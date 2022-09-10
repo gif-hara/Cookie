@@ -8,7 +8,7 @@ namespace Cookie
     /// 
     /// </summary>
     [Serializable]
-    public sealed class PassiveSkill
+    public sealed class PassiveSkill : IIdHolder
     {
         public int id;
         
@@ -17,6 +17,10 @@ namespace Cookie
         public PassiveSkillType skillType;
         
         public List<Attribute> attributes = new();
+
+        public int Id => this.id;
+
+        public string Name => this.name.GetLocalizedString();
     }
 
     [Serializable]

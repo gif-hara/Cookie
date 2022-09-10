@@ -2240,7 +2240,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: AccessoryName
+  m_text: WeaponName
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c0223b0a327fc8546b58257140dc19dc, type: 2}
   m_sharedMaterial: {fileID: -1223602183829894380, guid: c0223b0a327fc8546b58257140dc19dc, type: 2}

@@ -103,6 +103,10 @@ namespace Cookie
                         this.selectedWeapon = null;
                         this.selectedArmor = null;
                         this.selectedAccessory = accessory;
+                        var equippedAccessory = UserData.current.EquippedAccessory;
+                        AccessoryInformationUIViewUtility.Setup(uiView.BeforeAccessoryInformationUIView, equippedAccessory);
+                        AccessoryInformationUIViewUtility.Setup(uiView.AfterAccessoryInformationUIView, accessory);
+                        uiView.SetActiveEquipmentInformationRoot(EquipmentType.Accessory);
                     });
                 }
             }

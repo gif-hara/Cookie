@@ -56,6 +56,15 @@ namespace Cookie.UISystems
         [SerializeField]
         private ArmorInformationUIView afterArmorInformationUIView;
 
+        [SerializeField]
+        private GameObject accessoryInformationRoot;
+
+        [SerializeField]
+        private AccessoryInformationUIView beforeAccessoryInformationUIView;
+
+        [SerializeField]
+        private AccessoryInformationUIView afterAccessoryInformationUIView;
+
         private readonly List<CookieButton> equipmentButtons = new();
 
         public CookieButton WeaponButton => this.weaponButton;
@@ -80,6 +89,10 @@ namespace Cookie.UISystems
 
         public ArmorInformationUIView AfterArmorInformationUIView => this.afterArmorInformationUIView;
 
+        public AccessoryInformationUIView BeforeAccessoryInformationUIView => this.beforeAccessoryInformationUIView;
+
+        public AccessoryInformationUIView AfterAccessoryInformationUIView => this.afterAccessoryInformationUIView;
+
         public void DestroyAllEquipmentButtons()
         {
             foreach (var equipmentButton in this.equipmentButtons)
@@ -102,12 +115,14 @@ namespace Cookie.UISystems
         {
             this.weaponInformationRoot.SetActive(type == EquipmentType.Weapon);
             this.armorInformationRoot.SetActive(type == EquipmentType.Armor);
+            this.accessoryInformationRoot.SetActive(type == EquipmentType.Accessory);
         }
 
         public void SetDeactiveEquipmentInformationRoot()
         {
             this.weaponInformationRoot.SetActive(false);
             this.armorInformationRoot.SetActive(false);
+            this.accessoryInformationRoot.SetActive(false);
         }
     }
 }

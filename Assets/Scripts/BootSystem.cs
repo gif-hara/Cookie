@@ -62,6 +62,7 @@ namespace Cookie
                 MasterDataArmorGacha.LoadAsync("Assets/MasterData/MasterDataArmorGacha.asset"),
                 MasterDataAccessoryGacha.LoadAsync("Assets/MasterData/MasterDataAccessoryGacha.asset"),
                 MasterDataActiveSkill.LoadAsync("Assets/MasterData/MasterDataActiveSkill.asset"),
+                MasterDataPassiveSkill.LoadAsync("Assets/MasterData/MasterDataPassiveSkill.asset"),
                 MasterDataInitialEquipment.LoadAsync("Assets/MasterData/MasterDataInitialEquipment.asset")
                 );
         }
