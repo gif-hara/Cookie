@@ -1,0 +1,354 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf9cda0000b27164c9f6156bbc2eec24, type: 3}
+  m_Name: MasterDataActiveSkill
+  m_EditorClassIdentifier: 
+  skills:
+  - id: 0
+    name:
+      m_TableReference:
+        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+      m_TableEntryReference:
+        m_KeyId: 7894925312
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    skillType: 0
+    attributes:
+    - name: Power
+      value: 10
+    - name: AttackAttribute
+      value: 1
+  - id: 10101
+    name:
+      m_TableReference:
+        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+      m_TableEntryReference:
+        m_KeyId: 2480873340928
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    skillType: 0
+    attributes:
+    - name: Power
+      value: 10
+    - name: AttackAttribute
+      value: 1
+  - id: 10102
+    name:
+      m_TableReference:
+        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+      m_TableEntryReference:
+        m_KeyId: 2548875591680
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    skillType: 0
+    attributes:
+    - name: Power
+      value: 12
+    - name: AttackAttribute
+      value: 1
+  - id: 10103
+    name:
+      m_TableReference:
+        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+      m_TableEntryReference:
+        m_KeyId: 36291841556480
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    skillType: 0
+    attributes:
+    - name: Power
+      value: 15
+    - name: AttackAttribute
+      value: 1
+  - id: 10104
+    name:
+      m_TableReference:
+        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+      m_TableEntryReference:
+        m_KeyId: 36416907313152
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    skillType: 0
+    attributes:
+    - name: Power
+      value: 19
+    - name: AttackAttribute
+      value: 1
+  - id: 10105
+    name:
+      m_TableReference:
+        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+      m_TableEntryReference:
+        m_KeyId: 36686898855936
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    skillType: 0
+    attributes:
+    - name: Power
+      value: 24
+    - name: AttackAttribute
+      value: 1
+  - id: 10106
+    name:
+      m_TableReference:
+        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+      m_TableEntryReference:
+        m_KeyId: 36879601958912
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    skillType: 0
+    attributes:
+    - name: Power
+      value: 30
+    - name: AttackAttribute
+      value: 1
+  - id: 10107
+    name:
+      m_TableReference:
+        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+      m_TableEntryReference:
+        m_KeyId: 38196483391488
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    skillType: 0
+    attributes:
+    - name: Power
+      value: 38
+    - name: AttackAttribute
+      value: 1
+  - id: 10108
+    name:
+      m_TableReference:
+        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+      m_TableEntryReference:
+        m_KeyId: 38239969935360
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    skillType: 0
+    attributes:
+    - name: Power
+      value: 48
+    - name: AttackAttribute
+      value: 1
+  - id: 10109
+    name:
+      m_TableReference:
+        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+      m_TableEntryReference:
+        m_KeyId: 38335604260864
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    skillType: 0
+    attributes:
+    - name: Power
+      value: 60
+    - name: AttackAttribute
+      value: 1
+  - id: 10110
+    name:
+      m_TableReference:
+        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+      m_TableEntryReference:
+        m_KeyId: 38522389200896
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    skillType: 0
+    attributes:
+    - name: Power
+      value: 75
+    - name: AttackAttribute
+      value: 1
+  - id: 10201
+    name:
+      m_TableReference:
+        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+      m_TableEntryReference:
+        m_KeyId: 560867012968448
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    skillType: 0
+    attributes:
+    - name: Power
+      value: 10
+    - name: AttackAttribute
+      value: 2
+  - id: 10202
+    name:
+      m_TableReference:
+        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+      m_TableEntryReference:
+        m_KeyId: 561025171783680
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    skillType: 0
+    attributes:
+    - name: Power
+      value: 12
+    - name: AttackAttribute
+      value: 2
+  - id: 10203
+    name:
+      m_TableReference:
+        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+      m_TableEntryReference:
+        m_KeyId: 561049855262720
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    skillType: 0
+    attributes:
+    - name: Power
+      value: 15
+    - name: AttackAttribute
+      value: 2
+  - id: 10204
+    name:
+      m_TableReference:
+        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+      m_TableEntryReference:
+        m_KeyId: 561074136088576
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    skillType: 0
+    attributes:
+    - name: Power
+      value: 19
+    - name: AttackAttribute
+      value: 2
+  - id: 10205
+    name:
+      m_TableReference:
+        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+      m_TableEntryReference:
+        m_KeyId: 561088530939904
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    skillType: 0
+    attributes:
+    - name: Power
+      value: 24
+    - name: AttackAttribute
+      value: 2
+  - id: 10206
+    name:
+      m_TableReference:
+        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+      m_TableEntryReference:
+        m_KeyId: 561104230219776
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    skillType: 0
+    attributes:
+    - name: Power
+      value: 30
+    - name: AttackAttribute
+      value: 2
+  - id: 10207
+    name:
+      m_TableReference:
+        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+      m_TableEntryReference:
+        m_KeyId: 561115965882368
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    skillType: 0
+    attributes:
+    - name: Power
+      value: 38
+    - name: AttackAttribute
+      value: 2
+  - id: 10208
+    name:
+      m_TableReference:
+        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+      m_TableEntryReference:
+        m_KeyId: 561140049575936
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    skillType: 0
+    attributes:
+    - name: Power
+      value: 48
+    - name: AttackAttribute
+      value: 2
+  - id: 10209
+    name:
+      m_TableReference:
+        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+      m_TableEntryReference:
+        m_KeyId: 561153349713920
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    skillType: 0
+    attributes:
+    - name: Power
+      value: 60
+    - name: AttackAttribute
+      value: 2
+  - id: 10210
+    name:
+      m_TableReference:
+        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+      m_TableEntryReference:
+        m_KeyId: 561166733737984
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    skillType: 0
+    attributes:
+    - name: Power
+      value: 75
+    - name: AttackAttribute
+      value: 2
+  references:
+    version: 2
+    RefIds: []

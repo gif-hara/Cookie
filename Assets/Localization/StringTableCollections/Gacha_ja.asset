@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Gacha_ja
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: ja
+  m_SharedData: {fileID: 11400000, guid: 088430a797f58bd47bdf3bed5d75d1f6, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 6364004352
+    m_Localized: "\u6B66\u5668\u30AC\u30C1\u30E3Lv.1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 46537048064
+    m_Localized: "\u9632\u5177\u30AC\u30C1\u30E3Lv.1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359482992558080
+    m_Localized: "\u30A2\u30AF\u30BB\u30AC\u30C1\u30E3Lv.1"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

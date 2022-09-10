@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2c9c096adfc58840805e150880a6168, type: 3}
+  m_Name: MasterDataInitialEquipment
+  m_EditorClassIdentifier: 
+  weapon:
+    instanceId: 0
+    nameKey: Test
+    physicalStrength: 70
+    magicStrength: 0
+    activeSkillIds: 75270000
+  armor:
+    instanceId: 0
+    nameKey: Test
+    hitPoint: 190
+    physicalDefense: 10
+    magicDefense: 10
+  accessory:
+    instanceId: 0
+    nameKey: Test
+    passiveSkillIds: 75270000

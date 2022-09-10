@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: UI Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: UI
+  m_TableCollectionNameGuidString: fc87cedf3ef17384885234dbf1652cb4
+  m_Entries:
+  - m_Id: 6062014464
+    m_Key: Weapon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 98324119552
+    m_Key: Armor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 121271156736
+    m_Key: Accessory
+    m_Metadata:
+      m_Items: []
+  - m_Id: 865634287616
+    m_Key: EditEquipment
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16320570785792
+    m_Key: Equipment
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16350941741056
+    m_Key: Discard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28062038294528
+    m_Key: Gacha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 116856175394816
+    m_Key: PhysicalStrength
+    m_Metadata:
+      m_Items: []
+  - m_Id: 116914744655872
+    m_Key: MagicStrength
+    m_Metadata:
+      m_Items: []
+  - m_Id: 116958411554816
+    m_Key: TotalStrength
+    m_Metadata:
+      m_Items: []
+  - m_Id: 117970014765056
+    m_Key: PhysicalDefense
+    m_Metadata:
+      m_Items: []
+  - m_Id: 117996820561920
+    m_Key: MagicDefense
+    m_Metadata:
+      m_Items: []
+  - m_Id: 118019209756672
+    m_Key: HitPoint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 118035970195456
+    m_Key: Speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 183758453145600
+    m_Key: ActiveSkill
+    m_Metadata:
+      m_Items: []
+  - m_Id: 183791638478848
+    m_Key: PassiveSkill
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4016482118961725500
+  references:
+    version: 2
+    RefIds:
+    - rid: 4016482118961725500
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1662776359745

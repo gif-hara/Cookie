@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b6858d2b9e326040a1006b8304e71af, type: 3}
+  m_Name: MasterDataArmorGacha
+  m_EditorClassIdentifier: 
+  gachas:
+  - nameKey:
+      m_TableReference:
+        m_TableCollectionName: GUID:088430a797f58bd47bdf3bed5d75d1f6
+      m_TableEntryReference:
+        m_KeyId: 46537048064
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    id: 1
+    hitPointMin: 240
+    hitPointMax: 350
+    physicalDefenseMin: 10
+    physicalDefenseMax: 16
+    magicDefenseMin: 10
+    magicDefenseMax: 16
+    speedMin: 10
+    speedMax: 15
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Shared
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-Assets-Shared
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 2538f752e0876af4fade4e3d809999f3
+  m_SerializeEntries:
+  - m_GUID: d54667a301adad04db31c506045402b5
+    m_Address: Assets/Localization/StringTableCollections/Weapon Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 20c2f5dbbf12f054998da01b8be563b5
+    m_Address: Assets/Localization/StringTableCollections/Skill Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a21d25bf393326f429a106453a6e6a3f
+    m_Address: Assets/Localization/StringTableCollections/Armor Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 088430a797f58bd47bdf3bed5d75d1f6
+    m_Address: Assets/Localization/StringTableCollections/Gacha Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e71ebc19cd20e6b49b23f90b19934121
+    m_Address: Assets/Localization/StringTableCollections/PassiveSkill Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc87cedf3ef17384885234dbf1652cb4
+    m_Address: Assets/Localization/StringTableCollections/UI Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 19139ad953f16dc4cb1763d795a24e12
+    m_Address: Assets/Localization/StringTableCollections/Accessory Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 27eab44efa1307f45a3f39d2b53c0a20, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 0aa4e6721ea44824aa8e26da0aba5347, type: 2}
+    - {fileID: 11400000, guid: f82ad2548f48cb848ac8153f47c6a208, type: 2}
