@@ -91,6 +91,10 @@ MonoBehaviour:
     m_Key: AccessoryGacha
     m_Metadata:
       m_Items: []
+  - m_Id: 430846350712832
+    m_Key: Invoke
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
