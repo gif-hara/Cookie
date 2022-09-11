@@ -30,6 +30,7 @@ namespace Cookie
             {
                 this.SetSelectedRootButton(uiView.WeaponGachaButton);
                 uiView.DestroyAllGachaButtons();
+                uiView.ConfirmListRoot.SetActive(false);
                 foreach (var gacha in MasterDataWeaponGacha.Instance.gachas)
                 {
                     var gachaButton = uiView.CreateGachaButton();
@@ -66,6 +67,7 @@ namespace Cookie
             {
                 this.SetSelectedRootButton(uiView.ArmorGachaButton);
                 uiView.DestroyAllGachaButtons();
+                uiView.ConfirmListRoot.SetActive(false);
                 foreach (var gacha in MasterDataArmorGacha.Instance.gachas)
                 {
                     var gachaButton = uiView.CreateGachaButton();
@@ -99,6 +101,7 @@ namespace Cookie
             {
                 this.SetSelectedRootButton(uiView.AccessoryGachaButton);
                 uiView.DestroyAllGachaButtons();
+                uiView.ConfirmListRoot.SetActive(false);
                 foreach (var gacha in MasterDataAccessoryGacha.Instance.gachas)
                 {
                     var gachaButton = uiView.CreateGachaButton();
