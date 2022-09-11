@@ -30,7 +30,7 @@ namespace Cookie
             {
                 this.SetSelectedRootButton(uiView.WeaponGachaButton);
                 uiView.DestroyAllGachaButtons();
-                uiView.ConfirmListRoot.SetActive(false);
+                uiView.InvokeListRoot.SetActive(false);
                 foreach (var gacha in MasterDataWeaponGacha.Instance.gachas)
                 {
                     var gachaButton = uiView.CreateGachaButton();
@@ -38,7 +38,7 @@ namespace Cookie
                     gachaButton.Button.onClick.AddListener(() =>
                     {
                         this.SetSelectedGachaButton(gachaButton);
-                        uiView.ConfirmListRoot.SetActive(true);
+                        uiView.InvokeListRoot.SetActive(true);
                         uiView.InvokeButton.Button.onClick.RemoveAllListeners();
                         uiView.InvokeButton.Button.onClick.AddListener(() =>
                         {
@@ -67,7 +67,7 @@ namespace Cookie
             {
                 this.SetSelectedRootButton(uiView.ArmorGachaButton);
                 uiView.DestroyAllGachaButtons();
-                uiView.ConfirmListRoot.SetActive(false);
+                uiView.InvokeListRoot.SetActive(false);
                 foreach (var gacha in MasterDataArmorGacha.Instance.gachas)
                 {
                     var gachaButton = uiView.CreateGachaButton();
@@ -75,7 +75,7 @@ namespace Cookie
                     gachaButton.Button.onClick.AddListener(() =>
                     {
                         this.SetSelectedGachaButton(gachaButton);
-                        uiView.ConfirmListRoot.SetActive(true);
+                        uiView.InvokeListRoot.SetActive(true);
                         uiView.InvokeButton.Button.onClick.RemoveAllListeners();
                         uiView.InvokeButton.Button.onClick.AddListener(() =>
                         {
@@ -101,7 +101,7 @@ namespace Cookie
             {
                 this.SetSelectedRootButton(uiView.AccessoryGachaButton);
                 uiView.DestroyAllGachaButtons();
-                uiView.ConfirmListRoot.SetActive(false);
+                uiView.InvokeListRoot.SetActive(false);
                 foreach (var gacha in MasterDataAccessoryGacha.Instance.gachas)
                 {
                     var gachaButton = uiView.CreateGachaButton();
@@ -109,7 +109,7 @@ namespace Cookie
                     gachaButton.Button.onClick.AddListener(() =>
                     {
                         this.SetSelectedGachaButton(gachaButton);
-                        uiView.ConfirmListRoot.SetActive(true);
+                        uiView.InvokeListRoot.SetActive(true);
                         uiView.InvokeButton.Button.onClick.RemoveAllListeners();
                         uiView.InvokeButton.Button.onClick.AddListener(() =>
                         {
@@ -132,6 +132,181 @@ namespace Cookie
                 }
             });
             
+            uiView.DestroyAllGachaButtons();
+            foreach (var gacha in MasterDataWeaponGacha.Instance.gachas)
+            {
+                var gachaButton = uiView.CreateGachaButton();
+                gachaButton.Message.text = gacha.Name;
+                gachaButton.Button.onClick.AddListener(() =>
+                {
+                    this.SetSelectedGachaButton(gachaButton);
+                    uiView.InvokeListRoot.SetActive(true);
+                    
+                    // 実行ボタンが押されたらガチャする
+                    uiView.InvokeButton.Button.onClick.RemoveAllListeners();
+                    uiView.InvokeButton.Button.onClick.AddListener(() =>
+                    {
+                        var newWeapon = new Weapon
+                        {
+                            instanceId = UserData.current.weaponCreatedNumber,
+                            nameKey = "Test",
+                            physicalStrength = Random.Range(gacha.physicalStrengthMin, gacha.physicalStrengthMax),
+                            magicStrength = Random.Range(gacha.magicStrengthMin, gacha.magicStrengthMax)
+                        };
+                        var skillNumber = Random.Range(gacha.skillNumberMin, gacha.skillNumberMax + 1);
+                        for (var i = 0; i < skillNumber; i++)
+                        {
+                            newWeapon.activeSkillIds.Add(gacha.activeSkillIds.Lottery().value);
+                        }
+                        UserData.current.weapons.Add(newWeapon);
+                        UserData.current.weaponCreatedNumber++;
+                        SaveData.SaveUserData(UserData.current);
+                        uiView.EquipmentInformationUIView.Setup(UserData.current.EquippedWeapon, newWeapon);
+                        uiView.ConfirmListRoot.SetActive(true);
+                        
+                        // 装備ボタンが押されたら装備する
+                        uiView.EquipmentButton.Button.onClick.RemoveAllListeners();
+                        uiView.EquipmentButton.Button.onClick.AddListener(() =>
+                        {
+                            UserData.current.equippedWeaponInstanceId = newWeapon.instanceId;
+                            uiView.EquipmentInformationUIView.Setup(UserData.current.EquippedWeapon, newWeapon);
+                            uiView.ConfirmListRoot.SetActive(false);
+                        });
+                        
+                        // 破棄ボタンが押されたら削除する
+                        uiView.DiscardButton.Button.onClick.RemoveAllListeners();
+                        uiView.DiscardButton.Button.onClick.AddListener(() =>
+                        {
+                            UserData.current.weapons.Remove(newWeapon);
+                            uiView.ConfirmListRoot.SetActive(false);
+                            uiView.EquipmentInformationUIView.SetDeactiveAll();
+                        });
+
+                        // 破棄して実行ボタンが押されたら削除してもう一度ガチャする
+                        uiView.DiscardAndInvokeButton.Button.onClick.RemoveAllListeners();
+                        uiView.DiscardAndInvokeButton.Button.onClick.AddListener(() =>
+                        {
+                            uiView.DiscardButton.Button.onClick.Invoke();
+                            uiView.InvokeButton.Button.onClick.Invoke();
+                        });
+                    });
+                });
+            }
+            foreach (var gacha in MasterDataArmorGacha.Instance.gachas)
+            {
+                var gachaButton = uiView.CreateGachaButton();
+                gachaButton.Message.text = gacha.Name;
+                gachaButton.Button.onClick.AddListener(() =>
+                {
+                    this.SetSelectedGachaButton(gachaButton);
+                    uiView.InvokeListRoot.SetActive(true);
+
+                    // 実行ボタンが押されたらガチャする
+                    uiView.InvokeButton.Button.onClick.RemoveAllListeners();
+                    uiView.InvokeButton.Button.onClick.AddListener(() =>
+                    {
+                        var newArmor = new Armor
+                        {
+                            instanceId = UserData.current.armorCreatedNumber,
+                            nameKey = "Test",
+                            hitPoint = Random.Range(gacha.hitPointMin, gacha.hitPointMax),
+                            physicalDefense = Random.Range(gacha.physicalDefenseMin, gacha.physicalDefenseMax),
+                            magicDefense = Random.Range(gacha.magicDefenseMin, gacha.magicDefenseMax),
+                            speed = Random.Range(gacha.speedMin, gacha.speedMax)
+                        };
+                        UserData.current.armors.Add(newArmor);
+                        UserData.current.armorCreatedNumber++;
+                        SaveData.SaveUserData(UserData.current);
+                        uiView.EquipmentInformationUIView.Setup(UserData.current.EquippedArmor, newArmor);
+                        uiView.ConfirmListRoot.SetActive(true);
+                                                
+                        // 装備ボタンが押されたら装備する
+                        uiView.EquipmentButton.Button.onClick.RemoveAllListeners();
+                        uiView.EquipmentButton.Button.onClick.AddListener(() =>
+                        {
+                            UserData.current.equippedArmorInstanceId = newArmor.instanceId;
+                            uiView.EquipmentInformationUIView.Setup(UserData.current.EquippedArmor, newArmor);
+                            uiView.ConfirmListRoot.SetActive(false);
+                        });
+                        
+                        // 破棄ボタンが押されたら削除する
+                        uiView.DiscardButton.Button.onClick.RemoveAllListeners();
+                        uiView.DiscardButton.Button.onClick.AddListener(() =>
+                        {
+                            UserData.current.armors.Remove(newArmor);
+                            uiView.ConfirmListRoot.SetActive(false);
+                            uiView.EquipmentInformationUIView.SetDeactiveAll();
+                        });
+                        
+                        // 破棄して実行ボタンが押されたら削除してもう一度ガチャする
+                        uiView.DiscardAndInvokeButton.Button.onClick.RemoveAllListeners();
+                        uiView.DiscardAndInvokeButton.Button.onClick.AddListener(() =>
+                        {
+                            uiView.DiscardButton.Button.onClick.Invoke();
+                            uiView.InvokeButton.Button.onClick.Invoke();
+                        });
+                    });
+                });
+            }
+            foreach (var gacha in MasterDataAccessoryGacha.Instance.gachas)
+            {
+                var gachaButton = uiView.CreateGachaButton();
+                gachaButton.Message.text = gacha.Name;
+                gachaButton.Button.onClick.AddListener(() =>
+                {
+                    this.SetSelectedGachaButton(gachaButton);
+                    uiView.InvokeListRoot.SetActive(true);
+                    
+                    // 実行ボタンが押されたらガチャする
+                    uiView.InvokeButton.Button.onClick.RemoveAllListeners();
+                    uiView.InvokeButton.Button.onClick.AddListener(() =>
+                    {
+                        var newAccessory = new Accessory
+                        {
+                            instanceId = UserData.current.accessoryCreatedNumber,
+                            nameKey = "Test"
+                        };
+                        var skillNumber = Random.Range(gacha.skillNumberMin, gacha.skillNumberMax + 1);
+                        for (var i = 0; i < skillNumber; i++)
+                        {
+                            newAccessory.passiveSkillIds.Add(gacha.passiveSkillIds.Lottery().value);
+                        }
+                        UserData.current.accessories.Add(newAccessory);
+                        UserData.current.accessoryCreatedNumber++;
+                        SaveData.SaveUserData(UserData.current);
+                        uiView.EquipmentInformationUIView.Setup(UserData.current.EquippedAccessory, newAccessory);
+                        uiView.ConfirmListRoot.SetActive(true);
+                                                                        
+                        // 装備ボタンが押されたら装備する
+                        uiView.EquipmentButton.Button.onClick.RemoveAllListeners();
+                        uiView.EquipmentButton.Button.onClick.AddListener(() =>
+                        {
+                            UserData.current.equippedAccessoryInstanceId = newAccessory.instanceId;
+                            uiView.EquipmentInformationUIView.Setup(UserData.current.EquippedAccessory, newAccessory);
+                            uiView.ConfirmListRoot.SetActive(false);
+                        });
+                        
+                        // 破棄ボタンが押されたら削除する
+                        uiView.DiscardButton.Button.onClick.RemoveAllListeners();
+                        uiView.DiscardButton.Button.onClick.AddListener(() =>
+                        {
+                            UserData.current.accessories.Remove(newAccessory);
+                            uiView.ConfirmListRoot.SetActive(false);
+                            uiView.EquipmentInformationUIView.SetDeactiveAll();
+                        });
+                        
+                        // 破棄して実行ボタンが押されたら削除してもう一度ガチャする
+                        uiView.DiscardAndInvokeButton.Button.onClick.RemoveAllListeners();
+                        uiView.DiscardAndInvokeButton.Button.onClick.AddListener(() =>
+                        {
+                            uiView.DiscardButton.Button.onClick.Invoke();
+                            uiView.InvokeButton.Button.onClick.Invoke();
+                        });
+                    });
+                });
+            }
+
+            uiView.InvokeListRoot.SetActive(false);
             uiView.ConfirmListRoot.SetActive(false);
             uiView.EquipmentInformationUIView.SetDeactiveAll();
             HeaderUIViewUtility.Setup(uiView.HeaderUIView);

@@ -95,6 +95,10 @@ MonoBehaviour:
     m_Key: Invoke
     m_Metadata:
       m_Items: []
+  - m_Id: 454874258145280
+    m_Key: DiscardAndInvoke
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

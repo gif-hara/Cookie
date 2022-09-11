@@ -30,13 +30,25 @@ namespace Cookie.UISystems
         private CookieButton gachaButtonPrefab;
 
         [SerializeField]
-        private GameObject confirmListRoot;
+        private GameObject invokeListRoot;
 
         [SerializeField]
         private CookieButton invokeButton;
 
         [SerializeField]
         private EquipmentInformationUIView equipmentInformationUIView;
+
+        [SerializeField]
+        private GameObject confirmListRoot;
+        
+        [SerializeField]
+        private CookieButton equipmentButton;
+
+        [SerializeField]
+        private CookieButton discardButton;
+
+        [SerializeField]
+        private CookieButton discardAndInvokeButton;
 
         private readonly List<CookieButton> gachaButtons = new();
 
@@ -48,12 +60,20 @@ namespace Cookie.UISystems
 
         public CookieButton AccessoryGachaButton => this.accessoryGachaButton;
 
-        public GameObject ConfirmListRoot => this.confirmListRoot;
+        public GameObject InvokeListRoot => this.invokeListRoot;
 
         public CookieButton InvokeButton => this.invokeButton;
 
         public EquipmentInformationUIView EquipmentInformationUIView => this.equipmentInformationUIView;
 
+        public GameObject ConfirmListRoot => this.confirmListRoot;
+
+        public CookieButton EquipmentButton => this.equipmentButton;
+
+        public CookieButton DiscardButton => this.discardButton;
+
+        public CookieButton DiscardAndInvokeButton => this.discardAndInvokeButton;
+        
         public void DestroyAllGachaButtons()
         {
             foreach (var gachaButton in this.gachaButtons)
