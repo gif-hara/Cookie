@@ -56,13 +56,14 @@ namespace Cookie
                             UserData.current.weapons.Add(newWeapon);
                             UserData.current.weaponCreatedNumber++;
                             SaveData.SaveUserData(UserData.current);
-                            Debug.Log(JsonUtility.ToJson(newWeapon, true));
+                            uiView.EquipmentInformationUIView.Setup(UserData.current.EquippedWeapon, newWeapon);
                         });
                     });
                 }
             });
             
             uiView.ConfirmListRoot.SetActive(false);
+            uiView.EquipmentInformationUIView.SetDeactiveAll();
             
             GlobalMessagePipe.GetSubscriber<GachaEvent.RequestArmorGacha>()
                 .Subscribe(x =>

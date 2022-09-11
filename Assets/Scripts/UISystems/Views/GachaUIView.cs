@@ -35,6 +35,9 @@ namespace Cookie.UISystems
         [SerializeField]
         private CookieButton invokeButton;
 
+        [SerializeField]
+        private EquipmentInformationUIView equipmentInformationUIView;
+
         private readonly List<CookieButton> gachaButtons = new();
 
         public HeaderUIView HeaderUIView => this.headerUIView;
@@ -48,6 +51,8 @@ namespace Cookie.UISystems
         public GameObject ConfirmListRoot => this.confirmListRoot;
 
         public CookieButton InvokeButton => this.invokeButton;
+
+        public EquipmentInformationUIView EquipmentInformationUIView => this.equipmentInformationUIView;
 
         public void DestroyAllGachaButtons()
         {
