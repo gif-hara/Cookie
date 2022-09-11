@@ -11,7 +11,7 @@ namespace Cookie
     {
         public static void Setup(AccessoryInformationUIView passiveInformationUIView, Accessory accessory)
         {
-            passiveInformationUIView.AccessoryName.text = UserData.current.equippedWeaponInstanceId == accessory.instanceId
+            passiveInformationUIView.AccessoryName.text = UserData.current.equippedAccessoryInstanceId == accessory.instanceId
                 ? $"[E] {accessory.Name}"
                 : accessory.Name;
             passiveInformationUIView.DestroyAllPassiveSkillUIElements();

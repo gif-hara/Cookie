@@ -62,50 +62,75 @@ namespace Cookie
                 }
             });
             
+            uiView.ArmorGachaButton.Button.onClick.AddListener(() =>
+            {
+                this.SetSelectedRootButton(uiView.ArmorGachaButton);
+                uiView.DestroyAllGachaButtons();
+                foreach (var gacha in MasterDataArmorGacha.Instance.gachas)
+                {
+                    var gachaButton = uiView.CreateGachaButton();
+                    gachaButton.Message.text = gacha.Name;
+                    gachaButton.Button.onClick.AddListener(() =>
+                    {
+                        this.SetSelectedGachaButton(gachaButton);
+                        uiView.ConfirmListRoot.SetActive(true);
+                        uiView.InvokeButton.Button.onClick.RemoveAllListeners();
+                        uiView.InvokeButton.Button.onClick.AddListener(() =>
+                        {
+                            var newArmor = new Armor
+                            {
+                                instanceId = UserData.current.armorCreatedNumber,
+                                nameKey = "Test",
+                                hitPoint = Random.Range(gacha.hitPointMin, gacha.hitPointMax),
+                                physicalDefense = Random.Range(gacha.physicalDefenseMin, gacha.physicalDefenseMax),
+                                magicDefense = Random.Range(gacha.magicDefenseMin, gacha.magicDefenseMax),
+                                speed = Random.Range(gacha.speedMin, gacha.speedMax)
+                            };
+                            UserData.current.armors.Add(newArmor);
+                            UserData.current.armorCreatedNumber++;
+                            SaveData.SaveUserData(UserData.current);
+                            uiView.EquipmentInformationUIView.Setup(UserData.current.EquippedArmor, newArmor);
+                        });
+                    });
+                }
+            });
+            
+            uiView.AccessoryGachaButton.Button.onClick.AddListener(() =>
+            {
+                this.SetSelectedRootButton(uiView.AccessoryGachaButton);
+                uiView.DestroyAllGachaButtons();
+                foreach (var gacha in MasterDataAccessoryGacha.Instance.gachas)
+                {
+                    var gachaButton = uiView.CreateGachaButton();
+                    gachaButton.Message.text = gacha.Name;
+                    gachaButton.Button.onClick.AddListener(() =>
+                    {
+                        this.SetSelectedGachaButton(gachaButton);
+                        uiView.ConfirmListRoot.SetActive(true);
+                        uiView.InvokeButton.Button.onClick.RemoveAllListeners();
+                        uiView.InvokeButton.Button.onClick.AddListener(() =>
+                        {
+                            var newAccessory = new Accessory
+                            {
+                                instanceId = UserData.current.accessoryCreatedNumber,
+                                nameKey = "Test"
+                            };
+                            var skillNumber = Random.Range(gacha.skillNumberMin, gacha.skillNumberMax + 1);
+                            for (var i = 0; i < skillNumber; i++)
+                            {
+                                newAccessory.passiveSkillIds.Add(gacha.passiveSkillIds.Lottery().value);
+                            }
+                            UserData.current.accessories.Add(newAccessory);
+                            UserData.current.accessoryCreatedNumber++;
+                            SaveData.SaveUserData(UserData.current);
+                            uiView.EquipmentInformationUIView.Setup(UserData.current.EquippedAccessory, newAccessory);
+                        });
+                    });
+                }
+            });
+            
             uiView.ConfirmListRoot.SetActive(false);
             uiView.EquipmentInformationUIView.SetDeactiveAll();
-            
-            GlobalMessagePipe.GetSubscriber<GachaEvent.RequestArmorGacha>()
-                .Subscribe(x =>
-                {
-                    var armorGacha = MasterDataArmorGacha.Instance.gachas.Find(x.ArmorGachaId);
-                    var newArmor = new Armor
-                    {
-                        instanceId = UserData.current.armorCreatedNumber,
-                        nameKey = "Test",
-                        hitPoint = Random.Range(armorGacha.hitPointMin, armorGacha.hitPointMax),
-                        physicalDefense = Random.Range(armorGacha.physicalDefenseMin, armorGacha.physicalDefenseMax),
-                        magicDefense = Random.Range(armorGacha.magicDefenseMin, armorGacha.magicDefenseMax),
-                        speed = Random.Range(armorGacha.speedMin, armorGacha.speedMax)
-                    };
-                    UserData.current.armors.Add(newArmor);
-                    UserData.current.armorCreatedNumber++;
-                    SaveData.SaveUserData(UserData.current);
-                    Debug.Log(JsonUtility.ToJson(newArmor, true));
-                })
-                .AddTo(scope);
-            
-            GlobalMessagePipe.GetSubscriber<GachaEvent.RequestAccessoryGacha>()
-                .Subscribe(x =>
-                {
-                    var accessoryGacha = MasterDataAccessoryGacha.Instance.gachas.Find(x.AccessoryGachaId);
-                    var newAccessory = new Accessory
-                    {
-                        instanceId = UserData.current.accessoryCreatedNumber,
-                        nameKey = "Test"
-                    };
-                    var skillNumber = Random.Range(accessoryGacha.skillNumberMin, accessoryGacha.skillNumberMax + 1);
-                    for (var i = 0; i < skillNumber; i++)
-                    {
-                        newAccessory.passiveSkillIds.Add(accessoryGacha.passiveSkillIds.Lottery().value);
-                    }
-                    UserData.current.accessories.Add(newAccessory);
-                    UserData.current.accessoryCreatedNumber++;
-                    SaveData.SaveUserData(UserData.current);
-                    Debug.Log(JsonUtility.ToJson(newAccessory, true));
-                })
-                .AddTo(scope);
-
             HeaderUIViewUtility.Setup(uiView.HeaderUIView);
             
             return base.OnStartAsync(scope);
