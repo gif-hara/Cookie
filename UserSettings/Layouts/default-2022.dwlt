@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2048
     height: 1068.8
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Hierarchy
   m_RootView: {fileID: 8}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 148
+  controlID: 142
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -319,8 +319,8 @@ MonoBehaviour:
     y: 0
     width: 993.6
     height: 615.2
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 23}
@@ -566,7 +566,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -37674
+  m_LastSelectedObjectID: 37102
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -636,22 +636,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/UI
+    - Assets/Scripts/UISystems/Views
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs/UI
+  - Assets/Scripts/UISystems/Views
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\hkmp5\Documents\UnityProjects\Cookie
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 180}
-    m_SelectedIDs: 84710000
-    m_LastClickedID: 29060
-    m_ExpandedIDs: 00000000387100003a7100003c7100003e7100004071000042710000447100004671000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 21.399963}
+    m_SelectedIDs: 70720000
+    m_LastClickedID: 29296
+    m_ExpandedIDs: 00000000187200001a7200001c7200001e7200002072000022720000247200002672000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -679,7 +679,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000387100003a7100003c7100003e71000040710000427100004471000046710000
+    m_ExpandedIDs: 00000000187200001a7200001c7200001e72000020720000227200002472000026720000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -807,23 +807,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d0b80000
-      m_LastClickedID: 47312
-      m_ExpandedIDs: 5655ffff9055ffff9255ffff14b8000028b800002eb80000b2b80000cab80000d0b80000dab80000
+      m_SelectedIDs: 28eaffff
+      m_LastClickedID: -5592
+      m_ExpandedIDs: 3ceaffff62eaffff86ebffff88ebffff6a900000729000007a90000084900000be900000ee900000f8900000fc90000024910000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: PositiveStyle
+        m_OriginalName: PositiveStyle
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -5592
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
@@ -1091,9 +1091,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.44329932, y: 0.30270633, z: 0.06823063}
+    m_Target: {x: -5.6740947, y: 1.9447742, z: 0.0137758255}
     speed: 2
-    m_Value: {x: 6.9127707, y: 2.5063694, z: -0.066502094}
+    m_Value: {x: -5.6740947, y: 1.9447742, z: 0.0137758255}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1143,9 +1143,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.8414884
+    m_Target: 3.5922954
     speed: 2
-    m_Value: 3.0303338
+    m_Value: 3.5922954
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1247,7 +1247,7 @@ MonoBehaviour:
       y: 21
       width: 992.6
       height: 573.2
-    m_Scale: {x: 0.9999999, y: 0.9999999}
+    m_Scale: {x: 0.99999994, y: 0.99999994}
     m_Translation: {x: 496.3, y: 286.6}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -1255,9 +1255,9 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -496.30005
+      x: -496.30002
       y: -286.60004
-      width: 992.6001
+      width: 992.60004
       height: 573.2001
     m_MinimalGUI: 1
   m_defaultScale: 0.99999994

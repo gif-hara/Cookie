@@ -21,6 +21,15 @@ namespace Cookie
         protected override UniTask OnStartAsync(DisposableBagBuilder scope)
         {
             var uiView = Instantiate(this.gachaUIPrefab, this.uiParent);
+            
+            uiView.WeaponGachaButton.Button.onClick.AddListener(() =>
+            {
+                uiView.DestroyAllGachaButtons();
+                foreach (var gacha in MasterDataWeaponGacha.Instance.gachas)
+                {
+                    
+                }
+            });
 
             GlobalMessagePipe.GetSubscriber<GachaEvent.RequestWeaponGacha>()
                 .Subscribe(x =>

@@ -79,6 +79,18 @@ MonoBehaviour:
     m_Key: PassiveSkill
     m_Metadata:
       m_Items: []
+  - m_Id: 359880633548800
+    m_Key: WeaponGacha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359920076783616
+    m_Key: ArmorGacha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359956286210048
+    m_Key: AccessoryGacha
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
