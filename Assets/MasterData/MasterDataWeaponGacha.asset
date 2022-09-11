@@ -34,6 +34,60 @@ MonoBehaviour:
       weight: 80
     - value: 10102
       weight: 20
+  - nameKey:
+      m_TableReference:
+        m_TableCollectionName: GUID:088430a797f58bd47bdf3bed5d75d1f6
+      m_TableEntryReference:
+        m_KeyId: 1123358877089792
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    id: 2
+    physicalStrengthMin: 90
+    physicalStrengthMax: 120
+    magicStrengthMin: 90
+    magicStrengthMax: 120
+    skillNumberMin: 3
+    skillNumberMax: 3
+    activeSkillIds:
+    - value: 10101
+      weight: 70
+    - value: 10102
+      weight: 40
+    - value: 10201
+      weight: 70
+    - value: 10202
+      weight: 40
+  - nameKey:
+      m_TableReference:
+        m_TableCollectionName: GUID:088430a797f58bd47bdf3bed5d75d1f6
+      m_TableEntryReference:
+        m_KeyId: 1123394071494656
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    id: 2
+    physicalStrengthMin: 110
+    physicalStrengthMax: 150
+    magicStrengthMin: 110
+    magicStrengthMax: 150
+    skillNumberMin: 10
+    skillNumberMax: 10
+    activeSkillIds:
+    - value: 10101
+      weight: 40
+    - value: 10102
+      weight: 60
+    - value: 10103
+      weight: 9999
+    - value: 10201
+      weight: 40
+    - value: 10202
+      weight: 60
+    - value: 10203
+      weight: 9999
   references:
     version: 2
     RefIds: []
