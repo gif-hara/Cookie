@@ -141,6 +141,8 @@ namespace Cookie
                 {
                     this.SetSelectedGachaButton(gachaButton);
                     uiView.InvokeListRoot.SetActive(true);
+                    uiView.ConfirmListRoot.SetActive(false);
+                    uiView.EquipmentInformationUIView.SetDeactiveAll();
                     
                     // 実行ボタンが押されたらガチャする
                     uiView.InvokeButton.Button.onClick.RemoveAllListeners();
@@ -200,6 +202,8 @@ namespace Cookie
                 {
                     this.SetSelectedGachaButton(gachaButton);
                     uiView.InvokeListRoot.SetActive(true);
+                    uiView.ConfirmListRoot.SetActive(false);
+                    uiView.EquipmentInformationUIView.SetDeactiveAll();
 
                     // 実行ボタンが押されたらガチャする
                     uiView.InvokeButton.Button.onClick.RemoveAllListeners();
@@ -256,6 +260,8 @@ namespace Cookie
                 {
                     this.SetSelectedGachaButton(gachaButton);
                     uiView.InvokeListRoot.SetActive(true);
+                    uiView.ConfirmListRoot.SetActive(false);
+                    uiView.EquipmentInformationUIView.SetDeactiveAll();
                     
                     // 実行ボタンが押されたらガチャする
                     uiView.InvokeButton.Button.onClick.RemoveAllListeners();
