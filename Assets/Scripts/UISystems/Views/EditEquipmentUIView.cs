@@ -39,32 +39,8 @@ namespace Cookie.UISystems
         private HeaderUIView headerUIView;
 
         [SerializeField]
-        private GameObject weaponInformationRoot;
-
-        [SerializeField]
-        private WeaponInformationUIView beforeWeaponInformationUIView;
-
-        [SerializeField]
-        private WeaponInformationUIView afterWeaponInformationUIView;
-
-        [SerializeField]
-        private GameObject armorInformationRoot;
-
-        [SerializeField]
-        private ArmorInformationUIView beforeArmorInformationUIView;
-
-        [SerializeField]
-        private ArmorInformationUIView afterArmorInformationUIView;
-
-        [SerializeField]
-        private GameObject accessoryInformationRoot;
-
-        [SerializeField]
-        private AccessoryInformationUIView beforeAccessoryInformationUIView;
-
-        [SerializeField]
-        private AccessoryInformationUIView afterAccessoryInformationUIView;
-
+        private EquipmentInformationUIView equipmentInformationUIView;
+        
         private readonly List<CookieButton> equipmentButtons = new();
 
         public CookieButton WeaponButton => this.weaponButton;
@@ -81,18 +57,8 @@ namespace Cookie.UISystems
 
         public HeaderUIView HeaderUIView => this.headerUIView;
 
-        public WeaponInformationUIView BeforeWeaponInformationUIView => this.beforeWeaponInformationUIView;
-
-        public WeaponInformationUIView AfterWeaponInformationUIView => this.afterWeaponInformationUIView;
-
-        public ArmorInformationUIView BeforeArmorInformationUIView => this.beforeArmorInformationUIView;
-
-        public ArmorInformationUIView AfterArmorInformationUIView => this.afterArmorInformationUIView;
-
-        public AccessoryInformationUIView BeforeAccessoryInformationUIView => this.beforeAccessoryInformationUIView;
-
-        public AccessoryInformationUIView AfterAccessoryInformationUIView => this.afterAccessoryInformationUIView;
-
+        public EquipmentInformationUIView EquipmentInformationUIView => this.equipmentInformationUIView;
+        
         public void DestroyAllEquipmentButtons()
         {
             foreach (var equipmentButton in this.equipmentButtons)
@@ -109,20 +75,6 @@ namespace Cookie.UISystems
             this.equipmentButtons.Add(result);
 
             return result;
-        }
-
-        public void SetActiveEquipmentInformationRoot(EquipmentType type)
-        {
-            this.weaponInformationRoot.SetActive(type == EquipmentType.Weapon);
-            this.armorInformationRoot.SetActive(type == EquipmentType.Armor);
-            this.accessoryInformationRoot.SetActive(type == EquipmentType.Accessory);
-        }
-
-        public void SetDeactiveEquipmentInformationRoot()
-        {
-            this.weaponInformationRoot.SetActive(false);
-            this.armorInformationRoot.SetActive(false);
-            this.accessoryInformationRoot.SetActive(false);
         }
     }
 }

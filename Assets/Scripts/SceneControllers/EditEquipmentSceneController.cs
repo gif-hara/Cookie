@@ -50,9 +50,7 @@ namespace Cookie
                         this.selectedArmor = null;
                         this.selectedAccessory = null;
                         var equippedWeapon = UserData.current.EquippedWeapon;
-                        WeaponInformationUIViewUtility.Setup(uiView.BeforeWeaponInformationUIView, equippedWeapon);
-                        WeaponInformationUIViewUtility.Setup(uiView.AfterWeaponInformationUIView, equippedWeapon, weapon);
-                        uiView.SetActiveEquipmentInformationRoot(EquipmentType.Weapon);
+                        uiView.EquipmentInformationUIView.Setup(equippedWeapon, weapon);
                     });
                 }
             }
@@ -77,9 +75,7 @@ namespace Cookie
                         this.selectedArmor = armor;
                         this.selectedAccessory = null;
                         var equippedArmor = UserData.current.EquippedArmor;
-                        ArmorInformationUIViewUtility.Setup(uiView.BeforeArmorInformationUIView, equippedArmor);
-                        ArmorInformationUIViewUtility.Setup(uiView.AfterArmorInformationUIView, equippedArmor, armor);
-                        uiView.SetActiveEquipmentInformationRoot(EquipmentType.Armor);
+                        uiView.EquipmentInformationUIView.Setup(equippedArmor, armor);
                     });
                 }
             }
@@ -104,9 +100,7 @@ namespace Cookie
                         this.selectedArmor = null;
                         this.selectedAccessory = accessory;
                         var equippedAccessory = UserData.current.EquippedAccessory;
-                        AccessoryInformationUIViewUtility.Setup(uiView.BeforeAccessoryInformationUIView, equippedAccessory);
-                        AccessoryInformationUIViewUtility.Setup(uiView.AfterAccessoryInformationUIView, accessory);
-                        uiView.SetActiveEquipmentInformationRoot(EquipmentType.Accessory);
+                        uiView.EquipmentInformationUIView.Setup(equippedAccessory, accessory);
                     });
                 }
             }
@@ -114,19 +108,19 @@ namespace Cookie
             uiView.WeaponButton.Button.onClick.AddListener(() =>
             {
                 CreateWeaponList();
-                uiView.SetDeactiveEquipmentInformationRoot();
+                uiView.EquipmentInformationUIView.SetDeactiveAll();
             });
             
             uiView.ArmorButton.Button.onClick.AddListener(() =>
             {
                 CreateArmorList();
-                uiView.SetDeactiveEquipmentInformationRoot();
+                uiView.EquipmentInformationUIView.SetDeactiveAll();
             });
             
             uiView.AccessoryButton.Button.onClick.AddListener(() =>
             {
                 CreateAccessoryList();
-                uiView.SetDeactiveEquipmentInformationRoot();
+                uiView.EquipmentInformationUIView.SetDeactiveAll();
             });
             
             uiView.EquipmentButton.Button.onClick.AddListener(() =>
@@ -137,27 +131,30 @@ namespace Cookie
                     SaveData.SaveUserData(UserData.current);
                     CreateWeaponList();
                     var equippedWeapon = UserData.current.EquippedWeapon;
-                    WeaponInformationUIViewUtility.Setup(uiView.BeforeWeaponInformationUIView, equippedWeapon);
-                    WeaponInformationUIViewUtility.Setup(uiView.AfterWeaponInformationUIView, equippedWeapon, equippedWeapon);
+                    uiView.EquipmentInformationUIView.Setup(equippedWeapon, equippedWeapon);
                 }
                 if (this.selectedArmor != null)
                 {
                     UserData.current.equippedArmorInstanceId = this.selectedArmor.instanceId;
                     SaveData.SaveUserData(UserData.current);
                     CreateArmorList();
+                    var equippedArmor = UserData.current.EquippedArmor;
+                    uiView.EquipmentInformationUIView.Setup(equippedArmor, equippedArmor);
                 }
                 if (this.selectedAccessory != null)
                 {
                     UserData.current.equippedAccessoryInstanceId = this.selectedAccessory.instanceId;
                     SaveData.SaveUserData(UserData.current);
                     CreateAccessoryList();
+                    var equippedAccessory = UserData.current.EquippedAccessory;
+                    uiView.EquipmentInformationUIView.Setup(equippedAccessory, equippedAccessory);
                 }
             });
 
             HeaderUIViewUtility.Setup(uiView.HeaderUIView);
             
             uiView.ConfirmRoot.SetActive(false);
-            uiView.SetDeactiveEquipmentInformationRoot();
+            uiView.EquipmentInformationUIView.SetDeactiveAll();
             
             return base.OnStartAsync(scope);
         }
