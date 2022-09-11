@@ -20,12 +20,6 @@ namespace Cookie
 
         private CookieButton selectedEquipmentButton;
 
-        private Weapon selectedWeapon;
-
-        private Armor selectedArmor;
-
-        private Accessory selectedAccessory;
-        
         protected override UniTask OnStartAsync(DisposableBagBuilder scope)
         {
             var uiView = Instantiate(this.editEquipmentUIViewPrefab, this.uiParent);
@@ -46,11 +40,33 @@ namespace Cookie
                     {
                         this.SetSelectedEquipmentButton(button);
                         uiView.ConfirmRoot.SetActive(true);
-                        this.selectedWeapon = weapon;
-                        this.selectedArmor = null;
-                        this.selectedAccessory = null;
-                        var equippedWeapon = UserData.current.EquippedWeapon;
-                        uiView.EquipmentInformationUIView.Setup(equippedWeapon, weapon);
+                        uiView.EquipmentInformationUIView.Setup(UserData.current.EquippedWeapon, weapon);
+                        
+                        // 装備ボタンが押されたら装備する
+                        uiView.EquipmentButton.Button.onClick.RemoveAllListeners();
+                        uiView.EquipmentButton.Button.onClick.AddListener(() =>
+                        {
+                            UserData.current.equippedWeaponInstanceId = weapon.instanceId;
+                            SaveData.SaveUserData(UserData.current);
+                            CreateWeaponList();
+                            uiView.EquipmentInformationUIView.Setup(UserData.current.EquippedWeapon, UserData.current.EquippedWeapon);
+                        });
+                        
+                        // 破棄ボタンが押されたら削除する
+                        uiView.DiscardButton.Button.onClick.RemoveAllListeners();
+                        uiView.DiscardButton.Button.onClick.AddListener(() =>
+                        {
+                            // 装備中の武器は削除出来ない
+                            if (UserData.current.equippedWeaponInstanceId == weapon.instanceId)
+                            {
+                                // TODO: UIで表示したほうが良いかも
+                                return;
+                            }
+                            UserData.current.weapons.Remove(weapon);
+                            SaveData.SaveUserData(UserData.current);
+                            CreateWeaponList();
+                            uiView.EquipmentInformationUIView.SetDeactiveAll();
+                        });
                     });
                 }
             }
@@ -71,11 +87,33 @@ namespace Cookie
                     {
                         this.SetSelectedEquipmentButton(button);
                         uiView.ConfirmRoot.SetActive(true);
-                        this.selectedWeapon = null;
-                        this.selectedArmor = armor;
-                        this.selectedAccessory = null;
-                        var equippedArmor = UserData.current.EquippedArmor;
-                        uiView.EquipmentInformationUIView.Setup(equippedArmor, armor);
+                        uiView.EquipmentInformationUIView.Setup(UserData.current.EquippedArmor, armor);
+                                                
+                        // 装備ボタンが押されたら装備する
+                        uiView.EquipmentButton.Button.onClick.RemoveAllListeners();
+                        uiView.EquipmentButton.Button.onClick.AddListener(() =>
+                        {
+                            UserData.current.equippedArmorInstanceId = armor.instanceId;
+                            SaveData.SaveUserData(UserData.current);
+                            CreateArmorList();
+                            uiView.EquipmentInformationUIView.Setup(UserData.current.EquippedArmor, UserData.current.EquippedArmor);
+                        });
+                                                
+                        // 破棄ボタンが押されたら削除する
+                        uiView.DiscardButton.Button.onClick.RemoveAllListeners();
+                        uiView.DiscardButton.Button.onClick.AddListener(() =>
+                        {
+                            // 装備中の武器は削除出来ない
+                            if (UserData.current.equippedArmorInstanceId == armor.instanceId)
+                            {
+                                // TODO: UIで表示したほうが良いかも
+                                return;
+                            }
+                            UserData.current.armors.Remove(armor);
+                            SaveData.SaveUserData(UserData.current);
+                            CreateArmorList();
+                            uiView.EquipmentInformationUIView.SetDeactiveAll();
+                        });
                     });
                 }
             }
@@ -96,11 +134,33 @@ namespace Cookie
                     {
                         this.SetSelectedEquipmentButton(button);
                         uiView.ConfirmRoot.SetActive(true);
-                        this.selectedWeapon = null;
-                        this.selectedArmor = null;
-                        this.selectedAccessory = accessory;
-                        var equippedAccessory = UserData.current.EquippedAccessory;
-                        uiView.EquipmentInformationUIView.Setup(equippedAccessory, accessory);
+                        uiView.EquipmentInformationUIView.Setup(UserData.current.EquippedAccessory, accessory);
+                                                                        
+                        // 装備ボタンが押されたら装備する
+                        uiView.EquipmentButton.Button.onClick.RemoveAllListeners();
+                        uiView.EquipmentButton.Button.onClick.AddListener(() =>
+                        {
+                            UserData.current.equippedAccessoryInstanceId = accessory.instanceId;
+                            SaveData.SaveUserData(UserData.current);
+                            CreateAccessoryList();
+                            uiView.EquipmentInformationUIView.Setup(UserData.current.EquippedAccessory, UserData.current.EquippedAccessory);
+                        });
+                                                
+                        // 破棄ボタンが押されたら削除する
+                        uiView.DiscardButton.Button.onClick.RemoveAllListeners();
+                        uiView.DiscardButton.Button.onClick.AddListener(() =>
+                        {
+                            // 装備中の武器は削除出来ない
+                            if (UserData.current.equippedAccessoryInstanceId == accessory.instanceId)
+                            {
+                                // TODO: UIで表示したほうが良いかも
+                                return;
+                            }
+                            UserData.current.accessories.Remove(accessory);
+                            SaveData.SaveUserData(UserData.current);
+                            CreateAccessoryList();
+                            uiView.EquipmentInformationUIView.SetDeactiveAll();
+                        });
                     });
                 }
             }
@@ -123,34 +183,6 @@ namespace Cookie
                 uiView.EquipmentInformationUIView.SetDeactiveAll();
             });
             
-            uiView.EquipmentButton.Button.onClick.AddListener(() =>
-            {
-                if (this.selectedWeapon != null)
-                {
-                    UserData.current.equippedWeaponInstanceId = this.selectedWeapon.instanceId;
-                    SaveData.SaveUserData(UserData.current);
-                    CreateWeaponList();
-                    var equippedWeapon = UserData.current.EquippedWeapon;
-                    uiView.EquipmentInformationUIView.Setup(equippedWeapon, equippedWeapon);
-                }
-                if (this.selectedArmor != null)
-                {
-                    UserData.current.equippedArmorInstanceId = this.selectedArmor.instanceId;
-                    SaveData.SaveUserData(UserData.current);
-                    CreateArmorList();
-                    var equippedArmor = UserData.current.EquippedArmor;
-                    uiView.EquipmentInformationUIView.Setup(equippedArmor, equippedArmor);
-                }
-                if (this.selectedAccessory != null)
-                {
-                    UserData.current.equippedAccessoryInstanceId = this.selectedAccessory.instanceId;
-                    SaveData.SaveUserData(UserData.current);
-                    CreateAccessoryList();
-                    var equippedAccessory = UserData.current.EquippedAccessory;
-                    uiView.EquipmentInformationUIView.Setup(equippedAccessory, equippedAccessory);
-                }
-            });
-
             HeaderUIViewUtility.Setup(uiView.HeaderUIView);
             
             uiView.ConfirmRoot.SetActive(false);
