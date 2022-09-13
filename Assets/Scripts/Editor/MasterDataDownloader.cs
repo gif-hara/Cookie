@@ -15,8 +15,8 @@ namespace Cookie
         [MenuItem("HK/Cookie/Test")]
         private static async void DownloadMasterDataPlayerStatus()
         {
-            var test = await DownloadFromSpreadSheet("Player");
-            var json = JsonUtility.FromJson<PlayerStatus.Json>(test);
+            var text = await DownloadFromSpreadSheet("Player");
+            var json = JsonUtility.FromJson<PlayerStatus.Json>(text);
             var masterDataPlayerStatus = AssetDatabase.LoadAssetAtPath<MasterDataPlayerStatus>("Assets/MasterData/MasterDataPlayerStatus.asset");
             masterDataPlayerStatus.playerStatusList.Clear();
             masterDataPlayerStatus.playerStatusList.AddRange(json.elements);
