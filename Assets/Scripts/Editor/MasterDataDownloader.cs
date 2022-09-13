@@ -22,8 +22,6 @@ namespace Cookie
             masterDataPlayerStatus.playerStatusList.AddRange(json.elements);
             EditorUtility.SetDirty(masterDataPlayerStatus);
             AssetDatabase.SaveAssets();
-            
-            Debug.Log(test);
         }
         
         private static async UniTask<string> DownloadFromSpreadSheet(string sheetName)
