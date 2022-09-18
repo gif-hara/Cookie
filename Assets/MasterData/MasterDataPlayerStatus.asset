@@ -16,500 +16,600 @@ MonoBehaviour:
   - Level: 1
     Strength: 100
     Defense: 80
+    Power: 100
     HitPoint: 500
     Speed: 50
   - Level: 2
     Strength: 100
     Defense: 80
+    Power: 100
     HitPoint: 503
     Speed: 50
   - Level: 3
     Strength: 100
     Defense: 80
+    Power: 100
     HitPoint: 508
     Speed: 50
   - Level: 4
     Strength: 101
     Defense: 80
+    Power: 100
     HitPoint: 515
     Speed: 50
   - Level: 5
     Strength: 102
     Defense: 81
+    Power: 100
     HitPoint: 523
     Speed: 50
   - Level: 6
     Strength: 103
     Defense: 81
+    Power: 100
     HitPoint: 534
-    Speed: 51
+    Speed: 50
   - Level: 7
     Strength: 104
     Defense: 82
+    Power: 100
     HitPoint: 546
     Speed: 51
   - Level: 8
     Strength: 105
     Defense: 82
+    Power: 101
     HitPoint: 560
     Speed: 51
   - Level: 9
     Strength: 107
     Defense: 83
+    Power: 101
     HitPoint: 576
     Speed: 52
   - Level: 10
     Strength: 108
     Defense: 84
+    Power: 102
     HitPoint: 594
     Speed: 52
   - Level: 11
     Strength: 110
     Defense: 85
+    Power: 102
     HitPoint: 614
     Speed: 53
   - Level: 12
     Strength: 112
     Defense: 86
+    Power: 102
     HitPoint: 636
-    Speed: 54
+    Speed: 53
   - Level: 13
     Strength: 115
     Defense: 87
+    Power: 103
     HitPoint: 660
     Speed: 54
   - Level: 14
     Strength: 117
     Defense: 88
+    Power: 103
     HitPoint: 686
-    Speed: 55
+    Speed: 54
   - Level: 15
     Strength: 120
     Defense: 89
+    Power: 104
     HitPoint: 713
-    Speed: 56
+    Speed: 55
   - Level: 16
     Strength: 123
     Defense: 90
+    Power: 105
     HitPoint: 743
-    Speed: 57
+    Speed: 56
   - Level: 17
     Strength: 125
     Defense: 92
+    Power: 105
     HitPoint: 774
-    Speed: 58
+    Speed: 57
   - Level: 18
     Strength: 129
     Defense: 93
+    Power: 106
     HitPoint: 807
-    Speed: 59
+    Speed: 58
   - Level: 19
     Strength: 132
     Defense: 95
+    Power: 107
     HitPoint: 842
-    Speed: 60
+    Speed: 59
   - Level: 20
     Strength: 135
     Defense: 96
+    Power: 108
     HitPoint: 879
-    Speed: 61
+    Speed: 60
   - Level: 21
     Strength: 139
     Defense: 98
+    Power: 108
     HitPoint: 918
-    Speed: 62
+    Speed: 61
   - Level: 22
     Strength: 143
     Defense: 100
+    Power: 109
     HitPoint: 959
-    Speed: 64
+    Speed: 62
   - Level: 23
     Strength: 147
     Defense: 102
+    Power: 110
     HitPoint: 1002
-    Speed: 65
+    Speed: 63
   - Level: 24
     Strength: 151
     Defense: 104
+    Power: 111
     HitPoint: 1047
-    Speed: 66
+    Speed: 64
   - Level: 25
     Strength: 156
     Defense: 106
+    Power: 112
     HitPoint: 1093
-    Speed: 68
+    Speed: 65
   - Level: 26
     Strength: 160
     Defense: 108
+    Power: 113
     HitPoint: 1142
-    Speed: 69
+    Speed: 66
   - Level: 27
     Strength: 165
     Defense: 110
+    Power: 114
     HitPoint: 1192
-    Speed: 71
+    Speed: 68
   - Level: 28
     Strength: 170
     Defense: 112
+    Power: 115
     HitPoint: 1244
-    Speed: 73
+    Speed: 69
   - Level: 29
     Strength: 175
     Defense: 115
+    Power: 116
     HitPoint: 1298
-    Speed: 74
+    Speed: 71
   - Level: 30
     Strength: 180
     Defense: 117
+    Power: 118
     HitPoint: 1354
-    Speed: 76
+    Speed: 72
   - Level: 31
     Strength: 186
     Defense: 120
+    Power: 119
     HitPoint: 1412
-    Speed: 78
+    Speed: 74
   - Level: 32
     Strength: 192
     Defense: 123
+    Power: 120
     HitPoint: 1472
-    Speed: 80
+    Speed: 75
   - Level: 33
     Strength: 197
     Defense: 125
+    Power: 121
     HitPoint: 1534
-    Speed: 82
+    Speed: 77
   - Level: 34
     Strength: 203
     Defense: 128
+    Power: 123
     HitPoint: 1598
-    Speed: 84
+    Speed: 78
   - Level: 35
     Strength: 210
     Defense: 131
+    Power: 124
     HitPoint: 1663
-    Speed: 86
+    Speed: 80
   - Level: 36
     Strength: 216
     Defense: 134
+    Power: 125
     HitPoint: 1731
-    Speed: 88
+    Speed: 82
   - Level: 37
     Strength: 223
     Defense: 137
+    Power: 127
     HitPoint: 1800
-    Speed: 90
+    Speed: 84
   - Level: 38
     Strength: 229
     Defense: 140
+    Power: 128
     HitPoint: 1871
-    Speed: 92
+    Speed: 86
   - Level: 39
     Strength: 236
     Defense: 143
+    Power: 130
     HitPoint: 1944
-    Speed: 94
+    Speed: 88
   - Level: 40
     Strength: 243
     Defense: 147
+    Power: 132
     HitPoint: 2019
-    Speed: 97
+    Speed: 90
   - Level: 41
     Strength: 251
     Defense: 150
+    Power: 133
     HitPoint: 2096
-    Speed: 99
+    Speed: 92
   - Level: 42
     Strength: 258
     Defense: 154
+    Power: 135
     HitPoint: 2175
-    Speed: 101
+    Speed: 94
   - Level: 43
     Strength: 266
     Defense: 157
+    Power: 136
     HitPoint: 2256
-    Speed: 104
+    Speed: 96
   - Level: 44
     Strength: 274
     Defense: 161
+    Power: 138
     HitPoint: 2339
-    Speed: 106
+    Speed: 98
   - Level: 45
     Strength: 282
     Defense: 165
+    Power: 140
     HitPoint: 2423
-    Speed: 109
+    Speed: 100
   - Level: 46
     Strength: 290
     Defense: 168
+    Power: 142
     HitPoint: 2510
-    Speed: 112
+    Speed: 102
   - Level: 47
     Strength: 298
     Defense: 172
+    Power: 144
     HitPoint: 2598
-    Speed: 114
+    Speed: 105
   - Level: 48
     Strength: 307
     Defense: 176
+    Power: 146
     HitPoint: 2688
-    Speed: 117
+    Speed: 107
   - Level: 49
     Strength: 315
     Defense: 180
+    Power: 148
     HitPoint: 2780
-    Speed: 120
+    Speed: 110
   - Level: 50
     Strength: 324
     Defense: 185
+    Power: 150
     HitPoint: 2874
-    Speed: 123
+    Speed: 112
   - Level: 51
     Strength: 333
     Defense: 189
+    Power: 152
     HitPoint: 2970
-    Speed: 126
+    Speed: 115
   - Level: 52
     Strength: 343
     Defense: 193
+    Power: 154
     HitPoint: 3068
-    Speed: 129
+    Speed: 117
   - Level: 53
     Strength: 352
     Defense: 198
+    Power: 156
     HitPoint: 3168
-    Speed: 132
+    Speed: 120
   - Level: 54
     Strength: 362
     Defense: 202
+    Power: 158
     HitPoint: 3270
-    Speed: 135
+    Speed: 122
   - Level: 55
     Strength: 372
     Defense: 207
+    Power: 160
     HitPoint: 3373
-    Speed: 138
+    Speed: 125
   - Level: 56
     Strength: 382
     Defense: 211
+    Power: 162
     HitPoint: 3479
-    Speed: 142
+    Speed: 128
   - Level: 57
     Strength: 392
     Defense: 216
+    Power: 164
     HitPoint: 3586
-    Speed: 145
+    Speed: 131
   - Level: 58
     Strength: 402
     Defense: 221
+    Power: 167
     HitPoint: 3695
-    Speed: 148
+    Speed: 134
   - Level: 59
     Strength: 413
     Defense: 226
+    Power: 169
     HitPoint: 3806
-    Speed: 152
+    Speed: 137
   - Level: 60
     Strength: 423
     Defense: 231
+    Power: 172
     HitPoint: 3919
-    Speed: 155
+    Speed: 140
   - Level: 61
     Strength: 434
     Defense: 236
+    Power: 174
     HitPoint: 4034
-    Speed: 159
+    Speed: 143
   - Level: 62
     Strength: 445
     Defense: 241
+    Power: 176
     HitPoint: 4151
-    Speed: 163
+    Speed: 146
   - Level: 63
     Strength: 456
     Defense: 246
+    Power: 179
     HitPoint: 4270
-    Speed: 166
+    Speed: 149
   - Level: 64
     Strength: 468
     Defense: 252
+    Power: 181
     HitPoint: 4390
-    Speed: 170
+    Speed: 152
   - Level: 65
     Strength: 479
     Defense: 257
+    Power: 184
     HitPoint: 4513
-    Speed: 174
+    Speed: 155
   - Level: 66
     Strength: 491
     Defense: 263
+    Power: 187
     HitPoint: 4637
-    Speed: 178
+    Speed: 158
   - Level: 67
     Strength: 503
     Defense: 268
+    Power: 189
     HitPoint: 4764
-    Speed: 182
+    Speed: 162
   - Level: 68
     Strength: 515
     Defense: 274
+    Power: 192
     HitPoint: 4892
-    Speed: 186
+    Speed: 165
   - Level: 69
     Strength: 528
     Defense: 280
+    Power: 195
     HitPoint: 5022
-    Speed: 190
+    Speed: 169
   - Level: 70
     Strength: 540
     Defense: 285
+    Power: 198
     HitPoint: 5154
-    Speed: 194
+    Speed: 172
   - Level: 71
     Strength: 553
     Defense: 291
+    Power: 200
     HitPoint: 5288
-    Speed: 198
+    Speed: 176
   - Level: 72
     Strength: 566
     Defense: 297
+    Power: 203
     HitPoint: 5424
-    Speed: 202
+    Speed: 179
   - Level: 73
     Strength: 579
     Defense: 303
+    Power: 206
     HitPoint: 5562
-    Speed: 206
+    Speed: 183
   - Level: 74
     Strength: 592
     Defense: 310
+    Power: 209
     HitPoint: 5701
-    Speed: 211
+    Speed: 186
   - Level: 75
     Strength: 605
     Defense: 316
+    Power: 212
     HitPoint: 5843
-    Speed: 215
+    Speed: 190
   - Level: 76
     Strength: 619
     Defense: 322
+    Power: 215
     HitPoint: 5986
-    Speed: 219
+    Speed: 194
   - Level: 77
     Strength: 633
     Defense: 329
+    Power: 218
     HitPoint: 6132
-    Speed: 224
+    Speed: 198
   - Level: 78
     Strength: 647
     Defense: 335
+    Power: 221
     HitPoint: 6279
-    Speed: 228
+    Speed: 202
   - Level: 79
     Strength: 661
     Defense: 342
+    Power: 224
     HitPoint: 6428
-    Speed: 233
+    Speed: 206
   - Level: 80
     Strength: 675
     Defense: 348
+    Power: 228
     HitPoint: 6579
-    Speed: 238
+    Speed: 210
   - Level: 81
     Strength: 690
     Defense: 355
+    Power: 231
     HitPoint: 6732
-    Speed: 242
+    Speed: 214
   - Level: 82
     Strength: 704
     Defense: 362
+    Power: 234
     HitPoint: 6887
-    Speed: 247
+    Speed: 218
   - Level: 83
     Strength: 719
     Defense: 369
+    Power: 237
     HitPoint: 7044
-    Speed: 252
+    Speed: 222
   - Level: 84
     Strength: 734
     Defense: 376
+    Power: 241
     HitPoint: 7202
-    Speed: 257
+    Speed: 226
   - Level: 85
     Strength: 749
     Defense: 383
+    Power: 244
     HitPoint: 7363
-    Speed: 262
+    Speed: 230
   - Level: 86
     Strength: 765
     Defense: 390
+    Power: 247
     HitPoint: 7525
-    Speed: 267
+    Speed: 234
   - Level: 87
     Strength: 780
     Defense: 398
+    Power: 251
     HitPoint: 7690
-    Speed: 272
+    Speed: 239
   - Level: 88
     Strength: 796
     Defense: 405
+    Power: 254
     HitPoint: 7856
-    Speed: 277
+    Speed: 243
   - Level: 89
     Strength: 812
     Defense: 412
+    Power: 258
     HitPoint: 8024
-    Speed: 282
+    Speed: 248
   - Level: 90
     Strength: 828
     Defense: 420
+    Power: 262
     HitPoint: 8194
-    Speed: 288
+    Speed: 252
   - Level: 91
     Strength: 844
     Defense: 427
+    Power: 265
     HitPoint: 8366
-    Speed: 293
+    Speed: 257
   - Level: 92
     Strength: 861
     Defense: 435
+    Power: 269
     HitPoint: 8540
-    Speed: 298
+    Speed: 261
   - Level: 93
     Strength: 877
     Defense: 443
+    Power: 272
     HitPoint: 8716
-    Speed: 304
+    Speed: 266
   - Level: 94
     Strength: 894
     Defense: 451
+    Power: 276
     HitPoint: 8893
-    Speed: 309
+    Speed: 270
   - Level: 95
     Strength: 911
     Defense: 459
+    Power: 280
     HitPoint: 9073
-    Speed: 315
+    Speed: 275
   - Level: 96
     Strength: 928
     Defense: 467
+    Power: 284
     HitPoint: 9254
-    Speed: 321
+    Speed: 280
   - Level: 97
     Strength: 946
     Defense: 475
+    Power: 288
     HitPoint: 9437
-    Speed: 326
+    Speed: 285
   - Level: 98
     Strength: 963
     Defense: 483
+    Power: 292
     HitPoint: 9623
-    Speed: 332
+    Speed: 290
   - Level: 99
     Strength: 981
     Defense: 491
+    Power: 296
     HitPoint: 9810
-    Speed: 338
+    Speed: 295
   - Level: 100
     Strength: 999
     Defense: 500
+    Power: 300
     HitPoint: 9999
-    Speed: 344
+    Speed: 300

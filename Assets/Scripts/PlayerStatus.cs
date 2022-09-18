@@ -16,6 +16,8 @@ namespace Cookie
         public int Strength;
 
         public int Defense;
+
+        public int Power;
         
         public int HitPoint;
 

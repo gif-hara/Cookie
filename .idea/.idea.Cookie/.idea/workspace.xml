@@ -102,19 +102,6 @@
           <properties documentPath="C:\Users\hkmp5\Documents\UnityProjects\Cookie\Assets\Scripts\StateController.cs" initialLine="52" containingFunctionPresentation="method 'ChangeRequest'" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Editor/MasterDataDownloader.cs</url>
-          <line>18</line>
-          <properties documentPath="C:\Users\hkmp5\Documents\UnityProjects\Cookie\Assets\Scripts\Editor\MasterDataDownloader.cs" initialLine="18" containingFunctionPresentation="method 'DownloadMasterDataPlayerStatus'">
-            <startOffsets>
-              <option value="453" />
-            </startOffsets>
-            <endOffsets>
-              <option value="510" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
