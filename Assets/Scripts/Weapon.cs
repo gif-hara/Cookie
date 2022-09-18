@@ -16,7 +16,7 @@ namespace Cookie
         
         public string nameKey;
 
-        public int physicalStrength;
+        public InstanceParameter physicalStrength;
 
         public int magicStrength;
 
@@ -34,7 +34,7 @@ namespace Cookie
                 return this.activeSkillIds
                     .Select(x => MasterDataActiveSkill.Instance.skills.Find(x))
                     .Where(x => x.skillType == ActiveSkillType.Attack)
-                    .Sum(x => Calculator.GetPower(this.physicalStrength, this.magicStrength, x));
+                    .Sum(x => Calculator.GetPower(this.physicalStrength.parameter, this.magicStrength, x));
             }
         }
 

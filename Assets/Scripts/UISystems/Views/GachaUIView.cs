@@ -1,8 +1,5 @@
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UnityEngine.Assertions;
-using UnityEngine.UI;
 
 namespace Cookie.UISystems
 {
@@ -13,16 +10,7 @@ namespace Cookie.UISystems
     {
         [SerializeField]
         private HeaderUIView headerUIView;
-
-        [SerializeField]
-        private CookieButton weaponGachaButton;
-
-        [SerializeField]
-        private CookieButton armorGachaButton;
-
-        [SerializeField]
-        private CookieButton accessoryGachaButton;
-
+        
         [SerializeField]
         private Transform gachaListRoot;
 
@@ -53,13 +41,7 @@ namespace Cookie.UISystems
         private readonly List<CookieButton> gachaButtons = new();
 
         public HeaderUIView HeaderUIView => this.headerUIView;
-
-        public CookieButton WeaponGachaButton => this.weaponGachaButton;
         
-        public CookieButton ArmorGachaButton => this.armorGachaButton;
-
-        public CookieButton AccessoryGachaButton => this.accessoryGachaButton;
-
         public GameObject InvokeListRoot => this.invokeListRoot;
 
         public CookieButton InvokeButton => this.invokeButton;

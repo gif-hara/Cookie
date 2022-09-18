@@ -76,6 +76,17 @@ namespace Cookie
         Magic = 2,
     }
 
+    /// <summary>
+    /// レアタイプ
+    /// </summary>
+    public enum Rare
+    {
+        Common,
+        UnCommon,
+        Epic,
+        Legendary,
+    }
+
     public static class EquipmentAttributeName
     {
         public const string Strength = "Strength";

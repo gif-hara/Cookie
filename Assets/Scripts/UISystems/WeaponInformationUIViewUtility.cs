@@ -33,7 +33,7 @@ namespace Cookie
         public static void Setup(WeaponInformationUIView weaponInformationUIView, Weapon before, Weapon after)
         {
             Setup(weaponInformationUIView, after);
-            weaponInformationUIView.PhysicalStrengthComparisonUIStylists.Apply(after.physicalStrength - before.physicalStrength);
+            weaponInformationUIView.PhysicalStrengthComparisonUIStylists.Apply(after.physicalStrength.parameter - before.physicalStrength.parameter);
             weaponInformationUIView.MagicStrengthComparisonUIStylists.Apply(after.magicStrength - before.magicStrength);
             weaponInformationUIView.TotalStrengthComparisonUIStylists.Apply(after.TotalStrength - before.TotalStrength);
         }
