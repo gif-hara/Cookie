@@ -17,24 +17,12 @@ namespace Cookie
         
         public int id;
 
-        public int physicalStrengthMin;
+        public List<InstanceRangeParameterWithWeight> physicalStrengths;
 
-        public int physicalStrengthMax;
+        public List<InstanceRangeParameterWithWeight> magicStrengths;
+
+        public List<InstanceRangeParameterWithWeight> skillNumbers;
         
-        public int magicStrengthMin;
-
-        public int magicStrengthMax;
-        
-        /// <summary>
-        /// 付与できるスキルの数の最小値
-        /// </summary>
-        public int skillNumberMin;
-
-        /// <summary>
-        /// 付与できるスキルの数の最大値
-        /// </summary>
-        public int skillNumberMax;
-
         public List<InstanceParameterWithWeight> activeSkillIds;
 
         public int Id => this.id;

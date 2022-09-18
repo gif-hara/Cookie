@@ -42,25 +42,27 @@ namespace Cookie
                     uiView.InvokeButton.Button.onClick.RemoveAllListeners();
                     uiView.InvokeButton.Button.onClick.AddListener(() =>
                     {
+                        var physicalStrength = gacha.physicalStrengths.Lottery();
+                        var magicStrength = gacha.magicStrengths.Lottery();
                         var newWeapon = new Weapon
                         {
                             instanceId = UserData.current.weaponCreatedNumber,
                             nameKey = "Test",
                             physicalStrength = new InstanceParameter
                             {
-                                parameter = Random.Range(gacha.physicalStrengthMin, gacha.physicalStrengthMax),
-                                rare = Rare.Common
+                                parameter = physicalStrength.value.GetParameter(),
+                                rare = physicalStrength.value.rare
                             },
                             magicStrength = new InstanceParameter
                             {
-                                parameter = Random.Range(gacha.magicStrengthMin, gacha.magicStrengthMax),
-                                rare = Rare.Common
+                                parameter = magicStrength.value.GetParameter(),
+                                rare = magicStrength.value.rare
                             }
                         };
-                        var skillNumber = Random.Range(gacha.skillNumberMin, gacha.skillNumberMax + 1);
+                        var skillNumber = gacha.skillNumbers.Lottery().value.GetParameter();
                         for (var i = 0; i < skillNumber; i++)
                         {
-                            newWeapon.activeSkillIds.Add(gacha.activeSkillIds.Lottery().value);
+                            newWeapon.activeSkillIds.Add(new InstanceParameter(gacha.activeSkillIds.Lottery().value));
                         }
                         UserData.current.weapons.Add(newWeapon);
                         UserData.current.weaponCreatedNumber++;

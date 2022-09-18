@@ -23,8 +23,17 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     id: 1
-    physicalStrengthMin: 80
-    physicalStrengthMax: 100
+    strengths:
+    - value:
+        min: 100
+        max: 105
+        rare: 0
+      weight: 80
+    - value:
+        min: 105
+        max: 108
+        rare: 0
+      weight: 40
     magicStrengthMin: 80
     magicStrengthMax: 100
     skillNumberMin: 2
@@ -48,8 +57,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     id: 2
-    physicalStrengthMin: 90
-    physicalStrengthMax: 120
+    strengths: []
     magicStrengthMin: 90
     magicStrengthMax: 120
     skillNumberMin: 3
@@ -81,8 +89,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     id: 2
-    physicalStrengthMin: 110
-    physicalStrengthMax: 150
+    strengths: []
     magicStrengthMin: 110
     magicStrengthMax: 150
     skillNumberMin: 10
