@@ -15,14 +15,6 @@ MonoBehaviour:
   m_TableCollectionName: Gacha
   m_TableCollectionNameGuidString: 088430a797f58bd47bdf3bed5d75d1f6
   m_Entries:
-  - m_Id: 359482992558080
-    m_Key: Accessory001
-    m_Metadata:
-      m_Items: []
-  - m_Id: 46537048064
-    m_Key: Armor001
-    m_Metadata:
-      m_Items: []
   - m_Id: 6364004352
     m_Key: Weapon001
     m_Metadata:
@@ -39,8 +31,24 @@ MonoBehaviour:
     m_Key: Weapon004
     m_Metadata:
       m_Items: []
-  - m_Id: 1123565148766208
-    m_Key: Weapon005
+  - m_Id: 46537048064
+    m_Key: Armor001
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3520265681100800
+    m_Key: Armor002
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3520265685295104
+    m_Key: Armor003
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3520265685295105
+    m_Key: Armor004
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359482992558080
+    m_Key: Accessory001
     m_Metadata:
       m_Items: []
   m_Metadata:

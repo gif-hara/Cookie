@@ -49,9 +49,13 @@ namespace Cookie
                             physicalStrength = new InstanceParameter
                             {
                                 parameter = Random.Range(gacha.physicalStrengthMin, gacha.physicalStrengthMax),
-                                rare = Rare.UnCommon
+                                rare = Rare.Common
                             },
-                            magicStrength = Random.Range(gacha.magicStrengthMin, gacha.magicStrengthMax)
+                            magicStrength = new InstanceParameter
+                            {
+                                parameter = Random.Range(gacha.magicStrengthMin, gacha.magicStrengthMax),
+                                rare = Rare.Common
+                            }
                         };
                         var skillNumber = Random.Range(gacha.skillNumberMin, gacha.skillNumberMax + 1);
                         for (var i = 0; i < skillNumber; i++)

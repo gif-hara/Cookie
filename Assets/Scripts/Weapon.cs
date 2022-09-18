@@ -18,9 +18,9 @@ namespace Cookie
 
         public InstanceParameter physicalStrength;
 
-        public int magicStrength;
+        public InstanceParameter magicStrength;
 
-        public List<int> activeSkillIds = new();
+        public List<InstanceParameter> activeSkillIds = new();
 
         public string Name => LocalizationSettings.StringDatabase.GetTable("Weapon").GetEntry(this.nameKey).Value;
 
@@ -32,9 +32,9 @@ namespace Cookie
             get
             {
                 return this.activeSkillIds
-                    .Select(x => MasterDataActiveSkill.Instance.skills.Find(x))
+                    .Select(x => MasterDataActiveSkill.Instance.skills.Find(x.parameter))
                     .Where(x => x.skillType == ActiveSkillType.Attack)
-                    .Sum(x => Calculator.GetPower(this.physicalStrength.parameter, this.magicStrength, x));
+                    .Sum(x => Calculator.GetPower(this.physicalStrength.parameter, this.magicStrength.parameter, x));
             }
         }
 

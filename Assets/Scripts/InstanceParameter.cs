@@ -14,4 +14,9 @@ namespace Cookie
 
         public Rare rare;
     }
+
+    [Serializable]
+    public sealed class InstanceParameterWithWeight : WithWeight<InstanceParameter>
+    {
+    }
 }

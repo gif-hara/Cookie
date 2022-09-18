@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -19,6 +20,11 @@ namespace Cookie
 
     [Serializable]
     public class IntWithWeight : WithWeight<int>
+    {
+    }
+
+    [Serializable]
+    public class IntListWithWeight : WithWeight<List<int>>
     {
     }
 }

@@ -30,9 +30,13 @@ MonoBehaviour:
     skillNumberMin: 2
     skillNumberMax: 3
     activeSkillIds:
-    - value: 10101
+    - value:
+        parameter: 10101
+        rare: 0
       weight: 80
-    - value: 10102
+    - value:
+        parameter: 10102
+        rare: 0
       weight: 20
   - nameKey:
       m_TableReference:
@@ -51,13 +55,21 @@ MonoBehaviour:
     skillNumberMin: 3
     skillNumberMax: 3
     activeSkillIds:
-    - value: 10101
+    - value:
+        parameter: 0
+        rare: 0
       weight: 70
-    - value: 10102
+    - value:
+        parameter: 0
+        rare: 0
       weight: 40
-    - value: 10201
+    - value:
+        parameter: 0
+        rare: 0
       weight: 70
-    - value: 10202
+    - value:
+        parameter: 0
+        rare: 0
       weight: 40
   - nameKey:
       m_TableReference:
@@ -76,17 +88,29 @@ MonoBehaviour:
     skillNumberMin: 10
     skillNumberMax: 10
     activeSkillIds:
-    - value: 10101
+    - value:
+        parameter: 0
+        rare: 0
       weight: 40
-    - value: 10102
+    - value:
+        parameter: 0
+        rare: 0
       weight: 60
-    - value: 10103
+    - value:
+        parameter: 0
+        rare: 0
       weight: 9999
-    - value: 10201
+    - value:
+        parameter: 0
+        rare: 0
       weight: 40
-    - value: 10202
+    - value:
+        parameter: 0
+        rare: 0
       weight: 60
-    - value: 10203
+    - value:
+        parameter: 0
+        rare: 0
       weight: 9999
   references:
     version: 2

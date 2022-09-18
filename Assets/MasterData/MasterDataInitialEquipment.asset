@@ -15,15 +15,22 @@ MonoBehaviour:
   weapon:
     instanceId: 0
     nameKey: Test
-    physicalStrength: 70
-    magicStrength: 0
-    activeSkillIds: 75270000
+    physicalStrength:
+      parameter: 80
+      rare: 0
+    magicStrength:
+      parameter: 80
+      rare: 0
+    activeSkillIds:
+    - parameter: 10101
+      rare: 0
   armor:
     instanceId: 0
     nameKey: Test
     hitPoint: 190
     physicalDefense: 10
     magicDefense: 10
+    speed: 0
   accessory:
     instanceId: 0
     nameKey: Test

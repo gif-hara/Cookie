@@ -15,7 +15,7 @@ namespace Cookie
                 ? $"[E] {weapon.Name}"
                 : weapon.Name;
             weaponInformationUIView.PhysicalStrength.text = weapon.physicalStrength.parameter.ToString();
-            weaponInformationUIView.MagicStrength.text = weapon.magicStrength.ToString();
+            weaponInformationUIView.MagicStrength.text = weapon.magicStrength.parameter.ToString();
             weaponInformationUIView.TotalStrength.text = weapon.TotalStrength.ToString();
             weaponInformationUIView.PhysicalStrengthComparisonUIStylists.Apply(0);
             weaponInformationUIView.MagicStrengthComparisonUIStylists.Apply(0);
@@ -24,7 +24,7 @@ namespace Cookie
             for (var i = 0; i < weapon.activeSkillIds.Count; i++)
             {
                 var activeSkillId = weapon.activeSkillIds[i];
-                var activeSkill = MasterDataActiveSkill.Instance.skills.Find(activeSkillId);
+                var activeSkill = MasterDataActiveSkill.Instance.skills.Find(activeSkillId.parameter);
                 var activeSkillUIElement = weaponInformationUIView.CreateActiveSkillUIElement();
                 activeSkillUIElement.Index.text = (i + 1).ToString();
                 activeSkillUIElement.NameText.text = activeSkill.Name;
@@ -34,7 +34,7 @@ namespace Cookie
         {
             Setup(weaponInformationUIView, after);
             weaponInformationUIView.PhysicalStrengthComparisonUIStylists.Apply(after.physicalStrength.parameter - before.physicalStrength.parameter);
-            weaponInformationUIView.MagicStrengthComparisonUIStylists.Apply(after.magicStrength - before.magicStrength);
+            weaponInformationUIView.MagicStrengthComparisonUIStylists.Apply(after.magicStrength.parameter - before.magicStrength.parameter);
             weaponInformationUIView.TotalStrengthComparisonUIStylists.Apply(after.TotalStrength - before.TotalStrength);
         }
     }

@@ -35,7 +35,7 @@ namespace Cookie
         /// </summary>
         public int skillNumberMax;
 
-        public List<IntWithWeight> activeSkillIds;
+        public List<InstanceParameterWithWeight> activeSkillIds;
 
         public int Id => this.id;
 
