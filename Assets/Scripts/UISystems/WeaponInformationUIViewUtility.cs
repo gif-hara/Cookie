@@ -14,7 +14,7 @@ namespace Cookie
             weaponInformationUIView.WeaponName.text = UserData.current.equippedWeaponInstanceId == weapon.instanceId
                 ? $"[E] {weapon.Name}"
                 : weapon.Name;
-            weaponInformationUIView.PhysicalStrength.text = weapon.physicalStrength.ToString();
+            weaponInformationUIView.PhysicalStrength.text = weapon.physicalStrength.parameter.ToString();
             weaponInformationUIView.MagicStrength.text = weapon.magicStrength.ToString();
             weaponInformationUIView.TotalStrength.text = weapon.TotalStrength.ToString();
             weaponInformationUIView.PhysicalStrengthComparisonUIStylists.Apply(0);
