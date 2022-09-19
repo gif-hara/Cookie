@@ -29,4 +29,104 @@ namespace Cookie
 
         public string Name => this.nameKey.GetLocalizedString();
     }
+
+    [Serializable]
+    public sealed class WeaponGachaSpec
+    {
+        public int id;
+
+        public string nameKey;
+
+        [Serializable]
+        public class Json
+        {
+            public List<WeaponGachaSpec> elements;
+        }
+    }
+
+    [Serializable]
+    public sealed class WeaponGachaPhysicalStrength
+    {
+        public int id;
+
+        public int gachaId;
+
+        public int strengthMin;
+
+        public int strengthMax;
+
+        public Rare rare;
+
+        public int weight;
+        
+        [Serializable]
+        public class Json
+        {
+            public List<WeaponGachaPhysicalStrength> elements;
+        }
+    }
+
+    [Serializable]
+    public sealed class WeaponGachaMagicStrength
+    {
+        public int id;
+
+        public int gachaId;
+
+        public int strengthMin;
+
+        public int strengthMax;
+
+        public Rare rare;
+
+        public int weight;
+        
+        [Serializable]
+        public class Json
+        {
+            public List<WeaponGachaMagicStrength> elements;
+        }
+    }
+
+    [Serializable]
+    public sealed class WeaponGachaSkillNumber
+    {
+        public int id;
+
+        public int gachaId;
+
+        public int numberMin;
+
+        public int numberMax;
+
+        public Rare rare;
+
+        public int weight;
+        
+        [Serializable]
+        public class Json
+        {
+            public List<WeaponGachaSkillNumber> elements;
+        }
+    }
+
+    [Serializable]
+    public sealed class WeaponGachaActiveSkill
+    {
+        public int id;
+
+        public int gachaId;
+
+        public int activeSkillId;
+
+        public Rare rare;
+
+        public int weight;
+        
+        [Serializable]
+        public class Json
+        {
+            public List<WeaponGachaActiveSkill> elements;
+        }
+    }
 }
