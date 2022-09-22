@@ -60,8 +60,8 @@ namespace Cookie
                                 {
                                     value = new InstanceRangeParameter
                                     {
-                                        min = y.strengthMin,
-                                        max = y.strengthMax,
+                                        min = y.min,
+                                        max = y.max,
                                         rare = y.rare,
                                     },
                                     weight = y.weight
@@ -75,8 +75,8 @@ namespace Cookie
                                 {
                                     value = new InstanceRangeParameter
                                     {
-                                        min = y.strengthMin,
-                                        max = y.strengthMax,
+                                        min = y.min,
+                                        max = y.max,
                                         rare = y.rare,
                                     },
                                     weight = y.weight
@@ -90,8 +90,8 @@ namespace Cookie
                                 {
                                     value = new InstanceRangeParameter
                                     {
-                                        min = y.numberMin,
-                                        max = y.numberMax,
+                                        min = y.min,
+                                        max = y.max,
                                         rare = y.rare,
                                     },
                                     weight = y.weight
@@ -105,7 +105,7 @@ namespace Cookie
                                 {
                                     value = new InstanceParameter
                                     {
-                                        parameter = y.activeSkillId,
+                                        parameter = y.value,
                                         rare = y.rare,
                                     },
                                     weight = y.weight

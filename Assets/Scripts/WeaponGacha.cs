@@ -51,9 +51,9 @@ namespace Cookie
 
         public int gachaId;
 
-        public int strengthMin;
+        public int min;
 
-        public int strengthMax;
+        public int max;
 
         public Rare rare;
 
@@ -73,9 +73,9 @@ namespace Cookie
 
         public int gachaId;
 
-        public int strengthMin;
+        public int min;
 
-        public int strengthMax;
+        public int max;
 
         public Rare rare;
 
@@ -95,9 +95,9 @@ namespace Cookie
 
         public int gachaId;
 
-        public int numberMin;
+        public int min;
 
-        public int numberMax;
+        public int max;
 
         public Rare rare;
 
@@ -117,7 +117,7 @@ namespace Cookie
 
         public int gachaId;
 
-        public int activeSkillId;
+        public int value;
 
         public Rare rare;
 
