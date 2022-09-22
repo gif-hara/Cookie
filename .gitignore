@@ -60,3 +60,4 @@ crashlytics-build.properties
 
 bearer.txt
 masterdata_sheet_url.txt
+.idea*
