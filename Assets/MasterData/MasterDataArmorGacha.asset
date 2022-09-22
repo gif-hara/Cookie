@@ -15,22 +15,92 @@ MonoBehaviour:
   gachas:
   - nameKey:
       m_TableReference:
-        m_TableCollectionName: GUID:088430a797f58bd47bdf3bed5d75d1f6
+        m_TableCollectionName: Gacha
       m_TableEntryReference:
-        m_KeyId: 46537048064
-        m_Key: 
+        m_KeyId: 0
+        m_Key: Armor001
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     id: 1
-    hitPointMin: 240
-    hitPointMax: 350
-    physicalDefenseMin: 10
-    physicalDefenseMax: 16
-    magicDefenseMin: 10
-    magicDefenseMax: 16
-    speedMin: 10
-    speedMax: 15
+    hitPoints:
+    - value:
+        min: 500
+        max: 546
+        rare: 0
+      weight: 80
+    - value:
+        min: 560
+        max: 594
+        rare: 0
+      weight: 40
+    physicalDefenses:
+    - value:
+        min: 80
+        max: 82
+        rare: 0
+      weight: 80
+    - value:
+        min: 82
+        max: 84
+        rare: 0
+      weight: 40
+    magicDefenses:
+    - value:
+        min: 80
+        max: 82
+        rare: 0
+      weight: 80
+    - value:
+        min: 82
+        max: 84
+        rare: 0
+      weight: 40
+    speeds:
+    - value:
+        min: 50
+        max: 51
+        rare: 0
+      weight: 80
+    - value:
+        min: 51
+        max: 52
+        rare: 0
+      weight: 40
+  - nameKey:
+      m_TableReference:
+        m_TableCollectionName: Gacha
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Armor002
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    id: 2
+    hitPoints:
+    - value:
+        min: 560
+        max: 594
+        rare: 0
+      weight: 40
+    physicalDefenses:
+    - value:
+        min: 82
+        max: 84
+        rare: 0
+      weight: 40
+    magicDefenses:
+    - value:
+        min: 82
+        max: 84
+        rare: 0
+      weight: 40
+    speeds:
+    - value:
+        min: 51
+        max: 52
+        rare: 0
+      weight: 40
   references:
     version: 2
     RefIds: []

@@ -115,6 +115,96 @@ namespace Cookie
                 })
                 );
         }
+
+        [MenuItem("HK/Cookie/Download MasterData/ArmorGacha")]
+        private static async void DownloadMasterDataArmorGacha()
+        {
+            var items = await UniTask.WhenAll(
+                DownloadFromSpreadSheet("ArmorGachaSpec"),
+                DownloadFromSpreadSheet("ArmorGachaPhysicalDefense"),
+                DownloadFromSpreadSheet("ArmorGachaMagicDefense"),
+                DownloadFromSpreadSheet("ArmorGachaHitPoint"),
+                DownloadFromSpreadSheet("ArmorGachaSpeed")
+                );
+            var armorGachaSpecJson = JsonUtility.FromJson<ArmorGachaSpec.Json>(items.Item1);
+            var armorGachaPhysicalDefenseJson = JsonUtility.FromJson<ArmorGachaPhysicalDefense.Json>(items.Item2);
+            var armorGachaMagicDefenseJson = JsonUtility.FromJson<ArmorGachaMagicDefense.Json>(items.Item3);
+            var armorGachaHitPointJson = JsonUtility.FromJson<ArmorGachaHitPoint.Json>(items.Item4);
+            var armorGachaSpeedJson = JsonUtility.FromJson<ArmorGachaSpeed.Json>(items.Item5);
+            
+            var masterDataArmorGacha = AssetDatabase.LoadAssetAtPath<MasterDataArmorGacha>("Assets/MasterData/MasterDataArmorGacha.asset");
+            masterDataArmorGacha.gachas.Clear();
+            masterDataArmorGacha.gachas.AddRange(
+                armorGachaSpecJson.elements.Select(x =>
+                {
+                    return new ArmorGacha
+                    {
+                        id = x.id,
+                        nameKey = new LocalizedString("Gacha", x.nameKey),
+                        physicalDefenses = new List<InstanceRangeParameterWithWeight>
+                            (
+                            armorGachaPhysicalDefenseJson.elements
+                                .Where(y => y.gachaId == x.id)
+                                .Select(y => new InstanceRangeParameterWithWeight
+                                {
+                                    value = new InstanceRangeParameter
+                                    {
+                                        min = y.min,
+                                        max = y.max,
+                                        rare = y.rare,
+                                    },
+                                    weight = y.weight
+                                })
+                            ),
+                        magicDefenses = new List<InstanceRangeParameterWithWeight>
+                            (
+                            armorGachaMagicDefenseJson.elements
+                                .Where(y => y.gachaId == x.id)
+                                .Select(y => new InstanceRangeParameterWithWeight
+                                {
+                                    value = new InstanceRangeParameter
+                                    {
+                                        min = y.min,
+                                        max = y.max,
+                                        rare = y.rare,
+                                    },
+                                    weight = y.weight
+                                })
+                            ),
+                        hitPoints = new List<InstanceRangeParameterWithWeight>
+                            (
+                            armorGachaHitPointJson.elements
+                                .Where(y => y.gachaId == x.id)
+                                .Select(y => new InstanceRangeParameterWithWeight
+                                {
+                                    value = new InstanceRangeParameter
+                                    {
+                                        min = y.min,
+                                        max = y.max,
+                                        rare = y.rare,
+                                    },
+                                    weight = y.weight
+                                })
+                            ),
+                        speeds = new List<InstanceRangeParameterWithWeight>
+                            (
+                            armorGachaSpeedJson.elements
+                                .Where(y => y.gachaId == x.id)
+                                .Select(y => new InstanceRangeParameterWithWeight
+                                {
+                                    value = new InstanceRangeParameter
+                                    {
+                                        min = y.min,
+                                        max = y.max,
+                                        rare = y.rare,
+                                    },
+                                    weight = y.weight
+                                })
+                            ),
+                    };
+                })
+                );
+        }
         
         private static async UniTask<string> DownloadFromSpreadSheet(string sheetName)
         {
