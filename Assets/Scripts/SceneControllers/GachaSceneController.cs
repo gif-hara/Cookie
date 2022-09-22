@@ -117,10 +117,10 @@ namespace Cookie
                         {
                             instanceId = UserData.current.armorCreatedNumber,
                             nameKey = "Test",
-                            hitPoint = Random.Range(gacha.hitPointMin, gacha.hitPointMax),
-                            physicalDefense = Random.Range(gacha.physicalDefenseMin, gacha.physicalDefenseMax),
-                            magicDefense = Random.Range(gacha.magicDefenseMin, gacha.magicDefenseMax),
-                            speed = Random.Range(gacha.speedMin, gacha.speedMax)
+                            hitPoint = gacha.hitPoints.Lottery().value.GetParameter(),
+                            physicalDefense = gacha.physicalDefenses.Lottery().value.GetParameter(),
+                            magicDefense = gacha.magicDefenses.Lottery().value.GetParameter(),
+                            speed = gacha.speeds.Lottery().value.GetParameter()
                         };
                         UserData.current.armors.Add(newArmor);
                         UserData.current.armorCreatedNumber++;

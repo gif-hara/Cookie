@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine.Localization;
 
 namespace Cookie
@@ -13,21 +14,13 @@ namespace Cookie
         
         public int id;
 
-        public int hitPointMin;
+        public List<InstanceRangeParameterWithWeight> hitPoints;
 
-        public int hitPointMax;
-
-        public int physicalDefenseMin;
-
-        public int physicalDefenseMax;
+        public List<InstanceRangeParameterWithWeight> physicalDefenses;
         
-        public int magicDefenseMin;
+        public List<InstanceRangeParameterWithWeight> magicDefenses;
 
-        public int magicDefenseMax;
-
-        public int speedMin;
-
-        public int speedMax;
+        public List<InstanceRangeParameterWithWeight> speeds;
         
         public int Id => this.id;
 
