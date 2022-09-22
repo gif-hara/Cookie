@@ -176,7 +176,7 @@ namespace Cookie
                             instanceId = UserData.current.accessoryCreatedNumber,
                             nameKey = "Test"
                         };
-                        var skillNumber = Random.Range(gacha.skillNumberMin, gacha.skillNumberMax + 1);
+                        var skillNumber = gacha.skillNumbers.Lottery().value.GetParameter();
                         for (var i = 0; i < skillNumber; i++)
                         {
                             newAccessory.passiveSkillIds.Add(gacha.passiveSkillIds.Lottery().value);

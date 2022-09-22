@@ -205,6 +205,61 @@ namespace Cookie
                 })
                 );
         }
+
+        [MenuItem("HK/Cookie/Download MasterData/AccessoryGacha")]
+        private static async void DownloadMasterDataAccessoryGacha()
+        {
+            var items = await UniTask.WhenAll(
+                DownloadFromSpreadSheet("AccessoryGachaSpec"),
+                DownloadFromSpreadSheet("AccessoryGachaSkillNumber"),
+                DownloadFromSpreadSheet("AccessoryGachaPassiveSkill")
+                );
+            var accessoryGachaSpecJson = JsonUtility.FromJson<AccessoryGachaSpec.Json>(items.Item1);
+            var accessoryGachaSkillNumberJson = JsonUtility.FromJson<AccessoryGachaSkillNumber.Json>(items.Item2);
+            var accessoryGachaPassiveSkillJson = JsonUtility.FromJson<AccessoryGachaPassiveSkill.Json>(items.Item3);
+            
+            var masterDataAccessoryGacha = AssetDatabase.LoadAssetAtPath<MasterDataAccessoryGacha>("Assets/MasterData/MasterDataAccessoryGacha.asset");
+            masterDataAccessoryGacha.gachas.Clear();
+            masterDataAccessoryGacha.gachas.AddRange(
+                accessoryGachaSpecJson.elements.Select(x =>
+                {
+                    return new AccessoryGacha()
+                    {
+                        id = x.id,
+                        nameKey = new LocalizedString("Gacha", x.nameKey),
+                        skillNumbers = new List<InstanceRangeParameterWithWeight>
+                            (
+                            accessoryGachaSkillNumberJson.elements
+                                .Where(y => y.gachaId == x.id)
+                                .Select(y => new InstanceRangeParameterWithWeight
+                                {
+                                    value = new InstanceRangeParameter
+                                    {
+                                        min = y.min,
+                                        max = y.max,
+                                        rare = y.rare,
+                                    },
+                                    weight = y.weight
+                                })
+                            ),
+                        passiveSkillIds = new List<InstanceParameterWithWeight>
+                            (
+                            accessoryGachaPassiveSkillJson.elements
+                                .Where(y => y.gachaId == x.id)
+                                .Select(y => new InstanceParameterWithWeight()
+                                {
+                                    value = new InstanceParameter()
+                                    {
+                                        parameter = y.value,
+                                        rare = y.rare,
+                                    },
+                                    weight = y.weight
+                                })
+                            ),
+                    };
+                })
+                );
+        }
         
         private static async UniTask<string> DownloadFromSpreadSheet(string sheetName)
         {

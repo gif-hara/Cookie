@@ -14,7 +14,7 @@ namespace Cookie
         
         public string nameKey;
         
-        public List<int> passiveSkillIds = new();
+        public List<InstanceParameter> passiveSkillIds = new();
 
         public string Name => LocalizationSettings.StringDatabase.GetTable("Accessory").GetEntry(this.nameKey).Value;
     }
