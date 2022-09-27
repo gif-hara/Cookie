@@ -103,6 +103,10 @@ MonoBehaviour:
     m_Key: SelectEnemy
     m_Metadata:
       m_Items: []
+  - m_Id: 6340613575475200
+    m_Key: StartBattle
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

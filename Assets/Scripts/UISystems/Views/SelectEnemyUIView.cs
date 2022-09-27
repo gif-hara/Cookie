@@ -6,13 +6,13 @@ namespace Cookie.UISystems
     /// <summary>
     /// 
     /// </summary>
-    public sealed class SelectEnemySceneController : UIView
+    public sealed class SelectEnemyUIView : UIView
     {
         [SerializeField]
         private HeaderUIView headerUIView;
         
         [SerializeField]
-        private Transform gachaListRoot;
+        private Transform enemyListRoot;
 
         [SerializeField]
         private CookieButton buttonPrefab;
@@ -43,7 +43,7 @@ namespace Cookie.UISystems
 
         public CookieButton CreateEnemyButton()
         {
-            var result = Instantiate(this.buttonPrefab, this.gachaListRoot);
+            var result = Instantiate(this.buttonPrefab, this.enemyListRoot);
             this.enemyButtons.Add(result);
 
             return result;

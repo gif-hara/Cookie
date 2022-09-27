@@ -66,6 +66,13 @@ MonoBehaviour:
     - Locale-en
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 324331d861093054fab33f6003350d4a
+    m_Address: Enemy_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 27eab44efa1307f45a3f39d2b53c0a20, type: 2}
   m_SchemaSet:

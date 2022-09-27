@@ -258,12 +258,24 @@ namespace Cookie
         [MenuItem("HK/Cookie/Download MasterData/EnemyStatus")]
         private static async void DownloadMasterDataEnemyStatus()
         {
-            var enemyText = await DownloadFromSpreadSheet("Enemy");
+            var enemySpecText = await DownloadFromSpreadSheet("EnemySpec");
 
-            var enemyJson = JsonUtility.FromJson<EnemyStatus.Json>(enemyText);
+            var enemySpecJson = JsonUtility.FromJson<EnemySpec.Json>(enemySpecText);
             var masterDataEnemyStatus = AssetDatabase.LoadAssetAtPath<MasterDataEnemyStatus>("Assets/MasterData/MasterDataEnemyStatus.asset");
             masterDataEnemyStatus.enemyStatusList.Clear();
-            masterDataEnemyStatus.enemyStatusList.AddRange(enemyJson.elements);
+            masterDataEnemyStatus.enemyStatusList.AddRange(
+                enemySpecJson.elements.Select(x => new EnemyStatus
+                {
+                    id = x.id,
+                    nameKey = new LocalizedString("Enemy", x.nameKey),
+                    hitPoint = x.hitPoint,
+                    physicalStrength = x.physicalStrength,
+                    magicStrength = x.magicStrength,
+                    physicalDefense = x.physicalDefense,
+                    magicDefense = x.magicDefense,
+                    speed = x.speed,
+                    money = x.money
+                }));
             EditorUtility.SetDirty(masterDataEnemyStatus);
             AssetDatabase.SaveAssets();
         }

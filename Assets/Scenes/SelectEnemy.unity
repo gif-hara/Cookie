@@ -221,7 +221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1313178982}
-  - component: {fileID: 1313178981}
+  - component: {fileID: 1313178983}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -229,20 +229,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1313178981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1313178980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6284c9e2df88e5746a47dda1d1c7ce22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiParent: {fileID: 546311538}
-  gachaUIPrefab: {fileID: 8517353572888182725, guid: 541cbf9873b32514184214b818254c4f, type: 3}
 --- !u!4 &1313178982
 Transform:
   m_ObjectHideFlags: 0
@@ -258,6 +244,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1313178983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313178980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd3329454d3bc747ad8fbf88c36282d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiParent: {fileID: 546311538}
+  selectEnemyUIPrefab: {fileID: 6180623731847725300, guid: cb2e4cf349d8f28499158546fbd21223, type: 3}
 --- !u!1001 &1477957838
 PrefabInstance:
   m_ObjectHideFlags: 0

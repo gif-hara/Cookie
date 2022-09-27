@@ -52,6 +52,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 537e91a48d8638e40b443c3b956a329b
+    m_Address: Assets/Localization/StringTableCollections/Enemy Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 27eab44efa1307f45a3f39d2b53c0a20, type: 2}
   m_SchemaSet:

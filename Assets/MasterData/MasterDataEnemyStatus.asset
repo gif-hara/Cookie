@@ -14,6 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyStatusList:
   - id: 1
+    nameKey:
+      m_TableReference:
+        m_TableCollectionName: Enemy
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Name001
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     hitPoint: 656
     physicalStrength: 80
     magicStrength: 80
@@ -22,6 +31,15 @@ MonoBehaviour:
     speed: 48
     money: 600
   - id: 2
+    nameKey:
+      m_TableReference:
+        m_TableCollectionName: Enemy
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Name001
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     hitPoint: 768
     physicalStrength: 85
     magicStrength: 85
@@ -30,6 +48,15 @@ MonoBehaviour:
     speed: 48
     money: 888
   - id: 3
+    nameKey:
+      m_TableReference:
+        m_TableCollectionName: Enemy
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Name001
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     hitPoint: 828
     physicalStrength: 55
     magicStrength: 55
@@ -38,6 +65,15 @@ MonoBehaviour:
     speed: 50
     money: 1788
   - id: 4
+    nameKey:
+      m_TableReference:
+        m_TableCollectionName: Enemy
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Name001
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     hitPoint: 846
     physicalStrength: 58
     magicStrength: 58
@@ -46,6 +82,15 @@ MonoBehaviour:
     speed: 53
     money: 2040
   - id: 5
+    nameKey:
+      m_TableReference:
+        m_TableCollectionName: Enemy
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Name001
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     hitPoint: 1216
     physicalStrength: 67
     magicStrength: 67
@@ -54,6 +99,15 @@ MonoBehaviour:
     speed: 54
     money: 2940
   - id: 6
+    nameKey:
+      m_TableReference:
+        m_TableCollectionName: Enemy
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Name001
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     hitPoint: 1336
     physicalStrength: 79
     magicStrength: 79
@@ -62,6 +116,15 @@ MonoBehaviour:
     speed: 57
     money: 4056
   - id: 7
+    nameKey:
+      m_TableReference:
+        m_TableCollectionName: Enemy
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Name001
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     hitPoint: 1480
     physicalStrength: 94
     magicStrength: 94
@@ -70,6 +133,15 @@ MonoBehaviour:
     speed: 60
     money: 5388
   - id: 8
+    nameKey:
+      m_TableReference:
+        m_TableCollectionName: Enemy
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Name001
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     hitPoint: 1528
     physicalStrength: 100
     magicStrength: 100
@@ -78,6 +150,15 @@ MonoBehaviour:
     speed: 61
     money: 5880
   - id: 9
+    nameKey:
+      m_TableReference:
+        m_TableCollectionName: Enemy
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Name001
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     hitPoint: 1576
     physicalStrength: 107
     magicStrength: 107
@@ -86,6 +167,15 @@ MonoBehaviour:
     speed: 62
     money: 6396
   - id: 10
+    nameKey:
+      m_TableReference:
+        m_TableCollectionName: Enemy
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Name001
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     hitPoint: 251720
     physicalStrength: 960
     magicStrength: 1040
@@ -93,3 +183,6 @@ MonoBehaviour:
     magicDefense: 550
     speed: 285
     money: 120588
+  references:
+    version: 2
+    RefIds: []
