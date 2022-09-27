@@ -29,6 +29,8 @@ namespace Cookie
         public int speed;
 
         public int money;
+
+        public string Name => this.nameKey.GetLocalizedString();
     }
     
     /// <summary>

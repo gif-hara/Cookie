@@ -22,7 +22,8 @@ namespace Cookie
             uiView.DestroyAllEnemyButtons();
             foreach (var enemyStatus in MasterDataEnemyStatus.Instance.enemyStatusList)
             {
-                
+                var enemyButton = uiView.CreateEnemyButton();
+                enemyButton.Message.text = enemyStatus.Name;
             }
             return base.OnStartAsync(scope);
         }
