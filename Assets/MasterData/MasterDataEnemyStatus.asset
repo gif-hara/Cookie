@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da58a55f9dc34d64ead5b6378cf41fda, type: 3}
+  m_Name: MasterDataEnemyStatus
+  m_EditorClassIdentifier: 
+  enemyStatusList:
+  - id: 1
+    hitPoint: 656
+    physicalStrength: 80
+    magicStrength: 80
+    physicalDefense: 80
+    magicDefense: 80
+    speed: 48
+    money: 600
+  - id: 2
+    hitPoint: 768
+    physicalStrength: 85
+    magicStrength: 85
+    physicalDefense: 81
+    magicDefense: 81
+    speed: 48
+    money: 888
+  - id: 3
+    hitPoint: 828
+    physicalStrength: 55
+    magicStrength: 55
+    physicalDefense: 84
+    magicDefense: 84
+    speed: 50
+    money: 1788
+  - id: 4
+    hitPoint: 846
+    physicalStrength: 58
+    magicStrength: 58
+    physicalDefense: 85
+    magicDefense: 85
+    speed: 53
+    money: 2040
+  - id: 5
+    hitPoint: 1216
+    physicalStrength: 67
+    magicStrength: 67
+    physicalDefense: 88
+    magicDefense: 88
+    speed: 54
+    money: 2940
+  - id: 6
+    hitPoint: 1336
+    physicalStrength: 79
+    magicStrength: 79
+    physicalDefense: 92
+    magicDefense: 92
+    speed: 57
+    money: 4056
+  - id: 7
+    hitPoint: 1480
+    physicalStrength: 94
+    magicStrength: 94
+    physicalDefense: 96
+    magicDefense: 96
+    speed: 60
+    money: 5388
+  - id: 8
+    hitPoint: 1528
+    physicalStrength: 100
+    magicStrength: 100
+    physicalDefense: 98
+    magicDefense: 98
+    speed: 61
+    money: 5880
+  - id: 9
+    hitPoint: 1576
+    physicalStrength: 107
+    magicStrength: 107
+    physicalDefense: 100
+    magicDefense: 100
+    speed: 62
+    money: 6396
+  - id: 10
+    hitPoint: 251720
+    physicalStrength: 960
+    magicStrength: 1040
+    physicalDefense: 500
+    magicDefense: 550
+    speed: 285
+    money: 120588

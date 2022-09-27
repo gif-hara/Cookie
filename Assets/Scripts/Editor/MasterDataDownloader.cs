@@ -254,7 +254,20 @@ namespace Cookie
             EditorUtility.SetDirty(masterDataAccessoryGacha);
             AssetDatabase.SaveAssets();
         }
-        
+
+        [MenuItem("HK/Cookie/Download MasterData/EnemyStatus")]
+        private static async void DownloadMasterDataEnemyStatus()
+        {
+            var enemyText = await DownloadFromSpreadSheet("Enemy");
+
+            var enemyJson = JsonUtility.FromJson<EnemyStatus.Json>(enemyText);
+            var masterDataEnemyStatus = AssetDatabase.LoadAssetAtPath<MasterDataEnemyStatus>("Assets/MasterData/MasterDataEnemyStatus.asset");
+            masterDataEnemyStatus.enemyStatusList.Clear();
+            masterDataEnemyStatus.enemyStatusList.AddRange(enemyJson.elements);
+            EditorUtility.SetDirty(masterDataEnemyStatus);
+            AssetDatabase.SaveAssets();
+        }
+
         private static async UniTask<string> DownloadFromSpreadSheet(string sheetName)
         {
             var sheetUrl = File.ReadAllText("masterdata_sheet_url.txt");
