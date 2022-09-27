@@ -99,6 +99,10 @@ MonoBehaviour:
     m_Key: DiscardAndInvoke
     m_Metadata:
       m_Items: []
+  - m_Id: 6339489959182336
+    m_Key: SelectEnemy
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
