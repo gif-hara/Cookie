@@ -15,18 +15,6 @@ namespace Cookie
     /// </summary>
     public static class MasterDataDownloader
     {
-        [MenuItem("HK/Cookie/Download MasterData/Player")]
-        private static async void DownloadMasterDataPlayerStatus()
-        {
-            var text = await DownloadFromSpreadSheet("Player");
-            var json = JsonUtility.FromJson<PlayerStatus.Json>(text);
-            var masterDataPlayerStatus = AssetDatabase.LoadAssetAtPath<MasterDataPlayerStatus>("Assets/MasterData/MasterDataPlayerStatus.asset");
-            masterDataPlayerStatus.playerStatusList.Clear();
-            masterDataPlayerStatus.playerStatusList.AddRange(json.elements);
-            EditorUtility.SetDirty(masterDataPlayerStatus);
-            AssetDatabase.SaveAssets();
-        }
-
         [MenuItem("HK/Cookie/Download MasterData/WeaponGacha")]
         private static async void DownloadMasterDataWeaponGacha()
         {
