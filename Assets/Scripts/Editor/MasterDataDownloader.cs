@@ -114,6 +114,8 @@ namespace Cookie
                     };
                 })
                 );
+            EditorUtility.SetDirty(masterDataWeaponGacha);
+            AssetDatabase.SaveAssets();
         }
 
         [MenuItem("HK/Cookie/Download MasterData/ArmorGacha")]
@@ -204,6 +206,8 @@ namespace Cookie
                     };
                 })
                 );
+            EditorUtility.SetDirty(masterDataArmorGacha);
+            AssetDatabase.SaveAssets();
         }
 
         [MenuItem("HK/Cookie/Download MasterData/AccessoryGacha")]
@@ -259,6 +263,8 @@ namespace Cookie
                     };
                 })
                 );
+            EditorUtility.SetDirty(masterDataAccessoryGacha);
+            AssetDatabase.SaveAssets();
         }
         
         private static async UniTask<string> DownloadFromSpreadSheet(string sheetName)

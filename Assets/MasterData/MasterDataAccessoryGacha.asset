@@ -15,21 +15,34 @@ MonoBehaviour:
   gachas:
   - nameKey:
       m_TableReference:
-        m_TableCollectionName: GUID:088430a797f58bd47bdf3bed5d75d1f6
+        m_TableCollectionName: Gacha
       m_TableEntryReference:
-        m_KeyId: 359482992558080
-        m_Key: 
+        m_KeyId: 0
+        m_Key: Accessory001
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     id: 1
-    skillNumberMin: 1
-    skillNumberMax: 1
+    skillNumbers:
+    - value:
+        min: 3
+        max: 3
+        rare: 0
+      weight: 80
+    - value:
+        min: 3
+        max: 3
+        rare: 0
+      weight: 40
     passiveSkillIds:
-    - value: 10101
+    - value:
+        parameter: 10101
+        rare: 0
       weight: 80
-    - value: 10201
-      weight: 80
+    - value:
+        parameter: 10102
+        rare: 0
+      weight: 40
   references:
     version: 2
     RefIds: []

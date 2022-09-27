@@ -15,18 +15,18 @@ MonoBehaviour:
   gachas:
   - nameKey:
       m_TableReference:
-        m_TableCollectionName: GUID:088430a797f58bd47bdf3bed5d75d1f6
+        m_TableCollectionName: Gacha
       m_TableEntryReference:
-        m_KeyId: 6364004352
-        m_Key: 
+        m_KeyId: 0
+        m_Key: Weapon001
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     id: 1
-    strengths:
+    physicalStrengths:
     - value:
         min: 100
-        max: 105
+        max: 104
         rare: 0
       weight: 80
     - value:
@@ -34,10 +34,28 @@ MonoBehaviour:
         max: 108
         rare: 0
       weight: 40
-    magicStrengthMin: 80
-    magicStrengthMax: 100
-    skillNumberMin: 2
-    skillNumberMax: 3
+    magicStrengths:
+    - value:
+        min: 100
+        max: 104
+        rare: 0
+      weight: 80
+    - value:
+        min: 105
+        max: 108
+        rare: 0
+      weight: 40
+    skillNumbers:
+    - value:
+        min: 3
+        max: 3
+        rare: 0
+      weight: 80
+    - value:
+        min: 3
+        max: 4
+        rare: 0
+      weight: 40
     activeSkillIds:
     - value:
         parameter: 10101
@@ -46,79 +64,31 @@ MonoBehaviour:
     - value:
         parameter: 10102
         rare: 0
-      weight: 20
+      weight: 40
   - nameKey:
       m_TableReference:
-        m_TableCollectionName: GUID:088430a797f58bd47bdf3bed5d75d1f6
+        m_TableCollectionName: Gacha
       m_TableEntryReference:
-        m_KeyId: 1123358877089792
-        m_Key: 
+        m_KeyId: 0
+        m_Key: Weapon002
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     id: 2
-    strengths: []
-    magicStrengthMin: 90
-    magicStrengthMax: 120
-    skillNumberMin: 3
-    skillNumberMax: 3
-    activeSkillIds:
+    physicalStrengths:
     - value:
-        parameter: 0
-        rare: 0
-      weight: 70
-    - value:
-        parameter: 0
+        min: 105
+        max: 108
         rare: 0
       weight: 40
+    magicStrengths:
     - value:
-        parameter: 0
-        rare: 0
-      weight: 70
-    - value:
-        parameter: 0
+        min: 105
+        max: 108
         rare: 0
       weight: 40
-  - nameKey:
-      m_TableReference:
-        m_TableCollectionName: GUID:088430a797f58bd47bdf3bed5d75d1f6
-      m_TableEntryReference:
-        m_KeyId: 1123394071494656
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
-    id: 2
-    strengths: []
-    magicStrengthMin: 110
-    magicStrengthMax: 150
-    skillNumberMin: 10
-    skillNumberMax: 10
-    activeSkillIds:
-    - value:
-        parameter: 0
-        rare: 0
-      weight: 40
-    - value:
-        parameter: 0
-        rare: 0
-      weight: 60
-    - value:
-        parameter: 0
-        rare: 0
-      weight: 9999
-    - value:
-        parameter: 0
-        rare: 0
-      weight: 40
-    - value:
-        parameter: 0
-        rare: 0
-      weight: 60
-    - value:
-        parameter: 0
-        rare: 0
-      weight: 9999
+    skillNumbers: []
+    activeSkillIds: []
   references:
     version: 2
     RefIds: []
