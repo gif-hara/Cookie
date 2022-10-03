@@ -20,6 +20,8 @@ namespace Cookie
 
         public int magicDefense;
 
+        public int speed;
+
         public List<int> activeSkillIds;
 
         public ActorStatus Create()
@@ -32,6 +34,7 @@ namespace Cookie
                 magicStrength = this.magicStrength,
                 physicalDefense = this.physicalDefense,
                 magicDefense = this.magicDefense,
+                speed = this.speed,
                 activeSkills = this.activeSkillIds.Select(x => MasterDataActiveSkill.Instance.skills.Find(y => y.id == x)).ToList()
             };
         }

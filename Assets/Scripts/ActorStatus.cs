@@ -19,6 +19,8 @@ namespace Cookie
         
         public int magicDefense;
 
+        public int speed;
+
         public List<ActiveSkill> activeSkills; 
 
         public bool IsDead => this.hitPoint <= 0;

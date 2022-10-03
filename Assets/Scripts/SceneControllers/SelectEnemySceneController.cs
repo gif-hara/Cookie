@@ -2,6 +2,7 @@ using Cookie.UISystems;
 using Cysharp.Threading.Tasks;
 using MessagePipe;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Cookie
 {
@@ -33,7 +34,13 @@ namespace Cookie
                     uiView.BattleButton.Button.onClick.RemoveAllListeners();
                     uiView.BattleButton.Button.onClick.AddListener(() =>
                     {
-                        Debug.Log(enemyStatus);
+                        var battleSceneArgument = new BattleSceneArgument
+                        {
+                            playerStatusBuilder = UserData.current.ToActorStatusBuilder(),
+                            enemyStatusBuilder = enemyStatus.ToActorStatusBuilder()
+                        };
+                        SceneMediator.SetArgument(battleSceneArgument);
+                        SceneManager.LoadScene("Battle");
                     });
                 });
             }

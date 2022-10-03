@@ -31,6 +31,20 @@ namespace Cookie
         public int money;
 
         public string Name => this.nameKey.GetLocalizedString();
+
+        public ActorStatusBuilder ToActorStatusBuilder()
+        {
+            return new ActorStatusBuilder
+            {
+                hitPoint = this.hitPoint,
+                physicalStrength = this.physicalStrength,
+                magicStrength = this.magicStrength,
+                physicalDefense = this.physicalDefense,
+                magicDefense = this.magicDefense,
+                speed = this.speed,
+                activeSkillIds = new List<int>()
+            };
+        }
     }
     
     /// <summary>

@@ -54,8 +54,17 @@ namespace Cookie
         private void OnEnterInitialize(StateType prev)
         {
             Debug.Log("Initialize");
-            this.player = new Actor(ActorType.Player, this.playerStatus.Create());
-            this.enemy = new Actor(ActorType.Enemy, this.enemyStatus.Create());
+            if (SceneMediator.IsMatchArgument<BattleSceneArgument>())
+            {
+                var argument = SceneMediator.GetArgument<BattleSceneArgument>();
+                this.player = new Actor(ActorType.Player, argument.playerStatusBuilder.Create());
+                this.enemy = new Actor(ActorType.Enemy, argument.enemyStatusBuilder.Create());
+            }
+            else
+            {
+                this.player = new Actor(ActorType.Player, this.playerStatus.Create());
+                this.enemy = new Actor(ActorType.Enemy, this.enemyStatus.Create());
+            }
             
             this.stateController.ChangeRequest(StateType.BattleStart);
         }
