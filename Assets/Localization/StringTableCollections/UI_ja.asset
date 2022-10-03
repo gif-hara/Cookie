@@ -103,11 +103,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 6339489959182336
-    m_Localized: "\u6575\u9078\u629E"
+    m_Localized: "\u30A2\u30EA\u30FC\u30CA"
     m_Metadata:
       m_Items: []
   - m_Id: 6340613575475200
-    m_Localized: "\u30D0\u30C8\u30EB\u3059\u308B"
+    m_Localized: "\u30D0\u30C8\u30EB\u958B\u59CB"
     m_Metadata:
       m_Items: []
   references:

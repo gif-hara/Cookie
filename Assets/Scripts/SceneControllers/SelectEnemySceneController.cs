@@ -15,6 +15,8 @@ namespace Cookie
 
         [SerializeField]
         private SelectEnemyUIView selectEnemyUIPrefab;
+
+        private CookieButton selectedEnemyButton;
         
         protected override UniTask OnStartAsync(DisposableBagBuilder scope)
         {
@@ -24,8 +26,36 @@ namespace Cookie
             {
                 var enemyButton = uiView.CreateEnemyButton();
                 enemyButton.Message.text = enemyStatus.Name;
+                enemyButton.Button.onClick.AddListener(() =>
+                {
+                    this.SetSelectedEnemyButton(enemyButton);
+                    uiView.ConfirmListRoot.SetActive(true);
+                    uiView.BattleButton.Button.onClick.RemoveAllListeners();
+                    uiView.BattleButton.Button.onClick.AddListener(() =>
+                    {
+                        Debug.Log(enemyStatus);
+                    });
+                });
             }
+            
+            uiView.ConfirmListRoot.SetActive(false);
+            
             return base.OnStartAsync(scope);
+        }
+
+        private void SetSelectedEnemyButton(CookieButton enemyButton)
+        {
+            if (this.selectedEnemyButton != null)
+            {
+                this.selectedEnemyButton.PositiveStylist.Apply();
+            }
+
+            this.selectedEnemyButton = enemyButton;
+
+            if (this.selectedEnemyButton != null)
+            {
+                this.selectedEnemyButton.SelectedStylist.Apply();
+            }
         }
     }
 }

@@ -1496,7 +1496,7 @@ MonoBehaviour:
   headerUIView: {fileID: 1462932583058182219}
   enemyListRoot: {fileID: 8787527628417709736}
   buttonPrefab: {fileID: 6360218132138771571, guid: a394bfa29364a4f49a6b2059d18f6135, type: 3}
-  confirmListRoot: {fileID: 6113766253125406261}
+  confirmListRoot: {fileID: 4936102843585106100}
   battleButton: {fileID: 9003188509342136253}
 --- !u!1001 &2645240872338600910
 PrefabInstance:
