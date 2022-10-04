@@ -14,8 +14,6 @@ namespace Cookie
         
         public LocalizedString name;
         
-        public ActiveSkillType skillType;
-        
         public List<Attribute> attributes = new();
         
         public int Id => this.id;

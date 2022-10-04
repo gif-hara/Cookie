@@ -23,11 +23,12 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: Power
       value: 10
     - name: AttackAttribute
+      value: 1
+    - name: ActiveSkillType
       value: 1
   - id: 10101
     name:
@@ -39,11 +40,12 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: Power
       value: 10
     - name: AttackAttribute
+      value: 1
+    - name: ActiveSkillType
       value: 1
   - id: 10102
     name:
@@ -55,11 +57,12 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: Power
       value: 12
     - name: AttackAttribute
+      value: 1
+    - name: ActiveSkillType
       value: 1
   - id: 10103
     name:
@@ -71,11 +74,12 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: Power
       value: 15
     - name: AttackAttribute
+      value: 1
+    - name: ActiveSkillType
       value: 1
   - id: 10104
     name:
@@ -87,7 +91,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: Power
       value: 19
@@ -103,7 +106,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: Power
       value: 24
@@ -119,7 +121,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: Power
       value: 30
@@ -135,7 +136,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: Power
       value: 38
@@ -151,7 +151,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: Power
       value: 48
@@ -167,7 +166,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: Power
       value: 60
@@ -183,7 +181,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: Power
       value: 75
@@ -199,7 +196,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: Power
       value: 10
@@ -215,7 +211,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: Power
       value: 12
@@ -231,7 +226,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: Power
       value: 15
@@ -247,7 +241,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: Power
       value: 19
@@ -263,7 +256,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: Power
       value: 24
@@ -279,7 +271,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: Power
       value: 30
@@ -295,7 +286,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: Power
       value: 38
@@ -311,7 +301,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: Power
       value: 48
@@ -327,7 +316,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: Power
       value: 60
@@ -343,7 +331,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: Power
       value: 75

@@ -282,8 +282,8 @@ namespace Cookie
 
         private static async UniTask<string> DownloadFromSpreadSheet(string sheetName)
         {
-            var sheetUrl = File.ReadAllText("masterdata_sheet_url.txt");
-            var bearer = File.ReadAllText("bearer.txt");
+            var sheetUrl = await File.ReadAllTextAsync("masterdata_sheet_url.txt");
+            var bearer = await File.ReadAllTextAsync("bearer.txt");
             var request = UnityWebRequest.Get($"{sheetUrl}?mode={sheetName}");
             request.SetRequestHeader("Authorization", $"Bearer {bearer}");
             var operation = request.SendWebRequest();

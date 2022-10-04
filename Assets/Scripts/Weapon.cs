@@ -33,7 +33,7 @@ namespace Cookie
             {
                 return this.activeSkillIds
                     .Select(x => MasterDataActiveSkill.Instance.skills.Find(x.parameter))
-                    .Where(x => x.skillType == ActiveSkillType.Attack)
+                    .Where(x => (ActiveSkillType)x.attributes.Get(SkillAttributeName.ActiveSkillType).value == ActiveSkillType.Attack)
                     .Sum(x => Calculator.GetPower(this.physicalStrength.parameter, this.magicStrength.parameter, x));
             }
         }

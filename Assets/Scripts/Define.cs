@@ -12,8 +12,8 @@ namespace Cookie
 
     public enum ActiveSkillType
     {
-        Attack,
-        Recovery,
+        Attack = 1,
+        Recovery = 2,
     }
 
     public enum PassiveSkillType
@@ -97,5 +97,7 @@ namespace Cookie
         public const string Power = "Power";
         
         public const string AttackAttribute = "AttackAttribute";
+
+        public const string ActiveSkillType = "ActiveSkillType";
     }
 }

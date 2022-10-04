@@ -41,13 +41,15 @@ namespace Cookie
                     Debug.Log($"StartTurn {this.actorType}");
                     foreach (var skill in this.Status.activeSkills)
                     {
-                        switch (skill.skillType)
+                        var skillType = (ActiveSkillType)skill.attributes.Get(SkillAttributeName.ActiveSkillType).value;
+                        switch (skillType)
                         {
                             case ActiveSkillType.Attack:
                                 x.Opponent.TakeDamage(Calculator.GetDamage(this.Status, skill, x.Opponent.Status));
                                 break;
+                            case ActiveSkillType.Recovery:
                             default:
-                                Assert.IsTrue(false, $"{skill.skillType}は未対応です");
+                                Assert.IsTrue(false, $"{skillType}は未対応です");
                                 break;
                         }
                         await UniTask.Delay(TimeSpan.FromSeconds(1.0f));
