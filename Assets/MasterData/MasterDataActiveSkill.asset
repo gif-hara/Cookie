@@ -13,329 +13,620 @@ MonoBehaviour:
   m_Name: MasterDataActiveSkill
   m_EditorClassIdentifier: 
   skills:
-  - id: 0
-    name:
-      m_TableReference:
-        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
-      m_TableEntryReference:
-        m_KeyId: 7894925312
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
-    attributes:
-    - name: Power
-      value: 10
-    - name: AttackAttribute
-      value: 1
-    - name: ActiveSkillType
-      value: 1
   - id: 10101
     name:
       m_TableReference:
-        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+        m_TableCollectionName: Skill
       m_TableEntryReference:
-        m_KeyId: 2480873340928
-        m_Key: 
+        m_KeyId: 0
+        m_Key: ActiveSkill10101
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: Power
-      value: 10
-    - name: AttackAttribute
-      value: 1
     - name: ActiveSkillType
+      value: 1
+    - name: Power
+      value: 100
+    - name: AttackAttribute
       value: 1
   - id: 10102
     name:
       m_TableReference:
-        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+        m_TableCollectionName: Skill
       m_TableEntryReference:
-        m_KeyId: 2548875591680
-        m_Key: 
+        m_KeyId: 0
+        m_Key: ActiveSkill10102
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: Power
-      value: 12
-    - name: AttackAttribute
-      value: 1
     - name: ActiveSkillType
+      value: 1
+    - name: Power
+      value: 109
+    - name: AttackAttribute
       value: 1
   - id: 10103
     name:
       m_TableReference:
-        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+        m_TableCollectionName: Skill
       m_TableEntryReference:
-        m_KeyId: 36291841556480
-        m_Key: 
+        m_KeyId: 0
+        m_Key: ActiveSkill10103
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: Power
-      value: 15
-    - name: AttackAttribute
-      value: 1
     - name: ActiveSkillType
+      value: 1
+    - name: Power
+      value: 135
+    - name: AttackAttribute
       value: 1
   - id: 10104
     name:
       m_TableReference:
-        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+        m_TableCollectionName: Skill
       m_TableEntryReference:
-        m_KeyId: 36416907313152
-        m_Key: 
+        m_KeyId: 0
+        m_Key: ActiveSkill10104
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
+    - name: ActiveSkillType
+      value: 1
     - name: Power
-      value: 19
+      value: 176
     - name: AttackAttribute
       value: 1
   - id: 10105
     name:
       m_TableReference:
-        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+        m_TableCollectionName: Skill
       m_TableEntryReference:
-        m_KeyId: 36686898855936
-        m_Key: 
+        m_KeyId: 0
+        m_Key: ActiveSkill10105
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
+    - name: ActiveSkillType
+      value: 1
     - name: Power
-      value: 24
+      value: 234
     - name: AttackAttribute
       value: 1
   - id: 10106
     name:
       m_TableReference:
-        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+        m_TableCollectionName: Skill
       m_TableEntryReference:
-        m_KeyId: 36879601958912
-        m_Key: 
+        m_KeyId: 0
+        m_Key: ActiveSkill10106
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
+    - name: ActiveSkillType
+      value: 1
     - name: Power
-      value: 30
+      value: 308
     - name: AttackAttribute
       value: 1
   - id: 10107
     name:
       m_TableReference:
-        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+        m_TableCollectionName: Skill
       m_TableEntryReference:
-        m_KeyId: 38196483391488
-        m_Key: 
+        m_KeyId: 0
+        m_Key: ActiveSkill10107
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
+    - name: ActiveSkillType
+      value: 1
     - name: Power
-      value: 38
+      value: 397
     - name: AttackAttribute
       value: 1
   - id: 10108
     name:
       m_TableReference:
-        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+        m_TableCollectionName: Skill
       m_TableEntryReference:
-        m_KeyId: 38239969935360
-        m_Key: 
+        m_KeyId: 0
+        m_Key: ActiveSkill10108
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
+    - name: ActiveSkillType
+      value: 1
     - name: Power
-      value: 48
+      value: 503
     - name: AttackAttribute
       value: 1
   - id: 10109
     name:
       m_TableReference:
-        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+        m_TableCollectionName: Skill
       m_TableEntryReference:
-        m_KeyId: 38335604260864
-        m_Key: 
+        m_KeyId: 0
+        m_Key: ActiveSkill10109
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
+    - name: ActiveSkillType
+      value: 1
     - name: Power
-      value: 60
+      value: 624
     - name: AttackAttribute
       value: 1
   - id: 10110
     name:
       m_TableReference:
-        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+        m_TableCollectionName: Skill
       m_TableEntryReference:
-        m_KeyId: 38522389200896
-        m_Key: 
+        m_KeyId: 0
+        m_Key: ActiveSkill10110
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
+    - name: ActiveSkillType
+      value: 1
     - name: Power
-      value: 75
+      value: 762
     - name: AttackAttribute
       value: 1
+  - id: 10111
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10111
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: ActiveSkillType
+      value: 1
+    - name: Power
+      value: 900
+    - name: AttackAttribute
+      value: 1
+  - id: 10112
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10112
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: ActiveSkillType
+      value: 1
+    - name: Power
+      value: 132
+    - name: AttackAttribute
+      value: 1
+    - name: AbnormalStatusType
+      value: 1
+  - id: 10113
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10113
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: ActiveSkillType
+      value: 1
+    - name: Power
+      value: 228
+    - name: AttackAttribute
+      value: 1
+    - name: AbnormalStatusType
+      value: 1
+  - id: 10114
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10114
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: ActiveSkillType
+      value: 1
+    - name: Power
+      value: 388
+    - name: AttackAttribute
+      value: 1
+    - name: AbnormalStatusType
+      value: 1
+  - id: 10115
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10115
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: ActiveSkillType
+      value: 1
+    - name: Power
+      value: 612
+    - name: AttackAttribute
+      value: 1
+    - name: AbnormalStatusType
+      value: 1
+  - id: 10116
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10116
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: ActiveSkillType
+      value: 1
+    - name: Power
+      value: 132
+    - name: AttackAttribute
+      value: 1
+    - name: AbnormalStatusType
+      value: 2
+  - id: 10117
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10117
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: ActiveSkillType
+      value: 1
+    - name: Power
+      value: 228
+    - name: AttackAttribute
+      value: 1
+    - name: AbnormalStatusType
+      value: 2
+  - id: 10118
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10118
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: ActiveSkillType
+      value: 1
+    - name: Power
+      value: 388
+    - name: AttackAttribute
+      value: 1
+    - name: AbnormalStatusType
+      value: 2
+  - id: 10119
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10119
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: ActiveSkillType
+      value: 1
+    - name: Power
+      value: 612
+    - name: AttackAttribute
+      value: 1
+    - name: AbnormalStatusType
+      value: 2
   - id: 10201
     name:
       m_TableReference:
-        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+        m_TableCollectionName: Skill
       m_TableEntryReference:
-        m_KeyId: 560867012968448
-        m_Key: 
+        m_KeyId: 0
+        m_Key: ActiveSkill10201
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
+    - name: ActiveSkillType
+      value: 1
     - name: Power
-      value: 10
+      value: 100
     - name: AttackAttribute
       value: 2
   - id: 10202
     name:
       m_TableReference:
-        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+        m_TableCollectionName: Skill
       m_TableEntryReference:
-        m_KeyId: 561025171783680
-        m_Key: 
+        m_KeyId: 0
+        m_Key: ActiveSkill10202
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
+    - name: ActiveSkillType
+      value: 1
     - name: Power
-      value: 12
+      value: 109
     - name: AttackAttribute
       value: 2
   - id: 10203
     name:
       m_TableReference:
-        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+        m_TableCollectionName: Skill
       m_TableEntryReference:
-        m_KeyId: 561049855262720
-        m_Key: 
+        m_KeyId: 0
+        m_Key: ActiveSkill10203
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
+    - name: ActiveSkillType
+      value: 1
     - name: Power
-      value: 15
+      value: 135
     - name: AttackAttribute
       value: 2
   - id: 10204
     name:
       m_TableReference:
-        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+        m_TableCollectionName: Skill
       m_TableEntryReference:
-        m_KeyId: 561074136088576
-        m_Key: 
+        m_KeyId: 0
+        m_Key: ActiveSkill10204
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
+    - name: ActiveSkillType
+      value: 1
     - name: Power
-      value: 19
+      value: 176
     - name: AttackAttribute
       value: 2
   - id: 10205
     name:
       m_TableReference:
-        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+        m_TableCollectionName: Skill
       m_TableEntryReference:
-        m_KeyId: 561088530939904
-        m_Key: 
+        m_KeyId: 0
+        m_Key: ActiveSkill10205
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
+    - name: ActiveSkillType
+      value: 1
     - name: Power
-      value: 24
+      value: 234
     - name: AttackAttribute
       value: 2
   - id: 10206
     name:
       m_TableReference:
-        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+        m_TableCollectionName: Skill
       m_TableEntryReference:
-        m_KeyId: 561104230219776
-        m_Key: 
+        m_KeyId: 0
+        m_Key: ActiveSkill10206
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
+    - name: ActiveSkillType
+      value: 1
     - name: Power
-      value: 30
+      value: 308
     - name: AttackAttribute
       value: 2
   - id: 10207
     name:
       m_TableReference:
-        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+        m_TableCollectionName: Skill
       m_TableEntryReference:
-        m_KeyId: 561115965882368
-        m_Key: 
+        m_KeyId: 0
+        m_Key: ActiveSkill10207
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
+    - name: ActiveSkillType
+      value: 1
     - name: Power
-      value: 38
+      value: 397
     - name: AttackAttribute
       value: 2
   - id: 10208
     name:
       m_TableReference:
-        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+        m_TableCollectionName: Skill
       m_TableEntryReference:
-        m_KeyId: 561140049575936
-        m_Key: 
+        m_KeyId: 0
+        m_Key: ActiveSkill10208
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
+    - name: ActiveSkillType
+      value: 1
     - name: Power
-      value: 48
+      value: 503
     - name: AttackAttribute
       value: 2
   - id: 10209
     name:
       m_TableReference:
-        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+        m_TableCollectionName: Skill
       m_TableEntryReference:
-        m_KeyId: 561153349713920
-        m_Key: 
+        m_KeyId: 0
+        m_Key: ActiveSkill10209
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
+    - name: ActiveSkillType
+      value: 1
     - name: Power
-      value: 60
+      value: 624
     - name: AttackAttribute
       value: 2
   - id: 10210
     name:
       m_TableReference:
-        m_TableCollectionName: GUID:20c2f5dbbf12f054998da01b8be563b5
+        m_TableCollectionName: Skill
       m_TableEntryReference:
-        m_KeyId: 561166733737984
-        m_Key: 
+        m_KeyId: 0
+        m_Key: ActiveSkill10210
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
+    - name: ActiveSkillType
+      value: 1
     - name: Power
-      value: 75
+      value: 762
     - name: AttackAttribute
       value: 2
+  - id: 10211
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10211
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: ActiveSkillType
+      value: 1
+    - name: Power
+      value: 900
+    - name: AttackAttribute
+      value: 2
+  - id: 10212
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10212
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes: []
+  - id: 10213
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10213
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes: []
+  - id: 10214
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10214
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes: []
+  - id: 10215
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10215
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes: []
+  - id: 10216
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10216
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes: []
+  - id: 10217
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10217
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes: []
+  - id: 10218
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10218
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes: []
+  - id: 10219
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10219
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes: []
   references:
     version: 2
     RefIds: []

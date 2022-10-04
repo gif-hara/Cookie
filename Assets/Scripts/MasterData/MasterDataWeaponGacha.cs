@@ -12,6 +12,4 @@ namespace Cookie
     {
         public List<WeaponGacha> gachas;
     }
-    
-    
 }

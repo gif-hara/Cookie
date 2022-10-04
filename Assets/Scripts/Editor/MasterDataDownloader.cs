@@ -280,6 +280,36 @@ namespace Cookie
             AssetDatabase.SaveAssets();
         }
 
+        [MenuItem("HK/Cookie/Download MasterData/ActiveSkill")]
+        private static async void DownloadMasterDataActiveSkill()
+        {
+            var items = await UniTask.WhenAll(
+                DownloadFromSpreadSheet("ActiveSkillSpec"),
+                DownloadFromSpreadSheet("ActiveSkillAttribute")
+                );
+
+            var activeSkillSpecJson = JsonUtility.FromJson<ActiveSkillSpec.Json>(items.Item1);
+            var activeSkillAttributeJson = JsonUtility.FromJson<ActiveSkillAttribute.Json>(items.Item2);
+            var masterDataActiveSkill = AssetDatabase.LoadAssetAtPath<MasterDataActiveSkill>("Assets/MasterData/MasterDataActiveSkill.asset");
+            masterDataActiveSkill.skills.Clear();
+            masterDataActiveSkill.skills.AddRange(
+                activeSkillSpecJson.elements.Select(x => new ActiveSkill
+                {
+                    id = x.id,
+                    name = new LocalizedString("Skill", x.nameKey),
+                    attributes = activeSkillAttributeJson.elements
+                        .Where(a => a.activeSkillId == x.id)
+                        .Select(a => new Attribute
+                        {
+                            name = a.key,
+                            value = a.value
+                        })
+                        .ToList()
+                }));
+            EditorUtility.SetDirty(masterDataActiveSkill);
+            AssetDatabase.SaveAssets();
+        }
+
         private static async UniTask<string> DownloadFromSpreadSheet(string sheetName)
         {
             var sheetUrl = await File.ReadAllTextAsync("masterdata_sheet_url.txt");

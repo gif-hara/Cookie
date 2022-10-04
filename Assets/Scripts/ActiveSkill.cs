@@ -25,4 +25,36 @@ namespace Cookie
     public sealed class ActiveSkillWithWeight : WithWeight<ActiveSkill>
     {
     }
+
+    [Serializable]
+    public sealed class ActiveSkillSpec
+    {
+        public int id;
+
+        public string nameKey;
+        
+        [Serializable]
+        public class Json
+        {
+            public List<ActiveSkillSpec> elements;
+        }
+    }
+
+    [Serializable]
+    public sealed class ActiveSkillAttribute
+    {
+        public int id;
+
+        public int activeSkillId;
+
+        public string key;
+
+        public int value;
+        
+        [Serializable]
+        public class Json
+        {
+            public List<ActiveSkillAttribute> elements;
+        }
+    }
 }
