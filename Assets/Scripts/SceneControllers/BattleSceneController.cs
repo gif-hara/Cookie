@@ -74,7 +74,7 @@ namespace Cookie
             Debug.Log("BattleStart");
             GlobalMessagePipe.GetPublisher<BattleEvent.StartBattle>()
                 .Publish(BattleEvent.StartBattle.Get());
-            this.stateController.ChangeRequest(StateType.PlayerTurn);
+            this.stateController.ChangeRequest(this.player.Status.speed >= this.enemy.Status.speed ? StateType.PlayerTurn : StateType.EnemyTurn);
         }
 
         private async void OnEnterPlayerTurn(StateType prev)
