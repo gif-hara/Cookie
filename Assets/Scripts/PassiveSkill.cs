@@ -27,4 +27,36 @@ namespace Cookie
     public sealed class PassiveSkillWithWeight : WithWeight<PassiveSkill>
     {
     }
+    
+    [Serializable]
+    public sealed class PassiveSkillSpec
+    {
+        public int id;
+
+        public string nameKey;
+        
+        [Serializable]
+        public class Json
+        {
+            public List<PassiveSkillSpec> elements;
+        }
+    }
+    
+    [Serializable]
+    public sealed class PassiveSkillAttribute
+    {
+        public int id;
+
+        public int passiveSkillId;
+
+        public string key;
+
+        public int value;
+        
+        [Serializable]
+        public class Json
+        {
+            public List<PassiveSkillAttribute> elements;
+        }
+    }
 }

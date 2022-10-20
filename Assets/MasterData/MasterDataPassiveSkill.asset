@@ -16,86 +16,170 @@ MonoBehaviour:
   - id: 10101
     name:
       m_TableReference:
-        m_TableCollectionName: GUID:e71ebc19cd20e6b49b23f90b19934121
+        m_TableCollectionName: Skill
       m_TableEntryReference:
-        m_KeyId: 21471887360
-        m_Key: 
+        m_KeyId: 0
+        m_Key: PassiveSkill10101
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     skillType: 0
     attributes:
-    - name: Power
+    - name: PhysicalStrengthUpRate
       value: 10
   - id: 10102
     name:
       m_TableReference:
-        m_TableCollectionName: GUID:e71ebc19cd20e6b49b23f90b19934121
+        m_TableCollectionName: Skill
       m_TableEntryReference:
-        m_KeyId: 105009840128
-        m_Key: 
+        m_KeyId: 0
+        m_Key: PassiveSkill10102
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     skillType: 0
     attributes:
-    - name: Power
+    - name: PhysicalStrengthUpRate
       value: 15
   - id: 10103
     name:
       m_TableReference:
-        m_TableCollectionName: GUID:e71ebc19cd20e6b49b23f90b19934121
+        m_TableCollectionName: Skill
       m_TableEntryReference:
-        m_KeyId: 167563689984
-        m_Key: 
+        m_KeyId: 0
+        m_Key: PassiveSkill10103
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     skillType: 0
     attributes:
-    - name: Power
+    - name: PhysicalStrengthUpRate
       value: 20
   - id: 10201
     name:
       m_TableReference:
-        m_TableCollectionName: GUID:e71ebc19cd20e6b49b23f90b19934121
+        m_TableCollectionName: Skill
       m_TableEntryReference:
-        m_KeyId: 3085440319488
-        m_Key: 
+        m_KeyId: 0
+        m_Key: PassiveSkill10201
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 1
+    skillType: 0
     attributes:
-    - name: Power
+    - name: MagicStrengthUpRate
       value: 10
   - id: 10202
     name:
       m_TableReference:
-        m_TableCollectionName: GUID:e71ebc19cd20e6b49b23f90b19934121
+        m_TableCollectionName: Skill
       m_TableEntryReference:
-        m_KeyId: 3246623227904
-        m_Key: 
+        m_KeyId: 0
+        m_Key: PassiveSkill10202
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 1
+    skillType: 0
     attributes:
-    - name: Power
+    - name: MagicStrengthUpRate
       value: 15
   - id: 10203
     name:
       m_TableReference:
-        m_TableCollectionName: GUID:e71ebc19cd20e6b49b23f90b19934121
+        m_TableCollectionName: Skill
       m_TableEntryReference:
-        m_KeyId: 3307029594112
-        m_Key: 
+        m_KeyId: 0
+        m_Key: PassiveSkill10203
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 1
+    skillType: 0
     attributes:
-    - name: Power
+    - name: MagicStrengthUpRate
+      value: 20
+  - id: 10301
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: PassiveSkill10301
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    skillType: 0
+    attributes:
+    - name: PhysicalDefenseUpRate
+      value: 10
+  - id: 10302
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: PassiveSkill10302
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    skillType: 0
+    attributes:
+    - name: PhysicalDefenseUpRate
+      value: 15
+  - id: 10303
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: PassiveSkill10303
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    skillType: 0
+    attributes:
+    - name: PhysicalDefenseUpRate
+      value: 20
+  - id: 10401
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: PassiveSkill10401
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    skillType: 0
+    attributes:
+    - name: MagicDefenseUpRate
+      value: 10
+  - id: 10402
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: PassiveSkill10402
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    skillType: 0
+    attributes:
+    - name: MagicDefenseUpRate
+      value: 15
+  - id: 10403
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: PassiveSkill10403
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    skillType: 0
+    attributes:
+    - name: MagicDefenseUpRate
       value: 20
   references:
     version: 2

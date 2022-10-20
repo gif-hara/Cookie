@@ -21,7 +21,9 @@ namespace Cookie
 
         public int speed;
 
-        public List<ActiveSkill> activeSkills; 
+        public List<ActiveSkill> activeSkills;
+
+        public List<PassiveSkill> passiveSkills;
 
         public bool IsDead => this.hitPoint <= 0;
     }

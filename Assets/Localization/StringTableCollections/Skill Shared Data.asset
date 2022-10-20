@@ -1,0 +1,228 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Skill Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Skill
+  m_TableCollectionNameGuidString: fe8b5a2e3279f1146b7c7649c18c307d
+  m_Entries:
+  - m_Id: 2197166424064
+    m_Key: ActiveSkill10101
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197195784192
+    m_Key: ActiveSkill10102
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197199978496
+    m_Key: ActiveSkill10103
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197199978497
+    m_Key: ActiveSkill10104
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172800
+    m_Key: ActiveSkill10105
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172801
+    m_Key: ActiveSkill10106
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172802
+    m_Key: ActiveSkill10107
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172803
+    m_Key: ActiveSkill10108
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172804
+    m_Key: ActiveSkill10109
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172805
+    m_Key: ActiveSkill10110
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172806
+    m_Key: ActiveSkill10111
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172807
+    m_Key: ActiveSkill10112
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172808
+    m_Key: ActiveSkill10113
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172809
+    m_Key: ActiveSkill10114
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172810
+    m_Key: ActiveSkill10115
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172811
+    m_Key: ActiveSkill10116
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172812
+    m_Key: ActiveSkill10117
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172813
+    m_Key: ActiveSkill10118
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172814
+    m_Key: ActiveSkill10119
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172815
+    m_Key: ActiveSkill10201
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172816
+    m_Key: ActiveSkill10202
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172817
+    m_Key: ActiveSkill10203
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172818
+    m_Key: ActiveSkill10204
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172819
+    m_Key: ActiveSkill10205
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172820
+    m_Key: ActiveSkill10206
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172821
+    m_Key: ActiveSkill10207
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172822
+    m_Key: ActiveSkill10208
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172823
+    m_Key: ActiveSkill10209
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172824
+    m_Key: ActiveSkill10210
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172825
+    m_Key: ActiveSkill10211
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172826
+    m_Key: ActiveSkill10212
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172827
+    m_Key: ActiveSkill10213
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172828
+    m_Key: ActiveSkill10214
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172829
+    m_Key: ActiveSkill10215
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172830
+    m_Key: ActiveSkill10216
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172831
+    m_Key: ActiveSkill10217
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172832
+    m_Key: ActiveSkill10218
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172833
+    m_Key: ActiveSkill10219
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172834
+    m_Key: PassiveSkill10101
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172835
+    m_Key: PassiveSkill10102
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172836
+    m_Key: PassiveSkill10103
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172837
+    m_Key: PassiveSkill10201
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172838
+    m_Key: PassiveSkill10202
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172839
+    m_Key: PassiveSkill10203
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172840
+    m_Key: PassiveSkill10301
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172841
+    m_Key: PassiveSkill10302
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172842
+    m_Key: PassiveSkill10303
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172843
+    m_Key: PassiveSkill10401
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172844
+    m_Key: PassiveSkill10402
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2197204172845
+    m_Key: PassiveSkill10403
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1121849771356061700
+  references:
+    version: 2
+    RefIds:
+    - rid: 1121849771356061700
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1666271279785

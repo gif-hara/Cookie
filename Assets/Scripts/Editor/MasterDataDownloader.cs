@@ -310,6 +310,36 @@ namespace Cookie
             AssetDatabase.SaveAssets();
         }
 
+        [MenuItem("HK/Cookie/Download MasterData/PassiveSkill")]
+        private static async void DownloadMasterDataPassiveSkill()
+        {
+            var items = await UniTask.WhenAll(
+                DownloadFromSpreadSheet("PassiveSkillSpec"),
+                DownloadFromSpreadSheet("PassiveSkillAttribute")
+                );
+
+            var passiveSkillSpecJson = JsonUtility.FromJson<PassiveSkillSpec.Json>(items.Item1);
+            var passiveSkillAttributeJson = JsonUtility.FromJson<PassiveSkillAttribute.Json>(items.Item2);
+            var masterDataPassiveSkill = AssetDatabase.LoadAssetAtPath<MasterDataPassiveSkill>("Assets/MasterData/MasterDataPassiveSkill.asset");
+            masterDataPassiveSkill.skills.Clear();
+            masterDataPassiveSkill.skills.AddRange(
+                passiveSkillSpecJson.elements.Select(x => new PassiveSkill
+                {
+                    id = x.id,
+                    name = new LocalizedString("Skill", x.nameKey),
+                    attributes = passiveSkillAttributeJson.elements
+                        .Where(a => a.passiveSkillId == x.id)
+                        .Select(a => new Attribute
+                        {
+                            name = a.key,
+                            value = a.value
+                        })
+                        .ToList()
+                }));
+            EditorUtility.SetDirty(masterDataPassiveSkill);
+            AssetDatabase.SaveAssets();
+        }
+
         private static async UniTask<string> DownloadFromSpreadSheet(string sheetName)
         {
             var sheetUrl = await File.ReadAllTextAsync("masterdata_sheet_url.txt");

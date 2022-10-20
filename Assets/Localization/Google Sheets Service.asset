@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ApiKey: 
   m_ClientId: 567456815912-s7v8hejfbbp5bvjrbvlseb7mro6t8mtn.apps.googleusercontent.com
-  m_ClientSecret: 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
+  m_ClientSecret: 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
   m_AuthenticationType: 1
   m_ApplicationName: HK
   m_NewSheetProperties:
