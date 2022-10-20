@@ -99,5 +99,9 @@ namespace Cookie
         public const string AttackAttribute = "AttackAttribute";
 
         public const string ActiveSkillType = "ActiveSkillType";
+
+        public const string PhysicalStrengthUpRate = "PhysicalStrengthUpRate";
+
+        public const string MagicStrengthUpRate = "MagicStrengthUpRate";
     }
 }

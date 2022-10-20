@@ -14,8 +14,6 @@ namespace Cookie
         
         public LocalizedString name;
         
-        public PassiveSkillType skillType;
-        
         public List<Attribute> attributes = new();
 
         public int Id => this.id;

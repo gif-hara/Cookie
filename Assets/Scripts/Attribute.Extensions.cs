@@ -8,7 +8,7 @@ namespace Cookie
     /// <summary>
     /// 
     /// </summary>
-    public static class Extensions
+    public static partial class Extensions
     {
         public static Attribute Get(this IEnumerable<Attribute> self, string name)
         {
@@ -16,6 +16,11 @@ namespace Cookie
             Assert.IsNotNull(result, $"{name}に対応する{typeof(Attribute)}は存在しません");
 
             return result;
+        }
+
+        public static bool Contains(this IEnumerable<Attribute> self, string key)
+        {
+            return self.Any(x => x.name == key);
         }
     }
 }

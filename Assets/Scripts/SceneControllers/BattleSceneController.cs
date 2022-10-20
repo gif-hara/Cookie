@@ -142,7 +142,7 @@ namespace Cookie
                     UpdateHitPointSlider();
                 })
                 .AddTo(bag);
-
+            
             return bag.Build();
         }
     }

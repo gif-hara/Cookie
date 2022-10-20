@@ -23,7 +23,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: PhysicalStrengthUpRate
       value: 10
@@ -37,7 +36,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: PhysicalStrengthUpRate
       value: 15
@@ -51,7 +49,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: PhysicalStrengthUpRate
       value: 20
@@ -65,7 +62,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: MagicStrengthUpRate
       value: 10
@@ -79,7 +75,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: MagicStrengthUpRate
       value: 15
@@ -93,7 +88,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: MagicStrengthUpRate
       value: 20
@@ -107,7 +101,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: PhysicalDefenseUpRate
       value: 10
@@ -121,7 +114,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: PhysicalDefenseUpRate
       value: 15
@@ -135,7 +127,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: PhysicalDefenseUpRate
       value: 20
@@ -149,7 +140,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: MagicDefenseUpRate
       value: 10
@@ -163,7 +153,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: MagicDefenseUpRate
       value: 15
@@ -177,7 +166,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    skillType: 0
     attributes:
     - name: MagicDefenseUpRate
       value: 20
