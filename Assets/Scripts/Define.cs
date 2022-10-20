@@ -103,5 +103,9 @@ namespace Cookie
         public const string PhysicalStrengthUpRate = "PhysicalStrengthUpRate";
 
         public const string MagicStrengthUpRate = "MagicStrengthUpRate";
+
+        public const string PhysicalDefenseUpRate = "PhysicalDefenseUpRate";
+
+        public const string MagicDefenseUpRate = "MagicDefenseUpRate";
     }
 }

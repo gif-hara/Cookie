@@ -275,7 +275,7 @@ MonoBehaviour:
     magicDefense: 80
     speed: 0
     activeSkillIds: 75270000
-    passiveSkillIds: 
+    passiveSkillIds: 3f2800003f2800003f2800003f2800003f280000
 --- !u!1001 &1477957838
 PrefabInstance:
   m_ObjectHideFlags: 0

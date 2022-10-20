@@ -19,6 +19,8 @@ namespace Cookie
             var physicalStrength = Mathf.FloorToInt(attacker.physicalStrength * GetPhysicalStrengthUpRate(attacker.passiveSkills));
             var magicStrength = Mathf.FloorToInt(attacker.magicStrength * GetMagicStrengthUpRate(attacker.passiveSkills));
             var defense = attackAttribute == AttackAttribute.Physical ? target.physicalDefense : target.magicDefense;
+            var defenseUpRate = attackAttribute == AttackAttribute.Physical ? GetPhysicalDefenseUpRate(target.passiveSkills) : GetMagicDefenseUpRate(target.passiveSkills);
+            defense = Mathf.FloorToInt(defense * defenseUpRate);
             var result = GetPower(physicalStrength, magicStrength, attackerActiveSkill) / defense;
 
             return result;
@@ -43,14 +45,22 @@ namespace Cookie
 
         public static float GetPhysicalStrengthUpRate(IEnumerable<PassiveSkill> passiveSkills)
         {
-            var result = 1.0f + ((float)passiveSkills.GetAllAttributeValue(SkillAttributeName.PhysicalStrengthUpRate) / 100);
-            return result;
+            return 1.0f + ((float)passiveSkills.GetAllAttributeValue(SkillAttributeName.PhysicalStrengthUpRate) / 100);
         }
 
         public static float GetMagicStrengthUpRate(IEnumerable<PassiveSkill> passiveSkills)
         {
-            var result = 1.0f + ((float)passiveSkills.GetAllAttributeValue(SkillAttributeName.MagicStrengthUpRate) / 100);
-            return result;
+            return 1.0f + ((float)passiveSkills.GetAllAttributeValue(SkillAttributeName.MagicStrengthUpRate) / 100);
+        }
+
+        public static float GetPhysicalDefenseUpRate(IEnumerable<PassiveSkill> passiveSkills)
+        {
+            return 1.0f + ((float)passiveSkills.GetAllAttributeValue(SkillAttributeName.PhysicalDefenseUpRate) / 100);
+        }
+
+        public static float GetMagicDefenseUpRate(IEnumerable<PassiveSkill> passiveSkills)
+        {
+            return 1.0f + ((float)passiveSkills.GetAllAttributeValue(SkillAttributeName.MagicDefenseUpRate) / 100);
         }
     }
 }
