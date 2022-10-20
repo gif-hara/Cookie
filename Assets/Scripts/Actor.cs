@@ -66,7 +66,7 @@ namespace Cookie
 
         private void TakeDamage(int damage)
         {
-            this.Status.hitPoint -= damage;
+            this.Status.hitPoint.Value -= damage;
             Debug.Log($"TakeDamage {this.actorType} hitPoint = {this.Status.hitPoint}");
         }
     }

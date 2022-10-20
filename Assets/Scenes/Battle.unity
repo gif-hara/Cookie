@@ -207,6 +207,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &831995860 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1507761581150842893, guid: 39a8a0f839c34ee4b85c4818d5dd7ccb, type: 3}
+  m_PrefabInstance: {fileID: 1477957838}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1313178980
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,6 +256,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 008b0380b7bee514ea7a53b6aa3265ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiParent: {fileID: 831995860}
+  battleUIPrefab: {fileID: 7410409703368559457, guid: d9fff1ac1156d2243805555cf0aca2dc, type: 3}
   playerStatus:
     hitPoint: 500
     physicalStrength: 100
@@ -259,6 +266,7 @@ MonoBehaviour:
     magicDefense: 80
     speed: 0
     activeSkillIds: 752700007627000077270000
+    passiveSkillIds: 
   enemyStatus:
     hitPoint: 500
     physicalStrength: 100
@@ -267,6 +275,7 @@ MonoBehaviour:
     magicDefense: 80
     speed: 0
     activeSkillIds: 75270000
+    passiveSkillIds: 
 --- !u!1001 &1477957838
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Cysharp.Threading.Tasks;
 
 namespace Cookie
 {
@@ -30,8 +31,8 @@ namespace Cookie
         {
             return new ActorStatus
             {
-                hitPoint = this.hitPoint,
-                hitPointMax = this.hitPoint,
+                hitPoint = new AsyncReactiveProperty<int>(this.hitPoint),
+                hitPointMax = new AsyncReactiveProperty<int>(this.hitPoint),
                 physicalStrength = this.physicalStrength,
                 magicStrength = this.magicStrength,
                 physicalDefense = this.physicalDefense,

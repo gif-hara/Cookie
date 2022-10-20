@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 
 namespace Cookie
 {
@@ -7,9 +8,9 @@ namespace Cookie
     /// </summary>
     public sealed class ActorStatus
     {
-        public int hitPoint;
+        public AsyncReactiveProperty<int> hitPoint;
 
-        public int hitPointMax;
+        public AsyncReactiveProperty<int> hitPointMax;
 
         public int physicalStrength;
 
