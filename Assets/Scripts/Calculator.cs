@@ -91,5 +91,10 @@ namespace Cookie
         {
             return actorStatus.hitPointMax / 5;
         }
+
+        public static bool CanInvokeParalysis()
+        {
+            return Random.value > 0.66f;
+        }
     }
 }

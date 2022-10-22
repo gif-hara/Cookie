@@ -42,6 +42,13 @@ namespace Cookie
                     Debug.Log($"StartTurn {this.actorType}");
                     foreach (var skill in this.Status.activeSkills)
                     {
+                        if (this.Status.abnormalStatuses.Contains(AbnormalStatus.Paralysis) && Calculator.CanInvokeParalysis())
+                        {
+                            Debug.Log("TODO Paralysis");
+                            await UniTask.Delay(TimeSpan.FromSeconds(1.0f));
+                            continue;
+                        }
+                        
                         var skillType = (ActiveSkillType)skill.attributes.Get(SkillAttributeName.ActiveSkillType).value;
                         switch (skillType)
                         {
