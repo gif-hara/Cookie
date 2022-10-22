@@ -266,7 +266,7 @@ MonoBehaviour:
     magicDefense: 80
     speed: 0
     activeSkillIds: 752700003d280000
-    passiveSkillIds: 7727000077270000772700007727000077270000
+    passiveSkillIds: 772700007727000077270000772700007727000005290000
   enemyStatus:
     hitPoint: 500
     physicalStrength: 100

@@ -48,7 +48,7 @@ namespace Cookie
                                 x.Opponent.TakeDamage(Calculator.GetDamage(this.Status, skill, x.Opponent.Status));
                                 break;
                             case ActiveSkillType.Recovery:
-                                this.Recovery(Calculator.GetRecoveryRate(skill));
+                                this.Recovery(Calculator.GetRecoveryRate(this.Status, skill));
                                 break;
                             default:
                                 Assert.IsTrue(false, $"{skillType}は未対応です");

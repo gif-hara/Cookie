@@ -63,9 +63,23 @@ namespace Cookie
             return 1.0f + ((float)passiveSkills.GetAllAttributeValue(SkillAttributeName.MagicDefenseUpRate) / 100);
         }
 
-        public static float GetRecoveryRate(ActiveSkill activeSkill)
+        /// <summary>
+        /// 回復力UPの倍率を返す
+        /// </summary>
+        public static float GetRecoveryUpRate(IEnumerable<PassiveSkill> passiveSkills)
         {
-            return (float)activeSkill.attributes.Get(SkillAttributeName.Power).value / 100;
+            return 1.0f + ((float)passiveSkills.GetAllAttributeValue(SkillAttributeName.RecoveryUpRate) / 100);
+        }
+        
+        /// <summary>
+        /// 回復量を返す
+        /// </summary>
+        public static float GetRecoveryRate(ActorStatus actorStatus, ActiveSkill activeSkill)
+        {
+            var result = (float)activeSkill.attributes.Get(SkillAttributeName.Power).value / 100;
+            result *= GetRecoveryUpRate(actorStatus.passiveSkills);
+
+            return result;
         }
     }
 }
