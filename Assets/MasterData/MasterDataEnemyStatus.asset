@@ -30,6 +30,7 @@ MonoBehaviour:
     magicDefense: 80
     speed: 48
     money: 600
+    activeSkills: 7527000075270000
   - id: 2
     nameKey:
       m_TableReference:
@@ -47,6 +48,7 @@ MonoBehaviour:
     magicDefense: 81
     speed: 48
     money: 888
+    activeSkills: 
   - id: 3
     nameKey:
       m_TableReference:
@@ -64,6 +66,7 @@ MonoBehaviour:
     magicDefense: 84
     speed: 50
     money: 1788
+    activeSkills: 
   - id: 4
     nameKey:
       m_TableReference:
@@ -81,6 +84,7 @@ MonoBehaviour:
     magicDefense: 85
     speed: 53
     money: 2040
+    activeSkills: 
   - id: 5
     nameKey:
       m_TableReference:
@@ -98,6 +102,7 @@ MonoBehaviour:
     magicDefense: 88
     speed: 54
     money: 2940
+    activeSkills: 
   - id: 6
     nameKey:
       m_TableReference:
@@ -115,6 +120,7 @@ MonoBehaviour:
     magicDefense: 92
     speed: 57
     money: 4056
+    activeSkills: 
   - id: 7
     nameKey:
       m_TableReference:
@@ -132,6 +138,7 @@ MonoBehaviour:
     magicDefense: 96
     speed: 60
     money: 5388
+    activeSkills: 
   - id: 8
     nameKey:
       m_TableReference:
@@ -149,6 +156,7 @@ MonoBehaviour:
     magicDefense: 98
     speed: 61
     money: 5880
+    activeSkills: 
   - id: 9
     nameKey:
       m_TableReference:
@@ -166,6 +174,7 @@ MonoBehaviour:
     magicDefense: 100
     speed: 62
     money: 6396
+    activeSkills: 
   - id: 10
     nameKey:
       m_TableReference:
@@ -183,6 +192,7 @@ MonoBehaviour:
     magicDefense: 550
     speed: 285
     money: 120588
+    activeSkills: 
   references:
     version: 2
     RefIds: []

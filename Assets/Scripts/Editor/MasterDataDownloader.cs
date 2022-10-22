@@ -258,9 +258,13 @@ namespace Cookie
         [MenuItem("HK/Cookie/Download MasterData/EnemyStatus")]
         private static async void DownloadMasterDataEnemyStatus()
         {
-            var enemySpecText = await DownloadFromSpreadSheet("EnemySpec");
+            var items = await UniTask.WhenAll(
+                DownloadFromSpreadSheet("EnemySpec"),
+                DownloadFromSpreadSheet("EnemyActiveSkill")
+                );
 
-            var enemySpecJson = JsonUtility.FromJson<EnemySpec.Json>(enemySpecText);
+            var enemySpecJson = JsonUtility.FromJson<EnemySpec.Json>(items.Item1);
+            var enemyActiveSkillJson = JsonUtility.FromJson<EnemyActiveSkill.Json>(items.Item2);
             var masterDataEnemyStatus = AssetDatabase.LoadAssetAtPath<MasterDataEnemyStatus>("Assets/MasterData/MasterDataEnemyStatus.asset");
             masterDataEnemyStatus.enemyStatusList.Clear();
             masterDataEnemyStatus.enemyStatusList.AddRange(
@@ -274,7 +278,11 @@ namespace Cookie
                     physicalDefense = x.physicalDefense,
                     magicDefense = x.magicDefense,
                     speed = x.speed,
-                    money = x.money
+                    money = x.money,
+                    activeSkills = enemyActiveSkillJson.elements
+                        .Where(enemyActiveSkill => enemyActiveSkill.enemyId == x.id)
+                        .Select(enemyActiveSkill => enemyActiveSkill.activeSkillId)
+                        .ToList()
                 }));
             EditorUtility.SetDirty(masterDataEnemyStatus);
             AssetDatabase.SaveAssets();

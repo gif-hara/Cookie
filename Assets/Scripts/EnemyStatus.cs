@@ -30,6 +30,8 @@ namespace Cookie
 
         public int money;
 
+        public List<int> activeSkills;
+
         public string Name => this.nameKey.GetLocalizedString();
 
         public ActorStatusBuilder ToActorStatusBuilder()
@@ -42,7 +44,7 @@ namespace Cookie
                 physicalDefense = this.physicalDefense,
                 magicDefense = this.magicDefense,
                 speed = this.speed,
-                activeSkillIds = new List<int>()
+                activeSkillIds = activeSkills
             };
         }
     }
@@ -75,6 +77,22 @@ namespace Cookie
         public class Json
         {
             public List<EnemySpec> elements;
+        }
+    }
+    
+    [Serializable]
+    public sealed class EnemyActiveSkill
+    {
+        public int id;
+
+        public int enemyId;
+
+        public int activeSkillId;
+
+        [Serializable]
+        public class Json
+        {
+            public List<EnemyActiveSkill> elements;
         }
     }
 }
