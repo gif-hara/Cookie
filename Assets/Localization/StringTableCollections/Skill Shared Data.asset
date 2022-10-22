@@ -167,6 +167,22 @@ MonoBehaviour:
     m_Key: ActiveSkill10219
     m_Metadata:
       m_Items: []
+  - m_Id: 558961070899200
+    m_Key: ActiveSkill10301
+    m_Metadata:
+      m_Items: []
+  - m_Id: 558961091870720
+    m_Key: ActiveSkill10302
+    m_Metadata:
+      m_Items: []
+  - m_Id: 558961091870721
+    m_Key: ActiveSkill10303
+    m_Metadata:
+      m_Items: []
+  - m_Id: 558961091870722
+    m_Key: ActiveSkill10304
+    m_Metadata:
+      m_Items: []
   - m_Id: 2197204172834
     m_Key: PassiveSkill10101
     m_Metadata:

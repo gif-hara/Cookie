@@ -549,7 +549,15 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    attributes: []
+    attributes:
+    - name: ActiveSkillType
+      value: 1
+    - name: Power
+      value: 132
+    - name: AttackAttribute
+      value: 2
+    - name: AbnormalStatusType
+      value: 3
   - id: 10213
     name:
       m_TableReference:
@@ -560,7 +568,15 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    attributes: []
+    attributes:
+    - name: ActiveSkillType
+      value: 1
+    - name: Power
+      value: 228
+    - name: AttackAttribute
+      value: 2
+    - name: AbnormalStatusType
+      value: 3
   - id: 10214
     name:
       m_TableReference:
@@ -571,7 +587,15 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    attributes: []
+    attributes:
+    - name: ActiveSkillType
+      value: 1
+    - name: Power
+      value: 388
+    - name: AttackAttribute
+      value: 2
+    - name: AbnormalStatusType
+      value: 3
   - id: 10215
     name:
       m_TableReference:
@@ -582,7 +606,15 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    attributes: []
+    attributes:
+    - name: ActiveSkillType
+      value: 1
+    - name: Power
+      value: 612
+    - name: AttackAttribute
+      value: 2
+    - name: AbnormalStatusType
+      value: 3
   - id: 10216
     name:
       m_TableReference:
@@ -593,7 +625,15 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    attributes: []
+    attributes:
+    - name: ActiveSkillType
+      value: 1
+    - name: Power
+      value: 132
+    - name: AttackAttribute
+      value: 2
+    - name: AbnormalStatusType
+      value: 4
   - id: 10217
     name:
       m_TableReference:
@@ -604,7 +644,15 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    attributes: []
+    attributes:
+    - name: ActiveSkillType
+      value: 1
+    - name: Power
+      value: 228
+    - name: AttackAttribute
+      value: 2
+    - name: AbnormalStatusType
+      value: 4
   - id: 10218
     name:
       m_TableReference:
@@ -615,7 +663,15 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    attributes: []
+    attributes:
+    - name: ActiveSkillType
+      value: 1
+    - name: Power
+      value: 388
+    - name: AttackAttribute
+      value: 2
+    - name: AbnormalStatusType
+      value: 4
   - id: 10219
     name:
       m_TableReference:
@@ -626,7 +682,75 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    attributes: []
+    attributes:
+    - name: ActiveSkillType
+      value: 1
+    - name: Power
+      value: 612
+    - name: AttackAttribute
+      value: 2
+    - name: AbnormalStatusType
+      value: 4
+  - id: 10301
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10301
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: ActiveSkillType
+      value: 2
+    - name: Power
+      value: 5
+  - id: 10302
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10302
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: ActiveSkillType
+      value: 2
+    - name: Power
+      value: 10
+  - id: 10303
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10303
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: ActiveSkillType
+      value: 2
+    - name: Power
+      value: 15
+  - id: 10304
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10304
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: ActiveSkillType
+      value: 2
+    - name: Power
+      value: 20
   references:
     version: 2
     RefIds: []
