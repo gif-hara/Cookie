@@ -48,6 +48,8 @@ namespace Cookie
                                 x.Opponent.TakeDamage(Calculator.GetDamage(this.Status, skill, x.Opponent.Status));
                                 break;
                             case ActiveSkillType.Recovery:
+                                this.Recovery(Calculator.GetRecoveryRate(skill));
+                                break;
                             default:
                                 Assert.IsTrue(false, $"{skillType}は未対応です");
                                 break;
@@ -67,7 +69,13 @@ namespace Cookie
         private void TakeDamage(int damage)
         {
             this.Status.hitPoint.Value -= damage;
-            Debug.Log($"TakeDamage {this.actorType} hitPoint = {this.Status.hitPoint}");
+        }
+
+        private void Recovery(float rate)
+        {
+            var recoveryAmount = Mathf.FloorToInt(this.Status.hitPointMax * rate);
+            var hitPoint = Mathf.Min(this.Status.hitPoint + recoveryAmount, this.Status.hitPointMax);
+            this.Status.hitPoint.Value = hitPoint;
         }
     }
 }

@@ -62,5 +62,10 @@ namespace Cookie
         {
             return 1.0f + ((float)passiveSkills.GetAllAttributeValue(SkillAttributeName.MagicDefenseUpRate) / 100);
         }
+
+        public static float GetRecoveryRate(ActiveSkill activeSkill)
+        {
+            return (float)activeSkill.attributes.Get(SkillAttributeName.Power).value / 100;
+        }
     }
 }
