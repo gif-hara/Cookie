@@ -23,6 +23,16 @@ namespace Cookie
             defense = Mathf.FloorToInt(defense * defenseUpRate);
             var result = GetPower(physicalStrength, magicStrength, attackerActiveSkill) / defense;
 
+            if (attacker.abnormalStatuses.Contains(AbnormalStatus.Debility))
+            {
+                result = Mathf.FloorToInt(result * (2.0f / 3.0f));
+            }
+
+            if (target.abnormalStatuses.Contains(AbnormalStatus.Fragility))
+            {
+                result = Mathf.FloorToInt(result * (4.0f / 3.0f));
+            }
+
             return result;
         }
 
