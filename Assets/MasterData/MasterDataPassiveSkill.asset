@@ -169,6 +169,45 @@ MonoBehaviour:
     attributes:
     - name: MagicDefenseUpRate
       value: 20
+  - id: 10501
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: PassiveSkill10501
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: RecoveryUpRate
+      value: 10
+  - id: 10502
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: PassiveSkill10502
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: RecoveryUpRate
+      value: 15
+  - id: 10503
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: PassiveSkill10503
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: RecoveryUpRate
+      value: 20
   references:
     version: 2
     RefIds: []

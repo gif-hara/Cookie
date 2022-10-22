@@ -231,6 +231,18 @@ MonoBehaviour:
     m_Key: PassiveSkill10403
     m_Metadata:
       m_Items: []
+  - m_Id: 562961870684160
+    m_Key: PassiveSkill10501
+    m_Metadata:
+      m_Items: []
+  - m_Id: 562961879072768
+    m_Key: PassiveSkill10502
+    m_Metadata:
+      m_Items: []
+  - m_Id: 562961879072769
+    m_Key: PassiveSkill10503
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

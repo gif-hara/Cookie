@@ -234,6 +234,18 @@ MonoBehaviour:
     m_Localized: "\u56DE\u5FA9Lv.EX"
     m_Metadata:
       m_Items: []
+  - m_Id: 562961870684160
+    m_Localized: "\u56DE\u5FA9\u529BUP\u3010\u5C0F\u3011"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 562961879072768
+    m_Localized: "\u56DE\u5FA9\u529BUP\u3010\u4E2D\u3011"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 562961879072769
+    m_Localized: "\u56DE\u5FA9\u529BUP\u3010\u5927\u3011"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
