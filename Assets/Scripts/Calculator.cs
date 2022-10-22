@@ -81,5 +81,10 @@ namespace Cookie
 
             return result;
         }
+
+        public static bool CanAddAbnormalStatus()
+        {
+            return Random.value > 0.5f;
+        }
     }
 }

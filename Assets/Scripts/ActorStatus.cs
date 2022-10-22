@@ -27,6 +27,8 @@ namespace Cookie
 
         public List<PassiveSkill> passiveSkills;
 
+        public HashSet<AbnormalStatus> abnormalStatuses;
+
         public bool IsDead => this.hitPoint <= 0;
     }
 }

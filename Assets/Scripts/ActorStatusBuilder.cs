@@ -39,7 +39,8 @@ namespace Cookie
                 magicDefense = this.magicDefense,
                 speed = this.speed,
                 activeSkills = this.activeSkillIds.Select(x => MasterDataActiveSkill.Instance.skills.Find(y => y.id == x)).ToList(),
-                passiveSkills = this.passiveSkillIds.Select(x => MasterDataPassiveSkill.Instance.skills.Find(y => y.id == x)).ToList()
+                passiveSkills = this.passiveSkillIds.Select(x => MasterDataPassiveSkill.Instance.skills.Find(y => y.id == x)).ToList(),
+                abnormalStatuses = new HashSet<AbnormalStatus>()
             };
         }
     }

@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Cysharp.Threading.Tasks;
 using MessagePipe;
 using UnityEngine;
@@ -46,6 +47,11 @@ namespace Cookie
                         {
                             case ActiveSkillType.Attack:
                                 x.Opponent.TakeDamage(Calculator.GetDamage(this.Status, skill, x.Opponent.Status));
+                                if (skill.attributes.Contains(SkillAttributeName.AbnormalStatusType) && Calculator.CanAddAbnormalStatus())
+                                {
+                                    var abnormalStatus = (AbnormalStatus)skill.attributes.Get(SkillAttributeName.AbnormalStatusType).value;
+                                    x.Opponent.Status.abnormalStatuses.Add(abnormalStatus);
+                                }
                                 break;
                             case ActiveSkillType.Recovery:
                                 this.Recovery(Calculator.GetRecoveryRate(this.Status, skill));

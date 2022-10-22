@@ -48,6 +48,29 @@ namespace Cookie
         Epic,
         Legendary,
     }
+
+    public enum AbnormalStatus
+    {
+        /// <summary>
+        /// 毒
+        /// </summary>
+        Poison = 1,
+        
+        /// <summary>
+        /// 麻痺
+        /// </summary>
+        Paralysis,
+        
+        /// <summary>
+        /// 衰弱
+        /// </summary>
+        Debility,
+        
+        /// <summary>
+        /// 脆弱
+        /// </summary>
+        Fragility,
+    }
     
     public static class SkillAttributeName
     {
@@ -66,5 +89,7 @@ namespace Cookie
         public const string MagicDefenseUpRate = "MagicDefenseUpRate";
         
         public const string RecoveryUpRate = "RecoveryUpRate";
+
+        public const string AbnormalStatusType = "AbnormalStatusType";
     }
 }
