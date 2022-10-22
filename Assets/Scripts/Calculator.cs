@@ -86,5 +86,10 @@ namespace Cookie
         {
             return Random.value > 0.5f;
         }
+
+        public static int GetPoisonDamage(ActorStatus actorStatus)
+        {
+            return actorStatus.hitPointMax / 5;
+        }
     }
 }

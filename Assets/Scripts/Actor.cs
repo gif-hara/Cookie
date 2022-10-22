@@ -68,6 +68,12 @@ namespace Cookie
                             break;
                         }
                     }
+
+                    if (this.Status.abnormalStatuses.Contains(AbnormalStatus.Poison))
+                    {
+                        this.TakeDamage(Calculator.GetPoisonDamage(this.Status));
+                        await UniTask.Delay(TimeSpan.FromSeconds(1.0f));
+                    }
                 })
                 .AddTo(bag);
         }
