@@ -22,11 +22,6 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 20c2f5dbbf12f054998da01b8be563b5
-    m_Address: Assets/Localization/StringTableCollections/Skill Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a21d25bf393326f429a106453a6e6a3f
     m_Address: Assets/Localization/StringTableCollections/Armor Shared Data.asset
     m_ReadOnly: 1
@@ -34,11 +29,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 088430a797f58bd47bdf3bed5d75d1f6
     m_Address: Assets/Localization/StringTableCollections/Gacha Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e71ebc19cd20e6b49b23f90b19934121
-    m_Address: Assets/Localization/StringTableCollections/PassiveSkill Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

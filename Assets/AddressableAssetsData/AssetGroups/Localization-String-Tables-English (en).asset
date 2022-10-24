@@ -24,13 +24,6 @@ MonoBehaviour:
     - Locale-en
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ff953f89166d96b4f84130d3d7495692
-    m_Address: ActiveSkill_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 45446b3338601d943bdb973495ea3d8e
     m_Address: Armor_en
     m_ReadOnly: 1
@@ -40,13 +33,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f0050f3e41b2cad4b9c3c3e0f017bf8d
     m_Address: Gacha_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9d1a43cca59d04a499f91670dc4ee45b
-    m_Address: PassiveSkill_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
