@@ -24,11 +24,11 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 100
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 1
   - id: 10102
     name:
@@ -41,11 +41,11 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 109
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 1
   - id: 10103
     name:
@@ -58,11 +58,11 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 135
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 1
   - id: 10104
     name:
@@ -75,11 +75,11 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 176
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 1
   - id: 10105
     name:
@@ -92,11 +92,11 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 234
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 1
   - id: 10106
     name:
@@ -109,11 +109,11 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 308
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 1
   - id: 10107
     name:
@@ -126,11 +126,11 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 397
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 1
   - id: 10108
     name:
@@ -143,11 +143,11 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 503
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 1
   - id: 10109
     name:
@@ -160,11 +160,11 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 624
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 1
   - id: 10110
     name:
@@ -177,11 +177,11 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 762
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 1
   - id: 10111
     name:
@@ -194,11 +194,11 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 900
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 1
   - id: 10112
     name:
@@ -211,13 +211,15 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 132
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 1
-    - name: AbnormalStatusType
+    - name: Behaviour.AddAbnormalStatus
+      value: 1
+    - name: AddAbnormalStatus.Type
       value: 1
   - id: 10113
     name:
@@ -230,13 +232,15 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 228
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 1
-    - name: AbnormalStatusType
+    - name: Behaviour.AddAbnormalStatus
+      value: 1
+    - name: AddAbnormalStatus.Type
       value: 1
   - id: 10114
     name:
@@ -249,13 +253,15 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 388
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 1
-    - name: AbnormalStatusType
+    - name: Behaviour.AddAbnormalStatus
+      value: 1
+    - name: AddAbnormalStatus.Type
       value: 1
   - id: 10115
     name:
@@ -268,13 +274,15 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 612
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 1
-    - name: AbnormalStatusType
+    - name: Behaviour.AddAbnormalStatus
+      value: 1
+    - name: AddAbnormalStatus.Type
       value: 1
   - id: 10116
     name:
@@ -287,13 +295,15 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 132
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 1
-    - name: AbnormalStatusType
+    - name: Behaviour.AddAbnormalStatus
+      value: 1
+    - name: AddAbnormalStatus.Type
       value: 2
   - id: 10117
     name:
@@ -306,13 +316,15 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 228
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 1
-    - name: AbnormalStatusType
+    - name: Behaviour.AddAbnormalStatus
+      value: 1
+    - name: AddAbnormalStatus.Type
       value: 2
   - id: 10118
     name:
@@ -325,13 +337,15 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 388
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 1
-    - name: AbnormalStatusType
+    - name: Behaviour.AddAbnormalStatus
+      value: 1
+    - name: AddAbnormalStatus.Type
       value: 2
   - id: 10119
     name:
@@ -344,13 +358,15 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 612
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 1
-    - name: AbnormalStatusType
+    - name: Behaviour.AddAbnormalStatus
+      value: 1
+    - name: AddAbnormalStatus.Type
       value: 2
   - id: 10201
     name:
@@ -363,11 +379,11 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 100
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 2
   - id: 10202
     name:
@@ -380,11 +396,11 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 109
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 2
   - id: 10203
     name:
@@ -397,11 +413,11 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 135
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 2
   - id: 10204
     name:
@@ -414,11 +430,11 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 176
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 2
   - id: 10205
     name:
@@ -431,11 +447,11 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 234
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 2
   - id: 10206
     name:
@@ -448,11 +464,11 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 308
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 2
   - id: 10207
     name:
@@ -465,11 +481,11 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 397
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 2
   - id: 10208
     name:
@@ -482,11 +498,11 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 503
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 2
   - id: 10209
     name:
@@ -499,11 +515,11 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 624
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 2
   - id: 10210
     name:
@@ -516,11 +532,11 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 762
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 2
   - id: 10211
     name:
@@ -533,11 +549,11 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 900
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 2
   - id: 10212
     name:
@@ -550,13 +566,15 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 132
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 2
-    - name: AbnormalStatusType
+    - name: Behaviour.AddAbnormalStatus
+      value: 1
+    - name: AddAbnormalStatus.Type
       value: 3
   - id: 10213
     name:
@@ -569,13 +587,13 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
-      value: 1
-    - name: Power
+    - name: Attack.Power
       value: 228
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 2
-    - name: AbnormalStatusType
+    - name: Behaviour.AddAbnormalStatus
+      value: 1
+    - name: AddAbnormalStatus.Type
       value: 3
   - id: 10214
     name:
@@ -588,13 +606,15 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 388
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 2
-    - name: AbnormalStatusType
+    - name: Behaviour.AddAbnormalStatus
+      value: 1
+    - name: AddAbnormalStatus.Type
       value: 3
   - id: 10215
     name:
@@ -607,13 +627,15 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 612
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 2
-    - name: AbnormalStatusType
+    - name: Behaviour.AddAbnormalStatus
+      value: 1
+    - name: AddAbnormalStatus.Type
       value: 3
   - id: 10216
     name:
@@ -626,13 +648,15 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 132
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 2
-    - name: AbnormalStatusType
+    - name: Behaviour.AddAbnormalStatus
+      value: 1
+    - name: AddAbnormalStatus.Type
       value: 4
   - id: 10217
     name:
@@ -645,13 +669,15 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 228
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 2
-    - name: AbnormalStatusType
+    - name: Behaviour.AddAbnormalStatus
+      value: 1
+    - name: AddAbnormalStatus.Type
       value: 4
   - id: 10218
     name:
@@ -664,13 +690,15 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 388
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 2
-    - name: AbnormalStatusType
+    - name: Behaviour.AddAbnormalStatus
+      value: 1
+    - name: AddAbnormalStatus.Type
       value: 4
   - id: 10219
     name:
@@ -683,13 +711,15 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
+    - name: Behaviour.Attack
       value: 1
-    - name: Power
+    - name: Attack.Power
       value: 612
-    - name: AttackAttribute
+    - name: Attack.Attribute
       value: 2
-    - name: AbnormalStatusType
+    - name: Behaviour.AddAbnormalStatus
+      value: 1
+    - name: AddAbnormalStatus.Type
       value: 4
   - id: 10301
     name:
@@ -702,9 +732,9 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
-      value: 2
-    - name: Power
+    - name: Behaviour.Recovery
+      value: 0
+    - name: Recovery.Power
       value: 5
   - id: 10302
     name:
@@ -717,9 +747,9 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
-      value: 2
-    - name: Power
+    - name: Behaviour.Recovery
+      value: 0
+    - name: Recovery.Power
       value: 10
   - id: 10303
     name:
@@ -732,9 +762,9 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
-      value: 2
-    - name: Power
+    - name: Behaviour.Recovery
+      value: 0
+    - name: Recovery.Power
       value: 15
   - id: 10304
     name:
@@ -747,10 +777,54 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
-    - name: ActiveSkillType
-      value: 2
-    - name: Power
+    - name: Behaviour.Recovery
+      value: 0
+    - name: Recovery.Power
       value: 20
+  - id: 10401
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10401
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes: []
+  - id: 10402
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10402
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes: []
+  - id: 10403
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10403
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes: []
+  - id: 10404
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10404
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes: []
   references:
     version: 2
     RefIds: []

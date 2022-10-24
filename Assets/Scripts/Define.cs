@@ -74,11 +74,28 @@ namespace Cookie
     
     public static class SkillAttributeName
     {
-        public const string Power = "Power";
+        /// <summary>
+        /// 回復行動を行える
+        /// </summary>
+        public const string BehaviourAttack = "Behaviour.Attack";
         
-        public const string AttackAttribute = "AttackAttribute";
+        /// <summary>
+        /// 回復行動を行える
+        /// </summary>
+        public const string BehaviourRecovery = "Behaviour.Recovery";
 
-        public const string ActiveSkillType = "ActiveSkillType";
+        /// <summary>
+        /// 状態異常の付与を行える
+        /// </summary>
+        public const string BehaviourAddAbnormalStatus = "Behaviour.AddAbnormalStatus";
+        
+        public const string AttackPower = "Attack.Power";
+        
+        public const string AttackAttribute = "Attack.Attribute";
+
+        public const string RecoveryPower = "Recovery.Power";
+        
+        public const string AbnormalStatusType = "AddAbnormalStatus.Type";
 
         public const string PhysicalStrengthUpRate = "PhysicalStrengthUpRate";
 
@@ -90,6 +107,5 @@ namespace Cookie
         
         public const string RecoveryUpRate = "RecoveryUpRate";
 
-        public const string AbnormalStatusType = "AbnormalStatusType";
     }
 }

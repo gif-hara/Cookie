@@ -21,7 +21,7 @@ namespace Cookie
             var defense = attackAttribute == AttackAttribute.Physical ? target.physicalDefense : target.magicDefense;
             var defenseUpRate = attackAttribute == AttackAttribute.Physical ? GetPhysicalDefenseUpRate(target.passiveSkills) : GetMagicDefenseUpRate(target.passiveSkills);
             defense = Mathf.FloorToInt(defense * defenseUpRate);
-            var result = GetPower(physicalStrength, magicStrength, attackerActiveSkill) / defense;
+            var result = GetAttackPower(physicalStrength, magicStrength, attackerActiveSkill) / defense;
 
             if (attacker.abnormalStatuses.Contains(AbnormalStatus.Debility))
             {
@@ -36,10 +36,10 @@ namespace Cookie
             return result;
         }
 
-        public static int GetPower(int physicalStrength, int magicStrength, ActiveSkill activeSkill)
+        public static int GetAttackPower(int physicalStrength, int magicStrength, ActiveSkill activeSkill)
         {
             var attackAttribute = (AttackAttribute)activeSkill.attributes.Get(SkillAttributeName.AttackAttribute).value;
-            var power = activeSkill.attributes.Get(SkillAttributeName.Power).value;
+            var power = activeSkill.attributes.Get(SkillAttributeName.AttackPower).value;
 
             switch (attackAttribute)
             {
@@ -86,7 +86,7 @@ namespace Cookie
         /// </summary>
         public static float GetRecoveryRate(ActorStatus actorStatus, ActiveSkill activeSkill)
         {
-            var result = (float)activeSkill.attributes.Get(SkillAttributeName.Power).value / 100;
+            var result = (float)activeSkill.attributes.Get(SkillAttributeName.RecoveryPower).value / 100;
             result *= GetRecoveryUpRate(actorStatus.passiveSkills);
 
             return result;

@@ -42,30 +42,40 @@ namespace Cookie
                     Debug.Log($"StartTurn {this.actorType}");
                     foreach (var skill in this.Status.activeSkills)
                     {
+                        // 麻痺の処理
                         if (this.Status.abnormalStatuses.Contains(AbnormalStatus.Paralysis) && Calculator.CanInvokeParalysis())
                         {
-                            Debug.Log("TODO Paralysis");
+                            Debug.Log("TODO 麻痺演出");
                             await UniTask.Delay(TimeSpan.FromSeconds(1.0f));
                             continue;
                         }
                         
-                        var skillType = (ActiveSkillType)skill.attributes.Get(SkillAttributeName.ActiveSkillType).value;
-                        switch (skillType)
+                        // 実際の行動を処理する
+                        foreach (var attribute in skill.attributes)
                         {
-                            case ActiveSkillType.Attack:
-                                x.Opponent.TakeDamage(Calculator.GetDamage(this.Status, skill, x.Opponent.Status));
-                                if (skill.attributes.Contains(SkillAttributeName.AbnormalStatusType) && Calculator.CanAddAbnormalStatus())
-                                {
-                                    var abnormalStatus = (AbnormalStatus)skill.attributes.Get(SkillAttributeName.AbnormalStatusType).value;
-                                    x.Opponent.Status.abnormalStatuses.Add(abnormalStatus);
-                                }
-                                break;
-                            case ActiveSkillType.Recovery:
-                                this.Recovery(Calculator.GetRecoveryRate(this.Status, skill));
-                                break;
-                            default:
-                                Assert.IsTrue(false, $"{skillType}は未対応です");
-                                break;
+                            if (!attribute.name.StartsWith("Behaviour"))
+                            {
+                                continue;
+                            }
+                            switch (attribute.name)
+                            {
+                                case SkillAttributeName.BehaviourAttack:
+                                    x.Opponent.TakeDamage(Calculator.GetDamage(this.Status, skill, x.Opponent.Status));
+                                    break;
+                                case SkillAttributeName.BehaviourRecovery:
+                                    this.Recovery(Calculator.GetRecoveryRate(this.Status, skill));
+                                    break;
+                                case SkillAttributeName.BehaviourAddAbnormalStatus:
+                                    if (Calculator.CanAddAbnormalStatus())
+                                    {
+                                        var abnormalStatus = (AbnormalStatus)skill.attributes.Get(SkillAttributeName.AbnormalStatusType).value;
+                                        x.Opponent.Status.abnormalStatuses.Add(abnormalStatus);
+                                    }
+                                    break;
+                                default:
+                                    Assert.IsTrue(false, $"{attribute.name}は未対応です");
+                                    break;
+                            }
                         }
                         await UniTask.Delay(TimeSpan.FromSeconds(1.0f));
                         
@@ -75,9 +85,11 @@ namespace Cookie
                             break;
                         }
                     }
-
+                    
+                    // 毒の処理
                     if (this.Status.abnormalStatuses.Contains(AbnormalStatus.Poison))
                     {
+                        Debug.Log("TODO: 毒演出");
                         this.TakeDamage(Calculator.GetPoisonDamage(this.Status));
                         await UniTask.Delay(TimeSpan.FromSeconds(1.0f));
                     }
