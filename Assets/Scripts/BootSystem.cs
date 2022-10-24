@@ -40,7 +40,7 @@ namespace Cookie
             if (!SaveData.ContainsUserData())
             {
                 UserData.current = new UserData();
-                var masterDataInitialEquipment = MasterDataInitialEquipment.Instance;
+                var masterDataInitialEquipment = MasterDataInitialUserData.Instance;
                 UserData.current.weapons.Add(masterDataInitialEquipment.weapon);
                 UserData.current.armors.Add(masterDataInitialEquipment.armor);
                 UserData.current.accessories.Add(masterDataInitialEquipment.accessory);
@@ -63,7 +63,7 @@ namespace Cookie
                 MasterDataAccessoryGacha.LoadAsync("Assets/MasterData/MasterDataAccessoryGacha.asset"),
                 MasterDataActiveSkill.LoadAsync("Assets/MasterData/MasterDataActiveSkill.asset"),
                 MasterDataPassiveSkill.LoadAsync("Assets/MasterData/MasterDataPassiveSkill.asset"),
-                MasterDataInitialEquipment.LoadAsync("Assets/MasterData/MasterDataInitialEquipment.asset"),
+                MasterDataInitialUserData.LoadAsync("Assets/MasterData/MasterDataInitialUserData.asset"),
                 MasterDataEnemyStatus.LoadAsync("Assets/MasterData/MasterDataEnemyStatus.asset")
                 );
         }

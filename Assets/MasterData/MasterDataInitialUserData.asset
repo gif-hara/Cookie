@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2c9c096adfc58840805e150880a6168, type: 3}
-  m_Name: MasterDataInitialEquipment
+  m_Name: MasterDataInitialUserData
   m_EditorClassIdentifier: 
   weapon:
     instanceId: 0

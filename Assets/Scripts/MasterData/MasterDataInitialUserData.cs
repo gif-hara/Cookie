@@ -7,8 +7,8 @@ namespace Cookie
     /// <summary>
     /// 
     /// </summary>
-    [CreateAssetMenu(menuName = "Cookie/MasterData/MasterDataInitialEquipment")]
-    public sealed class MasterDataInitialEquipment : MasterData<MasterDataInitialEquipment>
+    [CreateAssetMenu(menuName = "Cookie/MasterData/MasterDataInitialUserData")]
+    public sealed class MasterDataInitialUserData : MasterData<MasterDataInitialUserData>
     {
         public Weapon weapon;
 
