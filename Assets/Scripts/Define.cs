@@ -88,6 +88,11 @@ namespace Cookie
         /// 状態異常の付与を行える
         /// </summary>
         public const string BehaviourAddAbnormalStatus = "Behaviour.AddAbnormalStatus";
+
+        /// <summary>
+        /// 状態異常の解除を行える
+        /// </summary>
+        public const string BehaviourRemoveAbnormalStatus = "Behaviour.RemoveAbnormalStatus";
         
         public const string AttackPower = "Attack.Power";
         
@@ -95,7 +100,9 @@ namespace Cookie
 
         public const string RecoveryPower = "Recovery.Power";
         
-        public const string AbnormalStatusType = "AddAbnormalStatus.Type";
+        public const string AddAbnormalStatusType = "AddAbnormalStatus.Type";
+        
+        public const string RemoveAbnormalStatusType = "RemoveAbnormalStatus.Type";
 
         public const string PhysicalStrengthUpRate = "PhysicalStrengthUpRate";
 

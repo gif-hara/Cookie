@@ -68,8 +68,15 @@ namespace Cookie
                                 case SkillAttributeName.BehaviourAddAbnormalStatus:
                                     if (Calculator.CanAddAbnormalStatus())
                                     {
-                                        var abnormalStatus = (AbnormalStatus)skill.attributes.Get(SkillAttributeName.AbnormalStatusType).value;
+                                        var abnormalStatus = (AbnormalStatus)skill.attributes.Get(SkillAttributeName.AddAbnormalStatusType).value;
                                         x.Opponent.Status.abnormalStatuses.Add(abnormalStatus);
+                                    }
+                                    break;
+                                case SkillAttributeName.BehaviourRemoveAbnormalStatus:
+                                    var abnormalStatusType = (AbnormalStatus)skill.attributes.Get(SkillAttributeName.RemoveAbnormalStatusType).value;
+                                    if (!this.Status.abnormalStatuses.Contains(abnormalStatusType))
+                                    {
+                                        this.Status.abnormalStatuses.Remove(abnormalStatusType);
                                     }
                                     break;
                                 default:
@@ -77,8 +84,9 @@ namespace Cookie
                                     break;
                             }
                         }
-                        await UniTask.Delay(TimeSpan.FromSeconds(1.0f));
                         
+                        await UniTask.Delay(TimeSpan.FromSeconds(1.0f));
+
                         // 相手が死亡していたら強制的に終了する
                         if (x.Opponent.Status.IsDead)
                         {
