@@ -260,11 +260,13 @@ namespace Cookie
         {
             var items = await UniTask.WhenAll(
                 DownloadFromSpreadSheet("EnemySpec"),
-                DownloadFromSpreadSheet("EnemyActiveSkill")
+                DownloadFromSpreadSheet("EnemyActiveSkill"),
+                DownloadFromSpreadSheet("DefeatEnemyUnlock")
                 );
 
             var enemySpecJson = JsonUtility.FromJson<EnemySpec.Json>(items.Item1);
             var enemyActiveSkillJson = JsonUtility.FromJson<EnemyActiveSkill.Json>(items.Item2);
+            var defeatEnemyUnlockJson = JsonUtility.FromJson<DefeatEnemyUnlock.Json>(items.Item3);
             var masterDataEnemyStatus = AssetDatabase.LoadAssetAtPath<MasterDataEnemyStatus>("Assets/MasterData/MasterDataEnemyStatus.asset");
             masterDataEnemyStatus.enemyStatusList.Clear();
             masterDataEnemyStatus.enemyStatusList.AddRange(
@@ -282,6 +284,9 @@ namespace Cookie
                     activeSkills = enemyActiveSkillJson.elements
                         .Where(enemyActiveSkill => enemyActiveSkill.enemyId == x.id)
                         .Select(enemyActiveSkill => enemyActiveSkill.activeSkillId)
+                        .ToList(),
+                    defeatEnemyUnlocks = defeatEnemyUnlockJson.elements
+                        .Where(defeatEnemyUnlock => defeatEnemyUnlock.enemyId == x.id)
                         .ToList()
                 }));
             EditorUtility.SetDirty(masterDataEnemyStatus);

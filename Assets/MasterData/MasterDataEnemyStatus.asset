@@ -31,6 +31,11 @@ MonoBehaviour:
     speed: 48
     money: 600
     activeSkills: 7527000075270000
+    defeatEnemyUnlocks:
+    - id: 1
+      enemyId: 1
+      unlockType: 1
+      unlockId: 2
   - id: 2
     nameKey:
       m_TableReference:
@@ -49,6 +54,7 @@ MonoBehaviour:
     speed: 48
     money: 888
     activeSkills: 
+    defeatEnemyUnlocks: []
   - id: 3
     nameKey:
       m_TableReference:
@@ -67,6 +73,7 @@ MonoBehaviour:
     speed: 50
     money: 1788
     activeSkills: 
+    defeatEnemyUnlocks: []
   - id: 4
     nameKey:
       m_TableReference:
@@ -85,6 +92,7 @@ MonoBehaviour:
     speed: 53
     money: 2040
     activeSkills: 
+    defeatEnemyUnlocks: []
   - id: 5
     nameKey:
       m_TableReference:
@@ -103,6 +111,7 @@ MonoBehaviour:
     speed: 54
     money: 2940
     activeSkills: 
+    defeatEnemyUnlocks: []
   - id: 6
     nameKey:
       m_TableReference:
@@ -121,6 +130,7 @@ MonoBehaviour:
     speed: 57
     money: 4056
     activeSkills: 
+    defeatEnemyUnlocks: []
   - id: 7
     nameKey:
       m_TableReference:
@@ -139,6 +149,7 @@ MonoBehaviour:
     speed: 60
     money: 5388
     activeSkills: 
+    defeatEnemyUnlocks: []
   - id: 8
     nameKey:
       m_TableReference:
@@ -157,6 +168,7 @@ MonoBehaviour:
     speed: 61
     money: 5880
     activeSkills: 
+    defeatEnemyUnlocks: []
   - id: 9
     nameKey:
       m_TableReference:
@@ -175,6 +187,7 @@ MonoBehaviour:
     speed: 62
     money: 6396
     activeSkills: 
+    defeatEnemyUnlocks: []
   - id: 10
     nameKey:
       m_TableReference:
@@ -193,6 +206,7 @@ MonoBehaviour:
     speed: 285
     money: 120588
     activeSkills: 
+    defeatEnemyUnlocks: []
   references:
     version: 2
     RefIds: []

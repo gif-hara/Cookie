@@ -32,6 +32,8 @@ namespace Cookie
 
         public List<int> activeSkills;
 
+        public List<DefeatEnemyUnlock> defeatEnemyUnlocks;
+
         public string Name => this.nameKey.GetLocalizedString();
 
         public ActorStatusBuilder ToActorStatusBuilder()
@@ -93,6 +95,24 @@ namespace Cookie
         public class Json
         {
             public List<EnemyActiveSkill> elements;
+        }
+    }
+
+    [Serializable]
+    public sealed class DefeatEnemyUnlock
+    {
+        public int id;
+
+        public int enemyId;
+
+        public UnlockType unlockType;
+
+        public int unlockId;
+
+        [Serializable]
+        public class Json
+        {
+            public List<DefeatEnemyUnlock> elements;
         }
     }
 }

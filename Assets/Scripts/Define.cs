@@ -71,6 +71,17 @@ namespace Cookie
         /// </summary>
         Fragility,
     }
+
+    /// <summary>
+    /// アンロックタイプ
+    /// </summary>
+    public enum UnlockType
+    {
+        Enemy = 1,
+        WeaponGacha,
+        ArmorGacha,
+        AccessoryGacha,
+    }
     
     public static class SkillAttributeName
     {
