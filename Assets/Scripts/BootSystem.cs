@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -47,6 +48,7 @@ namespace Cookie
                 UserData.current.weaponCreatedNumber++;
                 UserData.current.armorCreatedNumber++;
                 UserData.current.accessoryCreatedNumber++;
+                UserData.current.unlockEnemies = new List<int>(masterDataInitialEquipment.unlockEnemies);
             }
             else
             {

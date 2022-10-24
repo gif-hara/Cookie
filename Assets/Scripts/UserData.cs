@@ -34,6 +34,8 @@ namespace Cookie
         
         public int equippedAccessoryInstanceId;
 
+        public List<int> unlockEnemies = new();
+
         public Weapon EquippedWeapon => this.weapons.Find(x => x.instanceId == this.equippedWeaponInstanceId);
         
         public Armor EquippedArmor => this.armors.Find(x => x.instanceId == this.equippedArmorInstanceId);

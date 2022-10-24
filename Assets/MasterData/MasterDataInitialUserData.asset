@@ -35,3 +35,4 @@ MonoBehaviour:
     instanceId: 0
     nameKey: Test
     passiveSkillIds: []
+  unlockEnemies: 01000000

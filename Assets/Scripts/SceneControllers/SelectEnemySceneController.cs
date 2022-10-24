@@ -23,8 +23,9 @@ namespace Cookie
         {
             var uiView = Instantiate(this.selectEnemyUIPrefab, this.uiParent);
             uiView.DestroyAllEnemyButtons();
-            foreach (var enemyStatus in MasterDataEnemyStatus.Instance.enemyStatusList)
+            foreach (var enemyId in UserData.current.unlockEnemies)
             {
+                var enemyStatus = MasterDataEnemyStatus.Instance.enemyStatusList.Find(x => x.id == enemyId);
                 var enemyButton = uiView.CreateEnemyButton();
                 enemyButton.Message.text = enemyStatus.Name;
                 enemyButton.Button.onClick.AddListener(() =>
