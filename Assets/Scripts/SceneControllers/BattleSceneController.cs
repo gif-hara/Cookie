@@ -104,6 +104,13 @@ namespace Cookie
         private void OnEnterBattleEnd(StateType prev)
         {
             Debug.Log("BattleEnd");
+            var judgement = !this.player.Status.IsDead ? BattleJudgement.PlayerWin : BattleJudgement.PlayerLose;
+
+            if (SceneMediator.IsMatchArgument<BattleSceneArgument>())
+            {
+                var argument = SceneMediator.GetArgument<BattleSceneArgument>();
+                argument.onBattleEnd?.Invoke(judgement);
+            }
             this.stateController.ChangeRequest(StateType.Finalize);
         }
         
@@ -112,6 +119,12 @@ namespace Cookie
             Debug.Log("Finalize");
             GlobalMessagePipe.GetPublisher<BattleEvent.Dispose>()
                 .Publish(BattleEvent.Dispose.Get());
+            
+            if (SceneMediator.IsMatchArgument<BattleSceneArgument>())
+            {
+                var argument = SceneMediator.GetArgument<BattleSceneArgument>();
+                argument.onBattleFinalize?.Invoke();
+            }
         }
         
         private bool IsBattleEnd()

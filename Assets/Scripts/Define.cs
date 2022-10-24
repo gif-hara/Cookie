@@ -82,6 +82,15 @@ namespace Cookie
         ArmorGacha,
         AccessoryGacha,
     }
+
+    /// <summary>
+    /// バトルの勝敗結果
+    /// </summary>
+    public enum BattleJudgement
+    {
+        PlayerWin,
+        PlayerLose,
+    }
     
     public static class SkillAttributeName
     {

@@ -1,7 +1,9 @@
+using System;
 using Cookie.UISystems;
 using Cysharp.Threading.Tasks;
 using MessagePipe;
 using UnityEngine;
+using UnityEngine.Assertions;
 using UnityEngine.SceneManagement;
 
 namespace Cookie
@@ -39,6 +41,38 @@ namespace Cookie
                         {
                             playerStatusBuilder = UserData.current.ToActorStatusBuilder(),
                             enemyStatusBuilder = enemyStatus.ToActorStatusBuilder()
+                        };
+                        battleSceneArgument.onBattleEnd = judgement =>
+                        {
+                            if (judgement == BattleJudgement.PlayerWin)
+                            {
+                                var userData = UserData.current;
+                                
+                                // 各種コンテンツのアンロック処理
+                                foreach (var i in enemyStatus.defeatEnemyUnlocks)
+                                {
+                                    switch (i.unlockType)
+                                    {
+                                        case UnlockType.Enemy:
+                                            if (!userData.unlockEnemies.Contains(i.unlockId))
+                                            {
+                                                userData.unlockEnemies.Add(i.unlockId);
+                                            }
+                                            break;
+                                        case UnlockType.WeaponGacha:
+                                        case UnlockType.ArmorGacha:
+                                        case UnlockType.AccessoryGacha:
+                                        default:
+                                            Assert.IsTrue(false, $"{i.unlockType}は未対応です");
+                                            break;
+                                    }
+                                }
+                            }
+                        };
+                        battleSceneArgument.onBattleFinalize = () =>
+                        {
+                            SceneMediator.SetArgument(null);
+                            SceneManager.LoadScene("SelectEnemy");
                         };
                         SceneMediator.SetArgument(battleSceneArgument);
                         SceneManager.LoadScene("Battle");

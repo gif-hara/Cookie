@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Battle.unity
     guid: cd6cbf0ae675d5344bef1a437d1f25ed
+  - enabled: 1
+    path: Assets/Scenes/SelectEnemy.unity
+    guid: f4a3144ba65caaa4bb6c4e37ba39c331
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: bf0f38fd6988e904983d6cdffa0da384, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: d325a8179992c2249ae658c6d92a520b, type: 2}

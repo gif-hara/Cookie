@@ -24,6 +24,10 @@ MonoBehaviour:
     activeSkillIds:
     - parameter: 10101
       rare: 0
+    - parameter: 10101
+      rare: 0
+    - parameter: 10101
+      rare: 0
   armor:
     instanceId: 0
     nameKey: Test
