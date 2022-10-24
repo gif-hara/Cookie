@@ -23,9 +23,9 @@ namespace Cookie
 
         public int speed;
 
-        public List<int> activeSkillIds;
+        public List<int> activeSkillIds = new ();
 
-        public List<int> passiveSkillIds;
+        public List<int> passiveSkillIds = new ();
 
         public ActorStatus Create()
         {
