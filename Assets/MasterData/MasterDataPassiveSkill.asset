@@ -208,6 +208,58 @@ MonoBehaviour:
     attributes:
     - name: RecoveryUpRate
       value: 20
+  - id: 10601
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: PassiveSkill10601
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: InvalidateAbnormalStatus
+      value: 1
+  - id: 10602
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: PassiveSkill10602
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: InvalidateAbnormalStatus
+      value: 2
+  - id: 10603
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: PassiveSkill10603
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: InvalidateAbnormalStatus
+      value: 13
+  - id: 10604
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: PassiveSkill10604
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: InvalidateAbnormalStatus
+      value: 4
   references:
     version: 2
     RefIds: []

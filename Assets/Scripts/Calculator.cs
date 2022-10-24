@@ -92,8 +92,15 @@ namespace Cookie
             return result;
         }
 
-        public static bool CanAddAbnormalStatus()
+        public static bool CanAddAbnormalStatus(AbnormalStatus abnormalStatus, ActorStatus targetStatus)
         {
+            // 状態異常を無効化するパッシブスキルを持っていた場合は付与できない
+            var attributes = targetStatus.passiveSkills.GetAllAttributes(SkillAttributeName.InvalidateAbnormalStatus);
+            if (attributes.FindIndex(x => (AbnormalStatus)x.value == abnormalStatus) >= 0)
+            {
+                return false;
+            }
+            
             return Random.value > 0.5f;
         }
 

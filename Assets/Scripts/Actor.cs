@@ -66,9 +66,9 @@ namespace Cookie
                                     this.Recovery(Calculator.GetRecoveryRate(this.Status, skill));
                                     break;
                                 case SkillAttributeName.BehaviourAddAbnormalStatus:
-                                    if (Calculator.CanAddAbnormalStatus())
+                                    var abnormalStatus = (AbnormalStatus)skill.attributes.Get(SkillAttributeName.AddAbnormalStatusType).value;
+                                    if (Calculator.CanAddAbnormalStatus(abnormalStatus, x.Opponent.Status))
                                     {
-                                        var abnormalStatus = (AbnormalStatus)skill.attributes.Get(SkillAttributeName.AddAbnormalStatusType).value;
                                         x.Opponent.Status.abnormalStatuses.Add(abnormalStatus);
                                     }
                                     break;

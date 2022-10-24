@@ -17,5 +17,20 @@ namespace Cookie
                 .Where(x => x.Contains(attributeName))
                 .Sum(attributes => attributes.Sum(x => x.value));
         }
+
+        public static bool Contains(this IEnumerable<PassiveSkill> self, string attributeName)
+        {
+            return self
+                .Select(x => x.attributes)
+                .Any(x => x.Contains(attributeName));
+        }
+
+        public static List<Attribute> GetAllAttributes(this IEnumerable<PassiveSkill> self, string attributeName)
+        {
+            return self
+                .SelectMany(x => x.attributes)
+                .Where(x => x.name == attributeName)
+                .ToList();
+        }
     }
 }
