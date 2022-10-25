@@ -281,6 +281,7 @@ namespace Cookie
                     magicDefense = x.magicDefense,
                     speed = x.speed,
                     money = x.money,
+                    fieldId = x.fieldId,
                     activeSkills = enemyActiveSkillJson.elements
                         .Where(enemyActiveSkill => enemyActiveSkill.enemyId == x.id)
                         .Select(enemyActiveSkill => enemyActiveSkill.activeSkillId)

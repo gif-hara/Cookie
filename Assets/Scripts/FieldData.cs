@@ -15,6 +15,8 @@ namespace Cookie
         public int id;
 
         public LocalizedString nameKey;
+
+        public string Name => this.nameKey.GetLocalizedString();
     }
 
     [Serializable]

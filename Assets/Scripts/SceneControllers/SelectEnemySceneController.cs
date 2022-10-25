@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Cookie.UISystems;
 using Cysharp.Threading.Tasks;
 using MessagePipe;
@@ -19,77 +20,109 @@ namespace Cookie
         [SerializeField]
         private SelectEnemyUIView selectEnemyUIPrefab;
 
+        private CookieButton selectedFieldButton;
+
         private CookieButton selectedEnemyButton;
         
         protected override UniTask OnStartAsync(DisposableBagBuilder scope)
         {
             var uiView = Instantiate(this.selectEnemyUIPrefab, this.uiParent);
+            uiView.DestroyAllFieldButtons();
             uiView.DestroyAllEnemyButtons();
-            foreach (var enemyId in UserData.current.unlockEnemies)
+            var enemyGroupByFieldId = UserData.current.unlockEnemies
+                .Select(x => MasterDataEnemyStatus.Instance.enemyStatusList.Find(y => x == y.id))
+                .GroupBy(x => x.fieldId);
+            foreach (var enemyGroup in enemyGroupByFieldId)
             {
-                var enemyStatus = MasterDataEnemyStatus.Instance.enemyStatusList.Find(x => x.id == enemyId);
-                var enemyButton = uiView.CreateEnemyButton();
-                enemyButton.Message.text = enemyStatus.Name;
-                enemyButton.Button.onClick.AddListener(() =>
+                var fieldButton = uiView.CreateFieldButton();
+                fieldButton.Message.text = MasterDataFieldData.Instance.records.Find(x => x.id == enemyGroup.Key).Name;
+                fieldButton.Button.onClick.AddListener(() =>
                 {
-                    this.SetSelectedEnemyButton(enemyButton);
-                    uiView.ConfirmListRoot.SetActive(true);
-                    uiView.BattleButton.Button.onClick.RemoveAllListeners();
-                    uiView.BattleButton.Button.onClick.AddListener(() =>
+                    SetSelectedFieldButton(fieldButton);
+                    uiView.DestroyAllEnemyButtons();
+                    uiView.ConfirmListRoot.SetActive(false);
+
+                    foreach (var enemyStatus in enemyGroup)
                     {
-                        var battleSceneArgument = new BattleSceneArgument
+                        var enemyButton = uiView.CreateEnemyButton();
+                        enemyButton.Message.text = enemyStatus.Name;
+                        enemyButton.Button.onClick.AddListener(() =>
                         {
-                            playerStatusBuilder = UserData.current.ToActorStatusBuilder(),
-                            enemyStatusBuilder = enemyStatus.ToActorStatusBuilder()
-                        };
-                        battleSceneArgument.onBattleEnd = judgement =>
-                        {
-                            if (judgement == BattleJudgement.PlayerWin)
+                            this.SetSelectedEnemyButton(enemyButton);
+                            uiView.ConfirmListRoot.SetActive(true);
+                            uiView.BattleButton.Button.onClick.RemoveAllListeners();
+                            uiView.BattleButton.Button.onClick.AddListener(() =>
                             {
-                                var userData = UserData.current;
-                                
-                                // 倒した敵の数を加算する
-                                if (!userData.defeatedEnemies.ContainsKey(enemyStatus.id))
+                                var battleSceneArgument = new BattleSceneArgument
                                 {
-                                    userData.defeatedEnemies.Add(enemyStatus.id, 0);
-                                }
-                                userData.defeatedEnemies[enemyStatus.id]++;
-                                
-                                // 各種コンテンツのアンロック処理
-                                foreach (var i in enemyStatus.defeatEnemyUnlocks)
+                                    playerStatusBuilder = UserData.current.ToActorStatusBuilder(),
+                                    enemyStatusBuilder = enemyStatus.ToActorStatusBuilder()
+                                };
+                                battleSceneArgument.onBattleEnd = judgement =>
                                 {
-                                    switch (i.unlockType)
+                                    if (judgement == BattleJudgement.PlayerWin)
                                     {
-                                        case UnlockType.Enemy:
-                                            if (!userData.unlockEnemies.Contains(i.unlockId))
+                                        var userData = UserData.current;
+
+                                        // 倒した敵の数を加算する
+                                        if (!userData.defeatedEnemies.ContainsKey(enemyStatus.id))
+                                        {
+                                            userData.defeatedEnemies.Add(enemyStatus.id, 0);
+                                        }
+                                        userData.defeatedEnemies[enemyStatus.id]++;
+
+                                        // 各種コンテンツのアンロック処理
+                                        foreach (var i in enemyStatus.defeatEnemyUnlocks)
+                                        {
+                                            switch (i.unlockType)
                                             {
-                                                userData.unlockEnemies.Add(i.unlockId);
+                                                case UnlockType.Enemy:
+                                                    if (!userData.unlockEnemies.Contains(i.unlockId))
+                                                    {
+                                                        userData.unlockEnemies.Add(i.unlockId);
+                                                    }
+                                                    break;
+                                                case UnlockType.WeaponGacha:
+                                                case UnlockType.ArmorGacha:
+                                                case UnlockType.AccessoryGacha:
+                                                default:
+                                                    Assert.IsTrue(false, $"{i.unlockType}は未対応です");
+                                                    break;
                                             }
-                                            break;
-                                        case UnlockType.WeaponGacha:
-                                        case UnlockType.ArmorGacha:
-                                        case UnlockType.AccessoryGacha:
-                                        default:
-                                            Assert.IsTrue(false, $"{i.unlockType}は未対応です");
-                                            break;
+                                        }
                                     }
-                                }
-                            }
-                        };
-                        battleSceneArgument.onBattleFinalize = () =>
-                        {
-                            SceneMediator.SetArgument(null);
-                            SceneManager.LoadScene("SelectEnemy");
-                        };
-                        SceneMediator.SetArgument(battleSceneArgument);
-                        SceneManager.LoadScene("Battle");
-                    });
+                                };
+                                battleSceneArgument.onBattleFinalize = () =>
+                                {
+                                    SceneMediator.SetArgument(null);
+                                    SceneManager.LoadScene("SelectEnemy");
+                                };
+                                SceneMediator.SetArgument(battleSceneArgument);
+                                SceneManager.LoadScene("Battle");
+                            });
+                        });
+                    }
                 });
             }
             
             uiView.ConfirmListRoot.SetActive(false);
             
             return base.OnStartAsync(scope);
+        }
+
+        private void SetSelectedFieldButton(CookieButton fieldButton)
+        {
+            if (this.selectedFieldButton != null)
+            {
+                this.selectedFieldButton.PositiveStylist.Apply();
+            }
+
+            this.selectedFieldButton = fieldButton;
+
+            if (this.selectedFieldButton != null)
+            {
+                this.selectedFieldButton.SelectedStylist.Apply();
+            }
         }
 
         private void SetSelectedEnemyButton(CookieButton enemyButton)

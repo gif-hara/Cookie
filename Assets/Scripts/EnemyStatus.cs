@@ -30,6 +30,8 @@ namespace Cookie
 
         public int money;
 
+        public int fieldId;
+
         public List<int> activeSkills;
 
         public List<DefeatEnemyUnlock> defeatEnemyUnlocks;
@@ -74,6 +76,8 @@ namespace Cookie
         public int speed;
 
         public int money;
+
+        public int fieldId;
 
         [Serializable]
         public class Json

@@ -10,6 +10,9 @@ namespace Cookie.UISystems
     {
         [SerializeField]
         private HeaderUIView headerUIView;
+
+        [SerializeField]
+        private Transform fieldListRoot;
         
         [SerializeField]
         private Transform enemyListRoot;
@@ -22,6 +25,8 @@ namespace Cookie.UISystems
         
         [SerializeField]
         private CookieButton battleButton;
+
+        private readonly List<CookieButton> fieldButtons = new();
         
         private readonly List<CookieButton> enemyButtons = new();
 
@@ -30,6 +35,24 @@ namespace Cookie.UISystems
         public GameObject ConfirmListRoot => this.confirmListRoot;
 
         public CookieButton BattleButton => this.battleButton;
+
+        public void DestroyAllFieldButtons()
+        {
+            foreach (var i in this.fieldButtons)
+            {
+                Destroy(i.gameObject);
+            }
+            
+            this.fieldButtons.Clear();
+        }
+
+        public CookieButton CreateFieldButton()
+        {
+            var result = Instantiate(this.buttonPrefab, this.fieldListRoot);
+            this.fieldButtons.Add(result);
+
+            return result;
+        }
         
         public void DestroyAllEnemyButtons()
         {

@@ -30,6 +30,7 @@ MonoBehaviour:
     magicDefense: 80
     speed: 48
     money: 600
+    fieldId: 1
     activeSkills: 7527000075270000
     defeatEnemyUnlocks:
     - id: 1
@@ -53,6 +54,7 @@ MonoBehaviour:
     magicDefense: 81
     speed: 48
     money: 888
+    fieldId: 1
     activeSkills: 
     defeatEnemyUnlocks: []
   - id: 3
@@ -72,6 +74,7 @@ MonoBehaviour:
     magicDefense: 84
     speed: 50
     money: 1788
+    fieldId: 1
     activeSkills: 
     defeatEnemyUnlocks: []
   - id: 4
@@ -91,6 +94,7 @@ MonoBehaviour:
     magicDefense: 85
     speed: 53
     money: 2040
+    fieldId: 1
     activeSkills: 
     defeatEnemyUnlocks: []
   - id: 5
@@ -110,6 +114,7 @@ MonoBehaviour:
     magicDefense: 88
     speed: 54
     money: 2940
+    fieldId: 1
     activeSkills: 
     defeatEnemyUnlocks: []
   - id: 6
@@ -129,6 +134,7 @@ MonoBehaviour:
     magicDefense: 92
     speed: 57
     money: 4056
+    fieldId: 1
     activeSkills: 
     defeatEnemyUnlocks: []
   - id: 7
@@ -148,6 +154,7 @@ MonoBehaviour:
     magicDefense: 96
     speed: 60
     money: 5388
+    fieldId: 1
     activeSkills: 
     defeatEnemyUnlocks: []
   - id: 8
@@ -167,6 +174,7 @@ MonoBehaviour:
     magicDefense: 98
     speed: 61
     money: 5880
+    fieldId: 1
     activeSkills: 
     defeatEnemyUnlocks: []
   - id: 9
@@ -186,6 +194,7 @@ MonoBehaviour:
     magicDefense: 100
     speed: 62
     money: 6396
+    fieldId: 1
     activeSkills: 
     defeatEnemyUnlocks: []
   - id: 10
@@ -205,6 +214,7 @@ MonoBehaviour:
     magicDefense: 550
     speed: 285
     money: 120588
+    fieldId: 1
     activeSkills: 
     defeatEnemyUnlocks: []
   references:
