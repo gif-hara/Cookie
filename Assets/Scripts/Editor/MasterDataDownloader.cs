@@ -353,6 +353,23 @@ namespace Cookie
             AssetDatabase.SaveAssets();
         }
 
+        [MenuItem("HK/Cookie/Download MasterData/FieldData")]
+        private static async void DownloadMasterDataFieldData()
+        {
+            var fieldSpecText = await DownloadFromSpreadSheet("FieldSpec");
+            var fieldSpecJson = JsonUtility.FromJson<FieldSpec.Json>(fieldSpecText);
+            var masterDataFieldData = AssetDatabase.LoadAssetAtPath<MasterDataFieldData>("Assets/MasterData/MasterDataFieldData.asset");
+            masterDataFieldData.records.Clear();
+            masterDataFieldData.records.AddRange(
+                fieldSpecJson.elements.Select(x => new FieldData()
+                {
+                    id = x.id,
+                    nameKey = new LocalizedString("Field", x.nameKey)
+                }));
+            EditorUtility.SetDirty(masterDataFieldData);
+            AssetDatabase.SaveAssets();
+        }
+
         private static async UniTask<string> DownloadFromSpreadSheet(string sheetName)
         {
             var sheetUrl = await File.ReadAllTextAsync("masterdata_sheet_url.txt");
