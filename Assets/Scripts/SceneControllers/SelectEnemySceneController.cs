@@ -48,6 +48,13 @@ namespace Cookie
                             {
                                 var userData = UserData.current;
                                 
+                                // 倒した敵の数を加算する
+                                if (!userData.defeatedEnemies.ContainsKey(enemyStatus.id))
+                                {
+                                    userData.defeatedEnemies.Add(enemyStatus.id, 0);
+                                }
+                                userData.defeatedEnemies[enemyStatus.id]++;
+                                
                                 // 各種コンテンツのアンロック処理
                                 foreach (var i in enemyStatus.defeatEnemyUnlocks)
                                 {

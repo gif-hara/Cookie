@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
+using SerializableCollections;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -35,6 +36,11 @@ namespace Cookie
         public int equippedAccessoryInstanceId;
 
         public List<int> unlockEnemies = new();
+
+        /// <summary>
+        /// 倒した敵の数
+        /// </summary>
+        public IntIntSerializableDictionary defeatedEnemies;
 
         public Weapon EquippedWeapon => this.weapons.Find(x => x.instanceId == this.equippedWeaponInstanceId);
         

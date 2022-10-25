@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using SerializableCollections;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.Localization.Settings;
@@ -49,6 +50,8 @@ namespace Cookie
                 UserData.current.armorCreatedNumber++;
                 UserData.current.accessoryCreatedNumber++;
                 UserData.current.unlockEnemies = new List<int>(masterDataInitialEquipment.unlockEnemies);
+                UserData.current.defeatedEnemies = new IntIntSerializableDictionary();
+                SaveData.SaveUserData(UserData.current);
             }
             else
             {
