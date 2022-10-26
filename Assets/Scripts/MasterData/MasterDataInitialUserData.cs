@@ -17,5 +17,11 @@ namespace Cookie
         public Accessory accessory;
 
         public List<int> unlockEnemies;
+
+        public List<int> unlockWeapons;
+
+        public List<int> unlockArmors;
+
+        public List<int> unlockAccessories;
     }
 }

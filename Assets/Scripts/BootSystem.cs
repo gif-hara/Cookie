@@ -50,6 +50,9 @@ namespace Cookie
                 UserData.current.armorCreatedNumber++;
                 UserData.current.accessoryCreatedNumber++;
                 UserData.current.unlockEnemies = new List<int>(masterDataInitialEquipment.unlockEnemies);
+                UserData.current.unlockWeapons = new List<int>(masterDataInitialEquipment.unlockWeapons);
+                UserData.current.unlockArmors = new List<int>(masterDataInitialEquipment.unlockArmors);
+                UserData.current.unlockAccessories = new List<int>(masterDataInitialEquipment.unlockAccessories);
                 UserData.current.defeatedEnemies = new IntIntSerializableDictionary();
                 SaveData.SaveUserData(UserData.current);
             }

@@ -40,3 +40,6 @@ MonoBehaviour:
     nameKey: Test
     passiveSkillIds: []
   unlockEnemies: 01000000
+  unlockWeapons: 01000000
+  unlockArmors: 01000000
+  unlockAccessories: 01000000
