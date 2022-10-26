@@ -195,7 +195,19 @@ namespace Cookie
                         var skillNumber = gacha.skillNumbers.Lottery().value.GetParameter();
                         for (var i = 0; i < skillNumber; i++)
                         {
-                            newAccessory.passiveSkillIds.Add(gacha.passiveSkillIds.Lottery().value);
+                            var instanceParameter = gacha.passiveSkillIds.Lottery().value;
+                            var passiveSkill = MasterDataPassiveSkill.Instance.skills.Find(x => x.id == instanceParameter.parameter);
+                            var attachNumber = newAccessory.passiveSkillIds
+                                .Count(x => x.parameter == instanceParameter.parameter);
+                            
+                            // アタッチ可能数を超えていた場合は付与できない
+                            if (passiveSkill.attachMax <= attachNumber)
+                            {
+                                // もう一度スキルを抽選する
+                                i--;
+                                continue;
+                            }
+                            newAccessory.passiveSkillIds.Add(new InstanceParameter(instanceParameter));
                         }
                         UserData.current.accessories.Add(newAccessory);
                         UserData.current.accessoryCreatedNumber++;

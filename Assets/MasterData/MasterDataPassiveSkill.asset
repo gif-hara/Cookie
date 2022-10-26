@@ -26,6 +26,7 @@ MonoBehaviour:
     attributes:
     - name: PhysicalStrengthUpRate
       value: 10
+    attachMax: 99
   - id: 10102
     name:
       m_TableReference:
@@ -39,6 +40,7 @@ MonoBehaviour:
     attributes:
     - name: PhysicalStrengthUpRate
       value: 15
+    attachMax: 99
   - id: 10103
     name:
       m_TableReference:
@@ -52,6 +54,7 @@ MonoBehaviour:
     attributes:
     - name: PhysicalStrengthUpRate
       value: 20
+    attachMax: 99
   - id: 10201
     name:
       m_TableReference:
@@ -65,6 +68,7 @@ MonoBehaviour:
     attributes:
     - name: MagicStrengthUpRate
       value: 10
+    attachMax: 99
   - id: 10202
     name:
       m_TableReference:
@@ -78,6 +82,7 @@ MonoBehaviour:
     attributes:
     - name: MagicStrengthUpRate
       value: 15
+    attachMax: 99
   - id: 10203
     name:
       m_TableReference:
@@ -91,6 +96,7 @@ MonoBehaviour:
     attributes:
     - name: MagicStrengthUpRate
       value: 20
+    attachMax: 99
   - id: 10301
     name:
       m_TableReference:
@@ -104,6 +110,7 @@ MonoBehaviour:
     attributes:
     - name: PhysicalDefenseUpRate
       value: 10
+    attachMax: 99
   - id: 10302
     name:
       m_TableReference:
@@ -117,6 +124,7 @@ MonoBehaviour:
     attributes:
     - name: PhysicalDefenseUpRate
       value: 15
+    attachMax: 99
   - id: 10303
     name:
       m_TableReference:
@@ -130,6 +138,7 @@ MonoBehaviour:
     attributes:
     - name: PhysicalDefenseUpRate
       value: 20
+    attachMax: 99
   - id: 10401
     name:
       m_TableReference:
@@ -143,6 +152,7 @@ MonoBehaviour:
     attributes:
     - name: MagicDefenseUpRate
       value: 10
+    attachMax: 99
   - id: 10402
     name:
       m_TableReference:
@@ -156,6 +166,7 @@ MonoBehaviour:
     attributes:
     - name: MagicDefenseUpRate
       value: 15
+    attachMax: 99
   - id: 10403
     name:
       m_TableReference:
@@ -169,6 +180,7 @@ MonoBehaviour:
     attributes:
     - name: MagicDefenseUpRate
       value: 20
+    attachMax: 99
   - id: 10501
     name:
       m_TableReference:
@@ -182,6 +194,7 @@ MonoBehaviour:
     attributes:
     - name: RecoveryUpRate
       value: 10
+    attachMax: 3
   - id: 10502
     name:
       m_TableReference:
@@ -195,6 +208,7 @@ MonoBehaviour:
     attributes:
     - name: RecoveryUpRate
       value: 15
+    attachMax: 3
   - id: 10503
     name:
       m_TableReference:
@@ -208,6 +222,7 @@ MonoBehaviour:
     attributes:
     - name: RecoveryUpRate
       value: 20
+    attachMax: 3
   - id: 10601
     name:
       m_TableReference:
@@ -221,6 +236,7 @@ MonoBehaviour:
     attributes:
     - name: InvalidateAbnormalStatus
       value: 1
+    attachMax: 1
   - id: 10602
     name:
       m_TableReference:
@@ -234,6 +250,7 @@ MonoBehaviour:
     attributes:
     - name: InvalidateAbnormalStatus
       value: 2
+    attachMax: 1
   - id: 10603
     name:
       m_TableReference:
@@ -246,7 +263,8 @@ MonoBehaviour:
       m_LocalVariables: []
     attributes:
     - name: InvalidateAbnormalStatus
-      value: 13
+      value: 3
+    attachMax: 1
   - id: 10604
     name:
       m_TableReference:
@@ -260,6 +278,7 @@ MonoBehaviour:
     attributes:
     - name: InvalidateAbnormalStatus
       value: 4
+    attachMax: 1
   references:
     version: 2
     RefIds: []

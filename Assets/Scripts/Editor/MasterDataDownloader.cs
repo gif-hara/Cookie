@@ -342,6 +342,7 @@ namespace Cookie
                 {
                     id = x.id,
                     name = new LocalizedString("Skill", x.nameKey),
+                    attachMax = x.attachMax,
                     attributes = passiveSkillAttributeJson.elements
                         .Where(a => a.passiveSkillId == x.id)
                         .Select(a => new Attribute

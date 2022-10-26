@@ -25,13 +25,13 @@ MonoBehaviour:
     id: 1
     skillNumbers:
     - value:
-        min: 3
-        max: 3
+        min: 10
+        max: 10
         rare: 0
       weight: 80
     - value:
-        min: 3
-        max: 3
+        min: 10
+        max: 10
         rare: 0
       weight: 40
     passiveSkillIds:
@@ -42,7 +42,11 @@ MonoBehaviour:
     - value:
         parameter: 10102
         rare: 0
-      weight: 40
+      weight: 80
+    - value:
+        parameter: 10501
+        rare: 0
+      weight: 80
   references:
     version: 2
     RefIds: []

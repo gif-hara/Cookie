@@ -16,6 +16,8 @@ namespace Cookie
         
         public List<Attribute> attributes = new();
 
+        public int attachMax;
+
         public int Id => this.id;
 
         public string Name => this.name.GetLocalizedString();
@@ -32,6 +34,8 @@ namespace Cookie
         public int id;
 
         public string nameKey;
+
+        public int attachMax;
         
         [Serializable]
         public class Json
