@@ -106,7 +106,7 @@ namespace Cookie
             var rate = 0.5f +
                 attackerStatus.passiveSkills.GetAllAttributeValue(SkillAttributeName.AddAbnormalStatusRateUpFixed) / 100.0f;
             
-            return Random.value > rate;
+            return Random.value <= rate;
         }
 
         public static int GetPoisonDamage(ActorStatus actorStatus)
