@@ -23,6 +23,9 @@ namespace Cookie
         private TextMeshProUGUI totalStrength;
 
         [SerializeField]
+        private TextMeshProUGUI criticalRate;
+
+        [SerializeField]
         private RectTransform activeSkillRoot;
 
         [SerializeField]
@@ -37,6 +40,9 @@ namespace Cookie
         [SerializeField]
         private ComparisonUIStylists totalStrengthComparisonUIStylists;
         
+        [SerializeField]
+        private ComparisonUIStylists criticalRateComparisonUIStylists;
+        
         private readonly List<ActiveSkillUIElement> activeSkillUIElements = new();
 
         public TextMeshProUGUI WeaponName => this.weaponName;
@@ -47,11 +53,15 @@ namespace Cookie
 
         public TextMeshProUGUI TotalStrength => this.totalStrength;
 
+        public TextMeshProUGUI CriticalRate => this.criticalRate;
+
         public ComparisonUIStylists PhysicalStrengthComparisonUIStylists => this.physicalStrengthComparisonUIStylists;
 
         public ComparisonUIStylists MagicStrengthComparisonUIStylists => this.magicStrengthComparisonUIStylists;
 
         public ComparisonUIStylists TotalStrengthComparisonUIStylists => this.totalStrengthComparisonUIStylists;
+
+        public ComparisonUIStylists CriticalRateComparisonUIStylists => this.criticalRateComparisonUIStylists;
 
         public void DestroyAllActiveSkillUIElements()
         {

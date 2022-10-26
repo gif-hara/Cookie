@@ -17,9 +17,11 @@ namespace Cookie
             weaponInformationUIView.PhysicalStrength.text = weapon.physicalStrength.parameter.ToString();
             weaponInformationUIView.MagicStrength.text = weapon.magicStrength.parameter.ToString();
             weaponInformationUIView.TotalStrength.text = weapon.TotalStrength.ToString();
+            weaponInformationUIView.CriticalRate.text = $"{weapon.criticalRate.parameter.ToString()}%";
             weaponInformationUIView.PhysicalStrengthComparisonUIStylists.Apply(0);
             weaponInformationUIView.MagicStrengthComparisonUIStylists.Apply(0);
             weaponInformationUIView.TotalStrengthComparisonUIStylists.Apply(0);
+            weaponInformationUIView.CriticalRateComparisonUIStylists.Apply(0);
             weaponInformationUIView.DestroyAllActiveSkillUIElements();
             for (var i = 0; i < weapon.activeSkillIds.Count; i++)
             {
@@ -36,6 +38,8 @@ namespace Cookie
             weaponInformationUIView.PhysicalStrengthComparisonUIStylists.Apply(after.physicalStrength.parameter - before.physicalStrength.parameter);
             weaponInformationUIView.MagicStrengthComparisonUIStylists.Apply(after.magicStrength.parameter - before.magicStrength.parameter);
             weaponInformationUIView.TotalStrengthComparisonUIStylists.Apply(after.TotalStrength - before.TotalStrength);
+            weaponInformationUIView.CriticalRateComparisonUIStylists.Apply(after.criticalRate.parameter - before.criticalRate.parameter);
+
         }
     }
 }

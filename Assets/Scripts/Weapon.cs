@@ -19,6 +19,8 @@ namespace Cookie
         public InstanceParameter physicalStrength;
 
         public InstanceParameter magicStrength;
+        
+        public InstanceParameter criticalRate;
 
         public List<InstanceParameter> activeSkillIds = new();
 

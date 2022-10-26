@@ -46,6 +46,7 @@ namespace Cookie
                     {
                         var physicalStrength = gacha.physicalStrengths.Lottery();
                         var magicStrength = gacha.magicStrengths.Lottery();
+                        var criticalRate = gacha.criticalRates.Lottery();
                         var newWeapon = new Weapon
                         {
                             instanceId = UserData.current.weaponCreatedNumber,
@@ -59,6 +60,11 @@ namespace Cookie
                             {
                                 parameter = magicStrength.value.GetParameter(),
                                 rare = magicStrength.value.rare
+                            },
+                            criticalRate = new InstanceParameter
+                            {
+                                parameter = criticalRate.value.GetParameter(),
+                                rare = criticalRate.value.rare
                             }
                         };
                         var skillNumber = gacha.skillNumbers.Lottery().value.GetParameter();
