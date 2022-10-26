@@ -141,5 +141,12 @@ namespace Cookie
         public const string Counter = "Counter";
 
         public const string Absorption = "Absorption";
+
+        /// <summary>
+        /// 状態異常付与確率上昇
+        /// </summary>
+        public const string AddAbnormalStatusRateUpFixed = "AddAbnormalStatusRateUpFixed";
+
+        public const string ContinuousAttack = "ContinuousAttack";
     }
 }

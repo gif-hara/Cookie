@@ -307,6 +307,104 @@ MonoBehaviour:
     - name: Absorption
       value: 1
     attachMax: 1
+  - id: 10901
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: PassiveSkill10901
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: AddAbnormalStatusRateUpFixed
+      value: 10
+    attachMax: 2
+  - id: 10902
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: PassiveSkill10902
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: AddAbnormalStatusRateUpFixed
+      value: 15
+    attachMax: 2
+  - id: 10903
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: PassiveSkill10903
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: AddAbnormalStatusRateUpFixed
+      value: 20
+    attachMax: 2
+  - id: 11001
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: PassiveSkill11001
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: CriticalRateUpFixed
+      value: 10
+    attachMax: 2
+  - id: 11002
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: PassiveSkill11002
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: CriticalRateUpFixed
+      value: 15
+    attachMax: 2
+  - id: 11003
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: PassiveSkill11003
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: CriticalRateUpFixed
+      value: 20
+    attachMax: 2
+  - id: 11101
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: PassiveSkill11101
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: ContinuousAttack
+      value: 1
+    attachMax: 1
   references:
     version: 2
     RefIds: []

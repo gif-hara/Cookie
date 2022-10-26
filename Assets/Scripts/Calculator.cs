@@ -94,7 +94,7 @@ namespace Cookie
             return result;
         }
 
-        public static bool CanAddAbnormalStatus(AbnormalStatus abnormalStatus, ActorStatus targetStatus)
+        public static bool CanAddAbnormalStatus(AbnormalStatus abnormalStatus, ActorStatus attackerStatus, ActorStatus targetStatus)
         {
             // 状態異常を無効化するパッシブスキルを持っていた場合は付与できない
             var attributes = targetStatus.passiveSkills.GetAllAttributes(SkillAttributeName.InvalidateAbnormalStatus);
@@ -102,8 +102,11 @@ namespace Cookie
             {
                 return false;
             }
+
+            var rate = 0.5f +
+                attackerStatus.passiveSkills.GetAllAttributeValue(SkillAttributeName.AddAbnormalStatusRateUpFixed) / 100.0f;
             
-            return Random.value > 0.5f;
+            return Random.value > rate;
         }
 
         public static int GetPoisonDamage(ActorStatus actorStatus)
@@ -135,6 +138,19 @@ namespace Cookie
         public static int GetAbsorptionRecoveryAmount(int damage)
         {
             return Mathf.FloorToInt(damage * 0.2f);
+        }
+
+        /// <summary>
+        /// 連続攻撃を行えるか
+        /// </summary>
+        public static bool CanInvokeContinuousAttack(ActorStatus actorStatus)
+        {
+            if (!actorStatus.passiveSkills.Contains(SkillAttributeName.ContinuousAttack))
+            {
+                return false;
+            }
+
+            return Random.value <= 0.2f;
         }
     }
 }

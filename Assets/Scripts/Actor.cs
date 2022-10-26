@@ -60,19 +60,30 @@ namespace Cookie
                             switch (attribute.name)
                             {
                                 case SkillAttributeName.BehaviourAttack:
-                                    var damage = Calculator.GetDamage(this.Status, skill, x.Opponent.Status);
-                                    x.Opponent.TakeDamage(damage);
+                                    void InvokeAttack()
+                                    {
+                                        var damage = Calculator.GetDamage(this.Status, skill, x.Opponent.Status);
+                                        x.Opponent.TakeDamage(damage);
                                     
-                                    // 反撃処理
-                                    if (x.Opponent.Status.passiveSkills.Contains(SkillAttributeName.Counter))
-                                    {
-                                        this.TakeDamage(Calculator.GetCounterDamage(damage));
-                                    }
+                                        // 反撃処理
+                                        if (x.Opponent.Status.passiveSkills.Contains(SkillAttributeName.Counter))
+                                        {
+                                            this.TakeDamage(Calculator.GetCounterDamage(damage));
+                                        }
 
-                                    // 吸収処理
-                                    if (this.Status.passiveSkills.Contains(SkillAttributeName.Absorption))
+                                        // 吸収処理
+                                        if (this.Status.passiveSkills.Contains(SkillAttributeName.Absorption))
+                                        {
+                                            this.RecoveryFixed(Calculator.GetAbsorptionRecoveryAmount(damage));
+                                        }
+                                    }
+                                    InvokeAttack();
+                                    
+                                    // 連続攻撃処理
+                                    if (Calculator.CanInvokeContinuousAttack(this.Status))
                                     {
-                                        this.RecoveryFixed(Calculator.GetAbsorptionRecoveryAmount(damage));
+                                        await UniTask.Delay(TimeSpan.FromSeconds(1.0f));
+                                        InvokeAttack();
                                     }
                                     break;
                                 case SkillAttributeName.BehaviourRecovery:
@@ -80,7 +91,7 @@ namespace Cookie
                                     break;
                                 case SkillAttributeName.BehaviourAddAbnormalStatus:
                                     var abnormalStatus = (AbnormalStatus)skill.attributes.Get(SkillAttributeName.AddAbnormalStatusType).value;
-                                    if (Calculator.CanAddAbnormalStatus(abnormalStatus, x.Opponent.Status))
+                                    if (Calculator.CanAddAbnormalStatus(abnormalStatus, this.Status, x.Opponent.Status))
                                     {
                                         x.Opponent.Status.abnormalStatuses.Add(abnormalStatus);
                                     }
