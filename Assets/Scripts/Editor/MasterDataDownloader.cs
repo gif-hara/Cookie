@@ -23,13 +23,15 @@ namespace Cookie
                 DownloadFromSpreadSheet("WeaponGachaPhysicalStrength"),
                 DownloadFromSpreadSheet("WeaponGachaMagicStrength"),
                 DownloadFromSpreadSheet("WeaponGachaSkillNumber"),
-                DownloadFromSpreadSheet("WeaponGachaActiveSkill")
+                DownloadFromSpreadSheet("WeaponGachaActiveSkill"),
+                DownloadFromSpreadSheet("WeaponGachaCriticalRate")
                 );
             var weaponGachaSpecJson = JsonUtility.FromJson<WeaponGachaSpec.Json>(items.Item1);
             var weaponGachaPhysicalStrengthJson = JsonUtility.FromJson<WeaponGachaPhysicalStrength.Json>(items.Item2);
             var weaponGachaMagicStrengthJson = JsonUtility.FromJson<WeaponGachaMagicStrength.Json>(items.Item3);
             var weaponGachaSkillNumberJson = JsonUtility.FromJson<WeaponGachaSkillNumber.Json>(items.Item4);
             var weaponGachaActiveSkillJson = JsonUtility.FromJson<WeaponGachaActiveSkill.Json>(items.Item5);
+            var weaponGachaCriticalRateJson = JsonUtility.FromJson<WeaponGachaCriticalRate.Json>(items.Item6);
             
             var masterDataWeaponGacha = AssetDatabase.LoadAssetAtPath<MasterDataWeaponGacha>("Assets/MasterData/MasterDataWeaponGacha.asset");
             masterDataWeaponGacha.gachas.Clear();
@@ -58,6 +60,21 @@ namespace Cookie
                         magicStrengths = new List<InstanceRangeParameterWithWeight>
                             (
                             weaponGachaMagicStrengthJson.elements
+                                .Where(y => y.gachaId == x.id)
+                                .Select(y => new InstanceRangeParameterWithWeight
+                                {
+                                    value = new InstanceRangeParameter
+                                    {
+                                        min = y.min,
+                                        max = y.max,
+                                        rare = y.rare,
+                                    },
+                                    weight = y.weight
+                                })
+                            ),
+                        criticalRates = new List<InstanceRangeParameterWithWeight>
+                            (
+                            weaponGachaCriticalRateJson.elements
                                 .Where(y => y.gachaId == x.id)
                                 .Select(y => new InstanceRangeParameterWithWeight
                                 {

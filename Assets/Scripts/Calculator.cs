@@ -113,5 +113,10 @@ namespace Cookie
         {
             return Random.value > 0.66f;
         }
+
+        public static bool IsCritical(int criticalRate)
+        {
+            return Random.value <= ((float)criticalRate / 100);
+        }
     }
 }

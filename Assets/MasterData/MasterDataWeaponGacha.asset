@@ -45,6 +45,17 @@ MonoBehaviour:
         max: 108
         rare: 0
       weight: 40
+    criticalRates:
+    - value:
+        min: 0
+        max: 0
+        rare: 0
+      weight: 80
+    - value:
+        min: 5
+        max: 5
+        rare: 1
+      weight: 40
     skillNumbers:
     - value:
         min: 10
@@ -89,6 +100,12 @@ MonoBehaviour:
     - value:
         min: 105
         max: 108
+        rare: 0
+      weight: 40
+    criticalRates:
+    - value:
+        min: 0
+        max: 0
         rare: 0
       weight: 40
     skillNumbers: []

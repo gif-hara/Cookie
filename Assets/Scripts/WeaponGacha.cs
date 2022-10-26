@@ -20,6 +20,8 @@ namespace Cookie
         public List<InstanceRangeParameterWithWeight> physicalStrengths;
 
         public List<InstanceRangeParameterWithWeight> magicStrengths;
+        
+        public List<InstanceRangeParameterWithWeight> criticalRates;
 
         public List<InstanceRangeParameterWithWeight> skillNumbers;
         
@@ -68,6 +70,28 @@ namespace Cookie
 
     [Serializable]
     public sealed class WeaponGachaMagicStrength
+    {
+        public int id;
+
+        public int gachaId;
+
+        public int min;
+
+        public int max;
+
+        public Rare rare;
+
+        public int weight;
+        
+        [Serializable]
+        public class Json
+        {
+            public List<WeaponGachaMagicStrength> elements;
+        }
+    }
+
+    [Serializable]
+    public sealed class WeaponGachaCriticalRate
     {
         public int id;
 
