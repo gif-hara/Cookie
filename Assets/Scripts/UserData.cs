@@ -37,11 +37,11 @@ namespace Cookie
 
         public List<int> unlockEnemies = new();
 
-        public List<int> unlockWeapons = new();
+        public List<int> unlockWeaponGachas = new();
 
-        public List<int> unlockArmors = new();
+        public List<int> unlockArmorGachas = new();
 
-        public List<int> unlockAccessories = new();
+        public List<int> unlockAccessoryGachas = new();
 
         /// <summary>
         /// 倒した敵の数
@@ -68,6 +68,46 @@ namespace Cookie
                 speed = armor.speed,
                 activeSkillIds = weapon.activeSkillIds.Select(x => x.parameter).ToList()
             };
+        }
+
+        public void UnlockEnemy(int unlockId)
+        {
+            if (this.unlockEnemies.Contains(unlockId))
+            {
+                return;
+            }
+            
+            this.unlockEnemies.Add(unlockId);
+        }
+
+        public void UnlockWeaponGacha(int unlockId)
+        {
+            if (this.unlockWeaponGachas.Contains(unlockId))
+            {
+                return;
+            }
+            
+            this.unlockWeaponGachas.Add(unlockId);
+        }
+
+        public void UnlockArmorGacha(int unlockId)
+        {
+            if (this.unlockArmorGachas.Contains(unlockId))
+            {
+                return;
+            }
+            
+            this.unlockArmorGachas.Add(unlockId);
+        }
+
+        public void UnlockAccessoryGacha(int unlockId)
+        {
+            if (this.unlockAccessoryGachas.Contains(unlockId))
+            {
+                return;
+            }
+            
+            this.unlockAccessoryGachas.Add(unlockId);
         }
     }
 }

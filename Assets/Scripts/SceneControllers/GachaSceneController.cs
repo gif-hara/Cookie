@@ -28,7 +28,7 @@ namespace Cookie
             var uiView = Instantiate(this.gachaUIPrefab, this.uiParent);
             
             uiView.DestroyAllGachaButtons();
-            foreach (var gachaId in UserData.current.unlockWeapons)
+            foreach (var gachaId in UserData.current.unlockWeaponGachas)
             {
                 var gacha = MasterDataWeaponGacha.Instance.gachas.Find(x => x.id == gachaId);
                 var gachaButton = uiView.CreateGachaButton();
@@ -112,7 +112,7 @@ namespace Cookie
                     });
                 });
             }
-            foreach (var gachaId in UserData.current.unlockArmors)
+            foreach (var gachaId in UserData.current.unlockArmorGachas)
             {
                 var gacha = MasterDataArmorGacha.Instance.gachas.Find(x => x.id == gachaId);
                 var gachaButton = uiView.CreateGachaButton();
@@ -171,7 +171,7 @@ namespace Cookie
                     });
                 });
             }
-            foreach (var gachaId in UserData.current.unlockAccessories)
+            foreach (var gachaId in UserData.current.unlockAccessoryGachas)
             {
                 var gacha = MasterDataAccessoryGacha.Instance.gachas.Find(x => x.id == gachaId);
                 var gachaButton = uiView.CreateGachaButton();
