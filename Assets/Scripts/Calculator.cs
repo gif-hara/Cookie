@@ -116,7 +116,7 @@ namespace Cookie
 
         public static bool CanInvokeParalysis()
         {
-            return Random.value > 0.66f;
+            return Random.value <= 0.66f;
         }
 
         public static bool IsCritical(int criticalRate)
