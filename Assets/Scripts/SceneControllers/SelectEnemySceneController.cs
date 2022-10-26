@@ -83,8 +83,23 @@ namespace Cookie
                                                     }
                                                     break;
                                                 case UnlockType.WeaponGacha:
+                                                    if (!userData.unlockWeapons.Contains(i.unlockId))
+                                                    {
+                                                        userData.unlockWeapons.Add(i.unlockId);
+                                                    }
+                                                    break;
                                                 case UnlockType.ArmorGacha:
+                                                    if (!userData.unlockArmors.Contains(i.unlockId))
+                                                    {
+                                                        userData.unlockArmors.Add(i.unlockId);
+                                                    }
+                                                    break;
                                                 case UnlockType.AccessoryGacha:
+                                                    if (!userData.unlockAccessories.Contains(i.unlockId))
+                                                    {
+                                                        userData.unlockAccessories.Add(i.unlockId);
+                                                    }
+                                                    break;
                                                 default:
                                                     Assert.IsTrue(false, $"{i.unlockType}は未対応です");
                                                     break;

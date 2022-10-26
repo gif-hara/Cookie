@@ -37,6 +37,12 @@ namespace Cookie
 
         public List<int> unlockEnemies = new();
 
+        public List<int> unlockWeapons = new();
+
+        public List<int> unlockArmors = new();
+
+        public List<int> unlockAccessories = new();
+
         /// <summary>
         /// 倒した敵の数
         /// </summary>
