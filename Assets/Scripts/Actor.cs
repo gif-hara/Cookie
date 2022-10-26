@@ -116,6 +116,40 @@ namespace Cookie
                                     }
                                     break;
                                 }
+                                case SkillAttributeName.BehaviourAddBuff:
+                                {
+                                    foreach (var a in skill.attributes.GetAll(SkillAttributeName.AddBuffType))
+                                    {
+                                        var addBuffType = (AddBuffType)a.value;
+                                        switch (addBuffType)
+                                        {
+                                            case AddBuffType.PhysicalStrength:
+                                            {
+                                                this.Status.physicalStrengthBuffLevel = Mathf.Min(this.Status.physicalStrengthBuffLevel + 1, Define.BuffLevelMax);
+                                                break;
+                                            }
+                                            case AddBuffType.MagicStrength:
+                                            {
+                                                this.Status.magicStrengthBuffLevel = Mathf.Min(this.Status.magicStrengthBuffLevel + 1, Define.BuffLevelMax);
+                                                break;
+                                            }
+                                            case AddBuffType.PhysicalDefense:
+                                            {
+                                                this.Status.physicalDefenseBuffLevel = Mathf.Min(this.Status.physicalDefenseBuffLevel + 1, Define.BuffLevelMax);
+                                                break;
+                                            }
+                                            case AddBuffType.MagicDefense:
+                                            {
+                                                this.Status.magicDefenseBuffLevel = Mathf.Min(this.Status.magicDefenseBuffLevel + 1, Define.BuffLevelMax);
+                                                break;
+                                            }
+                                            default:
+                                                Assert.IsTrue(false, $"{addBuffType}は未対応です");
+                                                break;
+                                        }
+                                    }
+                                    break;
+                                }
                                 default:
                                     Assert.IsTrue(false, $"{attribute.name}は未対応です");
                                     break;

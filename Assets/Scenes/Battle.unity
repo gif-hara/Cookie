@@ -266,7 +266,7 @@ MonoBehaviour:
     physicalDefense: 80
     magicDefense: 80
     speed: 0
-    activeSkillIds: 80270000
+    activeSkillIds: 0529000080270000
     passiveSkillIds: 972a0000972a0000972a0000
   enemyStatus:
     hitPoint: 500
@@ -276,7 +276,7 @@ MonoBehaviour:
     physicalDefense: 80
     magicDefense: 80
     speed: 0
-    activeSkillIds: a5280000
+    activeSkillIds: 75270000
     passiveSkillIds: 
 --- !u!1001 &1477957838
 PrefabInstance:

@@ -25,6 +25,14 @@ namespace Cookie
 
         public int speed;
 
+        public int physicalStrengthBuffLevel;
+
+        public int magicStrengthBuffLevel;
+
+        public int physicalDefenseBuffLevel;
+
+        public int magicDefenseBuffLevel;
+
         public List<ActiveSkill> activeSkills;
 
         public List<PassiveSkill> passiveSkills;

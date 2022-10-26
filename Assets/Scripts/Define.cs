@@ -91,6 +91,22 @@ namespace Cookie
         PlayerWin,
         PlayerLose,
     }
+
+    /// <summary>
+    /// バフ対象
+    /// </summary>
+    public enum AddBuffType
+    {
+        PhysicalStrength = 1,
+        MagicStrength,
+        PhysicalDefense,
+        MagicDefense,
+    }
+
+    public class Define
+    {
+        public const int BuffLevelMax = 4;
+    }
     
     public static class SkillAttributeName
     {
@@ -113,6 +129,8 @@ namespace Cookie
         /// 状態異常の解除を行える
         /// </summary>
         public const string BehaviourRemoveAbnormalStatus = "Behaviour.RemoveAbnormalStatus";
+
+        public const string BehaviourAddBuff = "Behaviour.AddBuff";
         
         public const string AttackPower = "Attack.Power";
         
@@ -121,6 +139,8 @@ namespace Cookie
         public const string RecoveryPower = "Recovery.Power";
         
         public const string AddAbnormalStatusType = "AddAbnormalStatus.Type";
+
+        public const string AddBuffType = "AddBuff.Type";
         
         public const string RemoveAbnormalStatusType = "RemoveAbnormalStatus.Type";
 

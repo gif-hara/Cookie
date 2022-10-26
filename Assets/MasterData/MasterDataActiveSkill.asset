@@ -909,6 +909,70 @@ MonoBehaviour:
     - name: RemoveAbnormalStatus.Type
       value: 4
     attachMax: 1
+  - id: 10501
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10501
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: Behaviour.AddBuff
+      value: 1
+    - name: AddBuff.Type
+      value: 1
+    attachMax: 1
+  - id: 10502
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10502
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: Behaviour.AddBuff
+      value: 1
+    - name: AddBuff.Type
+      value: 2
+    attachMax: 1
+  - id: 10503
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10503
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: Behaviour.AddBuff
+      value: 1
+    - name: AddBuff.Type
+      value: 3
+    attachMax: 1
+  - id: 10504
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: ActiveSkill10504
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: Behaviour.AddBuff
+      value: 1
+    - name: AddBuff.Type
+      value: 4
+    attachMax: 1
   references:
     version: 2
     RefIds: []

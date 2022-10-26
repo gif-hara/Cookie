@@ -16,11 +16,31 @@ namespace Cookie
             )
         {
             var attackAttribute = (AttackAttribute)attackerActiveSkill.attributes.Get(SkillAttributeName.AttackAttribute).value;
-            var physicalStrength = Mathf.FloorToInt(attacker.physicalStrength * GetPhysicalStrengthUpRate(attacker.passiveSkills));
-            var magicStrength = Mathf.FloorToInt(attacker.magicStrength * GetMagicStrengthUpRate(attacker.passiveSkills));
+            
+            var physicalStrength = attacker.physicalStrength;
+            physicalStrength = Mathf.FloorToInt(
+                physicalStrength *
+                (1.0f + GetPhysicalStrengthUpRateFromPassiveSkill(attacker.passiveSkills) + GetStrengthUpRateFromBuff(attacker.physicalStrengthBuffLevel))
+                );
+            
+            var magicStrength = attacker.magicStrength;
+            magicStrength = Mathf.FloorToInt(
+                magicStrength *
+                (1.0f + GetMagicStrengthUpRateFromPassiveSkill(attacker.passiveSkills) + GetStrengthUpRateFromBuff(attacker.magicStrengthBuffLevel))
+                );
+            
             var defense = attackAttribute == AttackAttribute.Physical ? target.physicalDefense : target.magicDefense;
-            var defenseUpRate = attackAttribute == AttackAttribute.Physical ? GetPhysicalDefenseUpRate(target.passiveSkills) : GetMagicDefenseUpRate(target.passiveSkills);
-            defense = Mathf.FloorToInt(defense * defenseUpRate);
+            var defenseUpRateFromPassiveSkill = attackAttribute == AttackAttribute.Physical
+                ? GetPhysicalDefenseUpRateFromPassiveSkill(target.passiveSkills)
+                : GetMagicDefenseUpRateFromPassiveSkill(target.passiveSkills);
+            var defenseUpRateFromBuff = attackAttribute == AttackAttribute.Physical
+                ? GetDefenseUpRateFromBuff(target.physicalDefenseBuffLevel)
+                : GetDefenseUpRateFromBuff(target.magicDefenseBuffLevel);
+            defense = Mathf.FloorToInt(
+                defense *
+                (1.0f + defenseUpRateFromPassiveSkill + defenseUpRateFromBuff)
+                );
+            
             var criticalRate = attacker.criticalRate + attacker.passiveSkills.GetAllAttributeValue(SkillAttributeName.CriticalRateUpFixed);
             var critical = IsCritical(criticalRate) ? 1.5f : 1.0f;
             var result = Mathf.FloorToInt(GetAttackPower(physicalStrength, magicStrength, attackerActiveSkill) * critical) / defense;
@@ -55,26 +75,54 @@ namespace Cookie
             }
         }
 
-        public static float GetPhysicalStrengthUpRate(IEnumerable<PassiveSkill> passiveSkills)
+        public static float GetPhysicalStrengthUpRateFromPassiveSkill(IEnumerable<PassiveSkill> passiveSkills)
         {
-            return 1.0f + ((float)passiveSkills.GetAllAttributeValue(SkillAttributeName.PhysicalStrengthUpRate) / 100);
+            return (float)passiveSkills.GetAllAttributeValue(SkillAttributeName.PhysicalStrengthUpRate) / 100;
         }
 
-        public static float GetMagicStrengthUpRate(IEnumerable<PassiveSkill> passiveSkills)
+        public static float GetMagicStrengthUpRateFromPassiveSkill(IEnumerable<PassiveSkill> passiveSkills)
         {
-            return 1.0f + ((float)passiveSkills.GetAllAttributeValue(SkillAttributeName.MagicStrengthUpRate) / 100);
+            return (float)passiveSkills.GetAllAttributeValue(SkillAttributeName.MagicStrengthUpRate) / 100;
         }
 
-        public static float GetPhysicalDefenseUpRate(IEnumerable<PassiveSkill> passiveSkills)
+        public static float GetPhysicalDefenseUpRateFromPassiveSkill(IEnumerable<PassiveSkill> passiveSkills)
         {
-            return 1.0f + ((float)passiveSkills.GetAllAttributeValue(SkillAttributeName.PhysicalDefenseUpRate) / 100);
+            return (float)passiveSkills.GetAllAttributeValue(SkillAttributeName.PhysicalDefenseUpRate) / 100;
         }
 
-        public static float GetMagicDefenseUpRate(IEnumerable<PassiveSkill> passiveSkills)
+        public static float GetMagicDefenseUpRateFromPassiveSkill(IEnumerable<PassiveSkill> passiveSkills)
         {
-            return 1.0f + ((float)passiveSkills.GetAllAttributeValue(SkillAttributeName.MagicDefenseUpRate) / 100);
+            return (float)passiveSkills.GetAllAttributeValue(SkillAttributeName.MagicDefenseUpRate) / 100;
         }
 
+        public static float GetStrengthUpRateFromBuff(int buffLevel)
+        {
+            var results = new[]
+            {
+                0.0f,
+                0.25f,
+                0.5f,
+                0.75f,
+                1.0f
+            };
+
+            return results[buffLevel];
+        }
+
+        public static float GetDefenseUpRateFromBuff(int buffLevel)
+        {
+            var results = new[]
+            {
+                0.0f,
+                0.25f,
+                0.5f,
+                0.75f,
+                1.0f
+            };
+
+            return results[buffLevel];
+        }
+        
         /// <summary>
         /// 回復力UPの倍率を返す
         /// </summary>
