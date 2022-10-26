@@ -60,10 +60,23 @@ namespace Cookie
                             switch (attribute.name)
                             {
                                 case SkillAttributeName.BehaviourAttack:
-                                    x.Opponent.TakeDamage(Calculator.GetDamage(this.Status, skill, x.Opponent.Status));
+                                    var damage = Calculator.GetDamage(this.Status, skill, x.Opponent.Status);
+                                    x.Opponent.TakeDamage(damage);
+                                    
+                                    // 反撃処理
+                                    if (x.Opponent.Status.passiveSkills.Contains(SkillAttributeName.Counter))
+                                    {
+                                        this.TakeDamage(Calculator.GetCounterDamage(damage));
+                                    }
+
+                                    // 吸収処理
+                                    if (this.Status.passiveSkills.Contains(SkillAttributeName.Absorption))
+                                    {
+                                        this.RecoveryFixed(Calculator.GetAbsorptionRecoveryAmount(damage));
+                                    }
                                     break;
                                 case SkillAttributeName.BehaviourRecovery:
-                                    this.Recovery(Calculator.GetRecoveryRate(this.Status, skill));
+                                    this.RecoveryRate(Calculator.GetRecoveryRate(this.Status, skill));
                                     break;
                                 case SkillAttributeName.BehaviourAddAbnormalStatus:
                                     var abnormalStatus = (AbnormalStatus)skill.attributes.Get(SkillAttributeName.AddAbnormalStatusType).value;
@@ -110,10 +123,15 @@ namespace Cookie
             this.Status.hitPoint.Value -= damage;
         }
 
-        private void Recovery(float rate)
+        private void RecoveryRate(float rate)
         {
             var recoveryAmount = Mathf.FloorToInt(this.Status.hitPointMax * rate);
-            var hitPoint = Mathf.Min(this.Status.hitPoint + recoveryAmount, this.Status.hitPointMax);
+            this.RecoveryFixed(recoveryAmount);
+        }
+
+        private void RecoveryFixed(int value)
+        {
+            var hitPoint = Mathf.Min(this.Status.hitPoint + value, this.Status.hitPointMax);
             this.Status.hitPoint.Value = hitPoint;
         }
     }

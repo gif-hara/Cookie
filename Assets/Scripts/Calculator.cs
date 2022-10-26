@@ -120,5 +120,21 @@ namespace Cookie
         {
             return Random.value <= ((float)criticalRate / 100);
         }
+
+        /// <summary>
+        /// 反撃によるダメージを返す
+        /// </summary>
+        public static int GetCounterDamage(int damage)
+        {
+            return Mathf.FloorToInt(damage * 0.2f);
+        }
+
+        /// <summary>
+        /// 吸収による回復量を返す
+        /// </summary>
+        public static int GetAbsorptionRecoveryAmount(int damage)
+        {
+            return Mathf.FloorToInt(damage * 0.2f);
+        }
     }
 }

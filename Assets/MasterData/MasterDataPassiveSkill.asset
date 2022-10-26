@@ -279,6 +279,34 @@ MonoBehaviour:
     - name: InvalidateAbnormalStatus
       value: 4
     attachMax: 1
+  - id: 10701
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: PassiveSkill10701
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: Counter
+      value: 1
+    attachMax: 1
+  - id: 10801
+    name:
+      m_TableReference:
+        m_TableCollectionName: Skill
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: PassiveSkill10801
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attributes:
+    - name: Absorption
+      value: 1
+    attachMax: 1
   references:
     version: 2
     RefIds: []

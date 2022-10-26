@@ -137,5 +137,9 @@ namespace Cookie
         public const string CriticalRateUpFixed = "CriticalRateUpFixed";
 
         public const string InvalidateAbnormalStatus = "InvalidateAbnormalStatus";
+
+        public const string Counter = "Counter";
+
+        public const string Absorption = "Absorption";
     }
 }
