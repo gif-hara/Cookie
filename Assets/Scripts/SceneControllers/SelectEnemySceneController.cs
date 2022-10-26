@@ -63,6 +63,9 @@ namespace Cookie
                                     if (judgement == BattleJudgement.PlayerWin)
                                     {
                                         var userData = UserData.current;
+                                        
+                                        // お金加算
+                                        userData.money += enemyStatus.money;
 
                                         // 倒した敵の数を加算する
                                         if (!userData.defeatedEnemies.ContainsKey(enemyStatus.id))

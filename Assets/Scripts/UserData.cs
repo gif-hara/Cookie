@@ -23,6 +23,8 @@ namespace Cookie
 
         public List<Accessory> accessories = new();
 
+        public int money;
+
         public int weaponCreatedNumber = 0;
 
         public int armorCreatedNumber = 0;
