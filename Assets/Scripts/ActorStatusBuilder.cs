@@ -17,6 +17,8 @@ namespace Cookie
         
         public int magicStrength;
 
+        public int criticalRate;
+
         public int physicalDefense;
 
         public int magicDefense;
@@ -35,6 +37,7 @@ namespace Cookie
                 hitPointMax = new AsyncReactiveProperty<int>(this.hitPoint),
                 physicalStrength = this.physicalStrength,
                 magicStrength = this.magicStrength,
+                criticalRate = this.criticalRate,
                 physicalDefense = this.physicalDefense,
                 magicDefense = this.magicDefense,
                 speed = this.speed,

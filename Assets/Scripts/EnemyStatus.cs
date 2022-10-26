@@ -21,6 +21,8 @@ namespace Cookie
         public int physicalStrength;
 
         public int magicStrength;
+        
+        public int criticalRate;
 
         public int physicalDefense;
 
@@ -45,6 +47,7 @@ namespace Cookie
                 hitPoint = this.hitPoint,
                 physicalStrength = this.physicalStrength,
                 magicStrength = this.magicStrength,
+                criticalRate = this.criticalRate,
                 physicalDefense = this.physicalDefense,
                 magicDefense = this.magicDefense,
                 speed = this.speed,

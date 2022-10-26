@@ -63,6 +63,7 @@ namespace Cookie
                 hitPoint = armor.hitPoint,
                 physicalStrength = weapon.physicalStrength.parameter,
                 magicStrength = weapon.magicStrength.parameter,
+                criticalRate = weapon.criticalRate.parameter,
                 physicalDefense = armor.physicalDefense,
                 magicDefense = armor.magicDefense,
                 speed = armor.speed,

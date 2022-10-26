@@ -134,6 +134,8 @@ namespace Cookie
         
         public const string RecoveryUpRate = "RecoveryUpRate";
 
+        public const string CriticalRateUp = "CriticalRateUp";
+
         public const string InvalidateAbnormalStatus = "InvalidateAbnormalStatus";
     }
 }

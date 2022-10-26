@@ -17,6 +17,8 @@ namespace Cookie
 
         public int magicStrength;
 
+        public int criticalRate;
+
         public int physicalDefense;
         
         public int magicDefense;
