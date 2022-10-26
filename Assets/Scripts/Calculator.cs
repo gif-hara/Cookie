@@ -21,7 +21,7 @@ namespace Cookie
             var defense = attackAttribute == AttackAttribute.Physical ? target.physicalDefense : target.magicDefense;
             var defenseUpRate = attackAttribute == AttackAttribute.Physical ? GetPhysicalDefenseUpRate(target.passiveSkills) : GetMagicDefenseUpRate(target.passiveSkills);
             defense = Mathf.FloorToInt(defense * defenseUpRate);
-            var criticalRate = attacker.criticalRate + attacker.passiveSkills.GetAllAttributeValue(SkillAttributeName.CriticalRateUp);
+            var criticalRate = attacker.criticalRate + attacker.passiveSkills.GetAllAttributeValue(SkillAttributeName.CriticalRateUpFixed);
             var critical = IsCritical(criticalRate) ? 1.5f : 1.0f;
             var result = Mathf.FloorToInt(GetAttackPower(physicalStrength, magicStrength, attackerActiveSkill) * critical) / defense;
 
