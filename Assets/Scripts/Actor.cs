@@ -60,6 +60,7 @@ namespace Cookie
                             switch (attribute.name)
                             {
                                 case SkillAttributeName.BehaviourAttack:
+                                {
                                     void InvokeAttack()
                                     {
                                         var damage = Calculator.GetDamage(this.Status, skill, x.Opponent.Status);
@@ -86,23 +87,35 @@ namespace Cookie
                                         InvokeAttack();
                                     }
                                     break;
+                                }
                                 case SkillAttributeName.BehaviourRecovery:
+                                {
                                     this.RecoveryRate(Calculator.GetRecoveryRate(this.Status, skill));
                                     break;
+                                }
                                 case SkillAttributeName.BehaviourAddAbnormalStatus:
-                                    var abnormalStatus = (AbnormalStatus)skill.attributes.Get(SkillAttributeName.AddAbnormalStatusType).value;
-                                    if (Calculator.CanAddAbnormalStatus(abnormalStatus, this.Status, x.Opponent.Status))
+                                {
+                                    var abnormalStatusType = (AbnormalStatus)skill.attributes.Get(SkillAttributeName.AddAbnormalStatusType).value;
+                                    if (Calculator.CanAddAbnormalStatus(abnormalStatusType, this.Status, x.Opponent.Status))
                                     {
-                                        x.Opponent.Status.abnormalStatuses.Add(abnormalStatus);
+                                        x.Opponent.Status.abnormalStatuses.Add(abnormalStatusType);
+                                        Debug.Log($"Add {abnormalStatusType}");
                                     }
                                     break;
+                                }
                                 case SkillAttributeName.BehaviourRemoveAbnormalStatus:
-                                    var abnormalStatusType = (AbnormalStatus)skill.attributes.Get(SkillAttributeName.RemoveAbnormalStatusType).value;
-                                    if (!this.Status.abnormalStatuses.Contains(abnormalStatusType))
+                                {
+                                    foreach (var a in skill.attributes.GetAll(SkillAttributeName.RemoveAbnormalStatusType))
                                     {
-                                        this.Status.abnormalStatuses.Remove(abnormalStatusType);
+                                        var abnormalStatusType = (AbnormalStatus)a.value;
+                                        if (this.Status.abnormalStatuses.Contains(abnormalStatusType))
+                                        {
+                                            this.Status.abnormalStatuses.Remove(abnormalStatusType);
+                                            Debug.Log($"Remove {abnormalStatusType}");
+                                        }
                                     }
                                     break;
+                                }
                                 default:
                                     Assert.IsTrue(false, $"{attribute.name}は未対応です");
                                     break;

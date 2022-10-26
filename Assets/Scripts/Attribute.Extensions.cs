@@ -18,6 +18,13 @@ namespace Cookie
             return result;
         }
 
+        public static List<Attribute> GetAll(this IEnumerable<Attribute> self, string name)
+        {
+            return self
+                .Where(x => x.name == name)
+                .ToList();
+        }
+
         public static bool Contains(this IEnumerable<Attribute> self, string key)
         {
             return self.Any(x => x.name == key);
