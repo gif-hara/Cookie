@@ -30,6 +30,7 @@ MonoBehaviour:
       value: 100
     - name: Attack.Attribute
       value: 1
+    attachMax: 99
   - id: 10102
     name:
       m_TableReference:
@@ -47,6 +48,7 @@ MonoBehaviour:
       value: 109
     - name: Attack.Attribute
       value: 1
+    attachMax: 99
   - id: 10103
     name:
       m_TableReference:
@@ -64,6 +66,7 @@ MonoBehaviour:
       value: 135
     - name: Attack.Attribute
       value: 1
+    attachMax: 99
   - id: 10104
     name:
       m_TableReference:
@@ -81,6 +84,7 @@ MonoBehaviour:
       value: 176
     - name: Attack.Attribute
       value: 1
+    attachMax: 99
   - id: 10105
     name:
       m_TableReference:
@@ -98,6 +102,7 @@ MonoBehaviour:
       value: 234
     - name: Attack.Attribute
       value: 1
+    attachMax: 99
   - id: 10106
     name:
       m_TableReference:
@@ -115,6 +120,7 @@ MonoBehaviour:
       value: 308
     - name: Attack.Attribute
       value: 1
+    attachMax: 99
   - id: 10107
     name:
       m_TableReference:
@@ -132,6 +138,7 @@ MonoBehaviour:
       value: 397
     - name: Attack.Attribute
       value: 1
+    attachMax: 99
   - id: 10108
     name:
       m_TableReference:
@@ -149,6 +156,7 @@ MonoBehaviour:
       value: 503
     - name: Attack.Attribute
       value: 1
+    attachMax: 99
   - id: 10109
     name:
       m_TableReference:
@@ -166,6 +174,7 @@ MonoBehaviour:
       value: 624
     - name: Attack.Attribute
       value: 1
+    attachMax: 99
   - id: 10110
     name:
       m_TableReference:
@@ -183,6 +192,7 @@ MonoBehaviour:
       value: 762
     - name: Attack.Attribute
       value: 1
+    attachMax: 99
   - id: 10111
     name:
       m_TableReference:
@@ -200,6 +210,7 @@ MonoBehaviour:
       value: 900
     - name: Attack.Attribute
       value: 1
+    attachMax: 99
   - id: 10112
     name:
       m_TableReference:
@@ -221,6 +232,7 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 1
+    attachMax: 99
   - id: 10113
     name:
       m_TableReference:
@@ -242,6 +254,7 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 1
+    attachMax: 99
   - id: 10114
     name:
       m_TableReference:
@@ -263,6 +276,7 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 1
+    attachMax: 99
   - id: 10115
     name:
       m_TableReference:
@@ -284,6 +298,7 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 1
+    attachMax: 99
   - id: 10116
     name:
       m_TableReference:
@@ -305,6 +320,7 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 2
+    attachMax: 99
   - id: 10117
     name:
       m_TableReference:
@@ -326,6 +342,7 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 2
+    attachMax: 99
   - id: 10118
     name:
       m_TableReference:
@@ -347,6 +364,7 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 2
+    attachMax: 99
   - id: 10119
     name:
       m_TableReference:
@@ -368,6 +386,7 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 2
+    attachMax: 99
   - id: 10201
     name:
       m_TableReference:
@@ -385,6 +404,7 @@ MonoBehaviour:
       value: 100
     - name: Attack.Attribute
       value: 2
+    attachMax: 99
   - id: 10202
     name:
       m_TableReference:
@@ -402,6 +422,7 @@ MonoBehaviour:
       value: 109
     - name: Attack.Attribute
       value: 2
+    attachMax: 99
   - id: 10203
     name:
       m_TableReference:
@@ -419,6 +440,7 @@ MonoBehaviour:
       value: 135
     - name: Attack.Attribute
       value: 2
+    attachMax: 99
   - id: 10204
     name:
       m_TableReference:
@@ -436,6 +458,7 @@ MonoBehaviour:
       value: 176
     - name: Attack.Attribute
       value: 2
+    attachMax: 99
   - id: 10205
     name:
       m_TableReference:
@@ -453,6 +476,7 @@ MonoBehaviour:
       value: 234
     - name: Attack.Attribute
       value: 2
+    attachMax: 99
   - id: 10206
     name:
       m_TableReference:
@@ -470,6 +494,7 @@ MonoBehaviour:
       value: 308
     - name: Attack.Attribute
       value: 2
+    attachMax: 99
   - id: 10207
     name:
       m_TableReference:
@@ -487,6 +512,7 @@ MonoBehaviour:
       value: 397
     - name: Attack.Attribute
       value: 2
+    attachMax: 99
   - id: 10208
     name:
       m_TableReference:
@@ -504,6 +530,7 @@ MonoBehaviour:
       value: 503
     - name: Attack.Attribute
       value: 2
+    attachMax: 99
   - id: 10209
     name:
       m_TableReference:
@@ -521,6 +548,7 @@ MonoBehaviour:
       value: 624
     - name: Attack.Attribute
       value: 2
+    attachMax: 99
   - id: 10210
     name:
       m_TableReference:
@@ -538,6 +566,7 @@ MonoBehaviour:
       value: 762
     - name: Attack.Attribute
       value: 2
+    attachMax: 99
   - id: 10211
     name:
       m_TableReference:
@@ -555,6 +584,7 @@ MonoBehaviour:
       value: 900
     - name: Attack.Attribute
       value: 2
+    attachMax: 99
   - id: 10212
     name:
       m_TableReference:
@@ -576,6 +606,7 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 3
+    attachMax: 99
   - id: 10213
     name:
       m_TableReference:
@@ -595,6 +626,7 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 3
+    attachMax: 99
   - id: 10214
     name:
       m_TableReference:
@@ -616,6 +648,7 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 3
+    attachMax: 99
   - id: 10215
     name:
       m_TableReference:
@@ -637,6 +670,7 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 3
+    attachMax: 99
   - id: 10216
     name:
       m_TableReference:
@@ -658,6 +692,7 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 4
+    attachMax: 99
   - id: 10217
     name:
       m_TableReference:
@@ -679,6 +714,7 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 4
+    attachMax: 99
   - id: 10218
     name:
       m_TableReference:
@@ -700,6 +736,7 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 4
+    attachMax: 99
   - id: 10219
     name:
       m_TableReference:
@@ -721,6 +758,7 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 4
+    attachMax: 99
   - id: 10301
     name:
       m_TableReference:
@@ -733,9 +771,10 @@ MonoBehaviour:
       m_LocalVariables: []
     attributes:
     - name: Behaviour.Recovery
-      value: 0
+      value: 1
     - name: Recovery.Power
       value: 5
+    attachMax: 3
   - id: 10302
     name:
       m_TableReference:
@@ -748,9 +787,10 @@ MonoBehaviour:
       m_LocalVariables: []
     attributes:
     - name: Behaviour.Recovery
-      value: 0
+      value: 1
     - name: Recovery.Power
       value: 10
+    attachMax: 3
   - id: 10303
     name:
       m_TableReference:
@@ -763,9 +803,10 @@ MonoBehaviour:
       m_LocalVariables: []
     attributes:
     - name: Behaviour.Recovery
-      value: 0
+      value: 1
     - name: Recovery.Power
       value: 15
+    attachMax: 3
   - id: 10304
     name:
       m_TableReference:
@@ -778,9 +819,10 @@ MonoBehaviour:
       m_LocalVariables: []
     attributes:
     - name: Behaviour.Recovery
-      value: 0
+      value: 1
     - name: Recovery.Power
       value: 20
+    attachMax: 3
   - id: 10401
     name:
       m_TableReference:
@@ -791,7 +833,12 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    attributes: []
+    attributes:
+    - name: Behaviour.RemoveAbnormalStatus
+      value: 1
+    - name: RemoveAbnormalStatus.Type
+      value: 1
+    attachMax: 1
   - id: 10402
     name:
       m_TableReference:
@@ -802,7 +849,12 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    attributes: []
+    attributes:
+    - name: Behaviour.RemoveAbnormalStatus
+      value: 1
+    - name: RemoveAbnormalStatus.Type
+      value: 2
+    attachMax: 1
   - id: 10403
     name:
       m_TableReference:
@@ -813,7 +865,12 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    attributes: []
+    attributes:
+    - name: Behaviour.RemoveAbnormalStatus
+      value: 1
+    - name: RemoveAbnormalStatus.Type
+      value: 3
+    attachMax: 1
   - id: 10404
     name:
       m_TableReference:
@@ -824,7 +881,12 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    attributes: []
+    attributes:
+    - name: Behaviour.RemoveAbnormalStatus
+      value: 1
+    - name: RemoveAbnormalStatus.Type
+      value: 4
+    attachMax: 1
   references:
     version: 2
     RefIds: []

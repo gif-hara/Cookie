@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Cookie.UISystems;
 using Cysharp.Threading.Tasks;
 using MessagePipe;
@@ -63,7 +64,19 @@ namespace Cookie
                         var skillNumber = gacha.skillNumbers.Lottery().value.GetParameter();
                         for (var i = 0; i < skillNumber; i++)
                         {
-                            newWeapon.activeSkillIds.Add(new InstanceParameter(gacha.activeSkillIds.Lottery().value));
+                            var instanceParameter = gacha.activeSkillIds.Lottery().value;
+                            var activeSkill = MasterDataActiveSkill.Instance.skills.Find(x => x.id == instanceParameter.parameter);
+                            var attachNumber = newWeapon.activeSkillIds
+                                .Count(x => x.parameter == instanceParameter.parameter);
+                            
+                            // アタッチ可能数を超えていた場合は付与できない
+                            if (activeSkill.attachMax <= attachNumber)
+                            {
+                                // もう一度スキルを抽選する
+                                i--;
+                                continue;
+                            }
+                            newWeapon.activeSkillIds.Add(new InstanceParameter(instanceParameter));
                         }
                         UserData.current.weapons.Add(newWeapon);
                         UserData.current.weaponCreatedNumber++;

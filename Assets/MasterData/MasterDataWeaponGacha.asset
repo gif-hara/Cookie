@@ -47,13 +47,13 @@ MonoBehaviour:
       weight: 40
     skillNumbers:
     - value:
-        min: 3
-        max: 3
+        min: 10
+        max: 10
         rare: 0
       weight: 80
     - value:
-        min: 3
-        max: 4
+        min: 10
+        max: 10
         rare: 0
       weight: 40
     activeSkillIds:
@@ -64,7 +64,11 @@ MonoBehaviour:
     - value:
         parameter: 10102
         rare: 0
-      weight: 40
+      weight: 80
+    - value:
+        parameter: 10301
+        rare: 0
+      weight: 80
   - nameKey:
       m_TableReference:
         m_TableCollectionName: Gacha
