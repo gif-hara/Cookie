@@ -1,3 +1,4 @@
+using Cookie.UISystems;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.SceneManagement;
@@ -13,17 +14,8 @@ namespace Cookie
         {
             headerUIView.RootButton.Button.onClick.AddListener(() =>
             {
-                headerUIView.MenuRoot.SetActive(!headerUIView.MenuRoot.activeSelf);
-            });
-            
-            headerUIView.GachaButton.Button.onClick.AddListener(() =>
-            {
-                SceneManager.LoadScene("Gacha");
-            });
-            
-            headerUIView.EditEquipmentButton.Button.onClick.AddListener(() =>
-            {
-                SceneManager.LoadScene("EditEquipment");
+                UIManager.SetAsLastSibling(UIManager.StartMenuUIView);
+                UIManager.Show(UIManager.StartMenuUIView);
             });
         }
     }

@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.SceneManagement;
 
 namespace Cookie.UISystems
 {
@@ -11,8 +12,15 @@ namespace Cookie.UISystems
     {
         [SerializeField]
         private RectTransform uiParent;
+
+        [SerializeField]
+        private StartMenuUIView startMenuUIViewPrefab;
+
+        private StartMenuUIView startMenuUIView;
         
         public static UIManager Instance { get; private set; }
+
+        public static StartMenuUIView StartMenuUIView => Instance.startMenuUIView;
         
         public static async UniTask Setup()
         {
@@ -21,6 +29,20 @@ namespace Cookie.UISystems
             var prefab = await AssetLoader.LoadAsync<GameObject>("Assets/Prefabs/UI/UIManager.prefab");
             Instance = Instantiate(prefab).GetComponent<UIManager>();
             DontDestroyOnLoad(Instance);
+
+            Instance.startMenuUIView = Open(Instance.startMenuUIViewPrefab);
+            Hidden(Instance.startMenuUIView);
+            Instance.startMenuUIView.GachaButton.Button.onClick.AddListener(() =>
+            {
+                SceneManager.LoadScene("Gacha");
+                Hidden(StartMenuUIView);
+            });
+            
+            Instance.startMenuUIView.EditEquipmentButton.Button.onClick.AddListener(() =>
+            {
+                SceneManager.LoadScene("EditEquipment");
+                Hidden(StartMenuUIView);
+            });
         }
 
         public static T Open<T>(T uiView) where T : UIView
@@ -31,6 +53,21 @@ namespace Cookie.UISystems
         public static void Close(UIView uiView)
         {
             Destroy(uiView.gameObject);
+        }
+
+        public static void Show(UIView uiView)
+        {
+            uiView.gameObject.SetActive(true);
+        }
+        
+        public static void Hidden(UIView uiView)
+        {
+            uiView.gameObject.SetActive(false);
+        }
+
+        public static void SetAsLastSibling(UIView uiView)
+        {
+            uiView.transform.SetAsLastSibling();
         }
     }
 }
