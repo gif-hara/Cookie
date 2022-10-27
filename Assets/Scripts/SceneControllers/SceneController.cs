@@ -31,10 +31,16 @@ namespace Cookie
 
         private readonly DisposableBagBuilder sceneScope = DisposableBag.CreateBuilder();
 
+        private bool isApplicationQuit;
+        
         private void Awake()
         {
             Instance = this;
-            this.messageBroker = new MessageBroker(OnInitializeMessageBroker);
+            this.messageBroker = new MessageBroker(builder =>
+            {
+                builder.AddMessageBroker<SceneEvent.OnDestroy>();
+                OnInitializeMessageBroker(builder);
+            });
         }
         
         async void Start()
@@ -45,9 +51,21 @@ namespace Cookie
 
         private void OnDestroy()
         {
-            this.sceneScope.Build().Dispose();
+            if (this.isApplicationQuit)
+            {
+                return;
+            }
+            
             OnDestroyInternal();
+            GlobalMessagePipe.GetPublisher<SceneEvent.OnDestroy>()
+                .Publish(SceneEvent.OnDestroy.Get());
+            this.sceneScope.Build().Dispose();
             Instance = null;
+        }
+
+        private void OnApplicationQuit()
+        {
+            this.isApplicationQuit = true;
         }
 
         protected virtual UniTask OnStartAsync(DisposableBagBuilder scope)

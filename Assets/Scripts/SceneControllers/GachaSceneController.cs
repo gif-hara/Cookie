@@ -251,6 +251,13 @@ namespace Cookie
             uiView.ConfirmListRoot.SetActive(false);
             uiView.EquipmentInformationUIView.SetDeactiveAll();
             HeaderUIViewUtility.Setup(uiView.HeaderUIView);
+
+            GlobalMessagePipe.GetSubscriber<SceneEvent.OnDestroy>()
+                .Subscribe(_ =>
+                {
+                    UIManager.Close(uiView);
+                })
+                .AddTo(scope);
             
             return base.OnStartAsync(scope);
         }

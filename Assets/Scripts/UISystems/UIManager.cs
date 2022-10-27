@@ -27,5 +27,10 @@ namespace Cookie.UISystems
         {
             return Instantiate(uiView, Instance.uiParent);
         }
+
+        public static void Close(UIView uiView)
+        {
+            Destroy(uiView.gameObject);
+        }
     }
 }
