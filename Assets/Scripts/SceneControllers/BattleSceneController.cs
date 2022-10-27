@@ -3,9 +3,7 @@ using Cookie.UISystems;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.Linq;
 using MessagePipe;
-using UnityEditor.Localization.Plugins.XLIFF.V20;
 using UnityEngine;
-using UnityEngine.Assertions;
 
 namespace Cookie
 {
