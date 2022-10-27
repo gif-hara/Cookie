@@ -39,6 +39,7 @@ namespace Cookie
             this.messageBroker = new MessageBroker(builder =>
             {
                 builder.AddMessageBroker<SceneEvent.OnDestroy>();
+                builder.AddMessageBroker<UserDataEvent.UpdatedMoney>();
                 OnInitializeMessageBroker(builder);
             });
         }

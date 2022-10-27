@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -12,6 +13,11 @@ namespace Cookie
         [SerializeField]
         private CookieButton rootButton;
 
+        [SerializeField]
+        private TextMeshProUGUI money;
+
         public CookieButton RootButton => this.rootButton;
+
+        public TextMeshProUGUI Money => this.money;
     }
 }

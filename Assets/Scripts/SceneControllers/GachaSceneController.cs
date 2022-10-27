@@ -250,7 +250,7 @@ namespace Cookie
             uiView.InvokeListRoot.SetActive(false);
             uiView.ConfirmListRoot.SetActive(false);
             uiView.EquipmentInformationUIView.SetDeactiveAll();
-            HeaderUIViewUtility.Setup(uiView.HeaderUIView);
+            HeaderUIViewUtility.Setup(uiView.HeaderUIView, scope);
 
             this.MessageBroker.GetSubscriber<SceneEvent.OnDestroy>()
                 .Subscribe(_ =>

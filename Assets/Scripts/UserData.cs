@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
+using MessagePipe;
 using SerializableCollections;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -23,7 +24,9 @@ namespace Cookie
 
         public List<Accessory> accessories = new();
 
-        public int money;
+        [SerializeField]
+        private int money;
+        public int Money => this.money;
 
         public int weaponCreatedNumber = 0;
 
@@ -111,6 +114,14 @@ namespace Cookie
             }
             
             this.unlockAccessoryGachas.Add(unlockId);
+        }
+
+        public void AddMoney(int value)
+        {
+            this.money += value;
+            Assert.IsTrue(this.money >= 0);
+            GlobalMessagePipe.GetPublisher<UserDataEvent.UpdatedMoney>()
+                .Publish(UserDataEvent.UpdatedMoney.Get());
         }
     }
 }

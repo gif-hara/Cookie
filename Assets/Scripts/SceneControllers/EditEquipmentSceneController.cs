@@ -180,7 +180,7 @@ namespace Cookie
                 uiView.EquipmentInformationUIView.SetDeactiveAll();
             });
             
-            HeaderUIViewUtility.Setup(uiView.HeaderUIView);
+            HeaderUIViewUtility.Setup(uiView.HeaderUIView, scope);
             
             uiView.ConfirmRoot.SetActive(false);
             uiView.EquipmentInformationUIView.SetDeactiveAll();
