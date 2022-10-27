@@ -11,9 +11,6 @@ namespace Cookie
     public sealed class EditEquipmentSceneController : SceneController
     {
         [SerializeField]
-        private Transform uiParent;
-
-        [SerializeField]
         private EditEquipmentUIView editEquipmentUIViewPrefab;
 
         private CookieButton selectedRootButton;
@@ -22,7 +19,7 @@ namespace Cookie
 
         protected override UniTask OnStartAsync(DisposableBagBuilder scope)
         {
-            var uiView = Instantiate(this.editEquipmentUIViewPrefab, this.uiParent);
+            var uiView = UIManager.Open(this.editEquipmentUIViewPrefab);
 
             void CreateWeaponList()
             {
@@ -187,6 +184,13 @@ namespace Cookie
             
             uiView.ConfirmRoot.SetActive(false);
             uiView.EquipmentInformationUIView.SetDeactiveAll();
+
+            GlobalMessagePipe.GetSubscriber<SceneEvent.OnDestroy>()
+                .Subscribe(_ =>
+                {
+                    UIManager.Close(uiView);
+                })
+                .AddTo(scope);
             
             return base.OnStartAsync(scope);
         }

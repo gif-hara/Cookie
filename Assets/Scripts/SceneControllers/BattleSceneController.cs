@@ -3,6 +3,7 @@ using Cookie.UISystems;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.Linq;
 using MessagePipe;
+using UnityEditor.Localization.Plugins.XLIFF.V20;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -13,9 +14,6 @@ namespace Cookie
     /// </summary>
     public sealed class BattleSceneController : SceneController
     {
-        [SerializeField]
-        private Transform uiParent;
-
         [SerializeField]
         private BattleUIView battleUIPrefab;
 
@@ -55,7 +53,7 @@ namespace Cookie
                 this.enemy = new Actor(ActorType.Enemy, this.enemyStatus.Create());
             }
 
-            var uiView = Instantiate(this.battleUIPrefab, this.uiParent);
+            var uiView = UIManager.Open(this.battleUIPrefab);
             StartObserveActorStatusView(this.player, uiView.PlayerStatusView)
                 .AddTo(scope);
             StartObserveActorStatusView(this.enemy, uiView.EnemyStatusView)
@@ -67,6 +65,14 @@ namespace Cookie
             this.stateController.Set(StateType.BattleEnd, OnEnterBattleEnd, null);
             this.stateController.Set(StateType.Finalize, OnEnterBattleFinalize, null);
             this.stateController.ChangeRequest(StateType.BattleStart);
+
+            GlobalMessagePipe.GetSubscriber<SceneEvent.OnDestroy>()
+                .Subscribe(_ =>
+                {
+                    UIManager.Close(uiView);
+                })
+                .AddTo(scope);
+            
             return UniTask.CompletedTask;
         }
 

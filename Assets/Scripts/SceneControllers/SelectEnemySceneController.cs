@@ -15,9 +15,6 @@ namespace Cookie
     public sealed class SelectEnemySceneController : SceneController
     {
         [SerializeField]
-        private Transform uiParent;
-
-        [SerializeField]
         private SelectEnemyUIView selectEnemyUIPrefab;
 
         private CookieButton selectedFieldButton;
@@ -26,7 +23,7 @@ namespace Cookie
         
         protected override UniTask OnStartAsync(DisposableBagBuilder scope)
         {
-            var uiView = Instantiate(this.selectEnemyUIPrefab, this.uiParent);
+            var uiView = UIManager.Open(this.selectEnemyUIPrefab);
             uiView.DestroyAllFieldButtons();
             uiView.DestroyAllEnemyButtons();
             var enemyGroupByFieldId = UserData.current.unlockEnemies
@@ -112,6 +109,13 @@ namespace Cookie
             }
             
             uiView.ConfirmListRoot.SetActive(false);
+
+            GlobalMessagePipe.GetSubscriber<SceneEvent.OnDestroy>()
+                .Subscribe(_ =>
+                {
+                    UIManager.Close(uiView);
+                })
+                .AddTo(scope);
             
             return base.OnStartAsync(scope);
         }
