@@ -34,10 +34,7 @@ namespace Cookie
         private void Awake()
         {
             Instance = this;
-            this.messageBroker = new MessageBroker(builder =>
-            {
-                OnInitializeMessageBroker(builder);
-            });
+            this.messageBroker = new MessageBroker(OnInitializeMessageBroker);
         }
         
         async void Start()

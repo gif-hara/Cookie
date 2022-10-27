@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Cookie.UISystems;
 using Cysharp.Threading.Tasks;
 using SerializableCollections;
 using UnityEngine;
@@ -24,7 +25,8 @@ namespace Cookie
         {
             await UniTask.WhenAll(
                 SetupLocalizationAsync(),
-                SetupMasterData()
+                SetupMasterData(),
+                SetupUISystem()
                 );
 
             await SetupUserDataAsync();
@@ -75,6 +77,11 @@ namespace Cookie
                 MasterDataEnemyStatus.LoadAsync("Assets/MasterData/MasterDataEnemyStatus.asset"),
                 MasterDataFieldData.LoadAsync("Assets/MasterData/MasterDataFieldData.asset")
                 );
+        }
+
+        private static UniTask SetupUISystem()
+        {
+            return UIManager.Setup();
         }
     }
 }

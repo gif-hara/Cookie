@@ -14,9 +14,6 @@ namespace Cookie
     public sealed class GachaSceneController : SceneController
     {
         [SerializeField]
-        private Transform uiParent;
-
-        [SerializeField]
         private GachaUIView gachaUIPrefab;
 
         private CookieButton selectedRootButton;
@@ -25,7 +22,7 @@ namespace Cookie
 
         protected override UniTask OnStartAsync(DisposableBagBuilder scope)
         {
-            var uiView = Instantiate(this.gachaUIPrefab, this.uiParent);
+            var uiView = UIManager.Open(this.gachaUIPrefab);
             
             uiView.DestroyAllGachaButtons();
             foreach (var gachaId in UserData.current.unlockWeaponGachas)
@@ -263,14 +260,6 @@ namespace Cookie
             builder.AddMessageBroker<GachaEvent.RequestWeaponGacha>();
             builder.AddMessageBroker<GachaEvent.RequestArmorGacha>();
             builder.AddMessageBroker<GachaEvent.RequestAccessoryGacha>();
-        }
-
-        void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                Debug.Log(JsonUtility.ToJson(UserData.current, true));
-            }
         }
 
         private void SetSelectedRootButton(CookieButton rootButton)
