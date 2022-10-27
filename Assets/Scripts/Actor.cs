@@ -16,27 +16,27 @@ namespace Cookie
 
         public readonly ActorStatus Status;
 
-        public Actor(ActorType actorType, ActorStatus status)
+        public Actor(ActorType actorType, ActorStatus status, MessageBroker messageBroker)
         {
             this.actorType = actorType;
             this.Status = status;
 
             var bag = DisposableBag.CreateBuilder();
-            GlobalMessagePipe.GetSubscriber<BattleEvent.StartBattle>()
+            messageBroker.GetSubscriber<BattleEvent.StartBattle>()
                 .Subscribe(_ =>
                 {
                     Debug.Log($"StartBattle {this.actorType}");
                 })
                 .AddTo(bag);
 
-            GlobalMessagePipe.GetSubscriber<BattleEvent.Dispose>()
+            messageBroker.GetSubscriber<BattleEvent.Dispose>()
                 .Subscribe(_ =>
                 {
                     bag.Build().Dispose();
                 })
                 .AddTo(bag);
             
-            GlobalMessagePipe.GetAsyncSubscriber<Actor, BattleEvent.StartTurn>()
+            messageBroker.GetAsyncSubscriber<Actor, BattleEvent.StartTurn>()
                 .Subscribe(this, async (x, cancelToken) =>
                 {
                     Debug.Log($"StartTurn {this.actorType}");

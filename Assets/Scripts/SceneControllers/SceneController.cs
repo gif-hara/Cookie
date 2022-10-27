@@ -57,7 +57,7 @@ namespace Cookie
             }
             
             OnDestroyInternal();
-            GlobalMessagePipe.GetPublisher<SceneEvent.OnDestroy>()
+            this.MessageBroker.GetPublisher<SceneEvent.OnDestroy>()
                 .Publish(SceneEvent.OnDestroy.Get());
             this.sceneScope.Build().Dispose();
             Instance = null;

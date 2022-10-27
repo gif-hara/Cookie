@@ -44,13 +44,13 @@ namespace Cookie
             if (SceneMediator.IsMatchArgument<BattleSceneArgument>())
             {
                 var argument = SceneMediator.GetArgument<BattleSceneArgument>();
-                this.player = new Actor(ActorType.Player, argument.playerStatusBuilder.Create());
-                this.enemy = new Actor(ActorType.Enemy, argument.enemyStatusBuilder.Create());
+                this.player = new Actor(ActorType.Player, argument.playerStatusBuilder.Create(), this.MessageBroker);
+                this.enemy = new Actor(ActorType.Enemy, argument.enemyStatusBuilder.Create(), this.MessageBroker);
             }
             else
             {
-                this.player = new Actor(ActorType.Player, this.playerStatus.Create());
-                this.enemy = new Actor(ActorType.Enemy, this.enemyStatus.Create());
+                this.player = new Actor(ActorType.Player, this.playerStatus.Create(), this.MessageBroker);
+                this.enemy = new Actor(ActorType.Enemy, this.enemyStatus.Create(), this.MessageBroker);
             }
 
             var uiView = UIManager.Open(this.battleUIPrefab);
@@ -66,7 +66,7 @@ namespace Cookie
             this.stateController.Set(StateType.Finalize, OnEnterBattleFinalize, null);
             this.stateController.ChangeRequest(StateType.BattleStart);
 
-            GlobalMessagePipe.GetSubscriber<SceneEvent.OnDestroy>()
+            this.MessageBroker.GetSubscriber<SceneEvent.OnDestroy>()
                 .Subscribe(_ =>
                 {
                     UIManager.Close(uiView);
@@ -86,14 +86,14 @@ namespace Cookie
         private void OnEnterBattleStart(StateType prev)
         {
             Debug.Log("BattleStart");
-            GlobalMessagePipe.GetPublisher<BattleEvent.StartBattle>()
+            this.MessageBroker.GetPublisher<BattleEvent.StartBattle>()
                 .Publish(BattleEvent.StartBattle.Get());
             this.stateController.ChangeRequest(this.player.Status.speed >= this.enemy.Status.speed ? StateType.PlayerTurn : StateType.EnemyTurn);
         }
 
         private async void OnEnterPlayerTurn(StateType prev)
         {
-            await GlobalMessagePipe.GetAsyncPublisher<Actor, BattleEvent.StartTurn>()
+            await this.MessageBroker.GetAsyncPublisher<Actor, BattleEvent.StartTurn>()
                 .PublishAsync(this.player, BattleEvent.StartTurn.Get(this.enemy));
 
             this.stateController.ChangeRequest(IsBattleEnd() ? StateType.BattleEnd : StateType.EnemyTurn);
@@ -101,7 +101,7 @@ namespace Cookie
 
         private async void OnEnterEnemyTurn(StateType prev)
         {
-            await GlobalMessagePipe.GetAsyncPublisher<Actor, BattleEvent.StartTurn>()
+            await this.MessageBroker.GetAsyncPublisher<Actor, BattleEvent.StartTurn>()
                 .PublishAsync(this.enemy, BattleEvent.StartTurn.Get(this.player));
             
             this.stateController.ChangeRequest(IsBattleEnd() ? StateType.BattleEnd : StateType.PlayerTurn);
@@ -123,7 +123,7 @@ namespace Cookie
         private void OnEnterBattleFinalize(StateType prev)
         {
             Debug.Log("Finalize");
-            GlobalMessagePipe.GetPublisher<BattleEvent.Dispose>()
+            this.MessageBroker.GetPublisher<BattleEvent.Dispose>()
                 .Publish(BattleEvent.Dispose.Get());
             
             if (SceneMediator.IsMatchArgument<BattleSceneArgument>())

@@ -16,5 +16,35 @@ namespace Cookie
             var provider = builder.BuildServiceProvider();
             GlobalMessagePipe.SetProvider(provider);
         }
+
+        public IPublisher<T> GetPublisher<T>()
+        {
+            return GlobalMessagePipe.GetPublisher<T>();
+        }
+
+        public ISubscriber<T> GetSubscriber<T>()
+        {
+            return GlobalMessagePipe.GetSubscriber<T>();
+        }
+
+        public IAsyncPublisher<T> GetAsyncPublisher<T>()
+        {
+            return GlobalMessagePipe.GetAsyncPublisher<T>();
+        }
+
+        public IAsyncPublisher<TKey, TMessage> GetAsyncPublisher<TKey, TMessage>()
+        {
+            return GlobalMessagePipe.GetAsyncPublisher<TKey, TMessage>();
+        }
+
+        public IAsyncSubscriber<T> GetAsyncSubscriber<T>()
+        {
+            return GlobalMessagePipe.GetAsyncSubscriber<T>();
+        }
+
+        public IAsyncSubscriber<TKey, TMessage> GetAsyncSubscriber<TKey, TMessage>()
+        {
+            return GlobalMessagePipe.GetAsyncSubscriber<TKey, TMessage>();
+        }
     }
 }
