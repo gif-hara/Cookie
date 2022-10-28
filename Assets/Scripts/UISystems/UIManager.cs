@@ -19,13 +19,13 @@ namespace Cookie.UISystems
         [SerializeField]
         private NotifyUIView notifyUIViewPrefab;
 
-        private StartMenuUIView startMenuUIView;
+        private StartMenuUIController startMenuUIController;
 
         private NotifyUIController notifyUIController;
         
         public static UIManager Instance { get; private set; }
 
-        public static StartMenuUIView StartMenuUIView => Instance.startMenuUIView;
+        public static StartMenuUIController StartMenuUIController => Instance.startMenuUIController;
 
         public static NotifyUIController NotifyUIController => Instance.notifyUIController;
         
@@ -37,25 +37,8 @@ namespace Cookie.UISystems
             Instance = Instantiate(prefab).GetComponent<UIManager>();
             DontDestroyOnLoad(Instance);
 
-            Instance.startMenuUIView = Open(Instance.startMenuUIViewPrefab);
-            Hidden(Instance.startMenuUIView);
-            Instance.startMenuUIView.GachaButton.Button.onClick.AddListener(() =>
-            {
-                SceneManager.LoadScene("Gacha");
-                Hidden(StartMenuUIView);
-            });
-            
-            Instance.startMenuUIView.EditEquipmentButton.Button.onClick.AddListener(() =>
-            {
-                SceneManager.LoadScene("EditEquipment");
-                Hidden(StartMenuUIView);
-            });
-            
-            Instance.startMenuUIView.SelectEnemyButton.Button.onClick.AddListener(() =>
-            {
-                SceneManager.LoadScene("SelectEnemy");
-                Hidden(StartMenuUIView);
-            });
+            Instance.startMenuUIController = new StartMenuUIController();
+            Instance.startMenuUIController.Setup(Instance.startMenuUIViewPrefab);
 
             Instance.notifyUIController = new NotifyUIController();
             Instance.notifyUIController.Setup(Instance.notifyUIViewPrefab);

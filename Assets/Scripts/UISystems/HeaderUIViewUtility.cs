@@ -16,8 +16,7 @@ namespace Cookie
         {
             headerUIView.RootButton.Button.onClick.AddListener(() =>
             {
-                UIManager.SetAsLastSibling(UIManager.StartMenuUIView);
-                UIManager.Show(UIManager.StartMenuUIView);
+                UIManager.StartMenuUIController.Show();
             });
             
             UpdateMoney(headerUIView, UserData.current.Money);
