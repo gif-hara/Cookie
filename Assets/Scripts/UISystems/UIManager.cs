@@ -16,11 +16,18 @@ namespace Cookie.UISystems
         [SerializeField]
         private StartMenuUIView startMenuUIViewPrefab;
 
+        [SerializeField]
+        private NotifyUIView notifyUIViewPrefab;
+
         private StartMenuUIView startMenuUIView;
+
+        private NotifyUIController notifyUIController;
         
         public static UIManager Instance { get; private set; }
 
         public static StartMenuUIView StartMenuUIView => Instance.startMenuUIView;
+
+        public static NotifyUIController NotifyUIController => Instance.notifyUIController;
         
         public static async UniTask Setup()
         {
@@ -49,6 +56,9 @@ namespace Cookie.UISystems
                 SceneManager.LoadScene("SelectEnemy");
                 Hidden(StartMenuUIView);
             });
+
+            Instance.notifyUIController = new NotifyUIController();
+            Instance.notifyUIController.Setup(Instance.notifyUIViewPrefab);
         }
 
         public static T Open<T>(T uiView) where T : UIView
