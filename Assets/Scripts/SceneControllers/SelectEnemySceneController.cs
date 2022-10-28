@@ -21,7 +21,7 @@ namespace Cookie
 
         private CookieButton selectedEnemyButton;
         
-        protected override UniTask OnStartAsync(DisposableBagBuilder scope)
+        protected override async UniTask OnStartAsync(DisposableBagBuilder scope)
         {
             var uiView = UIManager.Open(this.selectEnemyUIPrefab);
             HeaderUIViewUtility.Setup(uiView.HeaderUIView, scope);
@@ -117,8 +117,8 @@ namespace Cookie
                     UIManager.Close(uiView);
                 })
                 .AddTo(scope);
-            
-            return base.OnStartAsync(scope);
+
+            await UIManager.NotifyUIController.ShowUnlockContents();
         }
 
         private void SetSelectedFieldButton(CookieButton fieldButton)

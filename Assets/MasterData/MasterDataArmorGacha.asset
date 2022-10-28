@@ -26,47 +26,27 @@ MonoBehaviour:
     hitPoints:
     - value:
         min: 500
-        max: 546
+        max: 523
         rare: 0
-      weight: 80
-    - value:
-        min: 560
-        max: 594
-        rare: 0
-      weight: 40
+      weight: 100
     physicalDefenses:
     - value:
         min: 80
-        max: 82
+        max: 81
         rare: 0
-      weight: 80
-    - value:
-        min: 82
-        max: 84
-        rare: 0
-      weight: 40
+      weight: 100
     magicDefenses:
     - value:
         min: 80
-        max: 82
+        max: 81
         rare: 0
-      weight: 80
-    - value:
-        min: 82
-        max: 84
-        rare: 0
-      weight: 40
+      weight: 100
     speeds:
     - value:
         min: 50
-        max: 51
+        max: 50
         rare: 0
-      weight: 80
-    - value:
-        min: 51
-        max: 52
-        rare: 0
-      weight: 40
+      weight: 100
   - nameKey:
       m_TableReference:
         m_TableCollectionName: Gacha
@@ -79,28 +59,62 @@ MonoBehaviour:
     id: 2
     hitPoints:
     - value:
-        min: 560
+        min: 534
         max: 594
         rare: 0
-      weight: 40
+      weight: 100
     physicalDefenses:
     - value:
-        min: 82
+        min: 81
         max: 84
         rare: 0
-      weight: 40
+      weight: 100
     magicDefenses:
     - value:
-        min: 82
+        min: 81
         max: 84
         rare: 0
-      weight: 40
+      weight: 100
     speeds:
     - value:
-        min: 51
+        min: 50
         max: 52
         rare: 0
-      weight: 40
+      weight: 100
+  - nameKey:
+      m_TableReference:
+        m_TableCollectionName: Gacha
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Armor003
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    id: 3
+    hitPoints:
+    - value:
+        min: 614
+        max: 879
+        rare: 0
+      weight: 100
+    physicalDefenses:
+    - value:
+        min: 85
+        max: 96
+        rare: 0
+      weight: 100
+    magicDefenses:
+    - value:
+        min: 85
+        max: 96
+        rare: 0
+      weight: 100
+    speeds:
+    - value:
+        min: 53
+        max: 60
+        rare: 0
+      weight: 100
   references:
     version: 2
     RefIds: []

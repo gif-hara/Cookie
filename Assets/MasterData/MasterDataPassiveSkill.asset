@@ -194,7 +194,7 @@ MonoBehaviour:
     attributes:
     - name: RecoveryUpRate
       value: 10
-    attachMax: 3
+    attachMax: 2
   - id: 10502
     name:
       m_TableReference:
@@ -208,7 +208,7 @@ MonoBehaviour:
     attributes:
     - name: RecoveryUpRate
       value: 15
-    attachMax: 3
+    attachMax: 2
   - id: 10503
     name:
       m_TableReference:
@@ -222,7 +222,7 @@ MonoBehaviour:
     attributes:
     - name: RecoveryUpRate
       value: 20
-    attachMax: 3
+    attachMax: 2
   - id: 10601
     name:
       m_TableReference:

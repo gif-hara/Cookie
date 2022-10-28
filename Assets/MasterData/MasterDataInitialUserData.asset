@@ -21,6 +21,9 @@ MonoBehaviour:
     magicStrength:
       parameter: 100
       rare: 0
+    criticalRate:
+      parameter: 0
+      rare: 0
     activeSkillIds:
     - parameter: 10101
       rare: 0
@@ -41,5 +44,5 @@ MonoBehaviour:
     passiveSkillIds: []
   unlockEnemies: 01000000
   unlockWeapons: 01000000
-  unlockArmors: 01000000
-  unlockAccessories: 01000000
+  unlockArmors: 
+  unlockAccessories: 

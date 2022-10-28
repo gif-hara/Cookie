@@ -390,6 +390,18 @@ namespace Cookie
             AssetDatabase.SaveAssets();
         }
 
+        [MenuItem("HK/Cookie/Download MasterData/All")]
+        private static void DownloadAll()
+        {
+            DownloadMasterDataWeaponGacha();
+            DownloadMasterDataArmorGacha();
+            DownloadMasterDataAccessoryGacha();
+            DownloadMasterDataEnemyStatus();
+            DownloadMasterDataActiveSkill();
+            DownloadMasterDataPassiveSkill();
+            DownloadMasterDataFieldData();
+        }
+
         private static async UniTask<string> DownloadFromSpreadSheet(string sheetName)
         {
             var sheetUrl = await File.ReadAllTextAsync("masterdata_sheet_url.txt");

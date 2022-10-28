@@ -774,7 +774,7 @@ MonoBehaviour:
       value: 1
     - name: Recovery.Power
       value: 5
-    attachMax: 3
+    attachMax: 2
   - id: 10302
     name:
       m_TableReference:
@@ -790,7 +790,7 @@ MonoBehaviour:
       value: 1
     - name: Recovery.Power
       value: 10
-    attachMax: 3
+    attachMax: 2
   - id: 10303
     name:
       m_TableReference:
@@ -806,7 +806,7 @@ MonoBehaviour:
       value: 1
     - name: Recovery.Power
       value: 15
-    attachMax: 3
+    attachMax: 2
   - id: 10304
     name:
       m_TableReference:
@@ -822,7 +822,7 @@ MonoBehaviour:
       value: 1
     - name: Recovery.Power
       value: 20
-    attachMax: 3
+    attachMax: 2
   - id: 10401
     name:
       m_TableReference:

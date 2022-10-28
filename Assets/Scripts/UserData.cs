@@ -42,11 +42,19 @@ namespace Cookie
 
         public List<int> unlockEnemies = new();
 
+        public List<int> notifyEnemies = new();
+
         public List<int> unlockWeaponGachas = new();
+
+        public List<int> notifyWeaponGachas = new();
 
         public List<int> unlockArmorGachas = new();
 
+        public List<int> notifyArmorGachas = new();
+
         public List<int> unlockAccessoryGachas = new();
+
+        public List<int> notifyAccessoryGachas = new();
 
         /// <summary>
         /// 倒した敵の数
@@ -84,6 +92,7 @@ namespace Cookie
             }
             
             this.unlockEnemies.Add(unlockId);
+            this.notifyEnemies.Add(unlockId);
         }
 
         public void UnlockWeaponGacha(int unlockId)
@@ -94,6 +103,7 @@ namespace Cookie
             }
             
             this.unlockWeaponGachas.Add(unlockId);
+            this.notifyWeaponGachas.Add(unlockId);
         }
 
         public void UnlockArmorGacha(int unlockId)
@@ -104,6 +114,7 @@ namespace Cookie
             }
             
             this.unlockArmorGachas.Add(unlockId);
+            this.notifyArmorGachas.Add(unlockId);
         }
 
         public void UnlockAccessoryGacha(int unlockId)
@@ -114,6 +125,7 @@ namespace Cookie
             }
             
             this.unlockAccessoryGachas.Add(unlockId);
+            this.notifyAccessoryGachas.Add(unlockId);
         }
 
         public void AddMoney(int value)

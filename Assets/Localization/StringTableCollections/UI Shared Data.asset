@@ -111,6 +111,14 @@ MonoBehaviour:
     m_Key: CriticalRate
     m_Metadata:
       m_Items: []
+  - m_Id: 17711473766891520
+    m_Key: NotifyUnlockEnemy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17711655606747136
+    m_Key: NotifyUnlockGacha
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
