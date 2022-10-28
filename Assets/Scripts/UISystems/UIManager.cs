@@ -43,6 +43,12 @@ namespace Cookie.UISystems
                 SceneManager.LoadScene("EditEquipment");
                 Hidden(StartMenuUIView);
             });
+            
+            Instance.startMenuUIView.SelectEnemyButton.Button.onClick.AddListener(() =>
+            {
+                SceneManager.LoadScene("SelectEnemy");
+                Hidden(StartMenuUIView);
+            });
         }
 
         public static T Open<T>(T uiView) where T : UIView

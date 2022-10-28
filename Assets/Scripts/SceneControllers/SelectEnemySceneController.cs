@@ -24,6 +24,7 @@ namespace Cookie
         protected override UniTask OnStartAsync(DisposableBagBuilder scope)
         {
             var uiView = UIManager.Open(this.selectEnemyUIPrefab);
+            HeaderUIViewUtility.Setup(uiView.HeaderUIView, scope);
             uiView.DestroyAllFieldButtons();
             uiView.DestroyAllEnemyButtons();
             var enemyGroupByFieldId = UserData.current.unlockEnemies
