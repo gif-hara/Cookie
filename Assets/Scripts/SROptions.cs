@@ -1,5 +1,6 @@
 using System.ComponentModel;
 using Cookie;
+using Cookie.UISystems;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -33,5 +34,12 @@ public partial class SROptions
     public void DeleteAllPlayerPrefs()
     {
         PlayerPrefs.DeleteAll();
+    }
+
+    public async void ShowNotify()
+    {
+        Debug.Log("Start ShowNotify");
+        await UIManager.NotifyUIController.Show("Test1", "Test2");
+        Debug.Log("End ShowNotify");
     }
 }

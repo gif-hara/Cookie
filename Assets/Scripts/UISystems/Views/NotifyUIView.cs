@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Cookie.UISystems
 {
@@ -9,13 +10,28 @@ namespace Cookie.UISystems
     public sealed class NotifyUIView : UIView
     {
         [SerializeField]
-        private CookieButton button;
+        private Button button;
 
         [SerializeField]
         private TextMeshProUGUI message;
 
-        public CookieButton Button => this.button;
+        public Button Button => this.button;
 
         public TextMeshProUGUI Message => this.message;
+
+        public void Show()
+        {
+            UIManager.Show(this);
+        }
+
+        public void Hidden()
+        {
+            UIManager.Hidden(this);
+        }
+
+        public void SetAsLastSibling()
+        {
+            UIManager.SetAsLastSibling(this);
+        }
     }
 }
