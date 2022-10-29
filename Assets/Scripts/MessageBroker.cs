@@ -22,9 +22,19 @@ namespace Cookie
             return GlobalMessagePipe.GetPublisher<T>();
         }
 
+        public IPublisher<TKey, TValue> GetPublisher<TKey, TValue>()
+        {
+            return GlobalMessagePipe.GetPublisher<TKey, TValue>();
+        }
+
         public ISubscriber<T> GetSubscriber<T>()
         {
             return GlobalMessagePipe.GetSubscriber<T>();
+        }
+
+        public ISubscriber<TKey, TValue> GetSubscriber<TKey, TValue>()
+        {
+            return GlobalMessagePipe.GetSubscriber<TKey, TValue>();
         }
 
         public IAsyncPublisher<T> GetAsyncPublisher<T>()

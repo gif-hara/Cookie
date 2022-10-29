@@ -16,10 +16,15 @@ namespace Cookie
 
         public readonly ActorStatus Status;
 
+        private MessageBroker messageBroker;
+
+        public ActorType ActorType => this.actorType;
+
         public Actor(ActorType actorType, ActorStatus status, MessageBroker messageBroker)
         {
             this.actorType = actorType;
             this.Status = status;
+            this.messageBroker = messageBroker;
 
             var bag = DisposableBag.CreateBuilder();
             messageBroker.GetSubscriber<BattleEvent.StartBattle>()
@@ -179,6 +184,8 @@ namespace Cookie
         private void TakeDamage(int damage)
         {
             this.Status.hitPoint.Value -= damage;
+            this.messageBroker.GetPublisher<BattleEvent.TakedDamage>()
+                .Publish(BattleEvent.TakedDamage.Get(this, damage));
         }
 
         private void RecoveryRate(float rate)

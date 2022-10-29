@@ -32,5 +32,15 @@ namespace Cookie
             /// </summary>
             public Actor Opponent => this.Param1;
         }
+
+        /// <summary>
+        /// <see cref="Actor"/>がダメージを受けた際のメッセージ
+        /// </summary>
+        public class TakedDamage : Message<TakedDamage, Actor, int>
+        {
+            public Actor Actor => this.Param1;
+            
+            public int Damage => this.Param2;
+        }
     }
 }

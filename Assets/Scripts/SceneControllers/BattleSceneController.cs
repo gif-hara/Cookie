@@ -70,6 +70,13 @@ namespace Cookie
                     UIManager.Close(uiView);
                 })
                 .AddTo(scope);
+
+            this.MessageBroker.GetSubscriber<BattleEvent.TakedDamage>()
+                .Subscribe(x =>
+                {
+                    uiView.DamageLabelUIView.Create(x.Damage, x.Actor.ActorType);
+                })
+                .AddTo(scope);
             
             return UniTask.CompletedTask;
         }
@@ -79,6 +86,7 @@ namespace Cookie
             builder.AddMessageBroker<BattleEvent.StartBattle>();
             builder.AddMessageBroker<BattleEvent.Dispose>();
             builder.AddMessageBroker<Actor, BattleEvent.StartTurn>();
+            builder.AddMessageBroker<BattleEvent.TakedDamage>();
         }
         
         private void OnEnterBattleStart(StateType prev)
