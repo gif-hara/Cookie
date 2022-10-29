@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Cookie.UISystems
 {
@@ -16,11 +17,16 @@ namespace Cookie.UISystems
 
         [SerializeField]
         private DamageLabelUIView damageLabelUIView;
+
+        [SerializeField]
+        private Image enemyImage;
         
         public ActorStatusView PlayerStatusView => this.playerStatusView;
 
         public ActorStatusView EnemyStatusView => this.enemyStatusView;
 
         public DamageLabelUIView DamageLabelUIView => this.damageLabelUIView;
+
+        public Image EnemyImage => this.enemyImage;
     }
 }

@@ -32,6 +32,8 @@ MonoBehaviour:
     speed: 48
     money: 600
     fieldId: 1
+    spriteId: 1
+    playerLevel: 1
     activeSkills: 7527000075270000
     defeatEnemyUnlocks:
     - id: 1
@@ -61,6 +63,8 @@ MonoBehaviour:
     speed: 48
     money: 636
     fieldId: 1
+    spriteId: 2
+    playerLevel: 2
     activeSkills: 7527000075270000
     defeatEnemyUnlocks:
     - id: 3
@@ -86,6 +90,8 @@ MonoBehaviour:
     speed: 49
     money: 696
     fieldId: 1
+    spriteId: 3
+    playerLevel: 3
     activeSkills: d9270000d9270000
     defeatEnemyUnlocks:
     - id: 4
@@ -115,6 +121,8 @@ MonoBehaviour:
     speed: 49
     money: 917
     fieldId: 1
+    spriteId: 4
+    playerLevel: 5
     activeSkills: 752700007527000075270000
     defeatEnemyUnlocks:
     - id: 6
@@ -144,6 +152,8 @@ MonoBehaviour:
     speed: 50
     money: 1054
     fieldId: 1
+    spriteId: 5
+    playerLevel: 6
     activeSkills: d9270000d9270000d9270000
     defeatEnemyUnlocks:
     - id: 8
@@ -169,6 +179,8 @@ MonoBehaviour:
     speed: 51
     money: 1215
     fieldId: 1
+    spriteId: 6
+    playerLevel: 7
     activeSkills: 752700007527000075270000
     defeatEnemyUnlocks:
     - id: 9
@@ -194,6 +206,8 @@ MonoBehaviour:
     speed: 52
     money: 1664
     fieldId: 1
+    spriteId: 7
+    playerLevel: 9
     activeSkills: 752700007527000076270000
     defeatEnemyUnlocks:
     - id: 10
@@ -223,6 +237,8 @@ MonoBehaviour:
     speed: 52
     money: 1907
     fieldId: 1
+    spriteId: 8
+    playerLevel: 10
     activeSkills: 75270000752700007627000076270000
     defeatEnemyUnlocks:
     - id: 12
@@ -252,6 +268,8 @@ MonoBehaviour:
     speed: 53
     money: 2176
     fieldId: 1
+    spriteId: 9
+    playerLevel: 11
     activeSkills: 75270000752700007627000076270000
     defeatEnemyUnlocks:
     - id: 14
@@ -281,6 +299,8 @@ MonoBehaviour:
     speed: 54
     money: 2877
     fieldId: 1
+    spriteId: 10
+    playerLevel: 13
     activeSkills: 75270000762700007627000076270000
     defeatEnemyUnlocks: []
   - id: 11
@@ -302,6 +322,8 @@ MonoBehaviour:
     speed: 54
     money: 3234
     fieldId: 1
+    spriteId: 11
+    playerLevel: 14
     activeSkills: 75270000762700007627000076270000
     defeatEnemyUnlocks: []
   references:

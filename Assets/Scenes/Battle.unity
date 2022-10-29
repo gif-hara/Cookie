@@ -269,6 +269,7 @@ MonoBehaviour:
     physicalDefense: 80
     magicDefense: 80
     speed: 0
+    spriteId: 0
     activeSkillIds: 0529000080270000
     passiveSkillIds: 972a0000972a0000972a0000
   enemyStatus:
@@ -288,6 +289,7 @@ MonoBehaviour:
     physicalDefense: 80
     magicDefense: 80
     speed: 0
+    spriteId: 1
     activeSkillIds: 75270000
     passiveSkillIds: 
   references:

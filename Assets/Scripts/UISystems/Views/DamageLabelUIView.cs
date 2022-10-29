@@ -28,6 +28,12 @@ namespace Cookie.UISystems
             this.pool = new PrefabPool<DamageLabelElement>(this.elementPrefab);
         }
 
+        private void OnDestroy()
+        {
+            this.pool.Clear();
+            this.pool = null;
+        }
+
         public async void Create(int damage, ActorType actorType)
         {
             var element = this.pool.Get();
@@ -39,8 +45,8 @@ namespace Cookie.UISystems
             element.SetPosition(position);
 
             await UniTask.Delay(TimeSpan.FromSeconds(this.delayPoolSeconds));
-            
-            this.pool.Release(element);
+
+            this.pool?.Release(element);
         }
     }
 }

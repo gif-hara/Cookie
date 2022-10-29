@@ -34,6 +34,14 @@ namespace Cookie
 
         public int fieldId;
 
+        public int spriteId;
+
+        /// <summary>
+        /// プレイヤーレベル
+        /// レベルデザイン用に持っている
+        /// </summary>
+        public int playerLevel;
+
         public List<int> activeSkills;
 
         public List<DefeatEnemyUnlock> defeatEnemyUnlocks;
@@ -52,7 +60,8 @@ namespace Cookie
                 physicalDefense = this.physicalDefense,
                 magicDefense = this.magicDefense,
                 speed = this.speed,
-                activeSkillIds = activeSkills
+                activeSkillIds = activeSkills,
+                spriteId = this.spriteId
             };
         }
     }
@@ -82,6 +91,8 @@ namespace Cookie
         public int money;
 
         public int fieldId;
+
+        public int playerLevel;
 
         [Serializable]
         public class Json

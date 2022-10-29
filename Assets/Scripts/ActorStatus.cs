@@ -42,6 +42,8 @@ namespace Cookie
 
         public HashSet<AbnormalStatus> abnormalStatuses;
 
+        public int spriteId;
+
         public string Name => this.nameKey.GetLocalizedString();
         
         public bool IsDead => this.hitPoint <= 0;

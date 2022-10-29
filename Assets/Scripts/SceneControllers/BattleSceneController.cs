@@ -37,7 +37,7 @@ namespace Cookie
 
         private readonly StateController<StateType> stateController = new(StateType.Invalid);
 
-        protected override UniTask OnStartAsync(DisposableBagBuilder scope)
+        protected override async UniTask OnStartAsync(DisposableBagBuilder scope)
         {
             if (SceneMediator.IsMatchArgument<BattleSceneArgument>())
             {
@@ -62,7 +62,6 @@ namespace Cookie
             this.stateController.Set(StateType.EnemyTurn, OnEnterEnemyTurn, null);
             this.stateController.Set(StateType.BattleEnd, OnEnterBattleEnd, null);
             this.stateController.Set(StateType.Finalize, OnEnterBattleFinalize, null);
-            this.stateController.ChangeRequest(StateType.BattleStart);
 
             this.MessageBroker.GetSubscriber<SceneEvent.OnDestroy>()
                 .Subscribe(_ =>
@@ -77,8 +76,13 @@ namespace Cookie
                     uiView.DamageLabelUIView.Create(x.Damage, x.Actor.ActorType);
                 })
                 .AddTo(scope);
+
+            uiView.EnemyImage.enabled = false;
+            var enemySprite = await AssetLoader.LoadAsync<Sprite>($"Assets/Textures/Enemy/{this.enemy.Status.spriteId}.jpg");
+            uiView.EnemyImage.sprite = enemySprite;
+            uiView.EnemyImage.enabled = true;
             
-            return UniTask.CompletedTask;
+            this.stateController.ChangeRequest(StateType.BattleStart);
         }
 
         protected override void OnInitializeMessageBroker(BuiltinContainerBuilder builder)

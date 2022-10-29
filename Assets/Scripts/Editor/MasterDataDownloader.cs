@@ -299,6 +299,8 @@ namespace Cookie
                     speed = x.speed,
                     money = x.money,
                     fieldId = x.fieldId,
+                    spriteId = x.id,
+                    playerLevel = x.playerLevel,
                     activeSkills = enemyActiveSkillJson.elements
                         .Where(enemyActiveSkill => enemyActiveSkill.enemyId == x.id)
                         .Select(enemyActiveSkill => enemyActiveSkill.activeSkillId)
