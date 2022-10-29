@@ -44,6 +44,7 @@ namespace Cookie
         {
             return new ActorStatusBuilder
             {
+                nameKey = this.nameKey,
                 hitPoint = this.hitPoint,
                 physicalStrength = this.physicalStrength,
                 magicStrength = this.magicStrength,

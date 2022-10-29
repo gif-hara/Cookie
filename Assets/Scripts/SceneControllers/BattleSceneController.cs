@@ -159,6 +159,8 @@ namespace Cookie
                     UpdateHitPointSlider();
                 })
                 .AddTo(bag);
+
+            view.ActorName.text = actor.Status.Name;
             
             return bag.Build();
         }

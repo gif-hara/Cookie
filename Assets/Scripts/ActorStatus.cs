@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
+using UnityEngine.Localization;
 
 namespace Cookie
 {
@@ -9,6 +10,8 @@ namespace Cookie
     /// </summary>
     public sealed class ActorStatus
     {
+        public LocalizedString nameKey;
+        
         public AsyncReactiveProperty<int> hitPoint;
 
         public AsyncReactiveProperty<int> hitPointMax;
@@ -39,6 +42,8 @@ namespace Cookie
 
         public HashSet<AbnormalStatus> abnormalStatuses;
 
+        public string Name => this.nameKey.GetLocalizedString();
+        
         public bool IsDead => this.hitPoint <= 0;
     }
 }

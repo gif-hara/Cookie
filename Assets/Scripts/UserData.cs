@@ -6,6 +6,7 @@ using MessagePipe;
 using SerializableCollections;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.Localization;
 
 namespace Cookie
 {
@@ -73,6 +74,7 @@ namespace Cookie
             var armor = this.EquippedArmor;
             return new ActorStatusBuilder
             {
+                nameKey = new LocalizedString("UI", "Player"),
                 hitPoint = armor.hitPoint,
                 physicalStrength = weapon.physicalStrength.parameter,
                 magicStrength = weapon.magicStrength.parameter,

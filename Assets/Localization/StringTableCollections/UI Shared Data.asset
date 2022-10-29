@@ -119,6 +119,10 @@ MonoBehaviour:
     m_Key: NotifyUnlockGacha
     m_Metadata:
       m_Items: []
+  - m_Id: 17724703541231616
+    m_Key: Player
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

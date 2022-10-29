@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
+using UnityEngine.Localization;
 
 namespace Cookie
 {
@@ -11,6 +12,8 @@ namespace Cookie
     [Serializable]
     public sealed class ActorStatusBuilder
     {
+        public LocalizedString nameKey;
+        
         public int hitPoint;
 
         public int physicalStrength;
@@ -33,6 +36,7 @@ namespace Cookie
         {
             return new ActorStatus
             {
+                nameKey = this.nameKey,
                 hitPoint = new AsyncReactiveProperty<int>(this.hitPoint),
                 hitPointMax = new AsyncReactiveProperty<int>(this.hitPoint),
                 physicalStrength = this.physicalStrength,
