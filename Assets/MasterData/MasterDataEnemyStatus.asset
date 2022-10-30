@@ -24,8 +24,8 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     hitPoint: 637
-    physicalStrength: 50
-    magicStrength: 50
+    physicalStrength: 95
+    magicStrength: 95
     criticalRate: 0
     physicalDefense: 80
     magicDefense: 80
@@ -54,9 +54,9 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    hitPoint: 675
-    physicalStrength: 40
-    magicStrength: 40
+    hitPoint: 750
+    physicalStrength: 96
+    magicStrength: 96
     criticalRate: 0
     physicalDefense: 80
     magicDefense: 80
@@ -81,9 +81,9 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    hitPoint: 675
-    physicalStrength: 42
-    magicStrength: 42
+    hitPoint: 825
+    physicalStrength: 102
+    magicStrength: 102
     criticalRate: 0
     physicalDefense: 80
     magicDefense: 80
@@ -112,9 +112,9 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    hitPoint: 691
-    physicalStrength: 31
-    magicStrength: 31
+    hitPoint: 825
+    physicalStrength: 71
+    magicStrength: 71
     criticalRate: 0
     physicalDefense: 81
     magicDefense: 81
@@ -131,8 +131,8 @@ MonoBehaviour:
       unlockId: 5
     - id: 7
       enemyId: 4
-      unlockType: 1
-      unlockId: 6
+      unlockType: 3
+      unlockId: 2
   - id: 5
     nameKey:
       m_TableReference:
@@ -143,9 +143,9 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    hitPoint: 696
-    physicalStrength: 33
-    magicStrength: 33
+    hitPoint: 774
+    physicalStrength: 76
+    magicStrength: 76
     criticalRate: 0
     physicalDefense: 81
     magicDefense: 81
@@ -158,8 +158,8 @@ MonoBehaviour:
     defeatEnemyUnlocks:
     - id: 8
       enemyId: 5
-      unlockType: 3
-      unlockId: 2
+      unlockType: 1
+      unlockId: 6
   - id: 6
     nameKey:
       m_TableReference:
@@ -170,9 +170,9 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    hitPoint: 702
-    physicalStrength: 37
-    magicStrength: 37
+    hitPoint: 780
+    physicalStrength: 79
+    magicStrength: 79
     criticalRate: 0
     physicalDefense: 82
     magicDefense: 82
@@ -197,18 +197,18 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    hitPoint: 734
-    physicalStrength: 39
-    magicStrength: 39
+    hitPoint: 816
+    physicalStrength: 119
+    magicStrength: 119
     criticalRate: 0
-    physicalDefense: 83
-    magicDefense: 83
-    speed: 52
+    physicalDefense: 166
+    magicDefense: 166
+    speed: 50
     money: 1664
     fieldId: 1
     spriteId: 7
     playerLevel: 9
-    activeSkills: 752700007527000076270000
+    activeSkills: 76270000
     defeatEnemyUnlocks:
     - id: 10
       enemyId: 7
@@ -228,13 +228,13 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    hitPoint: 745
-    physicalStrength: 30
-    magicStrength: 30
+    hitPoint: 828
+    physicalStrength: 63
+    magicStrength: 63
     criticalRate: 0
     physicalDefense: 84
     magicDefense: 84
-    speed: 52
+    speed: 50
     money: 1907
     fieldId: 1
     spriteId: 8
@@ -259,9 +259,9 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    hitPoint: 761
-    physicalStrength: 31
-    magicStrength: 31
+    hitPoint: 846
+    physicalStrength: 66
+    magicStrength: 66
     criticalRate: 0
     physicalDefense: 85
     magicDefense: 85
@@ -290,7 +290,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    hitPoint: 149000
+    hitPoint: 4469553
     physicalStrength: 1345
     magicStrength: 1345
     criticalRate: 0
@@ -313,7 +313,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    hitPoint: 152000
+    hitPoint: 6079392
     physicalStrength: 1414
     magicStrength: 1414
     criticalRate: 0

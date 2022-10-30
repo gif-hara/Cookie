@@ -44,6 +44,8 @@ namespace Cookie
 
         public int spriteId;
 
+        public int playerLevel;
+
         public string Name => this.nameKey.GetLocalizedString();
         
         public bool IsDead => this.hitPoint <= 0;

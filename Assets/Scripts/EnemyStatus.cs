@@ -61,7 +61,8 @@ namespace Cookie
                 magicDefense = this.magicDefense,
                 speed = this.speed,
                 activeSkillIds = activeSkills,
-                spriteId = this.spriteId
+                spriteId = this.spriteId,
+                playerLevel = this.playerLevel
             };
         }
     }

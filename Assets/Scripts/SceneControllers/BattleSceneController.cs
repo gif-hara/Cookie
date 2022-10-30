@@ -77,10 +77,7 @@ namespace Cookie
                 })
                 .AddTo(scope);
 
-            uiView.EnemyImage.enabled = false;
-            var enemySprite = await AssetLoader.LoadAsync<Sprite>($"Assets/Textures/Enemy/{this.enemy.Status.spriteId}.jpg");
-            uiView.EnemyImage.sprite = enemySprite;
-            uiView.EnemyImage.enabled = true;
+            await uiView.EnemyImageUIView.Setup(this.enemyStatus.spriteId);
             
             this.stateController.ChangeRequest(StateType.BattleStart);
         }
@@ -173,6 +170,12 @@ namespace Cookie
                 .AddTo(bag);
 
             view.ActorName.text = actor.Status.Name;
+#if DEBUG
+            if (actor.ActorType == ActorType.Enemy)
+            {
+                view.ActorName.text += $"(Lv.{actor.Status.playerLevel})";
+            }
+#endif
             
             return bag.Build();
         }
