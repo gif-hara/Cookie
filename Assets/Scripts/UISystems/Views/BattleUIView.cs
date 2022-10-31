@@ -20,6 +20,9 @@ namespace Cookie.UISystems
 
         [SerializeField]
         private EnemyImageUIView enemyImageUIView;
+
+        [SerializeField]
+        private BattleMessageUIView battleMessageUIView;
         
         public ActorStatusView PlayerStatusView => this.playerStatusView;
 
@@ -28,5 +31,7 @@ namespace Cookie.UISystems
         public DamageLabelUIView DamageLabelUIView => this.damageLabelUIView;
 
         public EnemyImageUIView EnemyImageUIView => this.enemyImageUIView;
+
+        public BattleMessageUIView BattleMessageUIView => this.battleMessageUIView;
     }
 }

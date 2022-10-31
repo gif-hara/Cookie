@@ -54,7 +54,7 @@ MonoBehaviour:
       weight: 80
     - value:
         parameter: 10102
-        rare: 0
+        rare: 1
       weight: 40
   - nameKey:
       m_TableReference:
@@ -97,7 +97,7 @@ MonoBehaviour:
       weight: 80
     - value:
         parameter: 10102
-        rare: 0
+        rare: 1
       weight: 40
   - nameKey:
       m_TableReference:
@@ -141,6 +141,53 @@ MonoBehaviour:
     - value:
         parameter: 10102
         rare: 0
+      weight: 50
+  - nameKey:
+      m_TableReference:
+        m_TableCollectionName: Gacha
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Weapon004
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    id: 4
+    physicalStrengths:
+    - value:
+        min: 120
+        max: 135
+        rare: 0
+      weight: 100
+    magicStrengths:
+    - value:
+        min: 120
+        max: 135
+        rare: 0
+      weight: 100
+    criticalRates:
+    - value:
+        min: 0
+        max: 0
+        rare: 0
+      weight: 100
+    skillNumbers:
+    - value:
+        min: 4
+        max: 4
+        rare: 0
+      weight: 100
+    activeSkillIds:
+    - value:
+        parameter: 10101
+        rare: 0
+      weight: 50
+    - value:
+        parameter: 10102
+        rare: 0
+      weight: 50
+    - value:
+        parameter: 10112
+        rare: 1
       weight: 50
   references:
     version: 2

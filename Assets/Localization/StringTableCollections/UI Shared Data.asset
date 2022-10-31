@@ -123,6 +123,10 @@ MonoBehaviour:
     m_Key: Player
     m_Metadata:
       m_Items: []
+  - m_Id: 18655494014173184
+    m_Key: BattleStart
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

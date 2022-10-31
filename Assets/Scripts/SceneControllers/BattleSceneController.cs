@@ -35,6 +35,8 @@ namespace Cookie
 
         private Actor enemy;
 
+        private BattleUIView uiView;
+
         private readonly StateController<StateType> stateController = new(StateType.Invalid);
 
         protected override async UniTask OnStartAsync(DisposableBagBuilder scope)
@@ -52,6 +54,7 @@ namespace Cookie
             }
 
             var uiView = UIManager.Open(this.battleUIPrefab);
+            this.uiView = uiView;
             StartObserveActorStatusView(this.player, uiView.PlayerStatusView)
                 .AddTo(scope);
             StartObserveActorStatusView(this.enemy, uiView.EnemyStatusView)
@@ -77,7 +80,7 @@ namespace Cookie
                 })
                 .AddTo(scope);
 
-            await uiView.EnemyImageUIView.Setup(this.enemyStatus.spriteId);
+            await uiView.EnemyImageUIView.SetupAsync(this.enemy.Status.spriteId);
             
             this.stateController.ChangeRequest(StateType.BattleStart);
         }
@@ -90,11 +93,16 @@ namespace Cookie
             builder.AddMessageBroker<BattleEvent.TakedDamage>();
         }
         
-        private void OnEnterBattleStart(StateType prev)
+        private async void OnEnterBattleStart(StateType prev)
         {
-            Debug.Log("BattleStart");
             this.MessageBroker.GetPublisher<BattleEvent.StartBattle>()
                 .Publish(BattleEvent.StartBattle.Get());
+
+            await UniTask.WhenAll(
+                this.uiView.EnemyImageUIView.PlayAppearanceAsync(),
+                this.uiView.BattleMessageUIView.Play(BattleMessageUIView.Type.BattleStart)
+                );
+            
             this.stateController.ChangeRequest(this.player.Status.speed >= this.enemy.Status.speed ? StateType.PlayerTurn : StateType.EnemyTurn);
         }
 

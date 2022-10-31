@@ -126,6 +126,10 @@ MonoBehaviour:
     m_Localized: "\u30D7\u30EC\u30A4\u30E4\u30FC"
     m_Metadata:
       m_Items: []
+  - m_Id: 18655494014173184
+    m_Localized: Battle Start
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
