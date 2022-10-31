@@ -122,10 +122,15 @@ namespace Cookie
             this.stateController.ChangeRequest(IsBattleEnd() ? StateType.BattleEnd : StateType.PlayerTurn);
         }
 
-        private void OnEnterBattleEnd(StateType prev)
+        private async void OnEnterBattleEnd(StateType prev)
         {
-            Debug.Log("BattleEnd");
             var judgement = !this.player.Status.IsDead ? BattleJudgement.PlayerWin : BattleJudgement.PlayerLose;
+
+            await this.uiView.BattleMessageUIView.Play(
+                judgement == BattleJudgement.PlayerWin
+                    ? BattleMessageUIView.Type.Win
+                    : BattleMessageUIView.Type.Lose
+                );
 
             if (SceneMediator.IsMatchArgument<BattleSceneArgument>())
             {
