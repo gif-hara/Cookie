@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,8 +16,19 @@ namespace Cookie.UISystems
         [SerializeField]
         private TextMeshProUGUI actorName;
 
+        [SerializeField]
+        private AnimationController animationController;
+
+        [SerializeField]
+        private AnimationClip damageClip;
+
         public Slider HitPointSlider => this.hitPointSlider;
 
         public TextMeshProUGUI ActorName => this.actorName;
+
+        public async UniTask PlayDamageAsync()
+        {
+            await this.animationController.PlayTask(this.damageClip);
+        }
     }
 }

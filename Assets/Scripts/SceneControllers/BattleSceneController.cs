@@ -82,6 +82,10 @@ namespace Cookie
                     {
                         uiView.EnemyImageUIView.PlayDamageAsync().Forget();
                     }
+                    else
+                    {
+                        uiView.PlayerStatusView.PlayDamageAsync().Forget();
+                    }
                 })
                 .AddTo(scope);
             
