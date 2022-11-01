@@ -19,6 +19,9 @@ namespace Cookie
         [SerializeField]
         private AnimationClip appearanceClip;
 
+        [SerializeField]
+        private AnimationClip damageClip;
+
         public async UniTask SetupAsync(int enemySpriteId)
         {
             this.image.enabled = false;
@@ -30,6 +33,11 @@ namespace Cookie
         {
             this.image.enabled = true;
             await this.animationController.PlayTask(this.appearanceClip);
+        }
+
+        public async UniTask PlayDamageAsync()
+        {
+            await this.animationController.PlayTask(this.damageClip);
         }
     }
 }

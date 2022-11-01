@@ -181,6 +181,7 @@ MonoBehaviour:
   image: {fileID: 4237470292076827923}
   animationController: {fileID: 634499922412304189}
   appearanceClip: {fileID: 7400000, guid: 83f9c34effa24a245b17993acdaaae39, type: 2}
+  damageClip: {fileID: 7400000, guid: aef3165bd2c027e499bc8859a78ef835, type: 2}
 --- !u!95 &7387779899129242393
 Animator:
   serializedVersion: 4

@@ -77,9 +77,14 @@ namespace Cookie
                 .Subscribe(x =>
                 {
                     uiView.DamageLabelUIView.Create(x.Damage, x.Actor.ActorType);
+
+                    if (x.Actor.ActorType == ActorType.Enemy)
+                    {
+                        uiView.EnemyImageUIView.PlayDamageAsync().Forget();
+                    }
                 })
                 .AddTo(scope);
-
+            
             await uiView.EnemyImageUIView.SetupAsync(this.enemy.Status.spriteId);
             
             this.stateController.ChangeRequest(StateType.BattleStart);
