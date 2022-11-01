@@ -80,7 +80,14 @@ namespace Cookie
 
                     if (x.Actor.ActorType == ActorType.Enemy)
                     {
-                        uiView.EnemyImageUIView.PlayDamageAsync().Forget();
+                        if (x.Actor.Status.IsDead)
+                        {
+                            uiView.EnemyImageUIView.PlayDiedAsync().Forget();
+                        }
+                        else
+                        {
+                            uiView.EnemyImageUIView.PlayDamageAsync().Forget();
+                        }
                     }
                     else
                     {
