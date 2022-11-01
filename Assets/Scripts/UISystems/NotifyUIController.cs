@@ -22,6 +22,11 @@ namespace Cookie
             this.uiView = UIManager.Open(prefab);
             UIManager.Hidden(this.uiView);
         }
+        
+        public async UniTask Show(string message)
+        {
+            await this.Show(new List<string>{message});
+        }
 
         public async UniTask Show(List<string> messages)
         {

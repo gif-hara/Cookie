@@ -36,11 +36,22 @@ namespace Cookie
                     uiView.InvokeListRoot.SetActive(true);
                     uiView.ConfirmListRoot.SetActive(false);
                     uiView.EquipmentInformationUIView.SetDeactiveAll();
+                    uiView.InvokeButton.Message.text = string.Format(
+                        LocalizeString.Get("UI", "InvokeMoneyFormat"),
+                        gacha.money
+                        );
                     
                     // 実行ボタンが押されたらガチャする
                     uiView.InvokeButton.Button.onClick.RemoveAllListeners();
                     uiView.InvokeButton.Button.onClick.AddListener(() =>
                     {
+                        if (!UserData.current.IsPossessionMoney(gacha.money))
+                        {
+                            UIManager.NotifyUIController.Show(LocalizeString.Get("UI", "NotEnoughMoney")).Forget();
+                            return;
+                        }
+                        UserData.current.AddMoney(-gacha.money);
+
                         var physicalStrength = gacha.physicalStrengths.Lottery();
                         var magicStrength = gacha.magicStrengths.Lottery();
                         var criticalRate = gacha.criticalRates.Lottery();
@@ -126,11 +137,22 @@ namespace Cookie
                     uiView.InvokeListRoot.SetActive(true);
                     uiView.ConfirmListRoot.SetActive(false);
                     uiView.EquipmentInformationUIView.SetDeactiveAll();
+                    uiView.InvokeButton.Message.text = string.Format(
+                        LocalizeString.Get("UI", "InvokeMoneyFormat"),
+                        gacha.money
+                        );
 
                     // 実行ボタンが押されたらガチャする
                     uiView.InvokeButton.Button.onClick.RemoveAllListeners();
                     uiView.InvokeButton.Button.onClick.AddListener(() =>
                     {
+                        if (!UserData.current.IsPossessionMoney(gacha.money))
+                        {
+                            UIManager.NotifyUIController.Show(LocalizeString.Get("UI", "NotEnoughMoney")).Forget();
+                            return;
+                        }
+                        UserData.current.AddMoney(-gacha.money);
+
                         var newArmor = new Armor
                         {
                             instanceId = UserData.current.armorCreatedNumber,
@@ -185,11 +207,22 @@ namespace Cookie
                     uiView.InvokeListRoot.SetActive(true);
                     uiView.ConfirmListRoot.SetActive(false);
                     uiView.EquipmentInformationUIView.SetDeactiveAll();
+                    uiView.InvokeButton.Message.text = string.Format(
+                        LocalizeString.Get("UI", "InvokeMoneyFormat"),
+                        gacha.money
+                        );
                     
                     // 実行ボタンが押されたらガチャする
                     uiView.InvokeButton.Button.onClick.RemoveAllListeners();
                     uiView.InvokeButton.Button.onClick.AddListener(() =>
                     {
+                        if (!UserData.current.IsPossessionMoney(gacha.money))
+                        {
+                            UIManager.NotifyUIController.Show(LocalizeString.Get("UI", "NotEnoughMoney")).Forget();
+                            return;
+                        }
+                        UserData.current.AddMoney(-gacha.money);
+                        
                         var newAccessory = new Accessory
                         {
                             instanceId = UserData.current.accessoryCreatedNumber,

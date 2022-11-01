@@ -23,6 +23,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     id: 1
+    money: 200
     hitPoints:
     - value:
         min: 500
@@ -57,6 +58,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     id: 2
+    money: 596
     hitPoints:
     - value:
         min: 534
@@ -91,6 +93,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     id: 3
+    money: 1796
     hitPoints:
     - value:
         min: 614
@@ -125,6 +128,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     id: 4
+    money: 1796
     hitPoints:
     - value:
         min: 918

@@ -138,6 +138,18 @@ MonoBehaviour:
     m_Localized: You Died...
     m_Metadata:
       m_Items: []
+  - m_Id: 19019397483134976
+    m_Localized: ${0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19020104567291904
+    m_Localized: "\u5B9F\u884C(${0})"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19022898435129344
+    m_Localized: "\u304A\u91D1\u304C\u8DB3\u308A\u307E\u305B\u3093"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

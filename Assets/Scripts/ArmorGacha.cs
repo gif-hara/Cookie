@@ -14,6 +14,8 @@ namespace Cookie
         
         public int id;
 
+        public int money;
+
         public List<InstanceRangeParameterWithWeight> hitPoints;
 
         public List<InstanceRangeParameterWithWeight> physicalDefenses;
@@ -33,6 +35,8 @@ namespace Cookie
         public int id;
 
         public string nameKey;
+
+        public int money;
 
         [Serializable]
         public class Json

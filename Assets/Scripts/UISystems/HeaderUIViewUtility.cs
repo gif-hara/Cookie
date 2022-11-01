@@ -30,7 +30,7 @@ namespace Cookie
 
         private static void UpdateMoney(HeaderUIView headerUIView, int money)
         {
-            headerUIView.Money.text = money.ToString();
+            headerUIView.Money.text = string.Format(LocalizeString.Get("UI", "MoneyFormat"), money.ToString());
         }
     }
 }

@@ -16,6 +16,8 @@ namespace Cookie
         public LocalizedString nameKey;
         
         public int id;
+
+        public int money;
         
         /// <summary>
         /// 付与できるスキルの数
@@ -36,6 +38,8 @@ namespace Cookie
         public int id;
 
         public string nameKey;
+
+        public int money;
 
         [Serializable]
         public class Json

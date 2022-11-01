@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel;
 using Cookie;
 using Cookie.UISystems;
@@ -39,7 +40,7 @@ public partial class SROptions
     public async void ShowNotify()
     {
         Debug.Log("Start ShowNotify");
-        await UIManager.NotifyUIController.Show(new(){"Test1", "Test2"});
+        await UIManager.NotifyUIController.Show(new List<string>{"Test1", "Test2"});
         Debug.Log("End ShowNotify");
     }
 }

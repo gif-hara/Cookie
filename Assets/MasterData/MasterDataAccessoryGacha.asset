@@ -23,6 +23,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     id: 1
+    money: 200
     skillNumbers:
     - value:
         min: 10

@@ -42,6 +42,7 @@ namespace Cookie
                     {
                         id = x.id,
                         nameKey = new LocalizedString("Gacha", x.nameKey),
+                        money = x.money,
                         physicalStrengths = new List<InstanceRangeParameterWithWeight>
                             (
                             weaponGachaPhysicalStrengthJson.elements
@@ -148,6 +149,7 @@ namespace Cookie
                     {
                         id = x.id,
                         nameKey = new LocalizedString("Gacha", x.nameKey),
+                        money = x.money,
                         physicalDefenses = new List<InstanceRangeParameterWithWeight>
                             (
                             armorGachaPhysicalDefenseJson.elements
@@ -236,6 +238,7 @@ namespace Cookie
                     {
                         id = x.id,
                         nameKey = new LocalizedString("Gacha", x.nameKey),
+                        money = x.money,
                         skillNumbers = new List<InstanceRangeParameterWithWeight>
                             (
                             accessoryGachaSkillNumberJson.elements

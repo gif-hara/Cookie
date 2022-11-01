@@ -135,6 +135,18 @@ MonoBehaviour:
     m_Key: Lose
     m_Metadata:
       m_Items: []
+  - m_Id: 19019397483134976
+    m_Key: MoneyFormat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19020104567291904
+    m_Key: InvokeMoneyFormat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19022898435129344
+    m_Key: NotEnoughMoney
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

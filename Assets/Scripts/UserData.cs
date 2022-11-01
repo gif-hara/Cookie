@@ -137,5 +137,10 @@ namespace Cookie
             GlobalMessagePipe.GetPublisher<UserDataEvent.UpdatedMoney>()
                 .Publish(UserDataEvent.UpdatedMoney.Get());
         }
+
+        public bool IsPossessionMoney(int value)
+        {
+            return this.money >= value;
+        }
     }
 }
