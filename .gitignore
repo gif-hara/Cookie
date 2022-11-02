@@ -63,4 +63,6 @@ masterdata_sheet_url.txt
 .idea*
 Assets/StompyRobot*
 Assets/AddressableAssetsData/link.xml*
+Assets/AddressableAssetsData/OSX*
+ProjectSettings/BurstAotSettings_StandaloneOSX.json
 
