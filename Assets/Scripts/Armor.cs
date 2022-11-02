@@ -11,6 +11,7 @@ namespace Cookie
     {
         public int instanceId;
         
+        // シリアライズするからstringのままにしておく
         public string nameKey;
 
         public int hitPoint;
