@@ -57,6 +57,14 @@ MonoBehaviour:
         parameter: 10102
         rare: 1
       weight: 40
+    - value:
+        parameter: 10201
+        rare: 0
+      weight: 80
+    - value:
+        parameter: 10202
+        rare: 1
+      weight: 40
   - nameKey:
       m_TableReference:
         m_TableCollectionName: Gacha
@@ -100,7 +108,15 @@ MonoBehaviour:
     - value:
         parameter: 10102
         rare: 1
-      weight: 40
+      weight: 60
+    - value:
+        parameter: 10201
+        rare: 0
+      weight: 80
+    - value:
+        parameter: 10202
+        rare: 1
+      weight: 60
   - nameKey:
       m_TableReference:
         m_TableCollectionName: Gacha
@@ -145,6 +161,14 @@ MonoBehaviour:
         parameter: 10102
         rare: 0
       weight: 50
+    - value:
+        parameter: 10201
+        rare: 0
+      weight: 50
+    - value:
+        parameter: 10202
+        rare: 0
+      weight: 50
   - nameKey:
       m_TableReference:
         m_TableCollectionName: Gacha
@@ -187,6 +211,14 @@ MonoBehaviour:
       weight: 50
     - value:
         parameter: 10102
+        rare: 0
+      weight: 50
+    - value:
+        parameter: 10201
+        rare: 0
+      weight: 50
+    - value:
+        parameter: 10202
         rare: 0
       weight: 50
     - value:
