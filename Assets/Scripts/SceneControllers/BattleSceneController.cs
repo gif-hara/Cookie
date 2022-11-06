@@ -103,7 +103,7 @@ namespace Cookie
                 {
                     if (x.Actor.ActorType == ActorType.Enemy)
                     {
-                        
+                        Debug.Log("TODO 敵の状態異常付与エフェクト");
                     }
                     else
                     {
@@ -118,7 +118,7 @@ namespace Cookie
                 {
                     if (x.Actor.ActorType == ActorType.Enemy)
                     {
-
+                        Debug.Log("TODO 敵の状態異常解除エフェクト");
                     }
                     else
                     {
