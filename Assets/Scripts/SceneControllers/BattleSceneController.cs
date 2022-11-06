@@ -139,6 +139,8 @@ namespace Cookie
             builder.AddMessageBroker<BattleEvent.Dispose>();
             builder.AddMessageBroker<Actor, BattleEvent.StartTurn>();
             builder.AddMessageBroker<BattleEvent.TakedDamage>();
+            builder.AddMessageBroker<BattleEvent.AddedAbnormalStatus>();
+            builder.AddMessageBroker<BattleEvent.RemovedAbnormalStatus>();
         }
         
         private async void OnEnterBattleStart(StateType prev)
