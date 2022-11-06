@@ -127,6 +127,13 @@ namespace Cookie
                 })
                 .AddTo(scope);
 
+            this.MessageBroker.GetSubscriber<BattleEvent.AttackDeclaration>()
+                .Subscribe(x =>
+                {
+                    uiView.AttackDeclarationUIView.Create(x.Message, x.Actor.ActorType);
+                })
+                .AddTo(scope);
+
             await this.battleResourceManager.SetupAsync(scope);
             await uiView.EnemyImageUIView.SetupAsync(this.enemy.Status.spriteId);
             
@@ -141,6 +148,7 @@ namespace Cookie
             builder.AddMessageBroker<BattleEvent.TakedDamage>();
             builder.AddMessageBroker<BattleEvent.AddedAbnormalStatus>();
             builder.AddMessageBroker<BattleEvent.RemovedAbnormalStatus>();
+            builder.AddMessageBroker<BattleEvent.AttackDeclaration>();
         }
         
         private async void OnEnterBattleStart(StateType prev)

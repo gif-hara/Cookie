@@ -199,6 +199,26 @@ MonoBehaviour:
     m_Key: ActiveSkill10404
     m_Metadata:
       m_Items: []
+  - m_Id: 6116952063016960
+    m_Key: ActiveSkill10405
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6116952083988480
+    m_Key: ActiveSkill10501
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6116952083988481
+    m_Key: ActiveSkill10502
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6116952083988482
+    m_Key: ActiveSkill10503
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6116952083988483
+    m_Key: ActiveSkill10504
+    m_Metadata:
+      m_Items: []
   - m_Id: 2197204172834
     m_Key: PassiveSkill10101
     m_Metadata:
@@ -273,6 +293,42 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1455690058235910
     m_Key: PassiveSkill10604
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6116952083988484
+    m_Key: PassiveSkill10701
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6116952083988485
+    m_Key: PassiveSkill10801
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6116952083988486
+    m_Key: PassiveSkill10901
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6116952083988487
+    m_Key: PassiveSkill10902
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6116952083988488
+    m_Key: PassiveSkill10903
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6116952083988489
+    m_Key: PassiveSkill11001
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6116952083988490
+    m_Key: PassiveSkill11002
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6116952083988491
+    m_Key: PassiveSkill11003
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6116952083988492
+    m_Key: PassiveSkill11101
     m_Metadata:
       m_Items: []
   m_Metadata:

@@ -62,5 +62,15 @@ namespace Cookie
 
             public AbnormalStatus AbnormalStatus => this.Param2;
         }
+
+        /// <summary>
+        /// 攻撃宣言を行うメッセージ
+        /// </summary>
+        public class AttackDeclaration : Message<AttackDeclaration, Actor, string>
+        {
+            public Actor Actor => this.Param1;
+
+            public string Message => this.Param2;
+        }
     }
 }

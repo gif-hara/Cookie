@@ -48,6 +48,11 @@ namespace Cookie
                             continue;
                         }
                         
+                        messageBroker.GetPublisher<BattleEvent.AttackDeclaration>()
+                            .Publish(BattleEvent.AttackDeclaration.Get(this, skill.Name));
+                        
+                        await UniTask.Delay(TimeSpan.FromSeconds(0.5f));
+
                         // 実際の行動を処理する
                         foreach (var attribute in skill.attributes)
                         {
