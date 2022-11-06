@@ -27,12 +27,6 @@ namespace Cookie
             this.messageBroker = messageBroker;
 
             var bag = DisposableBag.CreateBuilder();
-            messageBroker.GetSubscriber<BattleEvent.StartBattle>()
-                .Subscribe(_ =>
-                {
-                    Debug.Log($"StartBattle {this.actorType}");
-                })
-                .AddTo(bag);
 
             messageBroker.GetSubscriber<BattleEvent.Dispose>()
                 .Subscribe(_ =>
@@ -44,7 +38,6 @@ namespace Cookie
             messageBroker.GetAsyncSubscriber<Actor, BattleEvent.StartTurn>()
                 .Subscribe(this, async (x, cancelToken) =>
                 {
-                    Debug.Log($"StartTurn {this.actorType}");
                     foreach (var skill in this.Status.activeSkills)
                     {
                         // 麻痺の処理
@@ -104,7 +97,8 @@ namespace Cookie
                                     if (Calculator.CanAddAbnormalStatus(abnormalStatusType, this.Status, x.Opponent.Status))
                                     {
                                         x.Opponent.Status.abnormalStatuses.Add(abnormalStatusType);
-                                        Debug.Log($"Add {abnormalStatusType}");
+                                        messageBroker.GetPublisher<BattleEvent.AddedAbnormalStatus>()
+                                            .Publish(BattleEvent.AddedAbnormalStatus.Get(x.Opponent, abnormalStatusType));
                                     }
                                     break;
                                 }
@@ -116,7 +110,8 @@ namespace Cookie
                                         if (this.Status.abnormalStatuses.Contains(abnormalStatusType))
                                         {
                                             this.Status.abnormalStatuses.Remove(abnormalStatusType);
-                                            Debug.Log($"Remove {abnormalStatusType}");
+                                            messageBroker.GetPublisher<BattleEvent.RemovedAbnormalStatus>()
+                                                .Publish(BattleEvent.RemovedAbnormalStatus.Get(this, abnormalStatusType));
                                         }
                                     }
                                     break;

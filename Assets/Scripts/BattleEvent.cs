@@ -42,5 +42,25 @@ namespace Cookie
             
             public int Damage => this.Param2;
         }
+        
+        /// <summary>
+        /// <see cref="Actor"/>が状態異常を付与された際のメッセージ
+        /// </summary>
+        public class AddedAbnormalStatus : Message<AddedAbnormalStatus, Actor, AbnormalStatus>
+        {
+            public Actor Actor => this.Param1;
+
+            public AbnormalStatus AbnormalStatus => this.Param2;
+        }
+
+        /// <summary>
+        /// <see cref="Actor"/>が状態異常を削除された際のメッセージ
+        /// </summary>
+        public class RemovedAbnormalStatus : Message<RemovedAbnormalStatus, Actor, AbnormalStatus>
+        {
+            public Actor Actor => this.Param1;
+
+            public AbnormalStatus AbnormalStatus => this.Param2;
+        }
     }
 }

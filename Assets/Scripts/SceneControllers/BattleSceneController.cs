@@ -39,6 +39,8 @@ namespace Cookie
 
         private readonly StateController<StateType> stateController = new(StateType.Invalid);
 
+        private readonly BattleResourceManager battleResourceManager = new();
+
         protected override async UniTask OnStartAsync(DisposableBagBuilder scope)
         {
             if (SceneMediator.IsMatchArgument<BattleSceneArgument>())
@@ -95,7 +97,37 @@ namespace Cookie
                     }
                 })
                 .AddTo(scope);
-            
+
+            this.MessageBroker.GetSubscriber<BattleEvent.AddedAbnormalStatus>()
+                .Subscribe(x =>
+                {
+                    if (x.Actor.ActorType == ActorType.Enemy)
+                    {
+                        
+                    }
+                    else
+                    {
+                        var icon = this.battleResourceManager.AbnormalStatusIcons[x.AbnormalStatus];
+                        uiView.PlayerStatusView.AddAbnormalStatusIcon(x.AbnormalStatus, icon);
+                    }
+                })
+                .AddTo(scope);
+
+            this.MessageBroker.GetSubscriber<BattleEvent.RemovedAbnormalStatus>()
+                .Subscribe(x =>
+                {
+                    if (x.Actor.ActorType == ActorType.Enemy)
+                    {
+
+                    }
+                    else
+                    {
+                        uiView.PlayerStatusView.RemoveAbnormalStatusIcon(x.AbnormalStatus);
+                    }
+                })
+                .AddTo(scope);
+
+            await this.battleResourceManager.SetupAsync(scope);
             await uiView.EnemyImageUIView.SetupAsync(this.enemy.Status.spriteId);
             
             this.stateController.ChangeRequest(StateType.BattleStart);

@@ -12,9 +12,7 @@ namespace Cookie
     {
         public static async UniTask<T> LoadAsync<T>(string path)
         {
-            var result = await Addressables.LoadAssetAsync<T>(path);
-
-            return result;
+            return await Addressables.LoadAssetAsync<T>(path);
         }
     }
 }
