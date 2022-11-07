@@ -66,19 +66,19 @@ namespace Cookie
                                 {
                                     void InvokeAttack()
                                     {
-                                        var damage = Calculator.GetDamage(this.Status, skill, x.Opponent.Status);
-                                        x.Opponent.TakeDamage(damage);
+                                        var damageData = Calculator.GetDamageData(this.Status, skill, x.Opponent.Status);
+                                        x.Opponent.TakeDamage(damageData);
                                     
                                         // 反撃処理
                                         if (x.Opponent.Status.passiveSkills.Contains(SkillAttributeName.Counter))
                                         {
-                                            this.TakeDamage(Calculator.GetCounterDamage(damage));
+                                            this.TakeDamage(Calculator.GetCounterDamage(damageData.damage, damageData.attackAttribute));
                                         }
 
                                         // 吸収処理
                                         if (this.Status.passiveSkills.Contains(SkillAttributeName.Absorption))
                                         {
-                                            this.RecoveryFixed(Calculator.GetAbsorptionRecoveryAmount(damage));
+                                            this.RecoveryFixed(Calculator.GetAbsorptionRecoveryAmount(damageData.damage));
                                         }
                                     }
                                     InvokeAttack();
@@ -181,11 +181,11 @@ namespace Cookie
                 .AddTo(bag);
         }
 
-        private void TakeDamage(int damage)
+        private void TakeDamage(DamageData damageData)
         {
-            this.Status.hitPoint.Value -= damage;
+            this.Status.hitPoint.Value -= damageData.damage;
             this.messageBroker.GetPublisher<BattleEvent.TakedDamage>()
-                .Publish(BattleEvent.TakedDamage.Get(this, damage));
+                .Publish(BattleEvent.TakedDamage.Get(this, damageData));
         }
 
         private void RecoveryRate(float rate)

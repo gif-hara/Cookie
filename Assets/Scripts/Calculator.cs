@@ -9,13 +9,14 @@ namespace Cookie
     /// </summary>
     public static class Calculator
     {
-        public static int GetDamage(
+        public static DamageData GetDamageData(
             ActorStatus attacker,
             ActiveSkill attackerActiveSkill,
             ActorStatus target
             )
         {
-            var attackAttribute = (AttackAttribute)attackerActiveSkill.attributes.Get(SkillAttributeName.AttackAttribute).value;
+            var result = new DamageData();
+            result.attackAttribute = (AttackAttribute)attackerActiveSkill.attributes.Get(SkillAttributeName.AttackAttribute).value;
             
             var physicalStrength = attacker.physicalStrength;
             physicalStrength = Mathf.FloorToInt(
@@ -29,11 +30,11 @@ namespace Cookie
                 (1.0f + GetMagicStrengthUpRateFromPassiveSkill(attacker.passiveSkills) + GetStrengthUpRateFromBuff(attacker.magicStrengthBuffLevel))
                 );
             
-            var defense = attackAttribute == AttackAttribute.Physical ? target.physicalDefense : target.magicDefense;
-            var defenseUpRateFromPassiveSkill = attackAttribute == AttackAttribute.Physical
+            var defense = result.attackAttribute == AttackAttribute.Physical ? target.physicalDefense : target.magicDefense;
+            var defenseUpRateFromPassiveSkill = result.attackAttribute == AttackAttribute.Physical
                 ? GetPhysicalDefenseUpRateFromPassiveSkill(target.passiveSkills)
                 : GetMagicDefenseUpRateFromPassiveSkill(target.passiveSkills);
-            var defenseUpRateFromBuff = attackAttribute == AttackAttribute.Physical
+            var defenseUpRateFromBuff = result.attackAttribute == AttackAttribute.Physical
                 ? GetDefenseUpRateFromBuff(target.physicalDefenseBuffLevel)
                 : GetDefenseUpRateFromBuff(target.magicDefenseBuffLevel);
             defense = Mathf.FloorToInt(
@@ -42,17 +43,18 @@ namespace Cookie
                 );
             
             var criticalRate = attacker.criticalRate + attacker.passiveSkills.GetAllAttributeValue(SkillAttributeName.CriticalRateUpFixed);
-            var critical = IsCritical(criticalRate) ? 1.5f : 1.0f;
-            var result = Mathf.FloorToInt(GetAttackPower(physicalStrength, magicStrength, attackerActiveSkill) * critical) / defense;
+            result.isCritical = IsCritical(criticalRate);
+            var critical = result.isCritical ? 1.5f : 1.0f;
+            result.damage = Mathf.FloorToInt(GetAttackPower(physicalStrength, magicStrength, attackerActiveSkill) * critical) / defense;
 
             if (attacker.abnormalStatuses.Contains(AbnormalStatus.Debility))
             {
-                result = Mathf.FloorToInt(result * (2.0f / 3.0f));
+                result.damage = Mathf.FloorToInt(result.damage * (2.0f / 3.0f));
             }
 
             if (target.abnormalStatuses.Contains(AbnormalStatus.Fragility))
             {
-                result = Mathf.FloorToInt(result * (4.0f / 3.0f));
+                result.damage = Mathf.FloorToInt(result.damage * (4.0f / 3.0f));
             }
 
             return result;
@@ -163,9 +165,14 @@ namespace Cookie
             return Random.value <= rate;
         }
 
-        public static int GetPoisonDamage(ActorStatus actorStatus)
+        public static DamageData GetPoisonDamage(ActorStatus actorStatus)
         {
-            return actorStatus.hitPointMax / 5;
+            return new DamageData
+            {
+                damage = Mathf.FloorToInt((float)actorStatus.hitPointMax / 5),
+                attackAttribute = AttackAttribute.Physical,
+                isCritical = false
+            };
         }
 
         public static bool CanInvokeParalysis()
@@ -181,9 +188,14 @@ namespace Cookie
         /// <summary>
         /// 反撃によるダメージを返す
         /// </summary>
-        public static int GetCounterDamage(int damage)
+        public static DamageData GetCounterDamage(int damage, AttackAttribute attackAttribute)
         {
-            return Mathf.FloorToInt(damage * 0.2f);
+            return new DamageData
+            {
+                damage = Mathf.FloorToInt(damage * 0.2f),
+                attackAttribute = attackAttribute,
+                isCritical = false
+            };
         }
 
         /// <summary>

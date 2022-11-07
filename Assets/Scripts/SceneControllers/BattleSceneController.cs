@@ -78,7 +78,7 @@ namespace Cookie
             this.MessageBroker.GetSubscriber<BattleEvent.TakedDamage>()
                 .Subscribe(x =>
                 {
-                    uiView.DamageLabelUIView.Create(x.Damage, x.Actor.ActorType);
+                    uiView.DamageLabelUIView.Create(x.DamageData.damage, x.Actor.ActorType);
 
                     if (x.Actor.ActorType == ActorType.Enemy)
                     {
