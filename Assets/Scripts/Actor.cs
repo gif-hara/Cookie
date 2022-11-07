@@ -171,7 +171,7 @@ namespace Cookie
                     }
                     
                     // 毒の処理
-                    if (this.Status.abnormalStatuses.Contains(AbnormalStatus.Poison))
+                    if (this.Status.abnormalStatuses.Contains(AbnormalStatus.Poison) && !x.Opponent.Status.IsDead)
                     {
                         Debug.Log("TODO: 毒演出");
                         this.TakeDamage(Calculator.GetPoisonDamage(this.Status));
