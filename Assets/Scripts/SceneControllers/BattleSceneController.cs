@@ -55,8 +55,7 @@ namespace Cookie
                 this.enemy = new Actor(ActorType.Enemy, this.enemyStatus.Create(), this.MessageBroker);
             }
 
-            var uiView = UIManager.Open(this.battleUIPrefab);
-            this.uiView = uiView;
+            this.uiView = UIManager.Open(this.battleUIPrefab);
             StartObserveActorStatusView(this.player, uiView.PlayerStatusView)
                 .AddTo(scope);
             StartObserveActorStatusView(this.enemy, uiView.EnemyStatusView)
