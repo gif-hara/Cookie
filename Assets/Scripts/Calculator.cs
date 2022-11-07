@@ -151,6 +151,12 @@ namespace Cookie
                 return false;
             }
 
+            // 既に状態異常にかかっている場合はかからない
+            if (targetStatus.abnormalStatuses.Contains(abnormalStatus))
+            {
+                return false;
+            }
+
             var rate = 0.5f +
                 attackerStatus.passiveSkills.GetAllAttributeValue(SkillAttributeName.AddAbnormalStatusRateUpFixed) / 100.0f;
             
