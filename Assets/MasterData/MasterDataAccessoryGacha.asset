@@ -23,25 +23,28 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     id: 1
-    money: 200
+    money: 2696
     skillNumbers:
     - value:
-        min: 10
-        max: 10
+        min: 3
+        max: 3
         rare: 0
       weight: 80
-    - value:
-        min: 10
-        max: 10
-        rare: 0
-      weight: 40
     passiveSkillIds:
     - value:
         parameter: 10101
         rare: 0
       weight: 80
     - value:
-        parameter: 10102
+        parameter: 10201
+        rare: 0
+      weight: 80
+    - value:
+        parameter: 10301
+        rare: 0
+      weight: 80
+    - value:
+        parameter: 10401
         rare: 0
       weight: 80
     - value:

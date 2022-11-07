@@ -75,7 +75,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     id: 2
-    money: 596
+    money: 340
     physicalStrengths:
     - value:
         min: 103
@@ -127,7 +127,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     id: 3
-    money: 1796
+    money: 680
     physicalStrengths:
     - value:
         min: 110
@@ -179,7 +179,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     id: 4
-    money: 1796
+    money: 1096
     physicalStrengths:
     - value:
         min: 120
@@ -223,6 +223,123 @@ MonoBehaviour:
       weight: 50
     - value:
         parameter: 10112
+        rare: 1
+      weight: 50
+  - nameKey:
+      m_TableReference:
+        m_TableCollectionName: Gacha
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Weapon005
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    id: 5
+    money: 1960
+    physicalStrengths:
+    - value:
+        min: 139
+        max: 180
+        rare: 0
+      weight: 100
+    magicStrengths:
+    - value:
+        min: 139
+        max: 180
+        rare: 0
+      weight: 100
+    criticalRates:
+    - value:
+        min: 0
+        max: 0
+        rare: 0
+      weight: 100
+    - value:
+        min: 10
+        max: 10
+        rare: 0
+      weight: 40
+    skillNumbers:
+    - value:
+        min: 5
+        max: 5
+        rare: 0
+      weight: 100
+    activeSkillIds:
+    - value:
+        parameter: 10102
+        rare: 1
+      weight: 50
+    - value:
+        parameter: 10103
+        rare: 1
+      weight: 80
+    - value:
+        parameter: 10202
+        rare: 1
+      weight: 50
+    - value:
+        parameter: 10203
+        rare: 1
+      weight: 80
+    - value:
+        parameter: 10301
+        rare: 1
+      weight: 60
+  - nameKey:
+      m_TableReference:
+        m_TableCollectionName: Gacha
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Weapon006
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    id: 6
+    money: 2132
+    physicalStrengths:
+    - value:
+        min: 139
+        max: 180
+        rare: 0
+      weight: 100
+    magicStrengths:
+    - value:
+        min: 139
+        max: 180
+        rare: 0
+      weight: 100
+    criticalRates:
+    - value:
+        min: 0
+        max: 0
+        rare: 0
+      weight: 100
+    skillNumbers:
+    - value:
+        min: 5
+        max: 5
+        rare: 0
+      weight: 100
+    activeSkillIds:
+    - value:
+        parameter: 10102
+        rare: 1
+      weight: 50
+    - value:
+        parameter: 10103
+        rare: 1
+      weight: 80
+    - value:
+        parameter: 10202
+        rare: 1
+      weight: 50
+    - value:
+        parameter: 10203
+        rare: 1
+      weight: 80
+    - value:
+        parameter: 10116
         rare: 1
       weight: 50
   references:

@@ -31,6 +31,14 @@ MonoBehaviour:
     m_Key: Weapon004
     m_Metadata:
       m_Items: []
+  - m_Id: 21767835299807232
+    m_Key: Weapon005
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21767835312390144
+    m_Key: Weapon006
+    m_Metadata:
+      m_Items: []
   - m_Id: 46537048064
     m_Key: Armor001
     m_Metadata:
@@ -45,6 +53,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3520265685295105
     m_Key: Armor004
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21767835312390145
+    m_Key: Armor005
     m_Metadata:
       m_Items: []
   - m_Id: 359482992558080

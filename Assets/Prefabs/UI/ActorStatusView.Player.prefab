@@ -56,6 +56,8 @@ MonoBehaviour:
   actorName: {fileID: 3524365334749160718}
   animationController: {fileID: 6954570875457583170}
   damageClip: {fileID: 7400000, guid: 659eb4d90fafe9f489f20fd1906c10f1, type: 2}
+  abnormalStatusIconElementPrefab: {fileID: 8627300569024182818, guid: bf1900c0007f80e44a41bc939c099479, type: 3}
+  abnormalStatusIconParent: {fileID: 1749901962296689338}
 --- !u!95 &7056481264634572449
 Animator:
   serializedVersion: 4

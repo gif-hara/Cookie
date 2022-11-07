@@ -58,7 +58,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     id: 2
-    money: 596
+    money: 340
     hitPoints:
     - value:
         min: 534
@@ -93,7 +93,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     id: 3
-    money: 1796
+    money: 680
     hitPoints:
     - value:
         min: 614
@@ -128,7 +128,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     id: 4
-    money: 1796
+    money: 1960
     hitPoints:
     - value:
         min: 918
@@ -151,6 +151,41 @@ MonoBehaviour:
     - value:
         min: 61
         max: 72
+        rare: 0
+      weight: 100
+  - nameKey:
+      m_TableReference:
+        m_TableCollectionName: Gacha
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Armor005
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    id: 5
+    money: 4040
+    hitPoints:
+    - value:
+        min: 1412
+        max: 2019
+        rare: 0
+      weight: 100
+    physicalDefenses:
+    - value:
+        min: 120
+        max: 147
+        rare: 0
+      weight: 100
+    magicDefenses:
+    - value:
+        min: 120
+        max: 147
+        rare: 0
+      weight: 100
+    speeds:
+    - value:
+        min: 74
+        max: 90
         rare: 0
       weight: 100
   references:

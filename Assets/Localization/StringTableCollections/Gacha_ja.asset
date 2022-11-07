@@ -19,39 +19,51 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 6364004352
-    m_Localized: "\u6B66\u5668\u30AC\u30C1\u30E3Lv.1"
+    m_Localized: "\u57FA\u672C\u6B66\u5668\u30AC\u30C1\u30E3Lv.1(Lv.1~5)"
     m_Metadata:
       m_Items: []
   - m_Id: 46537048064
-    m_Localized: "\u9632\u5177\u30AC\u30C1\u30E3Lv1"
+    m_Localized: "\u57FA\u672C\u9632\u5177\u30AC\u30C1\u30E3Lv.1(Lv.1~5)"
     m_Metadata:
       m_Items: []
   - m_Id: 359482992558080
-    m_Localized: "\u30A2\u30AF\u30BB\u30AC\u30C1\u30E3Lv.1"
+    m_Localized: "\u57FA\u672C\u30A2\u30AF\u30BB\u30AC\u30C1\u30E3Lv.1(Lv.21~30)"
     m_Metadata:
       m_Items: []
   - m_Id: 1123358877089792
-    m_Localized: "\u6B66\u5668\u30AC\u30C1\u30E3Lv.2"
+    m_Localized: "\u57FA\u672C\u6B66\u5668\u30AC\u30C1\u30E3Lv.2(Lv.6~10)"
     m_Metadata:
       m_Items: []
   - m_Id: 1123394071494656
-    m_Localized: "\u6B66\u5668\u30AC\u30C1\u30E3Lv.3"
+    m_Localized: "\u57FA\u672C\u6B66\u5668\u30AC\u30C1\u30E3Lv.3(Lv.11~20)"
     m_Metadata:
       m_Items: []
   - m_Id: 1123541211873280
-    m_Localized: "\u6B66\u5668\u30AC\u30C1\u30E3Lv.4"
+    m_Localized: "\u6BD2\u6B66\u5668\u30AC\u30C1\u30E3Lv.1(Lv.15~20)"
     m_Metadata:
       m_Items: []
   - m_Id: 3520265681100800
-    m_Localized: "\u9632\u5177\u30AC\u30C1\u30E3Lv2"
+    m_Localized: "\u57FA\u672C\u9632\u5177\u30AC\u30C1\u30E3Lv.2(Lv.6~10)"
     m_Metadata:
       m_Items: []
   - m_Id: 3520265685295104
-    m_Localized: "\u9632\u5177\u30AC\u30C1\u30E3Lv3"
+    m_Localized: "\u57FA\u672C\u9632\u5177\u30AC\u30C1\u30E3Lv.3(Lv.11~20)"
     m_Metadata:
       m_Items: []
   - m_Id: 3520265685295105
-    m_Localized: "\u9632\u5177\u30AC\u30C1\u30E3Lv4"
+    m_Localized: "\u57FA\u672C\u9632\u5177\u30AC\u30C1\u30E3Lv.4(Lv.21~30)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21767835299807232
+    m_Localized: "\u57FA\u672C\u6B66\u5668\u30AC\u30C1\u30E3Lv.4(Lv.21~30)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21767835312390144
+    m_Localized: "\u9EBB\u75FA\u6B66\u5668\u30AC\u30C1\u30E3Lv.1(Lv.21~30)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21767835312390145
+    m_Localized: "\u57FA\u672C\u9632\u5177\u30AC\u30C1\u30E3Lv.5(Lv.31~40)"
     m_Metadata:
       m_Items: []
   references:
