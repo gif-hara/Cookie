@@ -265,7 +265,7 @@ MonoBehaviour:
     hitPoint: 500
     physicalStrength: 100
     magicStrength: 100
-    criticalRate: 0
+    criticalRate: 100
     physicalDefense: 80
     magicDefense: 80
     speed: 0

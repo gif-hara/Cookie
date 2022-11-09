@@ -138,6 +138,11 @@ namespace Cookie
                 {
                     var effectId = x.ActiveSkill.attributes.Get(SkillAttributeName.EffectId);
                     uiView.BattleEffectUIView.Create(effectId.value, x.Target.ActorType).Forget();
+
+                    if (x.DamageData.isCritical)
+                    {
+                        uiView.CriticalEffectUIView.Play();
+                    }
                 })
                 .AddTo(scope);
 
