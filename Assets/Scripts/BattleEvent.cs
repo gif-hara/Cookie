@@ -72,5 +72,19 @@ namespace Cookie
 
             public string Message => this.Param2;
         }
+
+        /// <summary>
+        /// ダメージを与えた際のメッセージ
+        /// </summary>
+        public class GivedDamage : Message<GivedDamage, Actor, Actor, DamageData, ActiveSkill>
+        {
+            public Actor Attacker => this.Param1;
+
+            public Actor Target => this.Param2;
+
+            public DamageData DamageData => this.Param3;
+
+            public ActiveSkill ActiveSkill => this.Param4;
+        }
     }
 }

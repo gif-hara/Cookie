@@ -30,6 +30,8 @@ MonoBehaviour:
       value: 100
     - name: Attack.Attribute
       value: 1
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10102
     name:
@@ -48,6 +50,8 @@ MonoBehaviour:
       value: 109
     - name: Attack.Attribute
       value: 1
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10103
     name:
@@ -66,6 +70,8 @@ MonoBehaviour:
       value: 135
     - name: Attack.Attribute
       value: 1
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10104
     name:
@@ -84,6 +90,8 @@ MonoBehaviour:
       value: 176
     - name: Attack.Attribute
       value: 1
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10105
     name:
@@ -102,6 +110,8 @@ MonoBehaviour:
       value: 234
     - name: Attack.Attribute
       value: 1
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10106
     name:
@@ -120,6 +130,8 @@ MonoBehaviour:
       value: 308
     - name: Attack.Attribute
       value: 1
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10107
     name:
@@ -138,6 +150,8 @@ MonoBehaviour:
       value: 397
     - name: Attack.Attribute
       value: 1
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10108
     name:
@@ -156,6 +170,8 @@ MonoBehaviour:
       value: 503
     - name: Attack.Attribute
       value: 1
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10109
     name:
@@ -174,6 +190,8 @@ MonoBehaviour:
       value: 624
     - name: Attack.Attribute
       value: 1
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10110
     name:
@@ -192,6 +210,8 @@ MonoBehaviour:
       value: 762
     - name: Attack.Attribute
       value: 1
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10111
     name:
@@ -210,6 +230,8 @@ MonoBehaviour:
       value: 900
     - name: Attack.Attribute
       value: 1
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10112
     name:
@@ -232,6 +254,8 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 1
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10113
     name:
@@ -254,6 +278,8 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 1
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10114
     name:
@@ -276,6 +302,8 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 1
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10115
     name:
@@ -298,6 +326,8 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 1
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10116
     name:
@@ -320,6 +350,8 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 2
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10117
     name:
@@ -342,6 +374,8 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 2
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10118
     name:
@@ -364,6 +398,8 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 2
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10119
     name:
@@ -386,6 +422,8 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 2
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10201
     name:
@@ -404,6 +442,8 @@ MonoBehaviour:
       value: 100
     - name: Attack.Attribute
       value: 2
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10202
     name:
@@ -422,6 +462,8 @@ MonoBehaviour:
       value: 109
     - name: Attack.Attribute
       value: 2
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10203
     name:
@@ -440,6 +482,8 @@ MonoBehaviour:
       value: 135
     - name: Attack.Attribute
       value: 2
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10204
     name:
@@ -458,6 +502,8 @@ MonoBehaviour:
       value: 176
     - name: Attack.Attribute
       value: 2
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10205
     name:
@@ -476,6 +522,8 @@ MonoBehaviour:
       value: 234
     - name: Attack.Attribute
       value: 2
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10206
     name:
@@ -494,6 +542,8 @@ MonoBehaviour:
       value: 308
     - name: Attack.Attribute
       value: 2
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10207
     name:
@@ -512,6 +562,8 @@ MonoBehaviour:
       value: 397
     - name: Attack.Attribute
       value: 2
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10208
     name:
@@ -530,6 +582,8 @@ MonoBehaviour:
       value: 503
     - name: Attack.Attribute
       value: 2
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10209
     name:
@@ -548,6 +602,8 @@ MonoBehaviour:
       value: 624
     - name: Attack.Attribute
       value: 2
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10210
     name:
@@ -566,6 +622,8 @@ MonoBehaviour:
       value: 762
     - name: Attack.Attribute
       value: 2
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10211
     name:
@@ -584,6 +642,8 @@ MonoBehaviour:
       value: 900
     - name: Attack.Attribute
       value: 2
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10212
     name:
@@ -606,6 +666,8 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 3
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10213
     name:
@@ -626,6 +688,8 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 3
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10214
     name:
@@ -648,6 +712,8 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 3
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10215
     name:
@@ -670,6 +736,8 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 3
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10216
     name:
@@ -692,6 +760,8 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 4
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10217
     name:
@@ -714,6 +784,8 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 4
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10218
     name:
@@ -736,6 +808,8 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 4
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10219
     name:
@@ -758,6 +832,8 @@ MonoBehaviour:
       value: 1
     - name: AddAbnormalStatus.Type
       value: 4
+    - name: EffectId
+      value: 0
     attachMax: 99
   - id: 10301
     name:
@@ -774,6 +850,8 @@ MonoBehaviour:
       value: 1
     - name: Recovery.Power
       value: 5
+    - name: EffectId
+      value: 1
     attachMax: 1
   - id: 10302
     name:
@@ -790,6 +868,8 @@ MonoBehaviour:
       value: 1
     - name: Recovery.Power
       value: 10
+    - name: EffectId
+      value: 1
     attachMax: 1
   - id: 10303
     name:
@@ -806,6 +886,8 @@ MonoBehaviour:
       value: 1
     - name: Recovery.Power
       value: 15
+    - name: EffectId
+      value: 1
     attachMax: 1
   - id: 10304
     name:
@@ -822,6 +904,8 @@ MonoBehaviour:
       value: 1
     - name: Recovery.Power
       value: 20
+    - name: EffectId
+      value: 1
     attachMax: 1
   - id: 10401
     name:
@@ -838,6 +922,8 @@ MonoBehaviour:
       value: 1
     - name: RemoveAbnormalStatus.Type
       value: 1
+    - name: EffectId
+      value: 2
     attachMax: 1
   - id: 10402
     name:
@@ -853,6 +939,8 @@ MonoBehaviour:
     - name: Behaviour.RemoveAbnormalStatus
       value: 1
     - name: RemoveAbnormalStatus.Type
+      value: 2
+    - name: EffectId
       value: 2
     attachMax: 1
   - id: 10403
@@ -870,6 +958,8 @@ MonoBehaviour:
       value: 1
     - name: RemoveAbnormalStatus.Type
       value: 3
+    - name: EffectId
+      value: 2
     attachMax: 1
   - id: 10404
     name:
@@ -886,6 +976,8 @@ MonoBehaviour:
       value: 1
     - name: RemoveAbnormalStatus.Type
       value: 4
+    - name: EffectId
+      value: 2
     attachMax: 1
   - id: 10405
     name:
@@ -908,6 +1000,8 @@ MonoBehaviour:
       value: 3
     - name: RemoveAbnormalStatus.Type
       value: 4
+    - name: EffectId
+      value: 2
     attachMax: 1
   - id: 10501
     name:
@@ -924,6 +1018,8 @@ MonoBehaviour:
       value: 1
     - name: AddBuff.Type
       value: 1
+    - name: EffectId
+      value: 3
     attachMax: 1
   - id: 10502
     name:
@@ -940,6 +1036,8 @@ MonoBehaviour:
       value: 1
     - name: AddBuff.Type
       value: 2
+    - name: EffectId
+      value: 4
     attachMax: 1
   - id: 10503
     name:
@@ -956,6 +1054,8 @@ MonoBehaviour:
       value: 1
     - name: AddBuff.Type
       value: 3
+    - name: EffectId
+      value: 5
     attachMax: 1
   - id: 10504
     name:
@@ -972,6 +1072,8 @@ MonoBehaviour:
       value: 1
     - name: AddBuff.Type
       value: 4
+    - name: EffectId
+      value: 6
     attachMax: 1
   references:
     version: 2

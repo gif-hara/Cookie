@@ -68,6 +68,8 @@ namespace Cookie
                                     {
                                         var damageData = Calculator.GetDamageData(this.Status, skill, x.Opponent.Status);
                                         x.Opponent.TakeDamage(damageData);
+                                        messageBroker.GetPublisher<BattleEvent.GivedDamage>()
+                                            .Publish(BattleEvent.GivedDamage.Get(this, x.Opponent, damageData, skill));
                                     
                                         // 反撃処理
                                         if (x.Opponent.Status.passiveSkills.Contains(SkillAttributeName.Counter))

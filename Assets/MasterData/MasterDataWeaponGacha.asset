@@ -148,7 +148,7 @@ MonoBehaviour:
       weight: 100
     skillNumbers:
     - value:
-        min: 4
+        min: 3
         max: 4
         rare: 0
       weight: 100
@@ -257,11 +257,11 @@ MonoBehaviour:
     - value:
         min: 10
         max: 10
-        rare: 0
+        rare: 1
       weight: 40
     skillNumbers:
     - value:
-        min: 5
+        min: 4
         max: 5
         rare: 0
       weight: 100
@@ -317,7 +317,7 @@ MonoBehaviour:
       weight: 100
     skillNumbers:
     - value:
-        min: 5
+        min: 4
         max: 5
         rare: 0
       weight: 100
@@ -342,6 +342,88 @@ MonoBehaviour:
         parameter: 10116
         rare: 1
       weight: 50
+  - nameKey:
+      m_TableReference:
+        m_TableCollectionName: Gacha
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Weapon007
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    id: 7
+    money: 4040
+    physicalStrengths:
+    - value:
+        min: 186
+        max: 243
+        rare: 0
+      weight: 100
+    magicStrengths:
+    - value:
+        min: 186
+        max: 243
+        rare: 0
+      weight: 100
+    criticalRates:
+    - value:
+        min: 0
+        max: 0
+        rare: 0
+      weight: 100
+    - value:
+        min: 5
+        max: 5
+        rare: 0
+      weight: 40
+    - value:
+        min: 10
+        max: 10
+        rare: 1
+      weight: 40
+    skillNumbers:
+    - value:
+        min: 5
+        max: 5
+        rare: 0
+      weight: 100
+    activeSkillIds:
+    - value:
+        parameter: 10103
+        rare: 1
+      weight: 50
+    - value:
+        parameter: 10104
+        rare: 1
+      weight: 80
+    - value:
+        parameter: 10203
+        rare: 1
+      weight: 50
+    - value:
+        parameter: 10204
+        rare: 1
+      weight: 80
+    - value:
+        parameter: 10302
+        rare: 1
+      weight: 60
+    - value:
+        parameter: 10401
+        rare: 1
+      weight: 20
+    - value:
+        parameter: 10402
+        rare: 1
+      weight: 20
+    - value:
+        parameter: 10403
+        rare: 1
+      weight: 20
+    - value:
+        parameter: 10404
+        rare: 1
+      weight: 20
   references:
     version: 2
     RefIds: []

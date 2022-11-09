@@ -168,5 +168,7 @@ namespace Cookie
         public const string AddAbnormalStatusRateUpFixed = "AddAbnormalStatusRateUpFixed";
 
         public const string ContinuousAttack = "ContinuousAttack";
+
+        public const string EffectId = "EffectId";
     }
 }
