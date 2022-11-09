@@ -24,6 +24,9 @@ namespace Cookie
         [SerializeField]
         private UIStylist selectedStylist;
 
+        [SerializeField]
+        private GameObject newIcon;
+
         public Button Button => this.button;
 
         public TextMeshProUGUI Message => this.message;
@@ -31,6 +34,8 @@ namespace Cookie
         public UIStylist PositiveStylist => this.positiveStylist;
 
         public UIStylist SelectedStylist => this.selectedStylist;
+
+        public GameObject NewIcon => this.newIcon;
 
         public UnityEvent OnPointerEnter
         {
@@ -40,6 +45,7 @@ namespace Cookie
         void Awake()
         {
             this.positiveStylist.Apply();
+            this.newIcon.SetActive(false);
         }
         
         void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)

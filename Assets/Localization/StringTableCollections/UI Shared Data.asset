@@ -151,6 +151,10 @@ MonoBehaviour:
     m_Key: ContinuousAttack
     m_Metadata:
       m_Items: []
+  - m_Id: 21926275959685120
+    m_Key: New
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

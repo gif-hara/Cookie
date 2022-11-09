@@ -32,7 +32,9 @@ namespace Cookie
                 .GroupBy(x => x.fieldId);
             foreach (var enemyGroup in enemyGroupByFieldId)
             {
+                var isInNewEnemy = enemyGroup.Any(enemyStatus => !UserData.current.defeatedEnemies.ContainsKey(enemyStatus.id));
                 var fieldButton = uiView.CreateFieldButton();
+                fieldButton.NewIcon.SetActive(isInNewEnemy);
                 fieldButton.Message.text = MasterDataFieldData.Instance.records.Find(x => x.id == enemyGroup.Key).Name;
                 fieldButton.Button.onClick.AddListener(() =>
                 {
@@ -42,7 +44,10 @@ namespace Cookie
 
                     foreach (var enemyStatus in enemyGroup)
                     {
+                        var isNew = !UserData.current.defeatedEnemies.ContainsKey(enemyStatus.id);
+                        isInNewEnemy |= isNew;
                         var enemyButton = uiView.CreateEnemyButton();
+                        enemyButton.NewIcon.SetActive(isNew);
                         enemyButton.Message.text = enemyStatus.Name;
                         enemyButton.Button.onClick.AddListener(() =>
                         {
