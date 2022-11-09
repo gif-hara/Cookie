@@ -87,6 +87,8 @@ namespace Cookie
                                     if (Calculator.CanInvokeContinuousAttack(this.Status))
                                     {
                                         await UniTask.Delay(TimeSpan.FromSeconds(1.0f));
+                                        messageBroker.GetPublisher<BattleEvent.AttackDeclaration>()
+                                            .Publish(BattleEvent.AttackDeclaration.Get(this, LocalizeString.Get("UI", "ContinuousAttack")));
                                         InvokeAttack();
                                     }
                                     break;
