@@ -118,6 +118,7 @@ MonoBehaviour:
   - {fileID: 7175701590970094915, guid: c47e12826e740df4e9f3821cf8b87497, type: 3}
   - {fileID: 7175701590970094915, guid: 751370333174414459f72146903aa8d7, type: 3}
   - {fileID: 7175701590970094915, guid: c111058bb046c094bb28228d62a1765a, type: 3}
+  - {fileID: 7175701590970094915, guid: 737c1d3547cf0214e8d9f81ddc0e14ad, type: 3}
   playerPosition: {fileID: 137562370169560625}
   enemyPosition: {fileID: 6616939451161846533}
   delayPoolSeconds: 2
