@@ -77,7 +77,7 @@ namespace Cookie
             this.MessageBroker.GetSubscriber<BattleEvent.TakedDamage>()
                 .Subscribe(x =>
                 {
-                    uiView.DamageLabelUIView.Create(x.DamageData.damage, x.Actor.ActorType);
+                    uiView.DamageLabelUIView.CreateDamageLabel(x.DamageData.damage, x.Actor.ActorType);
 
                     if (x.Actor.ActorType == ActorType.Enemy)
                     {
@@ -141,6 +141,13 @@ namespace Cookie
                 })
                 .AddTo(scope);
 
+            this.MessageBroker.GetSubscriber<BattleEvent.Recovered>()
+                .Subscribe(x =>
+                {
+                    uiView.DamageLabelUIView.CreateRecoveryLabel(x.Value, x.Actor.ActorType).Forget();
+                })
+                .AddTo(scope);
+
             await this.battleResourceManager.SetupAsync(scope);
             await uiView.EnemyImageUIView.SetupAsync(this.enemy.Status.spriteId);
             
@@ -157,6 +164,7 @@ namespace Cookie
             builder.AddMessageBroker<BattleEvent.RemovedAbnormalStatus>();
             builder.AddMessageBroker<BattleEvent.AttackDeclaration>();
             builder.AddMessageBroker<BattleEvent.GivedDamage>();
+            builder.AddMessageBroker<BattleEvent.Recovered>();
         }
         
         private async void OnEnterBattleStart(StateType prev)

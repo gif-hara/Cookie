@@ -86,5 +86,15 @@ namespace Cookie
 
             public ActiveSkill ActiveSkill => this.Param4;
         }
+
+        /// <summary>
+        /// 回復した際のメッセージ
+        /// </summary>
+        public class Recovered : Message<Recovered, Actor, int>
+        {
+            public Actor Actor => this.Param1;
+
+            public int Value => this.Param2;
+        }
     }
 }

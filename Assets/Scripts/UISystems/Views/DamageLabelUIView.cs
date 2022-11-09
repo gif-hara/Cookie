@@ -10,7 +10,10 @@ namespace Cookie.UISystems
     public sealed class DamageLabelUIView : UIView
     {
         [SerializeField]
-        private DamageLabelElement elementPrefab;
+        private DamageLabelElement damageLabelPrefab;
+        
+        [SerializeField]
+        private DamageLabelElement recoveryLabelPrefab;
         
         [SerializeField]
         private RectTransform playerPosition;
@@ -21,32 +24,36 @@ namespace Cookie.UISystems
         [SerializeField]
         private float delayPoolSeconds;
 
-        private PrefabPool<DamageLabelElement> pool;
-
-        void Awake()
-        {
-            this.pool = new PrefabPool<DamageLabelElement>(this.elementPrefab);
-        }
-
+        private readonly PrefabPoolDictionary<DamageLabelElement> poolDictionary = new();
+        
         private void OnDestroy()
         {
-            this.pool.Clear();
-            this.pool = null;
+            this.poolDictionary.ClearAll();
         }
 
-        public async void Create(int damage, ActorType actorType)
+        public async UniTask CreateDamageLabel(int damage, ActorType actorType)
         {
-            var element = this.pool.Get();
+            await this.CreateLabel(damage, actorType, this.poolDictionary.Get(this.damageLabelPrefab));
+        }
+
+        public async UniTask CreateRecoveryLabel(int value, ActorType actorType)
+        {
+            await this.CreateLabel(value, actorType, this.poolDictionary.Get(this.recoveryLabelPrefab));
+        }
+
+        private async UniTask CreateLabel(int value, ActorType actorType, PrefabPool<DamageLabelElement> pool)
+        {
+            var element = pool.Get();
             element.transform.SetParent(this.transform, false);
-            element.Setup(damage);
+            element.Setup(value);
             var position = actorType == ActorType.Player
                 ? this.playerPosition.localPosition
                 : this.enemyPosition.localPosition;
             element.SetPosition(position);
 
-            await UniTask.Delay(TimeSpan.FromSeconds(this.delayPoolSeconds));
+            await UniTask.Delay(TimeSpan.FromSeconds(this.delayPoolSeconds), cancellationToken:this.GetCancellationTokenOnDestroy());
 
-            this.pool?.Release(element);
+            pool?.Release(element);
         }
     }
 }

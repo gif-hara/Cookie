@@ -97,7 +97,9 @@ namespace Cookie
                                 }
                                 case SkillAttributeName.BehaviourRecovery:
                                 {
-                                    this.RecoveryRate(Calculator.GetRecoveryRate(this.Status, skill));
+                                    var value = this.RecoveryRate(Calculator.GetRecoveryRate(this.Status, skill));
+                                    messageBroker.GetPublisher<BattleEvent.Recovered>()
+                                        .Publish(BattleEvent.Recovered.Get(this, value));
                                     break;
                                 }
                                 case SkillAttributeName.BehaviourAddAbnormalStatus:
@@ -192,10 +194,12 @@ namespace Cookie
                 .Publish(BattleEvent.TakedDamage.Get(this, damageData));
         }
 
-        private void RecoveryRate(float rate)
+        private int RecoveryRate(float rate)
         {
             var recoveryAmount = Mathf.FloorToInt(this.Status.hitPointMax * rate);
             this.RecoveryFixed(recoveryAmount);
+
+            return recoveryAmount;
         }
 
         private void RecoveryFixed(int value)

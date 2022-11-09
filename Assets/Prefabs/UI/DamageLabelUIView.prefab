@@ -110,7 +110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974efd6eec8aa9c48b7554dacfd515be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  elementPrefab: {fileID: 279829632990246599, guid: 93e91fef18b65444f831e4a40eab0880, type: 3}
+  damageLabelPrefab: {fileID: 279829632990246599, guid: 93e91fef18b65444f831e4a40eab0880, type: 3}
+  recoveryLabelPrefab: {fileID: 279829632990246599, guid: 51a2104195e9c5145b036f70f83f5b13, type: 3}
   playerPosition: {fileID: 137562370169560625}
   enemyPosition: {fileID: 6616939451161846533}
   delayPoolSeconds: 2

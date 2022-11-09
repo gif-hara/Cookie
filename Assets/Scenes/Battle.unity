@@ -270,7 +270,8 @@ MonoBehaviour:
     magicDefense: 80
     speed: 0
     spriteId: 0
-    activeSkillIds: 0529000080270000
+    playerLevel: 0
+    activeSkillIds: 3d28000075270000
     passiveSkillIds: 972a0000972a0000972a0000
   enemyStatus:
     nameKey:
@@ -290,6 +291,7 @@ MonoBehaviour:
     magicDefense: 80
     speed: 0
     spriteId: 1
+    playerLevel: 0
     activeSkillIds: 75270000
     passiveSkillIds: 
   references:
