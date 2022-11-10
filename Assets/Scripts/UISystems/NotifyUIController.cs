@@ -1,12 +1,7 @@
 using System.Collections.Generic;
 using Cookie.UISystems;
 using Cysharp.Threading.Tasks;
-using UnityEngine;
-using UnityEngine.Assertions;
 using System.Linq;
-using Unity.VisualScripting;
-using UnityEngine.Localization;
-using UnityEngine.Localization.Settings;
 
 namespace Cookie
 {

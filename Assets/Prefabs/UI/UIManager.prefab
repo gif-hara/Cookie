@@ -48,6 +48,7 @@ MonoBehaviour:
   uiParent: {fileID: 8104187933439145489}
   startMenuUIViewPrefab: {fileID: 9176808150586090743, guid: 2831e07478c0f644881cd7085cd8f5fb, type: 3}
   notifyUIViewPrefab: {fileID: 6281648692112816021, guid: f4407a1142d9f144094a76ba312c934b, type: 3}
+  popupUIViewPrefab: {fileID: 3158663532687938354, guid: 9dc8eed9005791240b0adfeae6802999, type: 3}
 --- !u!1001 &7249527490285110812
 PrefabInstance:
   m_ObjectHideFlags: 0

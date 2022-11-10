@@ -163,6 +163,14 @@ MonoBehaviour:
     m_Key: BattleSpeed
     m_Metadata:
       m_Items: []
+  - m_Id: 22276280679596032
+    m_Key: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22276302347370496
+    m_Key: No
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

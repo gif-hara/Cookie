@@ -43,4 +43,10 @@ public partial class SROptions
         await UIManager.NotifyUIController.Show(new List<string>{"Test1", "Test2"});
         Debug.Log("End ShowNotify");
     }
+
+    public async void ShowPopup()
+    {
+        var result = await UIManager.PopupUIController.ShowAsync("Yes?");
+        Debug.Log(result);
+    }
 }

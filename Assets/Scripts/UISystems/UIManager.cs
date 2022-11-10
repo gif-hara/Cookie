@@ -19,15 +19,22 @@ namespace Cookie.UISystems
         [SerializeField]
         private NotifyUIView notifyUIViewPrefab;
 
+        [SerializeField]
+        private PopupUIView popupUIViewPrefab;
+
         private StartMenuUIController startMenuUIController;
 
         private NotifyUIController notifyUIController;
+
+        private PopupUIController popupUIController;
         
         public static UIManager Instance { get; private set; }
 
         public static StartMenuUIController StartMenuUIController => Instance.startMenuUIController;
 
         public static NotifyUIController NotifyUIController => Instance.notifyUIController;
+
+        public static PopupUIController PopupUIController => Instance.popupUIController;
         
         public static async UniTask Setup()
         {
@@ -42,6 +49,9 @@ namespace Cookie.UISystems
 
             Instance.notifyUIController = new NotifyUIController();
             Instance.notifyUIController.Setup(Instance.notifyUIViewPrefab);
+
+            Instance.popupUIController = new PopupUIController();
+            Instance.popupUIController.Setup(Instance.popupUIViewPrefab);
         }
 
         public static T Open<T>(T uiView) where T : UIView
