@@ -22,6 +22,7 @@ namespace Cookie
 
         protected override UniTask OnStartAsync(DisposableBagBuilder scope)
         {
+            var userData = UserData.current;
             var uiView = UIManager.Open(this.gachaUIPrefab);
             
             uiView.DestroyAllGachaButtons();
@@ -29,6 +30,7 @@ namespace Cookie
             {
                 var gacha = MasterDataWeaponGacha.Instance.gachas.Find(x => x.id == gachaId);
                 var gachaButton = uiView.CreateGachaButton();
+                gachaButton.NewIcon.SetActive(!userData.weaponGachaInvokeCounts.ContainsKey(gachaId));
                 gachaButton.Message.text = gacha.Name;
                 gachaButton.Button.onClick.AddListener(() =>
                 {
@@ -50,7 +52,13 @@ namespace Cookie
                             UIManager.NotifyUIController.Show(LocalizeString.Get("UI", "NotEnoughMoney")).Forget();
                             return;
                         }
-                        UserData.current.AddMoney(-gacha.money);
+                        userData.AddMoney(-gacha.money);
+                        if (!userData.weaponGachaInvokeCounts.ContainsKey(gachaId))
+                        {
+                            userData.weaponGachaInvokeCounts.Add(gachaId, 0);
+                        }
+                        userData.weaponGachaInvokeCounts[gachaId]++;
+                        gachaButton.NewIcon.SetActive(false);
 
                         var physicalStrength = gacha.physicalStrengths.Lottery();
                         var magicStrength = gacha.magicStrengths.Lottery();
@@ -130,6 +138,7 @@ namespace Cookie
             {
                 var gacha = MasterDataArmorGacha.Instance.gachas.Find(x => x.id == gachaId);
                 var gachaButton = uiView.CreateGachaButton();
+                gachaButton.NewIcon.SetActive(!userData.armorGachaInvokeCounts.ContainsKey(gachaId));
                 gachaButton.Message.text = gacha.Name;
                 gachaButton.Button.onClick.AddListener(() =>
                 {
@@ -151,7 +160,14 @@ namespace Cookie
                             UIManager.NotifyUIController.Show(LocalizeString.Get("UI", "NotEnoughMoney")).Forget();
                             return;
                         }
-                        UserData.current.AddMoney(-gacha.money);
+                        userData.AddMoney(-gacha.money);
+                        if (!userData.armorGachaInvokeCounts.ContainsKey(gachaId))
+                        {
+                            userData.armorGachaInvokeCounts.Add(gachaId, 0);
+                        }
+                        userData.armorGachaInvokeCounts[gachaId]++;
+                        gachaButton.NewIcon.SetActive(false);
+
 
                         var newArmor = new Armor
                         {
@@ -200,6 +216,7 @@ namespace Cookie
             {
                 var gacha = MasterDataAccessoryGacha.Instance.gachas.Find(x => x.id == gachaId);
                 var gachaButton = uiView.CreateGachaButton();
+                gachaButton.NewIcon.SetActive(!userData.accessoryGachaInvokeCounts.ContainsKey(gachaId));
                 gachaButton.Message.text = gacha.Name;
                 gachaButton.Button.onClick.AddListener(() =>
                 {
@@ -221,7 +238,13 @@ namespace Cookie
                             UIManager.NotifyUIController.Show(LocalizeString.Get("UI", "NotEnoughMoney")).Forget();
                             return;
                         }
-                        UserData.current.AddMoney(-gacha.money);
+                        userData.AddMoney(-gacha.money);
+                        if (!userData.accessoryGachaInvokeCounts.ContainsKey(gachaId))
+                        {
+                            userData.accessoryGachaInvokeCounts.Add(gachaId, 0);
+                        }
+                        userData.accessoryGachaInvokeCounts[gachaId]++;
+                        gachaButton.NewIcon.SetActive(false);
                         
                         var newAccessory = new Accessory
                         {

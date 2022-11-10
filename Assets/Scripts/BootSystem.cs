@@ -55,6 +55,9 @@ namespace Cookie
                 UserData.current.unlockWeaponGachas = new List<int>(masterDataInitialEquipment.unlockWeapons);
                 UserData.current.unlockArmorGachas = new List<int>(masterDataInitialEquipment.unlockArmors);
                 UserData.current.unlockAccessoryGachas = new List<int>(masterDataInitialEquipment.unlockAccessories);
+                UserData.current.weaponGachaInvokeCounts = new IntIntSerializableDictionary();
+                UserData.current.armorGachaInvokeCounts = new IntIntSerializableDictionary();
+                UserData.current.accessoryGachaInvokeCounts = new IntIntSerializableDictionary();
                 UserData.current.defeatedEnemies = new IntIntSerializableDictionary();
                 SaveData.SaveUserData(UserData.current);
             }

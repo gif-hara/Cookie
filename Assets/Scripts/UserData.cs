@@ -58,6 +58,21 @@ namespace Cookie
         public List<int> notifyAccessoryGachas = new();
 
         /// <summary>
+        /// 各武器ガチャを実行した回数
+        /// </summary>
+        public IntIntSerializableDictionary weaponGachaInvokeCounts;
+
+        /// <summary>
+        /// 各防具ガチャを実行した回数
+        /// </summary>
+        public IntIntSerializableDictionary armorGachaInvokeCounts;
+
+        /// <summary>
+        /// 各アクセサリーガチャを実行した回数
+        /// </summary>
+        public IntIntSerializableDictionary accessoryGachaInvokeCounts;
+
+        /// <summary>
         /// 倒した敵の数
         /// </summary>
         public IntIntSerializableDictionary defeatedEnemies;
