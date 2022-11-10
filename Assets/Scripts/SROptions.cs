@@ -12,6 +12,9 @@ public partial class SROptions
 {
     private const string CategoryDefault = "Default";
 
+    private const string CategoryUser = "UserData";
+
+    [Category(CategoryUser)]
     public void UnlockAll()
     {
         foreach (var enemyStatus in MasterDataEnemyStatus.Instance.enemyStatusList)
@@ -30,6 +33,15 @@ public partial class SROptions
         {
             UserData.current.UnlockAccessoryGacha(gacha.id);
         }
+        
+        SaveData.SaveUserData(UserData.current);
+    }
+
+    [Category(CategoryUser)]
+    public void AddMoney()
+    {
+        UserData.current.AddMoney(1000000);
+        SaveData.SaveUserData(UserData.current);
     }
 
     public void DeleteAllPlayerPrefs()
