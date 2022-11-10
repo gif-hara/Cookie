@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -31,6 +32,38 @@ namespace Cookie
                 .SelectMany(x => x.attributes)
                 .Where(x => x.name == attributeName)
                 .ToList();
+        }
+
+        public static BattleSpeedType GetNext(this BattleSpeedType self)
+        {
+            switch (self)
+            {
+                case BattleSpeedType.Lv_1:
+                    return BattleSpeedType.Lv_2;
+                case BattleSpeedType.Lv_2:
+                    return BattleSpeedType.Lv_3;
+                case BattleSpeedType.Lv_3:
+                    return BattleSpeedType.Lv_1;
+                default:
+                    Assert.IsTrue(false, $"{self}は未対応です");
+                    return default;
+            }
+        }
+
+        public static string GetMessage(this BattleSpeedType self)
+        {
+            switch (self)
+            {
+                case BattleSpeedType.Lv_1:
+                    return ">";
+                case BattleSpeedType.Lv_2:
+                    return ">>";
+                case BattleSpeedType.Lv_3:
+                    return ">>>";
+                default:
+                    Assert.IsTrue(false, $"{self}は未対応です");
+                    return default;
+            }
         }
     }
 }

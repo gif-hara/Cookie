@@ -4,6 +4,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.Linq;
 using MessagePipe;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 namespace Cookie
 {
@@ -152,6 +153,22 @@ namespace Cookie
                     uiView.DamageLabelUIView.CreateRecoveryLabel(x.Value, x.Actor.ActorType).Forget();
                 })
                 .AddTo(scope);
+            
+            this.uiView.BattleHeaderUIView.EscapeButton.Button.onClick.AddListener(() =>
+            {
+                Debug.Log("TODO");
+            });
+            
+            this.uiView.BattleHeaderUIView.SpeedButton.Button.onClick.AddListener(() =>
+            {
+                var userData = UserData.current;
+                userData.battleSpeedType = userData.battleSpeedType.GetNext();
+                SaveData.SaveUserData(userData);
+                SetBattleSpeed(userData.battleSpeedType);
+                this.uiView.BattleHeaderUIView.SetSpeedButtonMessage(userData.battleSpeedType);
+            });
+            
+            this.uiView.BattleHeaderUIView.SetSpeedButtonMessage(UserData.current.battleSpeedType);
 
             await this.battleResourceManager.SetupAsync(scope);
             await uiView.EnemyImageUIView.SetupAsync(this.enemy.Status.spriteId);
@@ -222,6 +239,7 @@ namespace Cookie
         private void OnEnterBattleFinalize(StateType prev)
         {
             Debug.Log("Finalize");
+            SetBattleSpeed(BattleSpeedType.Lv_1);
             this.MessageBroker.GetPublisher<BattleEvent.Dispose>()
                 .Publish(BattleEvent.Dispose.Get());
             
@@ -270,6 +288,29 @@ namespace Cookie
 #endif
             
             return bag.Build();
+        }
+
+        private static void SetBattleSpeed(BattleSpeedType battleSpeedType)
+        {
+            var speed = 1.0f;
+
+            switch (battleSpeedType)
+            {
+                case BattleSpeedType.Lv_1:
+                    speed = 1.0f;
+                    break;
+                case BattleSpeedType.Lv_2:
+                    speed = 2.0f;
+                    break;
+                case BattleSpeedType.Lv_3:
+                    speed = 3.0f;
+                    break;
+                default:
+                    Assert.IsTrue(false, $"{battleSpeedType}は未対応です");
+                    break;
+            }
+
+            Time.timeScale = speed;
         }
     }
 }

@@ -62,6 +62,8 @@ namespace Cookie
         /// </summary>
         public IntIntSerializableDictionary defeatedEnemies;
 
+        public BattleSpeedType battleSpeedType;
+
         public Weapon EquippedWeapon => this.weapons.Find(x => x.instanceId == this.equippedWeaponInstanceId);
         
         public Armor EquippedArmor => this.armors.Find(x => x.instanceId == this.equippedArmorInstanceId);

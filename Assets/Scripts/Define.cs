@@ -103,6 +103,27 @@ namespace Cookie
         MagicDefense,
     }
 
+    /// <summary>
+    /// バトル倍速タイプ
+    /// </summary>
+    public enum BattleSpeedType
+    {
+        /// <summary>
+        /// 等速
+        /// </summary>
+        Lv_1,
+        
+        /// <summary>
+        /// 2倍速
+        /// </summary>
+        Lv_2,
+        
+        /// <summary>
+        /// 3倍速
+        /// </summary>
+        Lv_3,
+    }
+
     public class Define
     {
         public const int BuffLevelMax = 4;

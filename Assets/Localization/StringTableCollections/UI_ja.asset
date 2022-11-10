@@ -158,6 +158,14 @@ MonoBehaviour:
     m_Localized: New
     m_Metadata:
       m_Items: []
+  - m_Id: 22256284310110208
+    m_Localized: Escape
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22257206788554752
+    m_Localized: "{0}\u500D\u901F"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

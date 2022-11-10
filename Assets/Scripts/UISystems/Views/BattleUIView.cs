@@ -32,6 +32,9 @@ namespace Cookie.UISystems
 
         [SerializeField]
         private CriticalEffectUIView criticalEffectUIView;
+
+        [SerializeField]
+        private BattleHeaderUIView battleHeaderUIView;
         
         public ActorStatusView PlayerStatusView => this.playerStatusView;
 
@@ -48,5 +51,7 @@ namespace Cookie.UISystems
         public BattleEffectUIView BattleEffectUIView => this.battleEffectUIView;
 
         public CriticalEffectUIView CriticalEffectUIView => this.criticalEffectUIView;
+        
+        public BattleHeaderUIView BattleHeaderUIView => this.battleHeaderUIView;
     }
 }
