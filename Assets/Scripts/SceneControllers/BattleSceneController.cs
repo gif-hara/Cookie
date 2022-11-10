@@ -78,7 +78,7 @@ namespace Cookie
             this.MessageBroker.GetSubscriber<BattleEvent.TakedDamage>()
                 .Subscribe(x =>
                 {
-                    uiView.DamageLabelUIView.CreateDamageLabel(x.DamageData.damage, x.Actor.ActorType);
+                    uiView.DamageLabelUIView.CreateDamageLabel(x.DamageData.damage, x.Actor.ActorType).Forget();
 
                     if (x.Actor.ActorType == ActorType.Enemy)
                     {
@@ -266,7 +266,7 @@ namespace Cookie
             
             actor.Status.hitPoint
                 .Queue()
-                .Subscribe(x =>
+                .Subscribe(_ =>
                 {
                     UpdateHitPointSlider();
                 })
