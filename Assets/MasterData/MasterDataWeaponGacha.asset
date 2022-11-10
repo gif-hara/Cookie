@@ -131,15 +131,25 @@ MonoBehaviour:
     physicalStrengths:
     - value:
         min: 110
-        max: 135
+        max: 125
         rare: 0
-      weight: 100
+      weight: 70
+    - value:
+        min: 129
+        max: 135
+        rare: 1
+      weight: 30
     magicStrengths:
     - value:
         min: 110
-        max: 135
+        max: 125
         rare: 0
-      weight: 100
+      weight: 70
+    - value:
+        min: 129
+        max: 135
+        rare: 1
+      weight: 30
     criticalRates:
     - value:
         min: 0
@@ -183,15 +193,25 @@ MonoBehaviour:
     physicalStrengths:
     - value:
         min: 120
+        max: 129
+        rare: 0
+      weight: 30
+    - value:
+        min: 132
         max: 135
         rare: 0
-      weight: 100
+      weight: 20
     magicStrengths:
     - value:
         min: 120
+        max: 129
+        rare: 0
+      weight: 30
+    - value:
+        min: 132
         max: 135
         rare: 0
-      weight: 100
+      weight: 20
     criticalRates:
     - value:
         min: 0
@@ -239,15 +259,25 @@ MonoBehaviour:
     physicalStrengths:
     - value:
         min: 139
-        max: 180
+        max: 165
         rare: 0
-      weight: 100
+      weight: 70
+    - value:
+        min: 170
+        max: 180
+        rare: 1
+      weight: 30
     magicStrengths:
     - value:
         min: 139
-        max: 180
+        max: 165
         rare: 0
-      weight: 100
+      weight: 70
+    - value:
+        min: 170
+        max: 180
+        rare: 1
+      weight: 30
     criticalRates:
     - value:
         min: 0
@@ -268,24 +298,40 @@ MonoBehaviour:
     activeSkillIds:
     - value:
         parameter: 10102
-        rare: 1
-      weight: 50
+        rare: 0
+      weight: 80
     - value:
         parameter: 10103
         rare: 1
-      weight: 80
+      weight: 50
     - value:
         parameter: 10202
-        rare: 1
-      weight: 50
+        rare: 0
+      weight: 80
     - value:
         parameter: 10203
         rare: 1
-      weight: 80
+      weight: 50
     - value:
         parameter: 10301
-        rare: 1
+        rare: 0
       weight: 60
+    - value:
+        parameter: 10401
+        rare: 0
+      weight: 15
+    - value:
+        parameter: 10402
+        rare: 0
+      weight: 15
+    - value:
+        parameter: 10403
+        rare: 0
+      weight: 15
+    - value:
+        parameter: 10404
+        rare: 0
+      weight: 15
   - nameKey:
       m_TableReference:
         m_TableCollectionName: Gacha
@@ -300,15 +346,25 @@ MonoBehaviour:
     physicalStrengths:
     - value:
         min: 139
-        max: 180
+        max: 165
         rare: 0
-      weight: 100
+      weight: 70
+    - value:
+        min: 170
+        max: 180
+        rare: 1
+      weight: 30
     magicStrengths:
     - value:
         min: 139
-        max: 180
+        max: 165
         rare: 0
-      weight: 100
+      weight: 70
+    - value:
+        min: 170
+        max: 180
+        rare: 1
+      weight: 30
     criticalRates:
     - value:
         min: 0
@@ -324,20 +380,20 @@ MonoBehaviour:
     activeSkillIds:
     - value:
         parameter: 10102
-        rare: 1
-      weight: 50
+        rare: 0
+      weight: 80
     - value:
         parameter: 10103
         rare: 1
-      weight: 80
+      weight: 50
     - value:
         parameter: 10202
-        rare: 1
-      weight: 50
+        rare: 0
+      weight: 80
     - value:
         parameter: 10203
         rare: 1
-      weight: 80
+      weight: 50
     - value:
         parameter: 10116
         rare: 1
@@ -356,15 +412,25 @@ MonoBehaviour:
     physicalStrengths:
     - value:
         min: 186
-        max: 243
+        max: 223
         rare: 0
-      weight: 100
+      weight: 70
+    - value:
+        min: 229
+        max: 243
+        rare: 1
+      weight: 30
     magicStrengths:
     - value:
         min: 186
-        max: 243
+        max: 223
         rare: 0
-      weight: 100
+      weight: 70
+    - value:
+        min: 229
+        max: 243
+        rare: 1
+      weight: 30
     criticalRates:
     - value:
         min: 0
@@ -374,7 +440,7 @@ MonoBehaviour:
     - value:
         min: 5
         max: 5
-        rare: 0
+        rare: 1
       weight: 40
     - value:
         min: 10
@@ -390,18 +456,120 @@ MonoBehaviour:
     activeSkillIds:
     - value:
         parameter: 10103
-        rare: 1
-      weight: 50
+        rare: 0
+      weight: 80
     - value:
         parameter: 10104
         rare: 1
-      weight: 80
+      weight: 50
     - value:
         parameter: 10203
+        rare: 0
+      weight: 80
+    - value:
+        parameter: 10204
         rare: 1
       weight: 50
     - value:
+        parameter: 10302
+        rare: 1
+      weight: 60
+    - value:
+        parameter: 10401
+        rare: 0
+      weight: 20
+    - value:
+        parameter: 10402
+        rare: 0
+      weight: 20
+    - value:
+        parameter: 10403
+        rare: 0
+      weight: 20
+    - value:
+        parameter: 10404
+        rare: 0
+      weight: 20
+    - value:
+        parameter: 10501
+        rare: 1
+      weight: 15
+    - value:
+        parameter: 10502
+        rare: 1
+      weight: 15
+    - value:
+        parameter: 10503
+        rare: 1
+      weight: 15
+    - value:
+        parameter: 10504
+        rare: 1
+      weight: 15
+  - nameKey:
+      m_TableReference:
+        m_TableCollectionName: Gacha
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Weapon008
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    id: 8
+    money: 4552
+    physicalStrengths:
+    - value:
+        min: 186
+        max: 223
+        rare: 0
+      weight: 70
+    - value:
+        min: 229
+        max: 243
+        rare: 1
+      weight: 30
+    magicStrengths:
+    - value:
+        min: 186
+        max: 223
+        rare: 0
+      weight: 70
+    - value:
+        min: 229
+        max: 243
+        rare: 1
+      weight: 30
+    criticalRates:
+    - value:
+        min: 0
+        max: 0
+        rare: 0
+      weight: 100
+    skillNumbers:
+    - value:
+        min: 5
+        max: 5
+        rare: 0
+      weight: 100
+    activeSkillIds:
+    - value:
+        parameter: 10103
+        rare: 0
+      weight: 80
+    - value:
+        parameter: 10104
+        rare: 1
+      weight: 50
+    - value:
+        parameter: 10203
+        rare: 0
+      weight: 80
+    - value:
         parameter: 10204
+        rare: 1
+      weight: 50
+    - value:
+        parameter: 10212
         rare: 1
       weight: 80
     - value:
@@ -410,20 +578,214 @@ MonoBehaviour:
       weight: 60
     - value:
         parameter: 10401
-        rare: 1
+        rare: 0
       weight: 20
     - value:
         parameter: 10402
-        rare: 1
+        rare: 0
       weight: 20
     - value:
         parameter: 10403
-        rare: 1
+        rare: 0
       weight: 20
     - value:
         parameter: 10404
-        rare: 1
+        rare: 0
       weight: 20
+  - nameKey:
+      m_TableReference:
+        m_TableCollectionName: Gacha
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Weapon009
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    id: 9
+    money: 4552
+    physicalStrengths:
+    - value:
+        min: 186
+        max: 223
+        rare: 0
+      weight: 70
+    - value:
+        min: 229
+        max: 243
+        rare: 1
+      weight: 30
+    magicStrengths:
+    - value:
+        min: 186
+        max: 223
+        rare: 0
+      weight: 70
+    - value:
+        min: 229
+        max: 243
+        rare: 1
+      weight: 30
+    criticalRates:
+    - value:
+        min: 0
+        max: 0
+        rare: 0
+      weight: 100
+    skillNumbers:
+    - value:
+        min: 5
+        max: 5
+        rare: 0
+      weight: 100
+    activeSkillIds:
+    - value:
+        parameter: 10103
+        rare: 0
+      weight: 80
+    - value:
+        parameter: 10104
+        rare: 1
+      weight: 50
+    - value:
+        parameter: 10203
+        rare: 0
+      weight: 80
+    - value:
+        parameter: 10204
+        rare: 1
+      weight: 50
+    - value:
+        parameter: 10216
+        rare: 1
+      weight: 80
+    - value:
+        parameter: 10302
+        rare: 1
+      weight: 60
+    - value:
+        parameter: 10401
+        rare: 0
+      weight: 20
+    - value:
+        parameter: 10402
+        rare: 0
+      weight: 20
+    - value:
+        parameter: 10403
+        rare: 0
+      weight: 20
+    - value:
+        parameter: 10404
+        rare: 0
+      weight: 20
+  - nameKey:
+      m_TableReference:
+        m_TableCollectionName: Gacha
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Weapon010
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    id: 10
+    money: 6920
+    physicalStrengths:
+    - value:
+        min: 251
+        max: 298
+        rare: 0
+      weight: 70
+    - value:
+        min: 307
+        max: 324
+        rare: 1
+      weight: 30
+    magicStrengths:
+    - value:
+        min: 251
+        max: 298
+        rare: 0
+      weight: 70
+    - value:
+        min: 307
+        max: 324
+        rare: 1
+      weight: 30
+    criticalRates:
+    - value:
+        min: 0
+        max: 0
+        rare: 0
+      weight: 100
+    - value:
+        min: 5
+        max: 5
+        rare: 1
+      weight: 40
+    - value:
+        min: 10
+        max: 10
+        rare: 1
+      weight: 40
+    skillNumbers:
+    - value:
+        min: 5
+        max: 6
+        rare: 0
+      weight: 100
+    activeSkillIds:
+    - value:
+        parameter: 10104
+        rare: 0
+      weight: 80
+    - value:
+        parameter: 10105
+        rare: 1
+      weight: 50
+    - value:
+        parameter: 10204
+        rare: 0
+      weight: 80
+    - value:
+        parameter: 10205
+        rare: 1
+      weight: 50
+    - value:
+        parameter: 10302
+        rare: 1
+      weight: 60
+    - value:
+        parameter: 10401
+        rare: 0
+      weight: 20
+    - value:
+        parameter: 10402
+        rare: 0
+      weight: 20
+    - value:
+        parameter: 10403
+        rare: 0
+      weight: 20
+    - value:
+        parameter: 10404
+        rare: 0
+      weight: 20
+    - value:
+        parameter: 10501
+        rare: 1
+      weight: 15
+    - value:
+        parameter: 10502
+        rare: 1
+      weight: 15
+    - value:
+        parameter: 10503
+        rare: 1
+      weight: 15
+    - value:
+        parameter: 10504
+        rare: 1
+      weight: 15
   references:
     version: 2
     RefIds: []

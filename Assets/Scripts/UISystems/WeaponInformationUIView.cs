@@ -42,8 +42,22 @@ namespace Cookie
         
         [SerializeField]
         private ComparisonUIStylists criticalRateComparisonUIStylists;
-        
+
+        [SerializeField]
+        private RareEffectHolder rareEffectHolder;
+
+        [SerializeField]
+        private RectTransform physicalStrengthEffectParent;
+
+        [SerializeField]
+        private RectTransform magicStrengthEffectParent;
+
+        [SerializeField]
+        private RectTransform criticalRateEffectParent;
+
         private readonly List<ActiveSkillUIElement> activeSkillUIElements = new();
+
+        private readonly List<GameObject> rareEffects = new();
 
         public TextMeshProUGUI WeaponName => this.weaponName;
 
@@ -63,6 +77,12 @@ namespace Cookie
 
         public ComparisonUIStylists CriticalRateComparisonUIStylists => this.criticalRateComparisonUIStylists;
 
+        public RectTransform PhysicalStrengthEffectParent => this.physicalStrengthEffectParent;
+
+        public RectTransform MagicStrengthEffectParent => this.magicStrengthEffectParent;
+
+        public RectTransform CriticalRateEffectParent => this.criticalRateEffectParent;
+
         public void DestroyAllActiveSkillUIElements()
         {
             foreach (var activeSkillUIElement in this.activeSkillUIElements)
@@ -77,6 +97,24 @@ namespace Cookie
         {
             var result = Instantiate(this.activeSkillUIElementPrefab, this.activeSkillRoot);
             this.activeSkillUIElements.Add(result);
+
+            return result;
+        }
+
+        public void DestroyAllRareEffects()
+        {
+            foreach (var rareEffect in this.rareEffects)
+            {
+                Destroy(rareEffect);
+            }
+            
+            this.rareEffects.Clear();
+        }
+
+        public GameObject CreateRareEffect(Rare rare)
+        {
+            var result = this.rareEffectHolder.Create(rare);
+            this.rareEffects.Add(result);
 
             return result;
         }

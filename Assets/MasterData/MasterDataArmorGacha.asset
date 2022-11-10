@@ -97,27 +97,47 @@ MonoBehaviour:
     hitPoints:
     - value:
         min: 614
-        max: 879
+        max: 774
         rare: 0
-      weight: 100
+      weight: 70
+    - value:
+        min: 807
+        max: 879
+        rare: 1
+      weight: 30
     physicalDefenses:
     - value:
         min: 85
-        max: 96
+        max: 92
         rare: 0
-      weight: 100
+      weight: 70
+    - value:
+        min: 93
+        max: 96
+        rare: 1
+      weight: 30
     magicDefenses:
     - value:
         min: 85
-        max: 96
+        max: 92
         rare: 0
-      weight: 100
+      weight: 70
+    - value:
+        min: 93
+        max: 96
+        rare: 1
+      weight: 30
     speeds:
     - value:
         min: 53
-        max: 60
+        max: 57
         rare: 0
-      weight: 100
+      weight: 70
+    - value:
+        min: 58
+        max: 60
+        rare: 1
+      weight: 30
   - nameKey:
       m_TableReference:
         m_TableCollectionName: Gacha
@@ -132,27 +152,47 @@ MonoBehaviour:
     hitPoints:
     - value:
         min: 918
-        max: 1354
+        max: 1192
         rare: 0
-      weight: 100
+      weight: 70
+    - value:
+        min: 1244
+        max: 1354
+        rare: 1
+      weight: 30
     physicalDefenses:
     - value:
         min: 98
-        max: 117
+        max: 110
         rare: 0
-      weight: 100
+      weight: 70
+    - value:
+        min: 112
+        max: 117
+        rare: 1
+      weight: 30
     magicDefenses:
     - value:
         min: 98
-        max: 117
+        max: 110
         rare: 0
-      weight: 100
+      weight: 70
+    - value:
+        min: 112
+        max: 117
+        rare: 1
+      weight: 30
     speeds:
     - value:
         min: 61
-        max: 72
+        max: 68
         rare: 0
-      weight: 100
+      weight: 70
+    - value:
+        min: 69
+        max: 72
+        rare: 1
+      weight: 30
   - nameKey:
       m_TableReference:
         m_TableCollectionName: Gacha
@@ -167,27 +207,47 @@ MonoBehaviour:
     hitPoints:
     - value:
         min: 1412
-        max: 2019
+        max: 1800
         rare: 0
-      weight: 100
+      weight: 70
+    - value:
+        min: 1871
+        max: 2019
+        rare: 1
+      weight: 30
     physicalDefenses:
     - value:
         min: 120
-        max: 147
+        max: 137
         rare: 0
-      weight: 100
+      weight: 70
+    - value:
+        min: 140
+        max: 147
+        rare: 1
+      weight: 30
     magicDefenses:
     - value:
         min: 120
-        max: 147
+        max: 137
         rare: 0
-      weight: 100
+      weight: 70
+    - value:
+        min: 140
+        max: 147
+        rare: 1
+      weight: 30
     speeds:
     - value:
         min: 74
-        max: 90
+        max: 84
         rare: 0
-      weight: 100
+      weight: 70
+    - value:
+        min: 86
+        max: 90
+        rare: 1
+      weight: 30
   references:
     version: 2
     RefIds: []

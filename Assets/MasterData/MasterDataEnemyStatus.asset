@@ -399,8 +399,8 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     hitPoint: 1628
-    physicalStrength: 130
-    magicStrength: 130
+    physicalStrength: 113
+    magicStrength: 113
     criticalRate: 0
     physicalDefense: 95
     magicDefense: 95
@@ -430,8 +430,8 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     hitPoint: 1528
-    physicalStrength: 84
-    magicStrength: 84
+    physicalStrength: 78
+    magicStrength: 78
     criticalRate: 0
     physicalDefense: 98
     magicDefense: 98
@@ -554,8 +554,8 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     hitPoint: 1896
-    physicalStrength: 101
-    magicStrength: 101
+    physicalStrength: 95
+    magicStrength: 95
     criticalRate: 0
     physicalDefense: 110
     magicDefense: 110
@@ -581,8 +581,8 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     hitPoint: 2540
-    physicalStrength: 112
-    magicStrength: 112
+    physicalStrength: 105
+    magicStrength: 105
     criticalRate: 0
     physicalDefense: 115
     magicDefense: 115
@@ -591,7 +591,7 @@ MonoBehaviour:
     fieldId: 3
     spriteId: 20
     playerLevel: 29
-    activeSkills: db270000e4270000db270000e4270000db270000
+    activeSkills: db270000e4270000db270000db270000db270000
     defeatEnemyUnlocks:
     - id: 31
       enemyId: 20
@@ -607,19 +607,31 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    hitPoint: 2820
-    physicalStrength: 257
-    magicStrength: 257
+    hitPoint: 3525
+    physicalStrength: 206
+    magicStrength: 206
     criticalRate: 0
     physicalDefense: 123
     magicDefense: 123
     speed: 75
-    money: 12876
+    money: 15022
     fieldId: 4
     spriteId: 21
     playerLevel: 32
     activeSkills: dc270000dc270000
-    defeatEnemyUnlocks: []
+    defeatEnemyUnlocks:
+    - id: 32
+      enemyId: 21
+      unlockType: 1
+      unlockId: 22
+    - id: 33
+      enemyId: 21
+      unlockType: 1
+      unlockId: 23
+    - id: 34
+      enemyId: 21
+      unlockType: 2
+      unlockId: 7
   - id: 22
     nameKey:
       m_TableReference:
@@ -637,12 +649,20 @@ MonoBehaviour:
     physicalDefense: 128
     magicDefense: 128
     speed: 78
-    money: 14460
+    money: 16870
     fieldId: 5
     spriteId: 22
     playerLevel: 34
     activeSkills: 7727000077270000782700007827000078270000
-    defeatEnemyUnlocks: []
+    defeatEnemyUnlocks:
+    - id: 35
+      enemyId: 22
+      unlockType: 1
+      unlockId: 24
+    - id: 36
+      enemyId: 22
+      unlockType: 4
+      unlockId: 2
   - id: 23
     nameKey:
       m_TableReference:
@@ -654,18 +674,26 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     hitPoint: 3962
-    physicalStrength: 104
-    magicStrength: 104
+    physicalStrength: 99
+    magicStrength: 99
     criticalRate: 0
     physicalDefense: 131
     magicDefense: 131
     speed: 80
-    money: 15288
-    fieldId: 5
+    money: 17836
+    fieldId: 2
     spriteId: 23
     playerLevel: 35
     activeSkills: dc270000dc270000e4270000dc270000dc270000
-    defeatEnemyUnlocks: []
+    defeatEnemyUnlocks:
+    - id: 37
+      enemyId: 23
+      unlockType: 1
+      unlockId: 33
+    - id: 38
+      enemyId: 23
+      unlockType: 2
+      unlockId: 8
   - id: 24
     nameKey:
       m_TableReference:
@@ -683,12 +711,20 @@ MonoBehaviour:
     physicalDefense: 140
     magicDefense: 140
     speed: 86
-    money: 17916
-    fieldId: 2
+    money: 20902
+    fieldId: 5
     spriteId: 24
     playerLevel: 38
     activeSkills: dd270000
-    defeatEnemyUnlocks: []
+    defeatEnemyUnlocks:
+    - id: 39
+      enemyId: 24
+      unlockType: 1
+      unlockId: 25
+    - id: 40
+      enemyId: 24
+      unlockType: 2
+      unlockId: 9
   - id: 25
     nameKey:
       m_TableReference:
@@ -699,19 +735,27 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    hitPoint: 4700
-    physicalStrength: 205
-    magicStrength: 205
+    hitPoint: 3760
+    physicalStrength: 154
+    magicStrength: 154
     criticalRate: 0
     physicalDefense: 147
     magicDefense: 147
     speed: 90
-    money: 19788
-    fieldId: 5
+    money: 23086
+    fieldId: 6
     spriteId: 25
     playerLevel: 40
-    activeSkills: 782700007827000081270000
-    defeatEnemyUnlocks: []
+    activeSkills: 78270000782700003e28000081270000
+    defeatEnemyUnlocks:
+    - id: 41
+      enemyId: 25
+      unlockType: 1
+      unlockId: 26
+    - id: 42
+      enemyId: 25
+      unlockType: 2
+      unlockId: 10
   - id: 26
     nameKey:
       m_TableReference:
@@ -722,14 +766,14 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    hitPoint: 6045
-    physicalStrength: 294
-    magicStrength: 294
+    hitPoint: 24177582
+    physicalStrength: 7345
+    magicStrength: 7345
     criticalRate: 0
     physicalDefense: 154
     magicDefense: 154
     speed: 94
-    money: 21756
+    money: 25382
     fieldId: 6
     spriteId: 26
     playerLevel: 42
@@ -752,7 +796,7 @@ MonoBehaviour:
     physicalDefense: 157
     magicDefense: 157
     speed: 96
-    money: 22776
+    money: 26572
     fieldId: 6
     spriteId: 27
     playerLevel: 43
@@ -775,7 +819,7 @@ MonoBehaviour:
     physicalDefense: 161
     magicDefense: 161
     speed: 98
-    money: 23820
+    money: 27790
     fieldId: 6
     spriteId: 28
     playerLevel: 44
@@ -798,7 +842,7 @@ MonoBehaviour:
     physicalDefense: 165
     magicDefense: 165
     speed: 100
-    money: 24888
+    money: 29036
     fieldId: 6
     spriteId: 29
     playerLevel: 45
@@ -821,8 +865,8 @@ MonoBehaviour:
     physicalDefense: 168
     magicDefense: 168
     speed: 102
-    money: 25980
-    fieldId: 6
+    money: 30310
+    fieldId: 1
     spriteId: 30
     playerLevel: 46
     activeSkills: 
@@ -844,8 +888,8 @@ MonoBehaviour:
     physicalDefense: 172
     magicDefense: 172
     speed: 105
-    money: 27096
-    fieldId: 1
+    money: 31612
+    fieldId: 2
     spriteId: 31
     playerLevel: 47
     activeSkills: 
@@ -867,7 +911,7 @@ MonoBehaviour:
     physicalDefense: 185
     magicDefense: 185
     speed: 112
-    money: 30588
+    money: 35686
     fieldId: 2
     spriteId: 32
     playerLevel: 50
@@ -890,8 +934,8 @@ MonoBehaviour:
     physicalDefense: 231
     magicDefense: 231
     speed: 140
-    money: 43788
-    fieldId: 2
+    money: 51086
+    fieldId: 1
     spriteId: 33
     playerLevel: 60
     activeSkills: 
@@ -913,32 +957,9 @@ MonoBehaviour:
     physicalDefense: 285
     magicDefense: 285
     speed: 172
-    money: 59388
-    fieldId: 1
-    spriteId: 34
-    playerLevel: 70
-    activeSkills: 
-    defeatEnemyUnlocks: []
-  - id: 35
-    nameKey:
-      m_TableReference:
-        m_TableCollectionName: Enemy
-      m_TableEntryReference:
-        m_KeyId: 0
-        m_Key: Name035
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
-    hitPoint: 14912
-    physicalStrength: 0
-    magicStrength: 0
-    criticalRate: 0
-    physicalDefense: 285
-    magicDefense: 285
-    speed: 172
-    money: 59388
+    money: 69286
     fieldId: 2
-    spriteId: 35
+    spriteId: 34
     playerLevel: 70
     activeSkills: 
     defeatEnemyUnlocks: []

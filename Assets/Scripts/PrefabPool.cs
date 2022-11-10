@@ -33,7 +33,7 @@ namespace Cookie
         {
             this.objectPool.Release(element);
         }
-
+        
         public void Clear()
         {
             this.objectPool.Clear();

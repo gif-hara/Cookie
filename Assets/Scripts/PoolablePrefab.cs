@@ -8,5 +8,6 @@ namespace Cookie
     /// </summary>
     public sealed class PoolablePrefab : MonoBehaviour
     {
+        
     }
 }

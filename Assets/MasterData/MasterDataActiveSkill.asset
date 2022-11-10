@@ -659,7 +659,7 @@ MonoBehaviour:
     - name: Behaviour.Attack
       value: 1
     - name: Attack.Power
-      value: 132
+      value: 172
     - name: Attack.Attribute
       value: 2
     - name: Behaviour.AddAbnormalStatus
@@ -753,7 +753,7 @@ MonoBehaviour:
     - name: Behaviour.Attack
       value: 1
     - name: Attack.Power
-      value: 132
+      value: 172
     - name: Attack.Attribute
       value: 2
     - name: Behaviour.AddAbnormalStatus

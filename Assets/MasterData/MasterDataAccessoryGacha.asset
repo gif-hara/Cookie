@@ -30,6 +30,11 @@ MonoBehaviour:
         max: 3
         rare: 0
       weight: 80
+    - value:
+        min: 3
+        max: 3
+        rare: 0
+      weight: 80
     passiveSkillIds:
     - value:
         parameter: 10101
@@ -51,6 +56,67 @@ MonoBehaviour:
         parameter: 10501
         rare: 0
       weight: 80
+  - nameKey:
+      m_TableReference:
+        m_TableCollectionName: Gacha
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Accessory002
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    id: 2
+    money: 5096
+    skillNumbers: []
+    passiveSkillIds:
+    - value:
+        parameter: 10101
+        rare: 0
+      weight: 80
+    - value:
+        parameter: 10102
+        rare: 1
+      weight: 20
+    - value:
+        parameter: 10201
+        rare: 0
+      weight: 80
+    - value:
+        parameter: 10202
+        rare: 1
+      weight: 20
+    - value:
+        parameter: 10301
+        rare: 0
+      weight: 80
+    - value:
+        parameter: 10302
+        rare: 1
+      weight: 20
+    - value:
+        parameter: 10401
+        rare: 0
+      weight: 80
+    - value:
+        parameter: 10402
+        rare: 1
+      weight: 20
+    - value:
+        parameter: 10501
+        rare: 0
+      weight: 80
+    - value:
+        parameter: 10502
+        rare: 1
+      weight: 20
+    - value:
+        parameter: 10901
+        rare: 0
+      weight: 80
+    - value:
+        parameter: 10902
+        rare: 1
+      weight: 20
   references:
     version: 2
     RefIds: []

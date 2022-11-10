@@ -15,8 +15,20 @@ namespace Cookie
         [SerializeField]
         private TextMeshProUGUI nameText;
 
+        [SerializeField]
+        private RareEffectHolder rareEffectHolder;
+
+        [SerializeField]
+        private RectTransform rareEffectParent;
+
         public TextMeshProUGUI Index => this.index;
 
         public TextMeshProUGUI NameText => this.nameText;
+
+        public void CreateRareEffect(Rare rare)
+        {
+            var effect = this.rareEffectHolder.Create(rare);
+            effect.transform.SetParent(this.rareEffectParent, false);
+        }
     }
 }
