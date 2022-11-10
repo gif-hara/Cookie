@@ -14,13 +14,13 @@ namespace Cookie
         // シリアライズするからstringのままにしておく
         public string nameKey;
 
-        public int hitPoint;
+        public InstanceParameter hitPoint;
 
-        public int physicalDefense;
+        public InstanceParameter physicalDefense;
 
-        public int magicDefense;
+        public InstanceParameter magicDefense;
 
-        public int speed;
+        public InstanceParameter speed;
 
         public string Name => LocalizationSettings.StringDatabase.GetTable("Armor").GetEntry(this.nameKey).Value;
     }

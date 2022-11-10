@@ -92,13 +92,13 @@ namespace Cookie
             return new ActorStatusBuilder
             {
                 nameKey = new LocalizedString("UI", "Player"),
-                hitPoint = armor.hitPoint,
+                hitPoint = armor.hitPoint.parameter,
                 physicalStrength = weapon.physicalStrength.parameter,
                 magicStrength = weapon.magicStrength.parameter,
                 criticalRate = weapon.criticalRate.parameter,
-                physicalDefense = armor.physicalDefense,
-                magicDefense = armor.magicDefense,
-                speed = armor.speed,
+                physicalDefense = armor.physicalDefense.parameter,
+                magicDefense = armor.magicDefense.parameter,
+                speed = armor.speed.parameter,
                 activeSkillIds = weapon.activeSkillIds.Select(x => x.parameter).ToList()
             };
         }

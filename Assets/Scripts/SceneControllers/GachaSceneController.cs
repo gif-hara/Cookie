@@ -168,15 +168,34 @@ namespace Cookie
                         userData.armorGachaInvokeCounts[gachaId]++;
                         gachaButton.NewIcon.SetActive(false);
 
-
+                        var hitPoint = gacha.hitPoints.Lottery();
+                        var physicalDefense = gacha.physicalDefenses.Lottery();
+                        var magicDefense = gacha.magicDefenses.Lottery();
+                        var speed = gacha.speeds.Lottery();
                         var newArmor = new Armor
                         {
                             instanceId = UserData.current.armorCreatedNumber,
                             nameKey = "Test",
-                            hitPoint = gacha.hitPoints.Lottery().value.GetParameter(),
-                            physicalDefense = gacha.physicalDefenses.Lottery().value.GetParameter(),
-                            magicDefense = gacha.magicDefenses.Lottery().value.GetParameter(),
-                            speed = gacha.speeds.Lottery().value.GetParameter()
+                            hitPoint = new InstanceParameter
+                            {
+                                parameter = hitPoint.value.GetParameter(),
+                                rare = hitPoint.value.rare
+                            },
+                            physicalDefense = new InstanceParameter
+                            {
+                                parameter = physicalDefense.value.GetParameter(),
+                                rare = physicalDefense.value.rare
+                            },
+                            magicDefense = new InstanceParameter
+                            {
+                                parameter = magicDefense.value.GetParameter(),
+                                rare = magicDefense.value.rare
+                            },
+                            speed = new InstanceParameter
+                            {
+                                parameter = speed.value.GetParameter(),
+                                rare = speed.value.rare
+                            }
                         };
                         UserData.current.armors.Add(newArmor);
                         UserData.current.armorCreatedNumber++;
