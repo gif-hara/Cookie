@@ -168,6 +168,7 @@ namespace Cookie
                 this.uiView.BattleHeaderUIView.SetSpeedButtonMessage(userData.battleSpeedType);
             });
             
+            SetBattleSpeed(UserData.current.battleSpeedType);
             this.uiView.BattleHeaderUIView.SetSpeedButtonMessage(UserData.current.battleSpeedType);
 
             await this.battleResourceManager.SetupAsync(scope);
