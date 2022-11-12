@@ -39,6 +39,30 @@ MonoBehaviour:
     m_Key: Weapon006
     m_Metadata:
       m_Items: []
+  - m_Id: 23394577655463936
+    m_Key: Weapon007
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23394577672241152
+    m_Key: Weapon008
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23394577672241153
+    m_Key: Weapon009
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23394577672241154
+    m_Key: Weapon010
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23394577672241155
+    m_Key: Weapon011
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23394577672241156
+    m_Key: Weapon012
+    m_Metadata:
+      m_Items: []
   - m_Id: 46537048064
     m_Key: Armor001
     m_Metadata:
@@ -59,8 +83,24 @@ MonoBehaviour:
     m_Key: Armor005
     m_Metadata:
       m_Items: []
+  - m_Id: 23394577672241157
+    m_Key: Armor006
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23394577672241158
+    m_Key: Armor007
+    m_Metadata:
+      m_Items: []
   - m_Id: 359482992558080
     m_Key: Accessory001
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23394577672241159
+    m_Key: Accessory002
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23394577672241160
+    m_Key: Accessory003
     m_Metadata:
       m_Items: []
   m_Metadata:

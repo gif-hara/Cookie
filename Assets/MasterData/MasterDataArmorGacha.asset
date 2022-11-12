@@ -248,6 +248,116 @@ MonoBehaviour:
         max: 90
         rare: 1
       weight: 30
+  - nameKey:
+      m_TableReference:
+        m_TableCollectionName: Gacha
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Armor006
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    id: 6
+    money: 6920
+    hitPoints:
+    - value:
+        min: 2096
+        max: 2598
+        rare: 0
+      weight: 70
+    - value:
+        min: 2688
+        max: 2874
+        rare: 1
+      weight: 30
+    physicalDefenses:
+    - value:
+        min: 150
+        max: 172
+        rare: 0
+      weight: 70
+    - value:
+        min: 176
+        max: 185
+        rare: 1
+      weight: 30
+    magicDefenses:
+    - value:
+        min: 150
+        max: 172
+        rare: 0
+      weight: 70
+    - value:
+        min: 176
+        max: 185
+        rare: 1
+      weight: 30
+    speeds:
+    - value:
+        min: 92
+        max: 105
+        rare: 0
+      weight: 70
+    - value:
+        min: 107
+        max: 112
+        rare: 1
+      weight: 30
+  - nameKey:
+      m_TableReference:
+        m_TableCollectionName: Gacha
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Armor007
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    id: 7
+    money: 10600
+    hitPoints:
+    - value:
+        min: 2970
+        max: 3586
+        rare: 0
+      weight: 70
+    - value:
+        min: 3695
+        max: 3919
+        rare: 1
+      weight: 30
+    physicalDefenses:
+    - value:
+        min: 189
+        max: 216
+        rare: 0
+      weight: 70
+    - value:
+        min: 221
+        max: 231
+        rare: 1
+      weight: 30
+    magicDefenses:
+    - value:
+        min: 189
+        max: 216
+        rare: 0
+      weight: 70
+    - value:
+        min: 221
+        max: 231
+        rare: 1
+      weight: 30
+    speeds:
+    - value:
+        min: 115
+        max: 131
+        rare: 0
+      weight: 70
+    - value:
+        min: 134
+        max: 140
+        rare: 1
+      weight: 30
   references:
     version: 2
     RefIds: []
