@@ -22,6 +22,7 @@ namespace Cookie
                 var passiveSkillUIElement = passiveInformationUIView.CreatePassiveSkillUIElement();
                 passiveSkillUIElement.Index.text = (i + 1).ToString();
                 passiveSkillUIElement.NameText.text = passiveSkill.Name;
+                passiveSkillUIElement.CreateRareEffect(passiveSkillId.rare);
             }
         }
     }

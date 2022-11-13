@@ -21,6 +21,7 @@ namespace Cookie
         
         private readonly List<PassiveSkillUIElement> passiveSkillUIElements = new();
 
+        private readonly List<GameObject> rareEffects = new();
         public TextMeshProUGUI AccessoryName => this.accessoryName;
         
         public void DestroyAllPassiveSkillUIElements()
