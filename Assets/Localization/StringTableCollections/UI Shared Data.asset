@@ -171,6 +171,10 @@ MonoBehaviour:
     m_Key: No
     m_Metadata:
       m_Items: []
+  - m_Id: 23193759358582784
+    m_Key: ConfirmEscape
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

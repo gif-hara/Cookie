@@ -1238,7 +1238,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    hitPoint: 13860
+    hitPoint: 11088
     physicalStrength: 529
     magicStrength: 529
     criticalRate: 0
