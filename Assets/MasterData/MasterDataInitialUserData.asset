@@ -34,10 +34,18 @@ MonoBehaviour:
   armor:
     instanceId: 0
     nameKey: Test
-    hitPoint: 500
-    physicalDefense: 80
-    magicDefense: 80
-    speed: 50
+    hitPoint:
+      parameter: 500
+      rare: 0
+    physicalDefense:
+      parameter: 80
+      rare: 0
+    magicDefense:
+      parameter: 80
+      rare: 0
+    speed:
+      parameter: 50
+      rare: 0
   accessory:
     instanceId: 0
     nameKey: Test
