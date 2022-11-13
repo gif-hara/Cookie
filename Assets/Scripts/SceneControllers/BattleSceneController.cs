@@ -216,10 +216,12 @@ namespace Cookie
 
         private async void OnEnterPlayerTurn(StateType prev, DisposableBagBuilder scope)
         {
+            var cts = new CancellationTokenDisposable();
+            scope.Add(cts);
             try
             {
                 await this.MessageBroker.GetAsyncPublisher<Actor, BattleEvent.StartTurn>()
-                    .PublishAsync(this.player, BattleEvent.StartTurn.Get(this.enemy), this.GetCancellationTokenOnDestroy());
+                    .PublishAsync(this.player, BattleEvent.StartTurn.Get(this.enemy), cts.Token);
             }
             catch (OperationCanceledException)
             {
@@ -236,10 +238,12 @@ namespace Cookie
 
         private async void OnEnterEnemyTurn(StateType prev, DisposableBagBuilder scope)
         {
+            var cts = new CancellationTokenDisposable();
+            scope.Add(cts);
             try
             {
                 await this.MessageBroker.GetAsyncPublisher<Actor, BattleEvent.StartTurn>()
-                    .PublishAsync(this.enemy, BattleEvent.StartTurn.Get(this.player), this.GetCancellationTokenOnDestroy());
+                    .PublishAsync(this.enemy, BattleEvent.StartTurn.Get(this.player), cts.Token);
             }
             catch (OperationCanceledException)
             {
