@@ -45,7 +45,7 @@ namespace Cookie.UISystems
                 : this.enemyPosition.localPosition;
             element.transform.localPosition = position;
 
-            await UniTask.Delay(TimeSpan.FromSeconds(this.delayPoolSeconds));
+            await UniTask.Delay(TimeSpan.FromSeconds(this.delayPoolSeconds), cancellationToken: this.GetCancellationTokenOnDestroy());
 
             pool.Release(element);
         }
