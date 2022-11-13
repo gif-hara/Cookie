@@ -680,6 +680,8 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attributes:
+    - name: Behaviour.Attack
+      value: 1
     - name: Attack.Power
       value: 228
     - name: Attack.Attribute
