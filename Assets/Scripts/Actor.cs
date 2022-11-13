@@ -51,7 +51,7 @@ namespace Cookie
                         messageBroker.GetPublisher<BattleEvent.AttackDeclaration>()
                             .Publish(BattleEvent.AttackDeclaration.Get(this, skill.Name));
                         
-                        await UniTask.Delay(TimeSpan.FromSeconds(0.5f));
+                        await UniTask.Delay(TimeSpan.FromSeconds(0.5f), cancellationToken:cancelToken);
 
                         // 実際の行動を処理する
                         foreach (var attribute in skill.attributes)
@@ -167,7 +167,7 @@ namespace Cookie
                             }
                         }
                         
-                        await UniTask.Delay(TimeSpan.FromSeconds(1.0f));
+                        await UniTask.Delay(TimeSpan.FromSeconds(1.0f), cancellationToken:cancelToken);
 
                         // 相手が死亡していたら強制的に終了する
                         if (x.Opponent.Status.IsDead)
@@ -181,7 +181,7 @@ namespace Cookie
                     {
                         Debug.Log("TODO: 毒演出");
                         this.TakeDamage(Calculator.GetPoisonDamage(this.Status));
-                        await UniTask.Delay(TimeSpan.FromSeconds(1.0f));
+                        await UniTask.Delay(TimeSpan.FromSeconds(1.0f), cancellationToken:cancelToken);
                     }
                 })
                 .AddTo(bag);

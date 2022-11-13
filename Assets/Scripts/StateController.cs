@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using MessagePipe;
 using UnityEngine.Assertions;
 
 namespace Cookie
@@ -12,7 +13,7 @@ namespace Cookie
     {
         private class StateInfo
         {
-            public Action<T> onEnter;
+            public Action<T, DisposableBagBuilder> onEnter;
 
             public Action<T> onExit;
         }
@@ -29,6 +30,8 @@ namespace Cookie
         /// ステート切り替え中であるか
         /// </summary>
         private bool isChanging;
+
+        private readonly DisposableBagBuilder scope = DisposableBag.CreateBuilder();
         
         public StateController(T invalidState)
         {
@@ -37,7 +40,7 @@ namespace Cookie
             this.nextState = invalidState;
         }
 
-        public void Set(T value, Action<T> onEnter, Action<T> onExit)
+        public void Set(T value, Action<T, DisposableBagBuilder> onEnter, Action<T> onExit)
         {
             Assert.IsFalse(this.states.ContainsKey(value), $"{value}は既に登録済みです");
 
@@ -70,13 +73,14 @@ namespace Cookie
                 this.states[this.CurrentState].onExit?.Invoke(this.nextState);
             }
             
+            this.scope.Clear();
             var previousState = this.CurrentState;
             this.CurrentState = this.nextState;
             this.nextState = this.invalidState;
 
             if (this.states.ContainsKey(this.CurrentState))
             {
-                this.states[this.CurrentState].onEnter?.Invoke(previousState);
+                this.states[this.CurrentState].onEnter?.Invoke(previousState, this.scope);
             }
         }
 

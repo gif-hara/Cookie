@@ -29,6 +29,7 @@ namespace Cookie
             PlayerTurn,
             EnemyTurn,
             BattleEnd,
+            Escape,
             Finalize,
         }
 
@@ -66,6 +67,7 @@ namespace Cookie
             this.stateController.Set(StateType.PlayerTurn, OnEnterPlayerTurn, null);
             this.stateController.Set(StateType.EnemyTurn, OnEnterEnemyTurn, null);
             this.stateController.Set(StateType.BattleEnd, OnEnterBattleEnd, null);
+            this.stateController.Set(StateType.Escape, OnEnterEscape, null);
             this.stateController.Set(StateType.Finalize, OnEnterBattleFinalize, null);
 
             this.MessageBroker.GetSubscriber<SceneEvent.OnDestroy>()
@@ -154,9 +156,18 @@ namespace Cookie
                 })
                 .AddTo(scope);
             
-            this.uiView.BattleHeaderUIView.EscapeButton.Button.onClick.AddListener(() =>
+            this.uiView.BattleHeaderUIView.EscapeButton.Button.onClick.AddListener(async () =>
             {
-                Debug.Log("TODO");
+                Time.timeScale = 0.0f;
+                var result = await UIManager.PopupUIController.ShowAsync(LocalizeString.Get("UI", "ConfirmEscape"));
+                if (result)
+                {
+                    this.stateController.ChangeRequest(StateType.Escape);
+                }
+                else
+                {
+                    SetBattleSpeed(UserData.current.battleSpeedType);
+                }
             });
             
             this.uiView.BattleHeaderUIView.SpeedButton.Button.onClick.AddListener(() =>
@@ -190,7 +201,7 @@ namespace Cookie
             builder.AddMessageBroker<BattleEvent.Recovered>();
         }
         
-        private async void OnEnterBattleStart(StateType prev)
+        private async void OnEnterBattleStart(StateType prev, DisposableBagBuilder scope)
         {
             this.MessageBroker.GetPublisher<BattleEvent.StartBattle>()
                 .Publish(BattleEvent.StartBattle.Get());
@@ -203,23 +214,47 @@ namespace Cookie
             this.stateController.ChangeRequest(this.player.Status.speed >= this.enemy.Status.speed ? StateType.PlayerTurn : StateType.EnemyTurn);
         }
 
-        private async void OnEnterPlayerTurn(StateType prev)
+        private async void OnEnterPlayerTurn(StateType prev, DisposableBagBuilder scope)
         {
-            await this.MessageBroker.GetAsyncPublisher<Actor, BattleEvent.StartTurn>()
-                .PublishAsync(this.player, BattleEvent.StartTurn.Get(this.enemy));
+            try
+            {
+                await this.MessageBroker.GetAsyncPublisher<Actor, BattleEvent.StartTurn>()
+                    .PublishAsync(this.player, BattleEvent.StartTurn.Get(this.enemy), this.GetCancellationTokenOnDestroy());
+            }
+            catch (OperationCanceledException)
+            {
+                return;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
 
             this.stateController.ChangeRequest(IsBattleEnd() ? StateType.BattleEnd : StateType.EnemyTurn);
         }
 
-        private async void OnEnterEnemyTurn(StateType prev)
+        private async void OnEnterEnemyTurn(StateType prev, DisposableBagBuilder scope)
         {
-            await this.MessageBroker.GetAsyncPublisher<Actor, BattleEvent.StartTurn>()
-                .PublishAsync(this.enemy, BattleEvent.StartTurn.Get(this.player));
+            try
+            {
+                await this.MessageBroker.GetAsyncPublisher<Actor, BattleEvent.StartTurn>()
+                    .PublishAsync(this.enemy, BattleEvent.StartTurn.Get(this.player), this.GetCancellationTokenOnDestroy());
+            }
+            catch (OperationCanceledException)
+            {
+                return;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
             
             this.stateController.ChangeRequest(IsBattleEnd() ? StateType.BattleEnd : StateType.PlayerTurn);
         }
 
-        private async void OnEnterBattleEnd(StateType prev)
+        private async void OnEnterBattleEnd(StateType prev, DisposableBagBuilder scope)
         {
             var judgement = !this.player.Status.IsDead ? BattleJudgement.PlayerWin : BattleJudgement.PlayerLose;
 
@@ -236,8 +271,18 @@ namespace Cookie
             }
             this.stateController.ChangeRequest(StateType.Finalize);
         }
+
+        private void OnEnterEscape(StateType prev, DisposableBagBuilder scope)
+        {
+            if (SceneMediator.IsMatchArgument<BattleSceneArgument>())
+            {
+                var argument = SceneMediator.GetArgument<BattleSceneArgument>();
+                argument.onBattleEnd?.Invoke(BattleJudgement.PlayerLose);
+            }
+            this.stateController.ChangeRequest(StateType.Finalize);
+        }
         
-        private void OnEnterBattleFinalize(StateType prev)
+        private void OnEnterBattleFinalize(StateType prev, DisposableBagBuilder scope)
         {
             Debug.Log("Finalize");
             SetBattleSpeed(BattleSpeedType.Lv_1);
