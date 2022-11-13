@@ -89,6 +89,7 @@ namespace Cookie
         {
             var weapon = this.EquippedWeapon;
             var armor = this.EquippedArmor;
+            var accessory = this.EquippedAccessory;
             return new ActorStatusBuilder
             {
                 nameKey = new LocalizedString("UI", "Player"),
@@ -99,7 +100,8 @@ namespace Cookie
                 physicalDefense = armor.physicalDefense.parameter,
                 magicDefense = armor.magicDefense.parameter,
                 speed = armor.speed.parameter,
-                activeSkillIds = weapon.activeSkillIds.Select(x => x.parameter).ToList()
+                activeSkillIds = weapon.activeSkillIds.Select(x => x.parameter).ToList(),
+                passiveSkillIds = accessory.passiveSkillIds.Select(x => x.parameter).ToList()
             };
         }
 
