@@ -105,7 +105,8 @@ namespace Cookie
                 {
                     if (x.Actor.ActorType == ActorType.Enemy)
                     {
-                        Debug.Log("TODO 敵の状態異常付与エフェクト");
+                        var icon = this.battleResourceManager.AbnormalStatusIcons[x.AbnormalStatus];
+                        uiView.EnemyStatusView.AddAbnormalStatusIcon(x.AbnormalStatus, icon);
                     }
                     else
                     {
@@ -120,7 +121,7 @@ namespace Cookie
                 {
                     if (x.Actor.ActorType == ActorType.Enemy)
                     {
-                        Debug.Log("TODO 敵の状態異常解除エフェクト");
+                        uiView.EnemyStatusView.RemoveAbnormalStatusIcon(x.AbnormalStatus);
                     }
                     else
                     {
