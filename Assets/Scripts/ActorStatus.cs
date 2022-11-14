@@ -46,6 +46,8 @@ namespace Cookie
 
         public int playerLevel;
 
+        public int appearanceEffectId;
+
         public string Name => this.nameKey.GetLocalizedString();
         
         public bool IsDead => this.hitPoint <= 0;

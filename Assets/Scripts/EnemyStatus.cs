@@ -36,6 +36,8 @@ namespace Cookie
 
         public int spriteId;
 
+        public int appearanceEffectId;
+
         /// <summary>
         /// プレイヤーレベル
         /// レベルデザイン用に持っている
@@ -62,7 +64,8 @@ namespace Cookie
                 speed = this.speed,
                 activeSkillIds = activeSkills,
                 spriteId = this.spriteId,
-                playerLevel = this.playerLevel
+                playerLevel = this.playerLevel,
+                appearanceEffectId = this.appearanceEffectId
             };
         }
     }
@@ -94,6 +97,8 @@ namespace Cookie
         public int fieldId;
 
         public int playerLevel;
+
+        public int appearanceEffectId;
 
         [Serializable]
         public class Json

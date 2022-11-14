@@ -14,10 +14,10 @@ namespace Cookie
             uiView.WeaponName.text = UserData.current.equippedWeaponInstanceId == weapon.instanceId
                 ? $"[E] {weapon.Name}"
                 : weapon.Name;
-            uiView.PhysicalStrength.text = weapon.physicalStrength.parameter.ToString();
-            uiView.MagicStrength.text = weapon.magicStrength.parameter.ToString();
-            uiView.TotalStrength.text = weapon.TotalStrength.ToString();
-            uiView.CriticalRate.text = $"{weapon.criticalRate.parameter.ToString()}%";
+            uiView.PhysicalStrength.SetText("{0}", weapon.physicalStrength.parameter);
+            uiView.MagicStrength.SetText("{0}", weapon.magicStrength.parameter);
+            uiView.TotalStrength.SetText("{0}", weapon.TotalStrength);
+            uiView.CriticalRate.SetText("{0}%", weapon.criticalRate.parameter);
             uiView.PhysicalStrengthComparisonUIStylists.Apply(0);
             uiView.MagicStrengthComparisonUIStylists.Apply(0);
             uiView.TotalStrengthComparisonUIStylists.Apply(0);
@@ -28,7 +28,7 @@ namespace Cookie
                 var activeSkillId = weapon.activeSkillIds[i];
                 var activeSkill = MasterDataActiveSkill.Instance.skills.Find(activeSkillId.parameter);
                 var activeSkillUIElement = uiView.CreateActiveSkillUIElement();
-                activeSkillUIElement.Index.text = (i + 1).ToString();
+                activeSkillUIElement.Index.SetText("{0}", i + 1);
                 activeSkillUIElement.NameText.text = activeSkill.Name;
                 activeSkillUIElement.CreateRareEffect(activeSkillId.rare);
             }

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -17,7 +18,7 @@ namespace Cookie
         private AnimationController animationController;
 
         [SerializeField]
-        private AnimationClip appearanceClip;
+        private List<AnimationClip> appearanceClips;
 
         [SerializeField]
         private AnimationClip damageClip;
@@ -32,10 +33,10 @@ namespace Cookie
             this.image.sprite = enemySprite;
         }
 
-        public async UniTask PlayAppearanceAsync()
+        public async UniTask PlayAppearanceAsync(int clipId)
         {
             this.image.enabled = true;
-            await this.animationController.PlayTask(this.appearanceClip);
+            await this.animationController.PlayTask(this.appearanceClips[clipId]);
         }
 
         public async UniTask PlayDamageAsync()

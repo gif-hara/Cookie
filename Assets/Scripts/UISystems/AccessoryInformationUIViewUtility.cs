@@ -20,7 +20,7 @@ namespace Cookie
                 var passiveSkillId = accessory.passiveSkillIds[i];
                 var passiveSkill = MasterDataPassiveSkill.Instance.skills.Find(passiveSkillId.parameter);
                 var passiveSkillUIElement = passiveInformationUIView.CreatePassiveSkillUIElement();
-                passiveSkillUIElement.Index.text = (i + 1).ToString();
+                passiveSkillUIElement.Index.SetText("{0}", i + 1);
                 passiveSkillUIElement.NameText.text = passiveSkill.Name;
                 passiveSkillUIElement.CreateRareEffect(passiveSkillId.rare);
             }

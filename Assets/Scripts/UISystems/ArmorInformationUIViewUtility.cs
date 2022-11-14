@@ -14,10 +14,10 @@ namespace Cookie
             uiView.ArmorName.text = UserData.current.equippedArmorInstanceId == armor.instanceId
                 ? $"[E] {armor.Name}"
                 : armor.Name;
-            uiView.PhysicalDefense.text = armor.physicalDefense.parameter.ToString();
-            uiView.MagicDefense.text = armor.magicDefense.parameter.ToString();
-            uiView.HitPoint.text = armor.hitPoint.parameter.ToString();
-            uiView.Speed.text = armor.speed.parameter.ToString();
+            uiView.PhysicalDefense.SetText("{0}", armor.physicalDefense.parameter);
+            uiView.MagicDefense.SetText("{0}", armor.magicDefense.parameter);
+            uiView.HitPoint.SetText("{0}", armor.hitPoint.parameter);
+            uiView.Speed.SetText("{0}", armor.speed.parameter);
             uiView.PhysicalDefenseComparisonUIStylists.Apply(0);
             uiView.MagicDefenseComparisonUIStylists.Apply(0);
             uiView.HitPointComparisonUIStylists.Apply(0);

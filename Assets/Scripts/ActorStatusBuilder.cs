@@ -32,6 +32,8 @@ namespace Cookie
 
         public int playerLevel;
 
+        public int appearanceEffectId;
+
         public List<int> activeSkillIds = new ();
 
         public List<int> passiveSkillIds = new ();
@@ -53,7 +55,8 @@ namespace Cookie
                 passiveSkills = this.passiveSkillIds.Select(x => MasterDataPassiveSkill.Instance.skills.Find(y => y.id == x)).ToList(),
                 abnormalStatuses = new HashSet<AbnormalStatus>(),
                 spriteId = this.spriteId,
-                playerLevel = this.playerLevel
+                playerLevel = this.playerLevel,
+                appearanceEffectId = this.appearanceEffectId
             };
         }
     }

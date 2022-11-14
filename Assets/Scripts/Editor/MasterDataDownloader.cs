@@ -303,6 +303,7 @@ namespace Cookie
                     money = x.money,
                     fieldId = x.fieldId,
                     spriteId = x.id,
+                    appearanceEffectId = x.appearanceEffectId,
                     playerLevel = x.playerLevel,
                     activeSkills = enemyActiveSkillJson.elements
                         .Where(enemyActiveSkill => enemyActiveSkill.enemyId == x.id)

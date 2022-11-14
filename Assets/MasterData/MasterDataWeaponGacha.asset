@@ -1238,6 +1238,96 @@ MonoBehaviour:
         parameter: 10504
         rare: 1
       weight: 15
+  - nameKey:
+      m_TableReference:
+        m_TableCollectionName: Gacha
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Weapon016
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    id: 16
+    money: 19796
+    physicalStrengths:
+    - value:
+        min: 434
+        max: 503
+        rare: 0
+      weight: 70
+    - value:
+        min: 515
+        max: 540
+        rare: 1
+      weight: 30
+    magicStrengths:
+    - value:
+        min: 434
+        max: 503
+        rare: 0
+      weight: 70
+    - value:
+        min: 515
+        max: 540
+        rare: 1
+      weight: 30
+    criticalRates:
+    - value:
+        min: 0
+        max: 0
+        rare: 0
+      weight: 100
+    skillNumbers:
+    - value:
+        min: 7
+        max: 8
+        rare: 0
+      weight: 100
+    activeSkillIds:
+    - value:
+        parameter: 10107
+        rare: 0
+      weight: 100
+    - value:
+        parameter: 10207
+        rare: 0
+      weight: 100
+    - value:
+        parameter: 10113
+        rare: 1
+      weight: 50
+    - value:
+        parameter: 10117
+        rare: 1
+      weight: 50
+    - value:
+        parameter: 10213
+        rare: 1
+      weight: 50
+    - value:
+        parameter: 10217
+        rare: 1
+      weight: 50
+    - value:
+        parameter: 10302
+        rare: 1
+      weight: 30
+    - value:
+        parameter: 10401
+        rare: 0
+      weight: 5
+    - value:
+        parameter: 10402
+        rare: 0
+      weight: 5
+    - value:
+        parameter: 10403
+        rare: 0
+      weight: 5
+    - value:
+        parameter: 10404
+        rare: 0
+      weight: 5
   references:
     version: 2
     RefIds: []

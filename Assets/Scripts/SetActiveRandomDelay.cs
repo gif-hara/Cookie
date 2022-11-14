@@ -36,7 +36,7 @@ namespace Cookie
         {
             target.SetActive(!isActive);
 
-            await UniTask.Delay(TimeSpan.FromSeconds(delaySeconds));
+            await UniTask.Delay(TimeSpan.FromSeconds(delaySeconds), cancellationToken: target.GetCancellationTokenOnDestroy());
             
             target.SetActive(isActive);
         }
