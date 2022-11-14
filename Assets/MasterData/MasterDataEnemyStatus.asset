@@ -421,7 +421,7 @@ MonoBehaviour:
     money: 4920
     fieldId: 3
     spriteId: 14
-    appearanceEffectId: 0
+    appearanceEffectId: 1
     playerLevel: 19
     activeSkills: db270000e4270000
     defeatEnemyUnlocks:
@@ -609,7 +609,7 @@ MonoBehaviour:
     money: 10680
     fieldId: 3
     spriteId: 20
-    appearanceEffectId: 0
+    appearanceEffectId: 1
     playerLevel: 29
     activeSkills: db270000e4270000db270000db270000db270000
     defeatEnemyUnlocks:
@@ -769,7 +769,7 @@ MonoBehaviour:
     money: 26384
     fieldId: 4
     spriteId: 25
-    appearanceEffectId: 0
+    appearanceEffectId: 1
     playerLevel: 40
     activeSkills: 78270000782700003e28000081270000
     defeatEnemyUnlocks:
@@ -989,7 +989,7 @@ MonoBehaviour:
     money: 40784
     fieldId: 6
     spriteId: 32
-    appearanceEffectId: 0
+    appearanceEffectId: 1
     playerLevel: 50
     activeSkills: a22800000529000077270000772700007727000078270000
     defeatEnemyUnlocks:
@@ -1057,7 +1057,7 @@ MonoBehaviour:
     money: 87576
     fieldId: 1
     spriteId: 34
-    appearanceEffectId: 0
+    appearanceEffectId: 1
     playerLevel: 60
     activeSkills: a1280000a2280000792700007a27000082270000
     defeatEnemyUnlocks:
@@ -1085,7 +1085,7 @@ MonoBehaviour:
     money: 118776
     fieldId: 2
     spriteId: 35
-    appearanceEffectId: 0
+    appearanceEffectId: 1
     playerLevel: 70
     activeSkills: a3280000a4280000df270000df270000df270000e6270000
     defeatEnemyUnlocks:
@@ -1297,7 +1297,7 @@ MonoBehaviour:
     money: 58384
     fieldId: 4
     spriteId: 42
-    appearanceEffectId: 0
+    appearanceEffectId: 1
     playerLevel: 60
     activeSkills: e5270000e92700003e280000
     defeatEnemyUnlocks:
@@ -1325,7 +1325,7 @@ MonoBehaviour:
     money: 154776
     fieldId: 3
     spriteId: 43
-    appearanceEffectId: 0
+    appearanceEffectId: 1
     playerLevel: 80
     activeSkills: 
     defeatEnemyUnlocks: []
