@@ -33,7 +33,7 @@ MonoBehaviour:
     money: 600
     fieldId: 1
     spriteId: 1
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 1
     activeSkills: 7527000075270000
@@ -66,7 +66,7 @@ MonoBehaviour:
     money: 636
     fieldId: 1
     spriteId: 2
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 2
     activeSkills: 7527000075270000
@@ -95,7 +95,7 @@ MonoBehaviour:
     money: 696
     fieldId: 1
     spriteId: 3
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 3
     activeSkills: d9270000d9270000
@@ -128,7 +128,7 @@ MonoBehaviour:
     money: 917
     fieldId: 1
     spriteId: 4
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 5
     activeSkills: 752700007527000075270000
@@ -161,7 +161,7 @@ MonoBehaviour:
     money: 1054
     fieldId: 1
     spriteId: 5
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 6
     activeSkills: d9270000d9270000d9270000
@@ -190,7 +190,7 @@ MonoBehaviour:
     money: 1215
     fieldId: 1
     spriteId: 6
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 7
     activeSkills: 752700007527000075270000
@@ -219,7 +219,7 @@ MonoBehaviour:
     money: 1820
     fieldId: 1
     spriteId: 7
-    appearanceEffectId: 1
+    appearanceAnimationId: 1
     diedAnimationId: 1
     playerLevel: 9
     activeSkills: 76270000
@@ -252,7 +252,7 @@ MonoBehaviour:
     money: 1788
     fieldId: 2
     spriteId: 8
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 10
     activeSkills: 75270000752700007627000076270000
@@ -285,7 +285,7 @@ MonoBehaviour:
     money: 2040
     fieldId: 2
     spriteId: 9
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 11
     activeSkills: 75270000752700007627000076270000
@@ -318,7 +318,7 @@ MonoBehaviour:
     money: 2616
     fieldId: 2
     spriteId: 10
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 13
     activeSkills: 75270000762700007627000076270000
@@ -347,7 +347,7 @@ MonoBehaviour:
     money: 2940
     fieldId: 2
     spriteId: 11
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 14
     activeSkills: 75270000762700007627000076270000
@@ -376,7 +376,7 @@ MonoBehaviour:
     money: 3660
     fieldId: 2
     spriteId: 12
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 16
     activeSkills: da270000da270000da270000
@@ -405,7 +405,7 @@ MonoBehaviour:
     money: 4056
     fieldId: 3
     spriteId: 13
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 17
     activeSkills: 8027000075270000
@@ -434,7 +434,7 @@ MonoBehaviour:
     money: 4920
     fieldId: 3
     spriteId: 14
-    appearanceEffectId: 1
+    appearanceAnimationId: 1
     diedAnimationId: 1
     playerLevel: 19
     activeSkills: db270000e4270000
@@ -467,7 +467,7 @@ MonoBehaviour:
     money: 5880
     fieldId: 3
     spriteId: 15
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 21
     activeSkills: db270000db270000e8270000db270000
@@ -504,7 +504,7 @@ MonoBehaviour:
     money: 6396
     fieldId: 3
     spriteId: 16
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 22
     activeSkills: 77270000db27000077270000db270000
@@ -537,7 +537,7 @@ MonoBehaviour:
     money: 6936
     fieldId: 2
     spriteId: 17
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 23
     activeSkills: 84270000772700007727000077270000
@@ -570,7 +570,7 @@ MonoBehaviour:
     money: 8088
     fieldId: 2
     spriteId: 18
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 25
     activeSkills: 77270000772700007727000078270000
@@ -599,7 +599,7 @@ MonoBehaviour:
     money: 9336
     fieldId: 3
     spriteId: 19
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 27
     activeSkills: d9270000da270000db270000dc270000e8270000
@@ -628,7 +628,7 @@ MonoBehaviour:
     money: 10680
     fieldId: 3
     spriteId: 20
-    appearanceEffectId: 1
+    appearanceAnimationId: 1
     diedAnimationId: 1
     playerLevel: 29
     activeSkills: db270000e4270000db270000db270000db270000
@@ -657,7 +657,7 @@ MonoBehaviour:
     money: 17168
     fieldId: 3
     spriteId: 21
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 32
     activeSkills: dc270000dc270000
@@ -694,7 +694,7 @@ MonoBehaviour:
     money: 19280
     fieldId: 3
     spriteId: 22
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 34
     activeSkills: 7727000077270000782700007827000078270000
@@ -727,7 +727,7 @@ MonoBehaviour:
     money: 20384
     fieldId: 3
     spriteId: 23
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 35
     activeSkills: dc270000dc270000e4270000dc270000dc270000
@@ -760,7 +760,7 @@ MonoBehaviour:
     money: 23888
     fieldId: 4
     spriteId: 24
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 38
     activeSkills: dd270000
@@ -793,7 +793,7 @@ MonoBehaviour:
     money: 26384
     fieldId: 4
     spriteId: 25
-    appearanceEffectId: 1
+    appearanceAnimationId: 1
     diedAnimationId: 1
     playerLevel: 40
     activeSkills: 78270000782700003e28000081270000
@@ -826,7 +826,7 @@ MonoBehaviour:
     money: 29008
     fieldId: 6
     spriteId: 26
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 42
     activeSkills: 8127000076270000762700007727000078270000
@@ -863,7 +863,7 @@ MonoBehaviour:
     money: 30368
     fieldId: 6
     spriteId: 27
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 43
     activeSkills: 7527000076270000772700007827000079270000
@@ -896,7 +896,7 @@ MonoBehaviour:
     money: 31760
     fieldId: 6
     spriteId: 28
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 44
     activeSkills: 3e280000dc270000dc270000dc270000
@@ -929,7 +929,7 @@ MonoBehaviour:
     money: 33184
     fieldId: 6
     spriteId: 29
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 45
     activeSkills: a4280000a328000005290000782700007827000078270000
@@ -962,7 +962,7 @@ MonoBehaviour:
     money: 34640
     fieldId: 6
     spriteId: 30
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 46
     activeSkills: 782700007827000006290000dd270000dd270000dd270000
@@ -991,7 +991,7 @@ MonoBehaviour:
     money: 36128
     fieldId: 6
     spriteId: 31
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 47
     activeSkills: 0729000079270000
@@ -1020,7 +1020,7 @@ MonoBehaviour:
     money: 40784
     fieldId: 6
     spriteId: 32
-    appearanceEffectId: 1
+    appearanceAnimationId: 1
     diedAnimationId: 1
     playerLevel: 50
     activeSkills: a22800000529000077270000772700007727000078270000
@@ -1053,7 +1053,7 @@ MonoBehaviour:
     money: 42400
     fieldId: 4
     spriteId: 33
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 51
     activeSkills: a1280000782700007827000078270000
@@ -1090,7 +1090,7 @@ MonoBehaviour:
     money: 87576
     fieldId: 1
     spriteId: 34
-    appearanceEffectId: 1
+    appearanceAnimationId: 1
     diedAnimationId: 1
     playerLevel: 60
     activeSkills: a1280000a2280000792700007a27000082270000
@@ -1119,7 +1119,7 @@ MonoBehaviour:
     money: 118776
     fieldId: 2
     spriteId: 35
-    appearanceEffectId: 1
+    appearanceAnimationId: 1
     diedAnimationId: 1
     playerLevel: 70
     activeSkills: a3280000a4280000df270000df270000df270000e6270000
@@ -1148,7 +1148,7 @@ MonoBehaviour:
     money: 44048
     fieldId: 4
     spriteId: 36
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 52
     activeSkills: a228000079270000792700007927000079270000
@@ -1177,7 +1177,7 @@ MonoBehaviour:
     money: 45728
     fieldId: 4
     spriteId: 37
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 53
     activeSkills: 06290000dd270000dd270000dd270000dd270000
@@ -1206,7 +1206,7 @@ MonoBehaviour:
     money: 47440
     fieldId: 4
     spriteId: 38
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 54
     activeSkills: 7927000079270000852700007927000079270000
@@ -1239,7 +1239,7 @@ MonoBehaviour:
     money: 49184
     fieldId: 4
     spriteId: 39
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 55
     activeSkills: e5270000dd270000dd270000dd27000006290000
@@ -1272,7 +1272,7 @@ MonoBehaviour:
     money: 52768
     fieldId: 4
     spriteId: 40
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 57
     activeSkills: 08290000792700007927000079270000
@@ -1305,7 +1305,7 @@ MonoBehaviour:
     money: 56480
     fieldId: 4
     spriteId: 41
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 59
     activeSkills: df270000
@@ -1338,7 +1338,7 @@ MonoBehaviour:
     money: 58384
     fieldId: 4
     spriteId: 42
-    appearanceEffectId: 1
+    appearanceAnimationId: 1
     diedAnimationId: 1
     playerLevel: 60
     activeSkills: e5270000e92700003e280000
@@ -1367,7 +1367,7 @@ MonoBehaviour:
     money: 154776
     fieldId: 3
     spriteId: 43
-    appearanceEffectId: 1
+    appearanceAnimationId: 1
     diedAnimationId: 1
     playerLevel: 80
     activeSkills: 
@@ -1392,7 +1392,7 @@ MonoBehaviour:
     money: 60320
     fieldId: 5
     spriteId: 44
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 61
     activeSkills: 
@@ -1417,7 +1417,7 @@ MonoBehaviour:
     money: 62288
     fieldId: 5
     spriteId: 45
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 62
     activeSkills: 
@@ -1442,7 +1442,7 @@ MonoBehaviour:
     money: 64288
     fieldId: 5
     spriteId: 46
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 63
     activeSkills: 
@@ -1467,7 +1467,7 @@ MonoBehaviour:
     money: 66320
     fieldId: 5
     spriteId: 47
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 64
     activeSkills: 
@@ -1492,7 +1492,7 @@ MonoBehaviour:
     money: 68384
     fieldId: 5
     spriteId: 48
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 65
     activeSkills: 
@@ -1517,7 +1517,7 @@ MonoBehaviour:
     money: 70480
     fieldId: 5
     spriteId: 49
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 66
     activeSkills: 
@@ -1542,7 +1542,7 @@ MonoBehaviour:
     money: 72608
     fieldId: 5
     spriteId: 50
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 67
     activeSkills: 
@@ -1567,7 +1567,7 @@ MonoBehaviour:
     money: 74768
     fieldId: 5
     spriteId: 51
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 68
     activeSkills: 
@@ -1592,7 +1592,7 @@ MonoBehaviour:
     money: 79184
     fieldId: 5
     spriteId: 52
-    appearanceEffectId: 0
+    appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 70
     activeSkills: 

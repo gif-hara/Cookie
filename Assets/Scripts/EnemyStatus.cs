@@ -36,7 +36,7 @@ namespace Cookie
 
         public int spriteId;
 
-        public int appearanceEffectId;
+        public int appearanceAnimationId;
         
         public int diedAnimationId;
 
@@ -67,7 +67,7 @@ namespace Cookie
                 activeSkillIds = activeSkills,
                 spriteId = this.spriteId,
                 playerLevel = this.playerLevel,
-                appearanceEffectId = this.appearanceEffectId,
+                appearanceAnimationId = this.appearanceAnimationId,
                 diedAnimationId = this.diedAnimationId
             };
         }
@@ -101,7 +101,7 @@ namespace Cookie
 
         public int playerLevel;
 
-        public int appearanceEffectId;
+        public int appearanceAnimationId;
 
         public int diedAnimationId;
 

@@ -32,7 +32,7 @@ namespace Cookie
 
         public int playerLevel;
 
-        public int appearanceEffectId;
+        public int appearanceAnimationId;
 
         public int diedAnimationId;
 
@@ -58,7 +58,7 @@ namespace Cookie
                 abnormalStatuses = new HashSet<AbnormalStatus>(),
                 spriteId = this.spriteId,
                 playerLevel = this.playerLevel,
-                appearanceEffectId = this.appearanceEffectId,
+                appearanceAnimationId = this.appearanceAnimationId,
                 diedAnimationId = this.diedAnimationId
             };
         }

@@ -208,7 +208,7 @@ namespace Cookie
                 .Publish(BattleEvent.StartBattle.Get());
 
             await UniTask.WhenAll(
-                this.uiView.EnemyImageUIView.PlayAppearanceAsync(this.enemy.Status.appearanceEffectId),
+                this.uiView.EnemyImageUIView.PlayAppearanceAsync(this.enemy.Status.appearanceAnimationId),
                 this.uiView.BattleMessageUIView.Play(BattleMessageUIView.Type.BattleStart)
                 );
             

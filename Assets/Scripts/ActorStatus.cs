@@ -46,7 +46,7 @@ namespace Cookie
 
         public int playerLevel;
 
-        public int appearanceEffectId;
+        public int appearanceAnimationId;
 
         public int diedAnimationId;
 

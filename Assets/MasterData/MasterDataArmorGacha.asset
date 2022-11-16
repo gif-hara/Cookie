@@ -358,6 +358,61 @@ MonoBehaviour:
         max: 140
         rare: 1
       weight: 30
+  - nameKey:
+      m_TableReference:
+        m_TableCollectionName: Gacha
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Armor008
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    id: 8
+    money: 15080
+    hitPoints:
+    - value:
+        min: 4034
+        max: 4764
+        rare: 0
+      weight: 70
+    - value:
+        min: 4892
+        max: 5154
+        rare: 1
+      weight: 30
+    physicalDefenses:
+    - value:
+        min: 236
+        max: 268
+        rare: 0
+      weight: 70
+    - value:
+        min: 274
+        max: 285
+        rare: 1
+      weight: 30
+    magicDefenses:
+    - value:
+        min: 236
+        max: 268
+        rare: 0
+      weight: 70
+    - value:
+        min: 274
+        max: 285
+        rare: 1
+      weight: 30
+    speeds:
+    - value:
+        min: 143
+        max: 162
+        rare: 0
+      weight: 70
+    - value:
+        min: 165
+        max: 172
+        rare: 1
+      weight: 30
   references:
     version: 2
     RefIds: []

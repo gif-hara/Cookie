@@ -303,7 +303,7 @@ namespace Cookie
                     money = x.money,
                     fieldId = x.fieldId,
                     spriteId = x.id,
-                    appearanceEffectId = x.appearanceEffectId,
+                    appearanceAnimationId = x.appearanceAnimationId,
                     diedAnimationId = x.diedAnimationId,
                     playerLevel = x.playerLevel,
                     activeSkills = enemyActiveSkillJson.elements
