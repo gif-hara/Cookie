@@ -24,7 +24,7 @@ namespace Cookie
         private AnimationClip damageClip;
 
         [SerializeField]
-        private AnimationClip diedClip;
+        private List<AnimationClip> diedClips;
 
         public async UniTask SetupAsync(int enemySpriteId)
         {
@@ -44,9 +44,14 @@ namespace Cookie
             await this.animationController.PlayTask(this.damageClip);
         }
 
-        public async UniTask PlayDiedAsync()
+        public async UniTask PlayDiedAsync(int animationId)
         {
-            await this.animationController.PlayTask(this.diedClip);
+            await this.animationController.PlayTask(this.diedClips[animationId]);
+        }
+
+        public UniTask WaitForAnimation()
+        {
+            return this.animationController.WaitForAnimation();
         }
     }
 }

@@ -304,6 +304,7 @@ namespace Cookie
                     fieldId = x.fieldId,
                     spriteId = x.id,
                     appearanceEffectId = x.appearanceEffectId,
+                    diedAnimationId = x.diedAnimationId,
                     playerLevel = x.playerLevel,
                     activeSkills = enemyActiveSkillJson.elements
                         .Where(enemyActiveSkill => enemyActiveSkill.enemyId == x.id)

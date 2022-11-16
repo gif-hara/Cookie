@@ -37,6 +37,8 @@ namespace Cookie
         public int spriteId;
 
         public int appearanceEffectId;
+        
+        public int diedAnimationId;
 
         /// <summary>
         /// プレイヤーレベル
@@ -65,7 +67,8 @@ namespace Cookie
                 activeSkillIds = activeSkills,
                 spriteId = this.spriteId,
                 playerLevel = this.playerLevel,
-                appearanceEffectId = this.appearanceEffectId
+                appearanceEffectId = this.appearanceEffectId,
+                diedAnimationId = this.diedAnimationId
             };
         }
     }
@@ -99,6 +102,8 @@ namespace Cookie
         public int playerLevel;
 
         public int appearanceEffectId;
+
+        public int diedAnimationId;
 
         [Serializable]
         public class Json

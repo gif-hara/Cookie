@@ -48,6 +48,8 @@ namespace Cookie
 
         public int appearanceEffectId;
 
+        public int diedAnimationId;
+
         public string Name => this.nameKey.GetLocalizedString();
         
         public bool IsDead => this.hitPoint <= 0;

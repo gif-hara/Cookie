@@ -207,7 +207,9 @@ MonoBehaviour:
   - {fileID: 7400000, guid: 83f9c34effa24a245b17993acdaaae39, type: 2}
   - {fileID: 7400000, guid: 395ac5fb66648294fb7592606506119f, type: 2}
   damageClip: {fileID: 7400000, guid: aef3165bd2c027e499bc8859a78ef835, type: 2}
-  diedClip: {fileID: 7400000, guid: b3c6f04f3b6255744985a12659db868c, type: 2}
+  diedClips:
+  - {fileID: 7400000, guid: b3c6f04f3b6255744985a12659db868c, type: 2}
+  - {fileID: 7400000, guid: 549babc6cf00d3140bc4638fa40623e8, type: 2}
 --- !u!95 &7387779899129242393
 Animator:
   serializedVersion: 4

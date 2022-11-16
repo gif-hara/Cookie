@@ -86,7 +86,7 @@ namespace Cookie
                     {
                         if (x.Actor.Status.IsDead)
                         {
-                            uiView.EnemyImageUIView.PlayDiedAsync().Forget();
+                            uiView.EnemyImageUIView.PlayDiedAsync(x.Actor.Status.diedAnimationId).Forget();
                         }
                         else
                         {
@@ -230,7 +230,7 @@ namespace Cookie
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                Debug.LogException(e);
                 throw;
             }
 
@@ -252,7 +252,7 @@ namespace Cookie
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                Debug.LogException(e);
                 throw;
             }
             
@@ -261,6 +261,8 @@ namespace Cookie
 
         private async void OnEnterBattleEnd(StateType prev, DisposableBagBuilder scope)
         {
+            await this.uiView.EnemyImageUIView.WaitForAnimation();
+            
             var judgement = !this.player.Status.IsDead ? BattleJudgement.PlayerWin : BattleJudgement.PlayerLose;
 
             await this.uiView.BattleMessageUIView.Play(

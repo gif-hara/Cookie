@@ -54,6 +54,14 @@ namespace Cookie
             return this.PlayAsync(clip).ToUniTask();
         }
 
+        public async UniTask WaitForAnimation()
+        {
+            while (this.animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
+            {
+                await UniTask.Yield(this.GetCancellationTokenOnDestroy());
+            }
+        }
+
         private void ChangeClip(AnimationClip clip)
         {
             this.overrideController[OverrideClipName] = clip;

@@ -34,6 +34,8 @@ namespace Cookie
 
         public int appearanceEffectId;
 
+        public int diedAnimationId;
+
         public List<int> activeSkillIds = new ();
 
         public List<int> passiveSkillIds = new ();
@@ -56,7 +58,8 @@ namespace Cookie
                 abnormalStatuses = new HashSet<AbnormalStatus>(),
                 spriteId = this.spriteId,
                 playerLevel = this.playerLevel,
-                appearanceEffectId = this.appearanceEffectId
+                appearanceEffectId = this.appearanceEffectId,
+                diedAnimationId = this.diedAnimationId
             };
         }
     }
