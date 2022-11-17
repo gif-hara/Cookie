@@ -38,7 +38,11 @@ namespace Cookie
                     .Select(x => MasterDataActiveSkill.Instance.skills.Find(x.parameter))
                     .Where(x => x.attributes.Contains(SkillAttributeName.AttackPower))
                     .Sum(x => Calculator.GetAttackPower(this.physicalStrength.parameter, this.magicStrength.parameter, x));
-                result = Mathf.FloorToInt(result / 100.0f);
+
+                var criticalDamage = result * (Define.CriticalDamageRate - 1.0f) * (this.criticalRate.parameter / 100.0f);
+                
+                // 相手の防御力が100と仮定した際のダメージを総合攻撃力とする
+                result = Mathf.FloorToInt((result + criticalDamage) / 100.0f);
 
                 return result;
             }

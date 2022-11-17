@@ -127,6 +127,11 @@ namespace Cookie
     public class Define
     {
         public const int BuffLevelMax = 4;
+
+        /// <summary>
+        /// クリティカルヒット時のダメージの上昇量
+        /// </summary>
+        public const float CriticalDamageRate = 1.5f;
     }
     
     public static class SkillAttributeName

@@ -44,7 +44,7 @@ namespace Cookie
             
             var criticalRate = attacker.criticalRate + attacker.passiveSkills.GetAllAttributeValue(SkillAttributeName.CriticalRateUpFixed);
             result.isCritical = IsCritical(criticalRate);
-            var critical = result.isCritical ? 1.5f : 1.0f;
+            var critical = result.isCritical ? Define.CriticalDamageRate : 1.0f;
             result.damage = Mathf.FloorToInt(GetAttackPower(physicalStrength, magicStrength, attackerActiveSkill) * critical) / defense;
 
             if (attacker.abnormalStatuses.Contains(AbnormalStatus.Debility))
