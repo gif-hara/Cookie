@@ -96,5 +96,13 @@ namespace Cookie
 
             public int Value => this.Param2;
         }
+        
+        /// <summary>
+        /// 麻痺が発動した際のメッセージ
+        /// </summary>
+        public class InvokedParalysis : Message<InvokedParalysis, Actor>
+        {
+            public Actor Actor => this.Param1;
+        }
     }
 }

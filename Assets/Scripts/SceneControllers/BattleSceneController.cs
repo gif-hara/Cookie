@@ -179,6 +179,20 @@ namespace Cookie
                 SetBattleSpeed(userData.battleSpeedType);
                 this.uiView.BattleHeaderUIView.SetSpeedButtonMessage(userData.battleSpeedType);
             });
+
+            this.MessageBroker.GetAsyncSubscriber<BattleEvent.InvokedParalysis>()
+                .Subscribe(async (x, ct) =>
+                {
+                    if (x.Actor.ActorType == ActorType.Player)
+                    {
+                        await UniTask.Delay(TimeSpan.FromSeconds(2.0f), cancellationToken: ct);
+                    }
+                    else
+                    {
+                        await this.uiView.EnemyImageUIView.PlayParalysisEffect();
+                    }
+                })
+                .AddTo(scope);
             
             SetBattleSpeed(UserData.current.battleSpeedType);
             this.uiView.BattleHeaderUIView.SetSpeedButtonMessage(UserData.current.battleSpeedType);
@@ -200,6 +214,7 @@ namespace Cookie
             builder.AddMessageBroker<BattleEvent.AttackDeclaration>();
             builder.AddMessageBroker<BattleEvent.GivedDamage>();
             builder.AddMessageBroker<BattleEvent.Recovered>();
+            builder.AddMessageBroker<BattleEvent.InvokedParalysis>();
         }
         
         private async void OnEnterBattleStart(StateType prev, DisposableBagBuilder scope)

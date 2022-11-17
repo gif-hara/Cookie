@@ -262,7 +262,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    hitPoint: 500
+    hitPoint: 9999
     physicalStrength: 100
     magicStrength: 100
     criticalRate: 100
@@ -271,19 +271,21 @@ MonoBehaviour:
     speed: 0
     spriteId: 0
     playerLevel: 0
-    activeSkillIds: 3d28000075270000
-    passiveSkillIds: 972a0000972a0000972a0000
+    appearanceAnimationId: 0
+    diedAnimationId: 0
+    activeSkillIds: 84270000
+    passiveSkillIds: 972a0000972a0000972a0000972a0000972a0000
   enemyStatus:
     nameKey:
       m_TableReference:
         m_TableCollectionName: GUID:537e91a48d8638e40b443c3b956a329b
       m_TableEntryReference:
-        m_KeyId: 596661960704
+        m_KeyId: 16484121523191808
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    hitPoint: 500
+    hitPoint: 9999
     physicalStrength: 100
     magicStrength: 100
     criticalRate: 0
@@ -292,7 +294,9 @@ MonoBehaviour:
     speed: 0
     spriteId: 1
     playerLevel: 0
-    activeSkillIds: 75270000
+    appearanceAnimationId: 0
+    diedAnimationId: 0
+    activeSkillIds: 7527000075270000752700007527000075270000
     passiveSkillIds: 
   references:
     version: 2

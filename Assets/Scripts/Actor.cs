@@ -43,8 +43,8 @@ namespace Cookie
                         // 麻痺の処理
                         if (this.Status.abnormalStatuses.Contains(AbnormalStatus.Paralysis) && Calculator.CanInvokeParalysis())
                         {
-                            Debug.Log("TODO 麻痺演出");
-                            await UniTask.Delay(TimeSpan.FromSeconds(1.0f));
+                            await messageBroker.GetAsyncPublisher<BattleEvent.InvokedParalysis>()
+                                .PublishAsync(BattleEvent.InvokedParalysis.Get(this));
                             continue;
                         }
                         
