@@ -185,7 +185,7 @@ namespace Cookie
                 {
                     if (x.Actor.ActorType == ActorType.Player)
                     {
-                        await UniTask.Delay(TimeSpan.FromSeconds(2.0f), cancellationToken: ct);
+                        await this.uiView.PlayerStatusView.PlayParalysisEffect();
                     }
                     else
                     {

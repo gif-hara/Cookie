@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using TMPro;
@@ -30,7 +31,15 @@ namespace Cookie.UISystems
         [SerializeField]
         private RectTransform abnormalStatusIconParent;
 
+        [SerializeField]
+        private PoolablePrefab paralysisEffectPrefab;
+
+        [SerializeField]
+        private RectTransform paralysisEffectParent;
+
         private Dictionary<AbnormalStatus, AbnormalStatusIconElement> abnormalStatusIconDictionary = new();
+
+        private PrefabPool<PoolablePrefab> paralysisEffectPool;
 
         public Slider HitPointSlider => this.hitPointSlider;
 
@@ -55,6 +64,18 @@ namespace Cookie.UISystems
             var element = this.abnormalStatusIconDictionary[abnormalStatus];
             this.abnormalStatusIconDictionary.Remove(abnormalStatus);
             Destroy(element.gameObject);
+        }
+
+        public async UniTask PlayParalysisEffect()
+        {
+            this.paralysisEffectPool ??= new PrefabPool<PoolablePrefab>(this.paralysisEffectPrefab);
+            var effect = this.paralysisEffectPool.Get();
+            effect.transform.SetParent(this.paralysisEffectParent, false);
+            await UniTask.WhenAll(
+                this.PlayDamageAsync(),
+                UniTask.Delay(TimeSpan.FromSeconds(1.5f), cancellationToken: this.GetCancellationTokenOnDestroy())
+                );
+            this.paralysisEffectPool.Release(effect);
         }
     }
 }
