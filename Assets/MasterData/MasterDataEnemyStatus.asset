@@ -1357,12 +1357,12 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    hitPoint: 37984
-    physicalStrength: 0
-    magicStrength: 0
+    hitPoint: 42208
+    physicalStrength: 238
+    magicStrength: 238
     criticalRate: 0
-    physicalDefense: 348
-    magicDefense: 348
+    physicalDefense: 313
+    magicDefense: 382
     speed: 210
     money: 154776
     fieldId: 3
@@ -1370,7 +1370,7 @@ MonoBehaviour:
     appearanceAnimationId: 1
     diedAnimationId: 1
     playerLevel: 80
-    activeSkills: 
+    activeSkills: e0270000e0270000e0270000e0270000e6270000
     defeatEnemyUnlocks: []
   - id: 44
     nameKey:
@@ -1382,21 +1382,29 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    hitPoint: 12775
-    physicalStrength: 0
-    magicStrength: 0
+    hitPoint: 13965
+    physicalStrength: 372
+    magicStrength: 372
     criticalRate: 0
-    physicalDefense: 236
-    magicDefense: 236
+    physicalDefense: 259
+    magicDefense: 212
     speed: 143
-    money: 60320
+    money: 67860
     fieldId: 5
     spriteId: 44
     appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 61
-    activeSkills: 
-    defeatEnemyUnlocks: []
+    activeSkills: 7727000078270000792700007a270000
+    defeatEnemyUnlocks:
+    - id: 72
+      enemyId: 44
+      unlockType: 1
+      unlockId: 45
+    - id: 73
+      enemyId: 44
+      unlockType: 1
+      unlockId: 46
   - id: 45
     nameKey:
       m_TableReference:
@@ -1407,21 +1415,29 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    hitPoint: 13142
-    physicalStrength: 0
-    magicStrength: 0
+    hitPoint: 14343
+    physicalStrength: 206
+    magicStrength: 206
     criticalRate: 0
-    physicalDefense: 241
-    magicDefense: 241
+    physicalDefense: 265
+    magicDefense: 216
     speed: 146
-    money: 62288
+    money: 70074
     fieldId: 5
     spriteId: 45
     appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 62
-    activeSkills: 
-    defeatEnemyUnlocks: []
+    activeSkills: 862700007a2700007a2700007a2700007a270000
+    defeatEnemyUnlocks:
+    - id: 74
+      enemyId: 45
+      unlockType: 1
+      unlockId: 47
+    - id: 75
+      enemyId: 45
+      unlockType: 3
+      unlockId: 8
   - id: 46
     nameKey:
       m_TableReference:
@@ -1432,21 +1448,29 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    hitPoint: 13510
-    physicalStrength: 0
-    magicStrength: 0
+    hitPoint: 16212
+    physicalStrength: 227
+    magicStrength: 227
     criticalRate: 0
     physicalDefense: 246
     magicDefense: 246
     speed: 149
-    money: 64288
+    money: 72324
     fieldId: 5
     spriteId: 46
     appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 63
-    activeSkills: 
-    defeatEnemyUnlocks: []
+    activeSkills: 3e280000a2280000de270000de270000de270000
+    defeatEnemyUnlocks:
+    - id: 76
+      enemyId: 46
+      unlockType: 1
+      unlockId: 48
+    - id: 77
+      enemyId: 46
+      unlockType: 2
+      unlockId: 18
   - id: 47
     nameKey:
       m_TableReference:
@@ -1457,21 +1481,29 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    hitPoint: 13877
-    physicalStrength: 0
-    magicStrength: 0
+    hitPoint: 16653
+    physicalStrength: 527
+    magicStrength: 527
     criticalRate: 0
     physicalDefense: 252
     magicDefense: 252
     speed: 152
-    money: 66320
+    money: 74610
     fieldId: 5
     spriteId: 47
     appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 64
-    activeSkills: 
-    defeatEnemyUnlocks: []
+    activeSkills: da270000db270000dc270000a3280000a4280000
+    defeatEnemyUnlocks:
+    - id: 78
+      enemyId: 47
+      unlockType: 1
+      unlockId: 49
+    - id: 79
+      enemyId: 47
+      unlockType: 2
+      unlockId: 19
   - id: 48
     nameKey:
       m_TableReference:
@@ -1482,21 +1514,29 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    hitPoint: 14280
-    physicalStrength: 0
-    magicStrength: 0
+    hitPoint: 17136
+    physicalStrength: 141
+    magicStrength: 141
     criticalRate: 0
     physicalDefense: 257
     magicDefense: 257
     speed: 155
-    money: 68384
+    money: 76932
     fieldId: 5
     spriteId: 48
     appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 65
-    activeSkills: 
-    defeatEnemyUnlocks: []
+    activeSkills: 812700008127000081270000812700008127000081270000
+    defeatEnemyUnlocks:
+    - id: 80
+      enemyId: 48
+      unlockType: 1
+      unlockId: 50
+    - id: 81
+      enemyId: 48
+      unlockType: 1
+      unlockId: 51
   - id: 49
     nameKey:
       m_TableReference:
@@ -1507,21 +1547,25 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    hitPoint: 14630
-    physicalStrength: 0
-    magicStrength: 0
+    hitPoint: 17556
+    physicalStrength: 178
+    magicStrength: 178
     criticalRate: 0
     physicalDefense: 263
     magicDefense: 263
     speed: 158
-    money: 70480
+    money: 79290
     fieldId: 5
     spriteId: 49
     appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 66
-    activeSkills: 
-    defeatEnemyUnlocks: []
+    activeSkills: e5270000e5270000e5270000e5270000e5270000e5270000
+    defeatEnemyUnlocks:
+    - id: 82
+      enemyId: 49
+      unlockType: 4
+      unlockId: 6
   - id: 50
     nameKey:
       m_TableReference:
@@ -1532,21 +1576,25 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    hitPoint: 15067
-    physicalStrength: 0
-    magicStrength: 0
+    hitPoint: 18081
+    physicalStrength: 201
+    magicStrength: 201
     criticalRate: 0
     physicalDefense: 268
     magicDefense: 268
     speed: 162
-    money: 72608
+    money: 81684
     fieldId: 5
     spriteId: 50
     appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 67
-    activeSkills: 
-    defeatEnemyUnlocks: []
+    activeSkills: 052900007a2700007a2700007a2700007a270000da270000db270000dc270000dd270000
+    defeatEnemyUnlocks:
+    - id: 83
+      enemyId: 50
+      unlockType: 1
+      unlockId: 53
   - id: 51
     nameKey:
       m_TableReference:
@@ -1557,21 +1605,25 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    hitPoint: 15417
-    physicalStrength: 0
-    magicStrength: 0
+    hitPoint: 18501
+    physicalStrength: 181
+    magicStrength: 181
     criticalRate: 0
     physicalDefense: 274
     magicDefense: 274
     speed: 165
-    money: 74768
+    money: 84114
     fieldId: 5
     spriteId: 51
     appearanceAnimationId: 0
     diedAnimationId: 0
     playerLevel: 68
-    activeSkills: 
-    defeatEnemyUnlocks: []
+    activeSkills: 07290000082900003e280000a3280000a4280000de270000
+    defeatEnemyUnlocks:
+    - id: 84
+      enemyId: 51
+      unlockType: 1
+      unlockId: 52
   - id: 52
     nameKey:
       m_TableReference:
@@ -1582,19 +1634,277 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    hitPoint: 18640
-    physicalStrength: 0
-    magicStrength: 0
+    hitPoint: 22368
+    physicalStrength: 231
+    magicStrength: 231
     criticalRate: 0
     physicalDefense: 285
     magicDefense: 285
     speed: 172
-    money: 79184
+    money: 89082
     fieldId: 5
     spriteId: 52
+    appearanceAnimationId: 1
+    diedAnimationId: 1
+    playerLevel: 70
+    activeSkills: 05290000062900007b270000df270000
+    defeatEnemyUnlocks:
+    - id: 85
+      enemyId: 52
+      unlockType: 1
+      unlockId: 54
+    - id: 86
+      enemyId: 52
+      unlockType: 3
+      unlockId: 9
+  - id: 53
+    nameKey:
+      m_TableReference:
+        m_TableCollectionName: Enemy
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Name2004
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    hitPoint: 39798
+    physicalStrength: 0
+    magicStrength: 0
+    criticalRate: 0
+    physicalDefense: 420
+    magicDefense: 420
+    speed: 252
+    money: 195576
+    fieldId: 4
+    spriteId: 53
+    appearanceAnimationId: 1
+    diedAnimationId: 1
+    playerLevel: 90
+    activeSkills: 
+    defeatEnemyUnlocks: []
+  - id: 54
+    nameKey:
+      m_TableReference:
+        m_TableCollectionName: Enemy
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Name1050
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    hitPoint: 22920
+    physicalStrength: 0
+    magicStrength: 0
+    criticalRate: 0
+    physicalDefense: 291
+    magicDefense: 291
+    speed: 176
+    money: 91620
+    fieldId: 7
+    spriteId: 54
     appearanceAnimationId: 0
     diedAnimationId: 0
-    playerLevel: 70
+    playerLevel: 71
+    activeSkills: 
+    defeatEnemyUnlocks: []
+  - id: 55
+    nameKey:
+      m_TableReference:
+        m_TableCollectionName: Enemy
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Name1051
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    hitPoint: 23496
+    physicalStrength: 0
+    magicStrength: 0
+    criticalRate: 0
+    physicalDefense: 297
+    magicDefense: 297
+    speed: 179
+    money: 94194
+    fieldId: 7
+    spriteId: 55
+    appearanceAnimationId: 0
+    diedAnimationId: 0
+    playerLevel: 72
+    activeSkills: 
+    defeatEnemyUnlocks: []
+  - id: 56
+    nameKey:
+      m_TableReference:
+        m_TableCollectionName: Enemy
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Name1052
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    hitPoint: 24120
+    physicalStrength: 0
+    magicStrength: 0
+    criticalRate: 0
+    physicalDefense: 303
+    magicDefense: 303
+    speed: 183
+    money: 96804
+    fieldId: 7
+    spriteId: 56
+    appearanceAnimationId: 0
+    diedAnimationId: 0
+    playerLevel: 73
+    activeSkills: 
+    defeatEnemyUnlocks: []
+  - id: 57
+    nameKey:
+      m_TableReference:
+        m_TableCollectionName: Enemy
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Name1053
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    hitPoint: 24648
+    physicalStrength: 0
+    magicStrength: 0
+    criticalRate: 0
+    physicalDefense: 310
+    magicDefense: 310
+    speed: 186
+    money: 99450
+    fieldId: 7
+    spriteId: 57
+    appearanceAnimationId: 0
+    diedAnimationId: 0
+    playerLevel: 74
+    activeSkills: 
+    defeatEnemyUnlocks: []
+  - id: 58
+    nameKey:
+      m_TableReference:
+        m_TableCollectionName: Enemy
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Name1054
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    hitPoint: 25272
+    physicalStrength: 0
+    magicStrength: 0
+    criticalRate: 0
+    physicalDefense: 316
+    magicDefense: 316
+    speed: 190
+    money: 102132
+    fieldId: 7
+    spriteId: 58
+    appearanceAnimationId: 0
+    diedAnimationId: 0
+    playerLevel: 75
+    activeSkills: 
+    defeatEnemyUnlocks: []
+  - id: 59
+    nameKey:
+      m_TableReference:
+        m_TableCollectionName: Enemy
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Name1055
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    hitPoint: 25920
+    physicalStrength: 0
+    magicStrength: 0
+    criticalRate: 0
+    physicalDefense: 322
+    magicDefense: 322
+    speed: 194
+    money: 104850
+    fieldId: 7
+    spriteId: 59
+    appearanceAnimationId: 0
+    diedAnimationId: 0
+    playerLevel: 76
+    activeSkills: 
+    defeatEnemyUnlocks: []
+  - id: 60
+    nameKey:
+      m_TableReference:
+        m_TableCollectionName: Enemy
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Name1056
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    hitPoint: 26496
+    physicalStrength: 0
+    magicStrength: 0
+    criticalRate: 0
+    physicalDefense: 329
+    magicDefense: 329
+    speed: 198
+    money: 107604
+    fieldId: 7
+    spriteId: 60
+    appearanceAnimationId: 0
+    diedAnimationId: 0
+    playerLevel: 77
+    activeSkills: 
+    defeatEnemyUnlocks: []
+  - id: 61
+    nameKey:
+      m_TableReference:
+        m_TableCollectionName: Enemy
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Name1057
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    hitPoint: 27144
+    physicalStrength: 0
+    magicStrength: 0
+    criticalRate: 0
+    physicalDefense: 335
+    magicDefense: 335
+    speed: 202
+    money: 110394
+    fieldId: 7
+    spriteId: 61
+    appearanceAnimationId: 0
+    diedAnimationId: 0
+    playerLevel: 78
+    activeSkills: 
+    defeatEnemyUnlocks: []
+  - id: 62
+    nameKey:
+      m_TableReference:
+        m_TableCollectionName: Enemy
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: Name1058
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    hitPoint: 28488
+    physicalStrength: 0
+    magicStrength: 0
+    criticalRate: 0
+    physicalDefense: 348
+    magicDefense: 348
+    speed: 210
+    money: 116082
+    fieldId: 7
+    spriteId: 62
+    appearanceAnimationId: 0
+    diedAnimationId: 0
+    playerLevel: 80
     activeSkills: 
     defeatEnemyUnlocks: []
   references:
