@@ -10,13 +10,14 @@ namespace Coffee.UIExtensions
 		public int referenceCount = 0;
 		public Texture texture;
 		public Material material;
-
+#if UNITY_EDITOR
 		[UnityEditor.InitializeOnLoadMethod]
 		static void ClearCache()
 		{
 			materialCache.Clear();
 		}
-
+#endif
+		
 		public static List<MaterialCache> materialCache = new List<MaterialCache>();
 
 		public static MaterialCache Register(ColorMode color, Texture tex, System.Func<Material> onCreateMaterial)

@@ -26,16 +26,16 @@ namespace Coffee.UIExtensions
 		/// </summary>
 		public Material effectMaterial { get { return m_EffectMaterial; } }
 
+#if UNITY_EDITOR
 		/// <summary>
 		/// Raises the validate event.
 		/// </summary>
 		protected override void OnValidate ()
 		{
 			base.OnValidate ();
-#if UNITY_EDITOR
 			UnityEditor.EditorApplication.delayCall += () => UpdateMaterial(false);
-#endif
 		}
+#endif
 
 		/// <summary>
 		/// Raises the before serialize event.

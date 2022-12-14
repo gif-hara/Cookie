@@ -51,6 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   styleActions:
   - rid: 4016482118961725534
+  - rid: 6940793922797961223
   references:
     version: 2
     RefIds:
@@ -58,7 +59,12 @@ MonoBehaviour:
       type: {class: ChangeGraphicColor, ns: Cookie, asm: Assembly-CSharp}
       data:
         image: {fileID: 5051527811174150046}
-        color: {r: 1, g: 0.97029585, b: 0.37169808, a: 1}
+        color: {r: 1, g: 0.633542, b: 0, a: 1}
+    - rid: 6940793922797961223
+      type: {class: ChangeGraphicColor, ns: Cookie, asm: Assembly-CSharp}
+      data:
+        image: {fileID: 4957368247959139368}
+        color: {r: 0.2735849, g: 0.101690985, b: 0.101690985, a: 1}
 --- !u!1 &756089676287859478
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,6 +608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   styleActions:
   - rid: 4016482118961725534
+  - rid: 6940793922797961222
   references:
     version: 2
     RefIds:
@@ -609,7 +616,12 @@ MonoBehaviour:
       type: {class: ChangeGraphicColor, ns: Cookie, asm: Assembly-CSharp}
       data:
         image: {fileID: 5051527811174150046}
-        color: {r: 0.7924528, g: 0.421302, b: 0.17493767, a: 1}
+        color: {r: 0.5660378, g: 0.28944725, b: 0.10893555, a: 1}
+    - rid: 6940793922797961222
+      type: {class: ChangeGraphicColor, ns: Cookie, asm: Assembly-CSharp}
+      data:
+        image: {fileID: 4957368247959139368}
+        color: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
 --- !u!1 &8604944279890350788
 GameObject:
   m_ObjectHideFlags: 0
