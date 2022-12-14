@@ -38,13 +38,17 @@ SpriteAtlas:
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: dacc280121bc2bc4899a9d38e0c2d5f0, type: 3}
   - {fileID: 21300000, guid: 202d0af29aa0cb34b81e78020cdb2219, type: 3}
   - {fileID: 21300000, guid: f1171853940641446bcae2b06dd54675, type: 3}
+  - {fileID: 21300000, guid: c8545308151f2f04aac85e488c101d3f, type: 3}
   - {fileID: 21300000, guid: a18f3ec90f80314418c3d86fb228cebb, type: 3}
   - {fileID: 21300000, guid: bc579dba598c9db4ca2aa45408f88eea, type: 3}
   m_PackedSpriteNamesToIndex:
+  - white
   - AbnormalStatus4
   - AbnormalStatus3
+  - mid_button_on
   - AbnormalStatus1
   - AbnormalStatus2
   m_RenderDataMap: {}
