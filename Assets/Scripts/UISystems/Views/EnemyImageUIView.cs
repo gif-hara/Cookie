@@ -35,6 +35,11 @@ namespace Cookie
 
         private PrefabPool<PoolablePrefab> paralysisEffectPool;
 
+        void Awake()
+        {
+            this.image.enabled = false;
+        }
+
         public async UniTask SetupAsync(int enemySpriteId)
         {
             this.paralysisEffectPool = new PrefabPool<PoolablePrefab>(this.paralysisEffectPrefab);

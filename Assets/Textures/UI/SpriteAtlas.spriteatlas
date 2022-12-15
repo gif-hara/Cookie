@@ -44,6 +44,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: c8545308151f2f04aac85e488c101d3f, type: 3}
   - {fileID: 21300000, guid: a18f3ec90f80314418c3d86fb228cebb, type: 3}
   - {fileID: 21300000, guid: bc579dba598c9db4ca2aa45408f88eea, type: 3}
+  - {fileID: 21300000, guid: 38b55add711e3014dbd87d02b652fa03, type: 3}
   m_PackedSpriteNamesToIndex:
   - white
   - AbnormalStatus4
@@ -51,6 +52,7 @@ SpriteAtlas:
   - mid_button_on
   - AbnormalStatus1
   - AbnormalStatus2
+  - hamburger-menu
   m_RenderDataMap: {}
   m_Tag: SpriteAtlas
   m_IsVariant: 0

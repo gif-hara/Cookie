@@ -202,7 +202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u88C5\u5099\u7DE8\u96C6"
+  m_text: Title
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c0223b0a327fc8546b58257140dc19dc, type: 2}
   m_sharedMaterial: {fileID: -1223602183829894380, guid: c0223b0a327fc8546b58257140dc19dc, type: 2}
@@ -373,6 +373,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 5667200318041132191}
     m_Modifications:
+    - target: {fileID: 258276528721473526, guid: a394bfa29364a4f49a6b2059d18f6135, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 910646790076785857, guid: a394bfa29364a4f49a6b2059d18f6135, type: 3}
       propertyPath: m_Name
       value: RootButton
@@ -461,13 +465,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2380574865823996935, guid: a394bfa29364a4f49a6b2059d18f6135, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380574865823996935, guid: a394bfa29364a4f49a6b2059d18f6135, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380574865823996935, guid: a394bfa29364a4f49a6b2059d18f6135, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3684004687971077497, guid: a394bfa29364a4f49a6b2059d18f6135, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 38b55add711e3014dbd87d02b652fa03, type: 3}
+    - target: {fileID: 3684004687971077497, guid: a394bfa29364a4f49a6b2059d18f6135, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3684004687971077497, guid: a394bfa29364a4f49a6b2059d18f6135, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3684004687971077497, guid: a394bfa29364a4f49a6b2059d18f6135, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4957368247959139368, guid: a394bfa29364a4f49a6b2059d18f6135, type: 3}
       propertyPath: m_text
-      value: i
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4957368247959139368, guid: a394bfa29364a4f49a6b2059d18f6135, type: 3}
       propertyPath: m_fontSize
-      value: 60
+      value: 77
       objectReference: {fileID: 0}
     - target: {fileID: 4957368247959139368, guid: a394bfa29364a4f49a6b2059d18f6135, type: 3}
       propertyPath: m_HorizontalAlignment
