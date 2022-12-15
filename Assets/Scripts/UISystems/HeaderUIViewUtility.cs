@@ -1,9 +1,5 @@
 using Cookie.UISystems;
-using Cysharp.Threading.Tasks;
 using MessagePipe;
-using UnityEngine;
-using UnityEngine.Assertions;
-using UnityEngine.SceneManagement;
 
 namespace Cookie
 {

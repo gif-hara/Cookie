@@ -1,7 +1,7 @@
+using System;
 using Cookie.UISystems;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.Assertions;
-using UnityEngine.SceneManagement;
 
 namespace Cookie
 {
@@ -17,21 +17,21 @@ namespace Cookie
             this.uiView = UIManager.Open(prefab);
             UIManager.Hidden(this.uiView);
             
-            this.uiView.GachaButton.Button.onClick.AddListener(() =>
+            this.uiView.GachaButton.Button.onClick.AddListener(async () =>
             {
-                SceneManager.LoadScene("Gacha");
+                await SceneManager.LoadSceneAsync("Gacha");
                 UIManager.Hidden(this.uiView);
             });
             
-            this.uiView.EditEquipmentButton.Button.onClick.AddListener(() =>
+            this.uiView.EditEquipmentButton.Button.onClick.AddListener(async () =>
             {
-                SceneManager.LoadScene("EditEquipment");
+                await SceneManager.LoadSceneAsync("EditEquipment");
                 UIManager.Hidden(this.uiView);
             });
             
-            this.uiView.SelectEnemyButton.Button.onClick.AddListener(() =>
+            this.uiView.SelectEnemyButton.Button.onClick.AddListener(async () =>
             {
-                SceneManager.LoadScene("SelectEnemy");
+                await SceneManager.LoadSceneAsync("SelectEnemy");
                 UIManager.Hidden(this.uiView);
             });
         }
