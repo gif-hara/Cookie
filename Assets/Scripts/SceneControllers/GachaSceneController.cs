@@ -327,7 +327,7 @@ namespace Cookie
             uiView.EquipmentInformationUIView.SetDeactiveAll();
             HeaderUIViewUtility.Setup(uiView.HeaderUIView, scope);
 
-            MessageBroker.Scene.GetSubscriber<SceneEvent.OnDestroy>()
+            MessageBroker.Instance.GetSubscriber<SceneEvent.OnDestroy>()
                 .Subscribe(_ =>
                 {
                     UIManager.Close(uiView);
@@ -339,9 +339,6 @@ namespace Cookie
         
         protected override void OnInitializeMessageBroker(BuiltinContainerBuilder builder)
         {
-            builder.AddMessageBroker<GachaEvent.RequestWeaponGacha>();
-            builder.AddMessageBroker<GachaEvent.RequestArmorGacha>();
-            builder.AddMessageBroker<GachaEvent.RequestAccessoryGacha>();
         }
 
         private void SetSelectedRootButton(CookieButton rootButton)

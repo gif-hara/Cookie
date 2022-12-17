@@ -116,7 +116,7 @@ namespace Cookie
             
             uiView.ConfirmListRoot.SetActive(false);
 
-            MessageBroker.Scene.GetSubscriber<SceneEvent.OnDestroy>()
+            MessageBroker.Instance.GetSubscriber<SceneEvent.OnDestroy>()
                 .Subscribe(_ =>
                 {
                     UIManager.Close(uiView);

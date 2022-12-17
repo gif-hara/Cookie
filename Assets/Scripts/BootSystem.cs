@@ -24,6 +24,7 @@ namespace Cookie
         private static async UniTask SetupInternal()
         {
             await UniTask.WhenAll(
+                SetupMessageBroker(),
                 SetupLocalizationAsync(),
                 SetupMasterData(),
                 SetupUISystem()
@@ -89,9 +90,27 @@ namespace Cookie
 
         private static UniTask SetupMessageBroker()
         {
-            MessageBroker.Global = new MessageBroker(broker =>
+            MessageBroker.Instance = new MessageBroker(builder =>
             {
-
+                builder.AddMessageBroker<SceneEvent.OnDestroy>();
+                builder.AddMessageBroker<UserDataEvent.UpdatedMoney>();
+                
+                // BattleEvents
+                builder.AddMessageBroker<BattleEvent.StartBattle>();
+                builder.AddMessageBroker<BattleEvent.Dispose>();
+                builder.AddMessageBroker<Actor, BattleEvent.StartTurn>();
+                builder.AddMessageBroker<BattleEvent.TakedDamage>();
+                builder.AddMessageBroker<BattleEvent.AddedAbnormalStatus>();
+                builder.AddMessageBroker<BattleEvent.RemovedAbnormalStatus>();
+                builder.AddMessageBroker<BattleEvent.AttackDeclaration>();
+                builder.AddMessageBroker<BattleEvent.GivedDamage>();
+                builder.AddMessageBroker<BattleEvent.Recovered>();
+                builder.AddMessageBroker<BattleEvent.InvokedParalysis>();
+                
+                // GachaEvents
+                builder.AddMessageBroker<GachaEvent.RequestWeaponGacha>();
+                builder.AddMessageBroker<GachaEvent.RequestArmorGacha>();
+                builder.AddMessageBroker<GachaEvent.RequestAccessoryGacha>();
             });
             return UniTask.CompletedTask;
         }

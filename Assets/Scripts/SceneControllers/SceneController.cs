@@ -20,12 +20,6 @@ namespace Cookie
         private void Awake()
         {
             Instance = this;
-            MessageBroker.Scene = new MessageBroker(builder =>
-            {
-                builder.AddMessageBroker<SceneEvent.OnDestroy>();
-                builder.AddMessageBroker<UserDataEvent.UpdatedMoney>();
-                OnInitializeMessageBroker(builder);
-            });
         }
         
         async void Start()
@@ -42,7 +36,7 @@ namespace Cookie
             }
             
             OnDestroyInternal();
-            MessageBroker.Scene.GetPublisher<SceneEvent.OnDestroy>()
+            MessageBroker.Instance.GetPublisher<SceneEvent.OnDestroy>()
                 .Publish(SceneEvent.OnDestroy.Get());
             this.sceneScope.Build().Dispose();
             Instance = null;
