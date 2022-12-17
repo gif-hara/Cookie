@@ -32,15 +32,21 @@ namespace Cookie.UISystems
 
         [SerializeField]
         private List<FadeData> fadeDataList;
-
-        public async UniTask PlayAsync(FadeType fadeType, UniTask awaiter)
+        
+        public UniTask PlayInAsync(FadeType fadeType)
         {
             var fadeData = this.fadeDataList.Find(x => x.fadeType == fadeType);
             Assert.IsNotNull(fadeData, $"{fadeType}");
 
-            await fadeData.animationController.PlayTask(fadeData.inClip);
-            await awaiter;
-            await fadeData.animationController.PlayTask(fadeData.outClip);
+            return fadeData.animationController.PlayTask(fadeData.inClip);
+        }
+        
+        public UniTask PlayOutAsync(FadeType fadeType)
+        {
+            var fadeData = this.fadeDataList.Find(x => x.fadeType == fadeType);
+            Assert.IsNotNull(fadeData, $"{fadeType}");
+
+            return fadeData.animationController.PlayTask(fadeData.outClip);
         }
     }
 }

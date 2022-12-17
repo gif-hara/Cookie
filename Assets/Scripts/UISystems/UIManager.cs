@@ -1,7 +1,6 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Assertions;
-using UnityEngine.SceneManagement;
 
 namespace Cookie.UISystems
 {
@@ -22,11 +21,16 @@ namespace Cookie.UISystems
         [SerializeField]
         private PopupUIView popupUIViewPrefab;
 
+        [SerializeField]
+        private FadeUIView fadeUIViewPrefab;
+
         private StartMenuUIController startMenuUIController;
 
         private NotifyUIController notifyUIController;
 
         private PopupUIController popupUIController;
+
+        private FadeUIController fadeUIController;
         
         public static UIManager Instance { get; private set; }
 
@@ -35,6 +39,8 @@ namespace Cookie.UISystems
         public static NotifyUIController NotifyUIController => Instance.notifyUIController;
 
         public static PopupUIController PopupUIController => Instance.popupUIController;
+
+        public static FadeUIController FadeUIController => Instance.fadeUIController;
         
         public static async UniTask Setup()
         {
@@ -52,6 +58,9 @@ namespace Cookie.UISystems
 
             Instance.popupUIController = new PopupUIController();
             Instance.popupUIController.Setup(Instance.popupUIViewPrefab);
+
+            Instance.fadeUIController = new FadeUIController();
+            Instance.fadeUIController.Setup(Instance.fadeUIViewPrefab);
         }
 
         public static T Open<T>(T uiView) where T : UIView
