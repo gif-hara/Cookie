@@ -11,7 +11,7 @@ namespace Cookie
     {
         private FadeUIView uiView;
         
-        public void Setup(FadeUIView prefab)
+        public void Setup(FadeUIView prefab, DisposableBagBuilder bag)
         {
             this.uiView = UIManager.Open(prefab);
             UIManager.Hidden(this.uiView);
@@ -22,7 +22,8 @@ namespace Cookie
                     UIManager.Show(this.uiView);
                     UIManager.SetAsLastSibling(this.uiView);
                     await this.PlayInAsync(FadeUIView.FadeType.Basic);
-                });
+                })
+                .AddTo(bag);
 
             MessageBroker.Instance.GetAsyncSubscriber<GlobalEvent.ChangedScene>()
                 .Subscribe( async(_, x) =>
@@ -30,7 +31,8 @@ namespace Cookie
                     UIManager.SetAsLastSibling(this.uiView);
                     await this.PlayOutAsync(FadeUIView.FadeType.Basic);
                     UIManager.Hidden(this.uiView);
-                });
+                })
+                .AddTo(bag);
         }
 
         public UniTask PlayInAsync(FadeUIView.FadeType fadeType)

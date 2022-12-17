@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using Cookie.UISystems;
 using Cysharp.Threading.Tasks;
+using MessagePipe;
 using SerializableCollections;
 using UnityEngine;
-using UnityEngine.Assertions;
 using UnityEngine.Localization.Settings;
 
 namespace Cookie
@@ -14,6 +14,8 @@ namespace Cookie
     public static class BootSystem
     {
         public static UniTask IsReady { get; private set; }
+
+        private static readonly DisposableBagBuilder bag = DisposableBag.CreateBuilder();
             
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void Setup()
@@ -85,7 +87,7 @@ namespace Cookie
 
         private static UniTask SetupUISystem()
         {
-            return UIManager.Setup();
+            return UIManager.Setup(bag);
         }
 
         private static UniTask SetupMessageBroker()

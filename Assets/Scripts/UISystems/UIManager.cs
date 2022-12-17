@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using MessagePipe;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -42,7 +43,7 @@ namespace Cookie.UISystems
 
         public static FadeUIController FadeUIController => Instance.fadeUIController;
         
-        public static async UniTask Setup()
+        public static async UniTask Setup(DisposableBagBuilder bag)
         {
             Assert.IsNull(Instance);
             
@@ -60,7 +61,7 @@ namespace Cookie.UISystems
             Instance.popupUIController.Setup(Instance.popupUIViewPrefab);
 
             Instance.fadeUIController = new FadeUIController();
-            Instance.fadeUIController.Setup(Instance.fadeUIViewPrefab);
+            Instance.fadeUIController.Setup(Instance.fadeUIViewPrefab, bag);
         }
 
         public static T Open<T>(T uiView) where T : UIView
