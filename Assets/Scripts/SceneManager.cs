@@ -11,12 +11,21 @@ namespace Cookie
     {
         public static void LoadScene(string sceneName)
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+            LoadSceneAsyncInternal(sceneName).Forget();
         }
         
         public static UniTask LoadSceneAsync(string sceneName)
         {
-            return UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneName).ToUniTask();
+            return LoadSceneAsyncInternal(sceneName);
+        }
+
+        private static async UniTask LoadSceneAsyncInternal(string sceneName)
+        {
+            await MessageBroker.Instance.GetAsyncPublisher<GlobalEvent.WillChangeScene>()
+                .PublishAsync(GlobalEvent.WillChangeScene.Get());
+            await UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneName).ToUniTask();
+            await MessageBroker.Instance.GetAsyncPublisher<GlobalEvent.ChangedScene>()
+                .PublishAsync(GlobalEvent.ChangedScene.Get());
         }
     }
 }

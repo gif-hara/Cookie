@@ -92,10 +92,13 @@ namespace Cookie
         {
             MessageBroker.Instance = new MessageBroker(builder =>
             {
+                builder.AddMessageBroker<GlobalEvent.WillChangeScene>();
+                builder.AddMessageBroker<GlobalEvent.ChangedScene>();
+                
                 builder.AddMessageBroker<SceneEvent.OnDestroy>();
+                
                 builder.AddMessageBroker<UserDataEvent.UpdatedMoney>();
                 
-                // BattleEvents
                 builder.AddMessageBroker<BattleEvent.StartBattle>();
                 builder.AddMessageBroker<BattleEvent.Dispose>();
                 builder.AddMessageBroker<Actor, BattleEvent.StartTurn>();
@@ -107,7 +110,6 @@ namespace Cookie
                 builder.AddMessageBroker<BattleEvent.Recovered>();
                 builder.AddMessageBroker<BattleEvent.InvokedParalysis>();
                 
-                // GachaEvents
                 builder.AddMessageBroker<GachaEvent.RequestWeaponGacha>();
                 builder.AddMessageBroker<GachaEvent.RequestArmorGacha>();
                 builder.AddMessageBroker<GachaEvent.RequestAccessoryGacha>();
