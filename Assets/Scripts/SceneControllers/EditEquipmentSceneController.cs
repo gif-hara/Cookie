@@ -185,7 +185,7 @@ namespace Cookie
             uiView.ConfirmRoot.SetActive(false);
             uiView.EquipmentInformationUIView.SetDeactiveAll();
 
-            this.MessageBroker.GetSubscriber<SceneEvent.OnDestroy>()
+            MessageBroker.Scene.GetSubscriber<SceneEvent.OnDestroy>()
                 .Subscribe(_ =>
                 {
                     UIManager.Close(uiView);

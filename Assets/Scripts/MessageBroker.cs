@@ -8,6 +8,10 @@ namespace Cookie
     /// </summary>
     public sealed class MessageBroker
     {
+        public static MessageBroker Global;
+
+        public static MessageBroker Scene;
+        
         public MessageBroker(Action<BuiltinContainerBuilder> builderSetupAction)
         {
             var builder = new BuiltinContainerBuilder();

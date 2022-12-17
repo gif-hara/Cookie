@@ -48,13 +48,13 @@ namespace Cookie
             if (SceneMediator.IsMatchArgument<BattleSceneArgument>())
             {
                 var argument = SceneMediator.GetArgument<BattleSceneArgument>();
-                this.player = new Actor(ActorType.Player, argument.playerStatusBuilder.Create(), this.MessageBroker);
-                this.enemy = new Actor(ActorType.Enemy, argument.enemyStatusBuilder.Create(), this.MessageBroker);
+                this.player = new Actor(ActorType.Player, argument.playerStatusBuilder.Create(), MessageBroker.Scene);
+                this.enemy = new Actor(ActorType.Enemy, argument.enemyStatusBuilder.Create(), MessageBroker.Scene);
             }
             else
             {
-                this.player = new Actor(ActorType.Player, this.playerStatus.Create(), this.MessageBroker);
-                this.enemy = new Actor(ActorType.Enemy, this.enemyStatus.Create(), this.MessageBroker);
+                this.player = new Actor(ActorType.Player, this.playerStatus.Create(), MessageBroker.Scene);
+                this.enemy = new Actor(ActorType.Enemy, this.enemyStatus.Create(), MessageBroker.Scene);
             }
 
             this.uiView = UIManager.Open(this.battleUIPrefab);
@@ -70,14 +70,14 @@ namespace Cookie
             this.stateController.Set(StateType.Escape, OnEnterEscape, null);
             this.stateController.Set(StateType.Finalize, OnEnterBattleFinalize, null);
 
-            this.MessageBroker.GetSubscriber<SceneEvent.OnDestroy>()
+            MessageBroker.Scene.GetSubscriber<SceneEvent.OnDestroy>()
                 .Subscribe(_ =>
                 {
                     UIManager.Close(uiView);
                 })
                 .AddTo(scope);
 
-            this.MessageBroker.GetSubscriber<BattleEvent.TakedDamage>()
+            MessageBroker.Scene.GetSubscriber<BattleEvent.TakedDamage>()
                 .Subscribe(x =>
                 {
                     uiView.DamageLabelUIView.CreateDamageLabel(x.DamageData.damage, x.Actor.ActorType).Forget();
@@ -100,7 +100,7 @@ namespace Cookie
                 })
                 .AddTo(scope);
 
-            this.MessageBroker.GetSubscriber<BattleEvent.AddedAbnormalStatus>()
+            MessageBroker.Scene.GetSubscriber<BattleEvent.AddedAbnormalStatus>()
                 .Subscribe(x =>
                 {
                     if (x.Actor.ActorType == ActorType.Enemy)
@@ -116,7 +116,7 @@ namespace Cookie
                 })
                 .AddTo(scope);
 
-            this.MessageBroker.GetSubscriber<BattleEvent.RemovedAbnormalStatus>()
+            MessageBroker.Scene.GetSubscriber<BattleEvent.RemovedAbnormalStatus>()
                 .Subscribe(x =>
                 {
                     if (x.Actor.ActorType == ActorType.Enemy)
@@ -130,14 +130,14 @@ namespace Cookie
                 })
                 .AddTo(scope);
 
-            this.MessageBroker.GetSubscriber<BattleEvent.AttackDeclaration>()
+            MessageBroker.Scene.GetSubscriber<BattleEvent.AttackDeclaration>()
                 .Subscribe(x =>
                 {
                     uiView.AttackDeclarationUIView.Create(x.Message, x.Actor.ActorType);
                 })
                 .AddTo(scope);
 
-            this.MessageBroker.GetSubscriber<BattleEvent.GivedDamage>()
+            MessageBroker.Scene.GetSubscriber<BattleEvent.GivedDamage>()
                 .Subscribe(x =>
                 {
                     var effectId = x.ActiveSkill.attributes.Get(SkillAttributeName.EffectId);
@@ -150,7 +150,7 @@ namespace Cookie
                 })
                 .AddTo(scope);
 
-            this.MessageBroker.GetSubscriber<BattleEvent.Recovered>()
+            MessageBroker.Scene.GetSubscriber<BattleEvent.Recovered>()
                 .Subscribe(x =>
                 {
                     uiView.DamageLabelUIView.CreateRecoveryLabel(x.Value, x.Actor.ActorType).Forget();
@@ -180,7 +180,7 @@ namespace Cookie
                 this.uiView.BattleHeaderUIView.SetSpeedButtonMessage(userData.battleSpeedType);
             });
 
-            this.MessageBroker.GetAsyncSubscriber<BattleEvent.InvokedParalysis>()
+            MessageBroker.Scene.GetAsyncSubscriber<BattleEvent.InvokedParalysis>()
                 .Subscribe(async (x, ct) =>
                 {
                     if (x.Actor.ActorType == ActorType.Player)
@@ -219,7 +219,7 @@ namespace Cookie
         
         private async void OnEnterBattleStart(StateType prev, DisposableBagBuilder scope)
         {
-            this.MessageBroker.GetPublisher<BattleEvent.StartBattle>()
+            MessageBroker.Scene.GetPublisher<BattleEvent.StartBattle>()
                 .Publish(BattleEvent.StartBattle.Get());
 
             await UniTask.WhenAll(
@@ -236,7 +236,7 @@ namespace Cookie
             scope.Add(cts);
             try
             {
-                await this.MessageBroker.GetAsyncPublisher<Actor, BattleEvent.StartTurn>()
+                await MessageBroker.Scene.GetAsyncPublisher<Actor, BattleEvent.StartTurn>()
                     .PublishAsync(this.player, BattleEvent.StartTurn.Get(this.enemy), cts.Token);
             }
             catch (OperationCanceledException)
@@ -258,7 +258,7 @@ namespace Cookie
             scope.Add(cts);
             try
             {
-                await this.MessageBroker.GetAsyncPublisher<Actor, BattleEvent.StartTurn>()
+                await MessageBroker.Scene.GetAsyncPublisher<Actor, BattleEvent.StartTurn>()
                     .PublishAsync(this.enemy, BattleEvent.StartTurn.Get(this.player), cts.Token);
             }
             catch (OperationCanceledException)
@@ -308,7 +308,7 @@ namespace Cookie
         {
             Debug.Log("Finalize");
             SetBattleSpeed(BattleSpeedType.Lv_1);
-            this.MessageBroker.GetPublisher<BattleEvent.Dispose>()
+            MessageBroker.Scene.GetPublisher<BattleEvent.Dispose>()
                 .Publish(BattleEvent.Dispose.Get());
             
             if (SceneMediator.IsMatchArgument<BattleSceneArgument>())

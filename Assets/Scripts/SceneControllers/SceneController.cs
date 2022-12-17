@@ -12,23 +12,7 @@ namespace Cookie
     public abstract class SceneController : MonoBehaviour
     {
         public static SceneController Instance { get; private set; }
-
-        private MessageBroker messageBroker;
-
-        public MessageBroker MessageBroker
-        {
-            get
-            {
-                if (this.messageBroker == null)
-                {
-                    Debug.LogWarning($"{this.GetType()}は{typeof(MessageBroker)}のセットアップを完了していません");
-                    this.messageBroker = new MessageBroker(null);
-                }
-
-                return this.messageBroker;
-            }
-        }
-
+        
         private readonly DisposableBagBuilder sceneScope = DisposableBag.CreateBuilder();
 
         private bool isApplicationQuit;
@@ -36,7 +20,7 @@ namespace Cookie
         private void Awake()
         {
             Instance = this;
-            this.messageBroker = new MessageBroker(builder =>
+            MessageBroker.Scene = new MessageBroker(builder =>
             {
                 builder.AddMessageBroker<SceneEvent.OnDestroy>();
                 builder.AddMessageBroker<UserDataEvent.UpdatedMoney>();
@@ -58,7 +42,7 @@ namespace Cookie
             }
             
             OnDestroyInternal();
-            this.MessageBroker.GetPublisher<SceneEvent.OnDestroy>()
+            MessageBroker.Scene.GetPublisher<SceneEvent.OnDestroy>()
                 .Publish(SceneEvent.OnDestroy.Get());
             this.sceneScope.Build().Dispose();
             Instance = null;

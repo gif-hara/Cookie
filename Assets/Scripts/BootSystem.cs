@@ -86,5 +86,14 @@ namespace Cookie
         {
             return UIManager.Setup();
         }
+
+        private static UniTask SetupMessageBroker()
+        {
+            MessageBroker.Global = new MessageBroker(broker =>
+            {
+
+            });
+            return UniTask.CompletedTask;
+        }
     }
 }
