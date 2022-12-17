@@ -104,5 +104,13 @@ namespace Cookie
         {
             public Actor Actor => this.Param1;
         }
+        
+        /// <summary>
+        /// 毒が発動した際のメッセージ
+        /// </summary>
+        public class InvokedPoison : Message<InvokedPoison, Actor>
+        {
+            public Actor Actor => this.Param1;
+        }
     }
 }

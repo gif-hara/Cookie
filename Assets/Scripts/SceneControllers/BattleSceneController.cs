@@ -3,6 +3,7 @@ using Cookie.UISystems;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.Linq;
 using MessagePipe;
+using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -190,6 +191,20 @@ namespace Cookie
                     else
                     {
                         await this.uiView.EnemyImageUIView.PlayParalysisEffect();
+                    }
+                })
+                .AddTo(scope);
+
+            MessageBroker.Instance.GetAsyncSubscriber<BattleEvent.InvokedPoison>()
+                .Subscribe(async (x, ct) =>
+                {
+                    if (x.Actor.ActorType == ActorType.Player)
+                    {
+                        await this.uiView.PlayerStatusView.PlayPoisonEffect();
+                    }
+                    else
+                    {
+                        await this.uiView.EnemyImageUIView.PlayPoisonEffect();
                     }
                 })
                 .AddTo(scope);

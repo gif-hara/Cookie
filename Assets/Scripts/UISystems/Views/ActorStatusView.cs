@@ -37,9 +37,17 @@ namespace Cookie.UISystems
         [SerializeField]
         private RectTransform paralysisEffectParent;
 
+        [SerializeField]
+        private PoolablePrefab poisonEffectPrefab;
+
+        [SerializeField]
+        private RectTransform poisonEffectParent;
+
         private Dictionary<AbnormalStatus, AbnormalStatusIconElement> abnormalStatusIconDictionary = new();
 
         private PrefabPool<PoolablePrefab> paralysisEffectPool;
+
+        private PrefabPool<PoolablePrefab> poisonEffectPool;
 
         public Slider HitPointSlider => this.hitPointSlider;
 
@@ -76,6 +84,15 @@ namespace Cookie.UISystems
                 UniTask.Delay(TimeSpan.FromSeconds(1.5f), cancellationToken: this.GetCancellationTokenOnDestroy())
                 );
             this.paralysisEffectPool.Release(effect);
+        }
+
+        public async UniTask PlayPoisonEffect()
+        {
+            this.poisonEffectPool ??= new PrefabPool<PoolablePrefab>(this.poisonEffectPrefab);
+            var effect = this.poisonEffectPool.Get();
+            effect.transform.SetParent(this.poisonEffectParent, false);
+            await UniTask.Delay(TimeSpan.FromSeconds(1.5f), cancellationToken: this.GetCancellationTokenOnDestroy());
+            this.poisonEffectPool.Release(effect);
         }
     }
 }

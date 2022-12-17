@@ -111,6 +111,7 @@ namespace Cookie
                 builder.AddMessageBroker<BattleEvent.GivedDamage>();
                 builder.AddMessageBroker<BattleEvent.Recovered>();
                 builder.AddMessageBroker<BattleEvent.InvokedParalysis>();
+                builder.AddMessageBroker<BattleEvent.InvokedPoison>();
                 
                 builder.AddMessageBroker<GachaEvent.RequestWeaponGacha>();
                 builder.AddMessageBroker<GachaEvent.RequestArmorGacha>();
