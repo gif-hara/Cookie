@@ -26,6 +26,10 @@ MonoBehaviour:
     m_Localized: New
     m_Metadata:
       m_Items: []
+  - m_Id: 35970658616729600
+    m_Localized: Money
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

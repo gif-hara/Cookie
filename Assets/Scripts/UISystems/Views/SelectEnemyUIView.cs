@@ -26,6 +26,9 @@ namespace Cookie.UISystems
         [SerializeField]
         private CookieButton battleButton;
 
+        [SerializeField]
+        private EnemyInformationUIView enemyInformationUIView;
+
         private readonly List<CookieButton> fieldButtons = new();
         
         private readonly List<CookieButton> enemyButtons = new();
@@ -70,6 +73,16 @@ namespace Cookie.UISystems
             this.enemyButtons.Add(result);
 
             return result;
+        }
+
+        public void SetupEnemyInformation(EnemyStatus enemyStatus)
+        {
+            this.enemyInformationUIView.Setup(enemyStatus);
+        }
+
+        public void SetActiveEnemyInformation(bool isActive)
+        {
+            this.enemyInformationUIView.SetActive(isActive);
         }
     }
 }

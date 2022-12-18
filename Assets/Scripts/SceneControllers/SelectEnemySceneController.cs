@@ -27,6 +27,7 @@ namespace Cookie
             HeaderUIViewUtility.Setup(uiView.HeaderUIView, scope);
             uiView.DestroyAllFieldButtons();
             uiView.DestroyAllEnemyButtons();
+            uiView.SetActiveEnemyInformation(false);
             var enemyGroupByFieldId = UserData.current.unlockEnemies
                 .Select(x => MasterDataEnemyStatus.Instance.enemyStatusList.Find(y => x == y.id))
                 .GroupBy(x => x.fieldId);
@@ -53,6 +54,8 @@ namespace Cookie
                         {
                             this.SetSelectedEnemyButton(enemyButton);
                             uiView.ConfirmListRoot.SetActive(true);
+                            uiView.SetupEnemyInformation(enemyStatus);
+                            uiView.SetActiveEnemyInformation(!isNew);
                             uiView.BattleButton.Button.onClick.RemoveAllListeners();
                             uiView.BattleButton.Button.onClick.AddListener(() =>
                             {

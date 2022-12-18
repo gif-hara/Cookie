@@ -175,6 +175,10 @@ MonoBehaviour:
     m_Key: ConfirmEscape
     m_Metadata:
       m_Items: []
+  - m_Id: 35970658616729600
+    m_Key: AcquireMoney
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
