@@ -32,6 +32,8 @@ namespace Cookie.UISystems
             public PoolablePrefab enemyPrefab;
 
             public Transform enemyPosition;
+
+            public float releaseDelaySeconds;
         }
 
         [SerializeField]
@@ -40,17 +42,14 @@ namespace Cookie.UISystems
         [SerializeField]
         private AbnormalStatusEffectData paralysisEffectData;
 
-        private PrefabPoolDictionary<PoolablePrefab> poolDictionary;
+        [SerializeField]
+        private AbnormalStatusEffectData poisonEffectData;
 
-        void Awake()
-        {
-            this.poolDictionary = new PrefabPoolDictionary<PoolablePrefab>();
-        }
-
+        private readonly PrefabPoolDictionary<PoolablePrefab> poolDictionary = new ();
+        
         private void OnDestroy()
         {
             this.poolDictionary.ClearAll();
-            this.poolDictionary = null;
         }
 
         /// <summary>
@@ -62,6 +61,34 @@ namespace Cookie.UISystems
                 ? this.attackEffectData.playerPosition
                 : this.attackEffectData.enemyPosition;
             return this.CreateInternal(this.attackEffectData.effectPrefabs[index], point, this.attackEffectData.releaseDelaySeconds);
+        }
+
+        /// <summary>
+        /// 麻痺エフェクトを生成する
+        /// </summary>
+        public UniTask CreateParalysisEffect(ActorType actorType)
+        {
+            return this.CreateAbnormalStatusEffect(this.paralysisEffectData, actorType);
+        }
+
+        /// <summary>
+        /// 毒エフェクトを生成する
+        /// </summary>
+        public UniTask CreatePoisonEffect(ActorType actorType)
+        {
+            return this.CreateAbnormalStatusEffect(this.poisonEffectData, actorType);
+        }
+
+        private UniTask CreateAbnormalStatusEffect(AbnormalStatusEffectData effectData, ActorType actorType)
+        {
+            var prefab = actorType == ActorType.Player
+                ? effectData.playerPrefab
+                : effectData.enemyPrefab;
+            var point = actorType == ActorType.Player
+                ? effectData.playerPosition
+                : effectData.enemyPosition;
+
+            return this.CreateInternal(prefab, point, effectData.releaseDelaySeconds);
         }
 
         private async UniTask CreateInternal(PoolablePrefab prefab, Transform point, float releaseDelaySeconds)

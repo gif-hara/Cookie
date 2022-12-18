@@ -248,10 +248,6 @@ MonoBehaviour:
   diedClips:
   - {fileID: 7400000, guid: b3c6f04f3b6255744985a12659db868c, type: 2}
   - {fileID: 7400000, guid: 549babc6cf00d3140bc4638fa40623e8, type: 2}
-  paralysisEffectPrefab: {fileID: 7652201533289624717, guid: e614dec13b560be4eb0e8e96dd7d7426, type: 3}
-  paralysisEffectParent: {fileID: 2274147033351107449}
-  poisonEffectPrefab: {fileID: 7652201533289624717, guid: 5a223b17905bb4f46b8eacb52e81fcb1, type: 3}
-  poisonEffectParent: {fileID: 9208549729015953873}
 --- !u!95 &7387779899129242393
 Animator:
   serializedVersion: 4

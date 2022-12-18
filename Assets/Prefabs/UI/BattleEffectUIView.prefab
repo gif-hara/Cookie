@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 137562370169560625}
   m_Layer: 5
-  m_Name: PlayerAttackPosition
+  m_Name: PlayerPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,10 +124,17 @@ MonoBehaviour:
     enemyPosition: {fileID: 6616939451161846533}
     releaseDelaySeconds: 2
   paralysisEffectData:
-    playerPrefab: {fileID: 0}
-    playerPosition: {fileID: 0}
-    enemyPrefab: {fileID: 0}
-    enemyPosition: {fileID: 0}
+    playerPrefab: {fileID: 7652201533289624717, guid: f764dfa49a4f14043a204b9031634a5a, type: 3}
+    playerPosition: {fileID: 137562370169560625}
+    enemyPrefab: {fileID: 7652201533289624717, guid: e614dec13b560be4eb0e8e96dd7d7426, type: 3}
+    enemyPosition: {fileID: 6616939451161846533}
+    releaseDelaySeconds: 1
+  poisonEffectData:
+    playerPrefab: {fileID: 7652201533289624717, guid: 4039ea709cd6c9749b40a04f40789d39, type: 3}
+    playerPosition: {fileID: 137562370169560625}
+    enemyPrefab: {fileID: 7652201533289624717, guid: 5a223b17905bb4f46b8eacb52e81fcb1, type: 3}
+    enemyPosition: {fileID: 6616939451161846533}
+    releaseDelaySeconds: 1
 --- !u!1 &7723893664720876400
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,7 +145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6616939451161846533}
   m_Layer: 5
-  m_Name: EnemyAttackPosition
+  m_Name: EnemyPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

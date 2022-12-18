@@ -30,24 +30,8 @@ namespace Cookie.UISystems
 
         [SerializeField]
         private RectTransform abnormalStatusIconParent;
-
-        [SerializeField]
-        private PoolablePrefab paralysisEffectPrefab;
-
-        [SerializeField]
-        private RectTransform paralysisEffectParent;
-
-        [SerializeField]
-        private PoolablePrefab poisonEffectPrefab;
-
-        [SerializeField]
-        private RectTransform poisonEffectParent;
-
+        
         private Dictionary<AbnormalStatus, AbnormalStatusIconElement> abnormalStatusIconDictionary = new();
-
-        private PrefabPool<PoolablePrefab> paralysisEffectPool;
-
-        private PrefabPool<PoolablePrefab> poisonEffectPool;
 
         public Slider HitPointSlider => this.hitPointSlider;
 
@@ -72,27 +56,6 @@ namespace Cookie.UISystems
             var element = this.abnormalStatusIconDictionary[abnormalStatus];
             this.abnormalStatusIconDictionary.Remove(abnormalStatus);
             Destroy(element.gameObject);
-        }
-
-        public async UniTask PlayParalysisEffect()
-        {
-            this.paralysisEffectPool ??= new PrefabPool<PoolablePrefab>(this.paralysisEffectPrefab);
-            var effect = this.paralysisEffectPool.Get();
-            effect.transform.SetParent(this.paralysisEffectParent, false);
-            await UniTask.WhenAll(
-                this.PlayDamageAsync(),
-                UniTask.Delay(TimeSpan.FromSeconds(1.5f), cancellationToken: this.GetCancellationTokenOnDestroy())
-                );
-            this.paralysisEffectPool.Release(effect);
-        }
-
-        public async UniTask PlayPoisonEffect()
-        {
-            this.poisonEffectPool ??= new PrefabPool<PoolablePrefab>(this.poisonEffectPrefab);
-            var effect = this.poisonEffectPool.Get();
-            effect.transform.SetParent(this.poisonEffectParent, false);
-            await UniTask.Delay(TimeSpan.FromSeconds(1.5f), cancellationToken: this.GetCancellationTokenOnDestroy());
-            this.poisonEffectPool.Release(effect);
         }
     }
 }

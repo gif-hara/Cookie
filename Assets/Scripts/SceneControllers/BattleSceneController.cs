@@ -184,28 +184,14 @@ namespace Cookie
             MessageBroker.Instance.GetAsyncSubscriber<BattleEvent.InvokedParalysis>()
                 .Subscribe(async (x, ct) =>
                 {
-                    if (x.Actor.ActorType == ActorType.Player)
-                    {
-                        await this.uiView.PlayerStatusView.PlayParalysisEffect();
-                    }
-                    else
-                    {
-                        await this.uiView.EnemyImageUIView.PlayParalysisEffect();
-                    }
+                    await this.uiView.BattleEffectUIView.CreateParalysisEffect(x.Actor.ActorType);
                 })
                 .AddTo(scope);
 
             MessageBroker.Instance.GetAsyncSubscriber<BattleEvent.InvokedPoison>()
                 .Subscribe(async (x, ct) =>
                 {
-                    if (x.Actor.ActorType == ActorType.Player)
-                    {
-                        await this.uiView.PlayerStatusView.PlayPoisonEffect();
-                    }
-                    else
-                    {
-                        await this.uiView.EnemyImageUIView.PlayPoisonEffect();
-                    }
+                    await this.uiView.BattleEffectUIView.CreatePoisonEffect(x.Actor.ActorType);
                 })
                 .AddTo(scope);
             

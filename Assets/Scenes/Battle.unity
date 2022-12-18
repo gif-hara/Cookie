@@ -265,7 +265,7 @@ MonoBehaviour:
     hitPoint: 9999
     physicalStrength: 100
     magicStrength: 100
-    criticalRate: 100
+    criticalRate: 0
     physicalDefense: 80
     magicDefense: 80
     speed: 0
@@ -273,7 +273,7 @@ MonoBehaviour:
     playerLevel: 0
     appearanceAnimationId: 0
     diedAnimationId: 0
-    activeSkillIds: 8027000080270000802700008027000080270000
+    activeSkillIds: 80270000
     passiveSkillIds: 972a0000972a0000972a0000972a0000972a0000
   enemyStatus:
     nameKey:
@@ -296,7 +296,7 @@ MonoBehaviour:
     playerLevel: 0
     appearanceAnimationId: 0
     diedAnimationId: 0
-    activeSkillIds: 8027000080270000802700008027000080270000
+    activeSkillIds: 80270000
     passiveSkillIds: 972a0000972a0000972a0000972a0000972a0000
   references:
     version: 2

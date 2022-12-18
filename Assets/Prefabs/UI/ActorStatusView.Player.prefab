@@ -115,10 +115,6 @@ MonoBehaviour:
   damageClip: {fileID: 7400000, guid: 659eb4d90fafe9f489f20fd1906c10f1, type: 2}
   abnormalStatusIconElementPrefab: {fileID: 8627300569024182818, guid: bf1900c0007f80e44a41bc939c099479, type: 3}
   abnormalStatusIconParent: {fileID: 1749901962296689338}
-  paralysisEffectPrefab: {fileID: 7652201533289624717, guid: f764dfa49a4f14043a204b9031634a5a, type: 3}
-  paralysisEffectParent: {fileID: 4922627941697535932}
-  poisonEffectPrefab: {fileID: 7652201533289624717, guid: 4039ea709cd6c9749b40a04f40789d39, type: 3}
-  poisonEffectParent: {fileID: 5578476597605043908}
 --- !u!95 &7056481264634572449
 Animator:
   serializedVersion: 4
