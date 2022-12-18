@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 137562370169560625}
   m_Layer: 5
-  m_Name: PlayerPosition
+  m_Name: PlayerAttackPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,7 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6616939451161846533}
   m_Layer: 5
-  m_Name: EnemyPosition
+  m_Name: EnemyAttackPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
