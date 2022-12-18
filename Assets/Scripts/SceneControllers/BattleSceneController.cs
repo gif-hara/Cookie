@@ -142,7 +142,7 @@ namespace Cookie
                 .Subscribe(x =>
                 {
                     var effectId = x.ActiveSkill.attributes.Get(SkillAttributeName.EffectId);
-                    uiView.BattleEffectUIView.Create(effectId.value, x.Target.ActorType).Forget();
+                    uiView.BattleEffectUIView.CreateAttackEffect(effectId.value, x.Target.ActorType).Forget();
 
                     if (x.DamageData.isCritical)
                     {

@@ -110,18 +110,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e60aa019dfae24484a9021509c150e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectPrefabs:
-  - {fileID: 7175701590970094915, guid: 438e4923cf6f1ff40a233ceaa0dad015, type: 3}
-  - {fileID: 7175701590970094915, guid: 236f849dd6e2e3d41b2f0873b263b588, type: 3}
-  - {fileID: 7175701590970094915, guid: acf237fafc47e8d47baf9e1ca4ce8311, type: 3}
-  - {fileID: 7175701590970094915, guid: 903ce268c0c6ee240813c012a16df152, type: 3}
-  - {fileID: 7175701590970094915, guid: c47e12826e740df4e9f3821cf8b87497, type: 3}
-  - {fileID: 7175701590970094915, guid: 751370333174414459f72146903aa8d7, type: 3}
-  - {fileID: 7175701590970094915, guid: c111058bb046c094bb28228d62a1765a, type: 3}
-  - {fileID: 7175701590970094915, guid: 737c1d3547cf0214e8d9f81ddc0e14ad, type: 3}
-  playerPosition: {fileID: 137562370169560625}
-  enemyPosition: {fileID: 6616939451161846533}
-  delayPoolSeconds: 2
+  attackEffectData:
+    effectPrefabs:
+    - {fileID: 7175701590970094915, guid: 438e4923cf6f1ff40a233ceaa0dad015, type: 3}
+    - {fileID: 7175701590970094915, guid: 236f849dd6e2e3d41b2f0873b263b588, type: 3}
+    - {fileID: 7175701590970094915, guid: acf237fafc47e8d47baf9e1ca4ce8311, type: 3}
+    - {fileID: 7175701590970094915, guid: 903ce268c0c6ee240813c012a16df152, type: 3}
+    - {fileID: 7175701590970094915, guid: c47e12826e740df4e9f3821cf8b87497, type: 3}
+    - {fileID: 7175701590970094915, guid: 751370333174414459f72146903aa8d7, type: 3}
+    - {fileID: 7175701590970094915, guid: c111058bb046c094bb28228d62a1765a, type: 3}
+    - {fileID: 7175701590970094915, guid: 737c1d3547cf0214e8d9f81ddc0e14ad, type: 3}
+    playerPosition: {fileID: 137562370169560625}
+    enemyPosition: {fileID: 6616939451161846533}
 --- !u!1 &7723893664720876400
 GameObject:
   m_ObjectHideFlags: 0
