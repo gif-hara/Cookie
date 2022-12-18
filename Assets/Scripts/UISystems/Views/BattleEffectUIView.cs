@@ -18,11 +18,28 @@ namespace Cookie.UISystems
             public Transform playerPosition;
 
             public Transform enemyPosition;
+
+            public float releaseDelaySeconds;
+        }
+
+        [Serializable]
+        public class AbnormalStatusEffectData
+        {
+            public PoolablePrefab playerPrefab;
+
+            public Transform playerPosition;
+
+            public PoolablePrefab enemyPrefab;
+
+            public Transform enemyPosition;
         }
 
         [SerializeField]
         private AttackEffectData attackEffectData;
-        
+
+        [SerializeField]
+        private AbnormalStatusEffectData paralysisEffectData;
+
         private PrefabPoolDictionary<PoolablePrefab> poolDictionary;
 
         void Awake()
@@ -39,17 +56,22 @@ namespace Cookie.UISystems
         /// <summary>
         /// 攻撃エフェクトを生成する
         /// </summary>
-        public async UniTask CreateAttackEffect(int index, ActorType actorType)
+        public UniTask CreateAttackEffect(int index, ActorType actorType)
         {
-            var pool = this.poolDictionary.Get(this.attackEffectData.effectPrefabs[index]);
+            var point = actorType == ActorType.Player
+                ? this.attackEffectData.playerPosition
+                : this.attackEffectData.enemyPosition;
+            return this.CreateInternal(this.attackEffectData.effectPrefabs[index], point, this.attackEffectData.releaseDelaySeconds);
+        }
+
+        private async UniTask CreateInternal(PoolablePrefab prefab, Transform point, float releaseDelaySeconds)
+        {
+            var pool = this.poolDictionary.Get(prefab);
             var element = pool.Get();
             element.transform.SetParent(this.transform, false);
-            var position = actorType == ActorType.Player
-                ? this.attackEffectData.playerPosition.localPosition
-                : this.attackEffectData.enemyPosition.localPosition;
-            element.transform.localPosition = position;
+            element.transform.localPosition = point.localPosition;
 
-            await UniTask.Delay(TimeSpan.FromSeconds(element.GetParticleTotalSeconds()), cancellationToken: this.GetCancellationTokenOnDestroy());
+            await UniTask.Delay(TimeSpan.FromSeconds(releaseDelaySeconds), cancellationToken: this.GetCancellationTokenOnDestroy());
 
             pool.Release(element);
         }

@@ -122,6 +122,12 @@ MonoBehaviour:
     - {fileID: 7175701590970094915, guid: 737c1d3547cf0214e8d9f81ddc0e14ad, type: 3}
     playerPosition: {fileID: 137562370169560625}
     enemyPosition: {fileID: 6616939451161846533}
+    releaseDelaySeconds: 2
+  paralysisEffectData:
+    playerPrefab: {fileID: 0}
+    playerPosition: {fileID: 0}
+    enemyPrefab: {fileID: 0}
+    enemyPosition: {fileID: 0}
 --- !u!1 &7723893664720876400
 GameObject:
   m_ObjectHideFlags: 0
